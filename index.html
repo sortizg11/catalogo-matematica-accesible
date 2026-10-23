@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#162B45">
+  <meta name="description" content="Catálogo universitario de matemática: teoría, ejemplos y práctica con MathML y navegación por teclado.">
+  <title>Catálogo de Matemática</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="src/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido principal</a>
+  <header class="topbar">
+    <a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true">∫</span><span>Catálogo de Matemática<small>Aprender con autonomía</small></span></a>
+    <div class="header-actions"><button id="menu-toggle" aria-expanded="true" aria-controls="temario">Ocultar temario</button><button id="tools-open" class="primary">Abrir centro de herramientas</button><a href="#ayuda">Ayuda</a><button data-dialog="preferences">Preferencias</button></div>
+  </header>
+  <div class="layout">
+    <aside id="sidebar"><div id="nav-slot"></div></aside>
+    <main id="contenido" tabindex="-1">
+      <nav aria-label="Ruta académica" class="breadcrumbs" id="breadcrumbs"></nav>
+      <div id="views"></div>
+      <footer>Catálogo de Matemática <span>Prototipo 1.0 · Material provisional</span></footer>
+    </main>
+  </div>
+  <dialog id="menu-dialog" aria-labelledby="menu-title"><div class="dialog-head"><h2 id="menu-title">Temario del curso</h2><button data-close>Cerrar temario</button></div><div id="mobile-nav-slot"></div></dialog>
+  <dialog id="tools" aria-labelledby="tools-title"><div class="dialog-head"><h2 id="tools-title">Centro de herramientas</h2><button data-close>Cerrar</button></div><p>Elige adónde quieres ir.</p><div class="tool-list">
+    <a href="#inicio">Inicio del catálogo</a><a data-section="tema" href="#inicio">Inicio del tema</a><a data-section="teoria" href="#inicio">Teoría</a><a data-section="ejemplos" href="#inicio">Ejemplos resueltos</a><a data-section="practica" href="#inicio">Práctica</a><a data-section="soluciones" href="#inicio">Soluciones</a>
+    <button id="tools-menu">Mostrar u ocultar temario</button><button id="where-open">¿Dónde estoy?</button><button data-continue>Continuar donde quedé</button><a href="#ayuda">Aprender a utilizar el Catálogo</a><button data-dialog="preferences">Abrir preferencias</button>
+  </div><p class="muted">Los atajos opcionales se activan en Preferencias.</p></dialog>
+  <dialog id="where" aria-labelledby="where-title"><div class="dialog-head"><h2 id="where-title">¿Dónde estoy?</h2><button data-close>Cerrar</button></div><p id="where-text"></p></dialog>
+  <dialog id="resume" aria-labelledby="resume-title"><h2 id="resume-title">Continuar estudiando</h2><p>Todavía no hay un punto guardado. Selecciona un tema para comenzar.</p><button data-close>Cerrar</button></dialog>
+  <dialog id="preferences" aria-labelledby="preferences-title"><div class="dialog-head"><h2 id="preferences-title">Preferencias de lectura</h2><button data-close>Cerrar</button></div>
+    <p>Los cambios se aplican al elegirlos y se guardan en este navegador cuando es posible.</p>
+    <div class="field"><label><input id="shortcuts" type="checkbox"> Activar atajos personalizados</label><p id="shortcut-note">Provisionales: Alt + Shift + H, M, T, E, P, S, I. Pueden coincidir con el cambio de idioma de Windows, el navegador o tecnologías de asistencia. Pruébalos antes de usarlos; todos tienen alternativa con enlaces y botones. No se capturan al editar ni dentro de fórmulas o diálogos.</p></div>
+    <div class="field"><label><input id="menu-pref" type="checkbox"> Mantener abierto el temario en escritorio</label></div>
+    <div class="field"><label for="font-size">Tamaño de fuente</label><select id="font-size"><option value="100">Normal · 100 %</option><option value="125">Grande · 125 %</option><option value="150">Muy grande · 150 %</option></select></div>
+    <div class="field"><label><input id="contrast" type="checkbox"> Alto contraste</label></div>
+    <div class="field"><label for="reading-mode">Lectura de procedimientos</label><select id="reading-mode"><option value="progressive">Progresiva: abrir pasos a mi ritmo</option><option value="full">Completa: mostrar todos los pasos</option></select></div>
+    <button id="reset">Restablecer preferencias</button><p id="preference-status" role="status"></p>
+  </dialog>
+  <noscript><p>Activa JavaScript para cargar el catálogo interactivo. El contenido académico está disponible en el archivo src/content.js.</p></noscript>
+</body>
+</html>
