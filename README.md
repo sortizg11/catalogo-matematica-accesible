@@ -1,10 +1,10 @@
-# Catálogo de Matemática · Prototipo 1.0
+# Cálculo Diferencial e Integral · Prototipo 1.1
 
 Aplicación estática en español para estudiar matemática con teclado, MathML y lector de pantalla. Primer curso: Cálculo Diferencial e Integral. Prioridad: estudiante ciega que utiliza NVDA y MathCAT en Windows.
 
 ## Contenido y alcance
 
-El directorio local inicial estaba vacío. Al conectar el repositorio indicado por el usuario se localizó **`Integrales-Primera-parte-accesible.html`**. Se conserva intacto; todavía no se ha migrado su contenido a los temas del prototipo. Las dos muestras originales de este prototipo están identificadas como provisionales y requieren revisión docente. Hay un tema de integración inmediata y uno de sustitución, cada uno con teoría, ejemplo, ejercicio, procedimiento y respuesta. Los otros cinco temas están pendientes y no tienen enlaces ficticios.
+El material revisado v3 está incorporado: noción intuitiva y concepto de integral indefinida reunidos en Introducción a las integrales, además de sustitución. Se conservan 12 relaciones, 13 ejemplos, 5 ejercicios y 115 pasos. Reglas permanece pendiente. El temario comienza con Límites y continuidad; por ahora hay contenido en la unidad 4.
 
 Incluye temario adaptable, centro de herramientas modal, ayuda y recorrido voluntario, ubicación explícita, continuación local, preferencias, lectura progresiva/completa y atajos opcionales desactivados inicialmente. No incluye el futuro Explorador estructural de integrales.
 
@@ -28,7 +28,7 @@ En el equipo de esta entrega, Node no está en el PATH y el comando python3 del 
 
 El servidor solo escucha en el equipo local. Para detenerlo, pulsa Control + C en esa terminal.
 
-Recorrido sugerido: «Estudiar sustitución» → «Ejemplos resueltos» → abrir pasos con Enter → «Práctica» → «Consultar la solución del ejercicio 1» → «Volver al ejercicio 1».
+Recorrido sugerido: «Integración por sustitución» → «Ejemplos resueltos» → abrir pasos con Enter → «Práctica» → «Consultar la solución del ejercicio 4» → «Volver al ejercicio 4».
 
 ## Pruebas reproducibles
 
@@ -57,15 +57,12 @@ Las pruebas no sustituyen una auditoría WCAG ni una sesión real con NVDA. Cons
 
 Lee `AGENTS.md`. Conserva los identificadores de temas y ejercicios: los fragmentos se comparten y guardan localmente. Al añadir contenido usa el contrato `topics` y el inventario `curriculum` de `src/content.js`, sin cambiar el motor de navegación. Registra el origen y cambios académicos. No uses cadenas procedentes del usuario como HTML: los contenidos son módulos locales de confianza.
 
-## Publicación posterior por HTTPS
+## Publicación y actualizaciones
 
-Repositorio del proyecto: [sortizg11/catalogo-matematica-accesible](https://github.com/sortizg11/catalogo-matematica-accesible). El código se guarda en GitHub; no se ha activado la publicación del sitio mediante GitHub Pages. Para publicar, primero incorporar/revisar el material original y obtener autorización de uso y audiencia. Ejecutar las pruebas y la evaluación Windows antes de declarar compatibilidad.
+Repositorio: [sortizg11/catalogo-matematica-accesible](https://github.com/sortizg11/catalogo-matematica-accesible).
 
-Si nunca has usado GitHub, consulta la [guía breve del repositorio](docs/guia-github.md). Puedes solicitar cambios desde el chat sin editar archivos manualmente en GitHub.
+Dirección del sitio: [Cálculo Diferencial e Integral](https://sortizg11.github.io/catalogo-matematica-accesible/).
 
-1. Preparar una carpeta de distribución con `index.html`, `styles.css` y `src/`. No incluir `node_modules`, informes, material privado ni archivos de desarrollo.
-2. GitHub Pages: subir esos archivos a un repositorio autorizado y configurar Pages para servir la carpeta o un artefacto de Actions. Habilitar HTTPS en la configuración. Los enlaces y recursos relativos permiten una subruta de repositorio.
-3. Cloudflare Pages: crear un proyecto estático autorizado y cargar esa carpeta como salida. No necesita comando de compilación. Verificar HTTPS y la audiencia antes de compartir.
-4. Probar enlaces profundos, almacenamiento y navegación en la URL final. No se requieren reglas de redirección de SPA: las rutas son fragmentos del mismo documento.
+Publicación autorizada por el usuario. GitHub Pages sirve la rama `main`, carpeta raíz `/`. `.nojekyll` permite servir directamente HTML, CSS y módulos JavaScript. Cada actualización de `main` desencadena una nueva publicación. No requiere base de datos, servidor de aplicación ni pago de dominio.
 
-Los proveedores pueden cambiar su configuración; revisar su documentación vigente cuando se autorice la publicación.
+Consulta [cómo publicar y actualizar paso a paso](docs/publicacion.md). La publicación no implica compatibilidad verificada con NVDA; la evaluación real en Windows sigue pendiente.

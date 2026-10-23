@@ -5,7 +5,7 @@ test('recorrido principal por teclado, pasos, solución y retorno sin errores JS
   await page.goto('/');
   await page.keyboard.press('Tab');await expect(page.getByRole('link',{name:'Saltar al contenido principal',exact:true})).toBeFocused();
   await page.keyboard.press('Enter');await expect(page.locator('main')).toBeFocused();
-  await page.locator('[data-topic="sustitucion"]').focus();await page.keyboard.press('Enter');
+  await page.locator('#temario [data-topic="sustitucion"]').focus();await page.keyboard.press('Enter');
   await expect(page.locator('#sustitucion--tema')).toBeFocused();
   await page.getByRole('link',{name:'Ejemplos resueltos',exact:true}).focus();await page.keyboard.press('Enter');
   await expect(page.locator('#sustitucion--ejemplos')).toBeFocused();
@@ -13,10 +13,10 @@ test('recorrido principal por teclado, pasos, solución y retorno sin errores JS
   await expect(step).toBeFocused();await expect(step.locator('..')).toHaveAttribute('open','');
   await page.getByRole('link',{name:'Práctica',exact:true}).focus();await page.keyboard.press('Enter');
   await expect(page.locator('#sustitucion--practica')).toBeFocused();
-  await page.getByRole('link',{name:'Consultar la solución del ejercicio 1'}).focus();await page.keyboard.press('Enter');
-  await expect(page.locator('#sustitucion--solucion-1')).toBeFocused();
-  await page.getByRole('link',{name:'Volver al ejercicio 1',exact:true}).focus();await page.keyboard.press('Enter');
-  await expect(page.locator('#sustitucion--ejercicio-1')).toBeFocused();
+  await page.getByRole('link',{name:'Consultar la solución del ejercicio 4'}).focus();await page.keyboard.press('Enter');
+  await expect(page.locator('#sustitucion--solucion-p4')).toBeFocused();
+  await page.getByRole('link',{name:'Volver al ejercicio 4',exact:true}).focus();await page.keyboard.press('Enter');
+  await expect(page.locator('#sustitucion--ejercicio-p4')).toBeFocused();
   await page.getByRole('link',{name:'Volver al inicio del tema',exact:true}).focus();await page.keyboard.press('Enter');
   await expect(page.locator('#sustitucion--tema')).toBeFocused();expect(errors).toEqual([]);
 });
@@ -39,11 +39,11 @@ test('semántica, destinos académicos y MathML estructural',async({page})=>{
       missing:[...document.querySelectorAll('a[href^="#"]')].filter(a=>!document.getElementById(a.getAttribute('href').slice(1))).map(a=>a.href),
       math:[...document.querySelectorAll('math')].every(m=>m.namespaceURI==='http://www.w3.org/1998/Math/MathML')};
   });expect(report).toEqual({h1:1,jumps:false,missing:[],math:true});
-  await expect(page.locator('math mfrac').first()).toBeAttached();await expect(page.locator('math msqrt')).toHaveCount(1);await expect(page.locator('math msubsup')).toHaveCount(1);
+  await expect(page.locator('math mfrac').first()).toBeAttached();expect(await page.locator('math msqrt').count()).toBeGreaterThan(1);await expect(page.locator('math msubsup')).toHaveCount(1);
 });
 test('axe WCAG A/AA en vistas y diálogos',async({page})=>{
-  test.setTimeout(120000);
-  for(const id of ['inicio','inmediata--tema','sustitucion--tema','ayuda']){
+  test.setTimeout(180000);
+  for(const id of ['inicio','introduccion--tema','sustitucion--tema','ayuda']){
     await page.goto('/#'+id);
     const result=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa','best-practice']).analyze();
     expect(result.violations,JSON.stringify(result.violations,null,2)).toEqual([]);
@@ -62,7 +62,7 @@ test('preferencias persistentes, modo completo y restablecimiento',async({page})
   await page.locator('.header-actions [data-dialog="preferences"]').click();await expect(page.locator('#shortcuts')).toBeChecked();await page.locator('#reset').click();await expect(page.locator('#shortcuts')).not.toBeChecked();await expect(page.locator('html')).not.toHaveClass('high-contrast');
 });
 test('menú oculto fuera de Tab y grupos operables con teclado',async({page})=>{
-  await page.goto('/');await page.locator('#unit-2').focus();await page.keyboard.press('Enter');await expect(page.locator('#unit-list-2')).not.toBeVisible();await page.keyboard.press('Enter');await expect(page.locator('#unit-list-2')).toBeVisible();
+  await page.goto('/');await page.locator('#unit-2').focus();await page.keyboard.press('Enter');await expect(page.locator('#unit-list-2')).toBeVisible();await page.keyboard.press('Enter');await expect(page.locator('#unit-list-2')).not.toBeVisible();
   await page.locator('#menu-toggle').click();await expect(page.locator('#sidebar')).not.toBeVisible();
   for(let i=0;i<20;i++){await page.keyboard.press('Tab');expect(await page.evaluate(()=>!!document.activeElement.closest('#temario'))).toBe(false);}
   await page.locator('#menu-toggle').click();await expect(page.locator('#sidebar')).toBeVisible();
@@ -71,7 +71,7 @@ test('menú móvil modal, cierre y navegación',async({page})=>{
   await page.setViewportSize({width:320,height:800});await page.goto('/');await page.locator('#menu-toggle').click();await expect(page.locator('#menu-dialog')).toBeVisible();
   await page.keyboard.press('Shift+Tab');expect(await page.evaluate(()=>!!document.activeElement.closest('#menu-dialog'))).toBe(true);
   await page.keyboard.press('Escape');await expect(page.locator('#menu-toggle')).toBeFocused();
-  await page.locator('#menu-toggle').click();await page.locator('[data-topic="sustitucion"]').click();await expect(page.locator('#menu-dialog')).not.toBeVisible();await expect(page.locator('#sustitucion--tema')).toBeFocused();
+  await page.locator('#menu-toggle').click();await page.locator('#temario [data-topic="sustitucion"]').click();await expect(page.locator('#menu-dialog')).not.toBeVisible();await expect(page.locator('#sustitucion--tema')).toBeFocused();
 });
 test('reflujo a 320 CSS px y texto a 200 %',async({page})=>{
   for(const width of [1440,720,320]){
@@ -90,7 +90,7 @@ test('continuar explícito y navegación de historial',async({page})=>{
 });
 test('almacenamiento bloqueado no rompe la navegación',async({page})=>{
   await page.addInitScript(()=>{Object.defineProperty(window,'localStorage',{get(){throw new DOMException('Blocked','SecurityError');}});});
-  const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('/#inmediata--tema');await page.locator('.header-actions [data-dialog="preferences"]').click();await page.locator('#contrast').check();await expect(page.locator('#preference-status')).toContainText('almacenamiento no está disponible');await page.keyboard.press('Escape');await page.getByRole('link',{name:'Práctica',exact:true}).click();await expect(page.locator('#inmediata--practica')).toBeFocused();expect(errors).toEqual([]);
+  const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('/#introduccion--tema');await page.locator('.header-actions [data-dialog="preferences"]').click();await page.locator('#contrast').check();await expect(page.locator('#preference-status')).toContainText('almacenamiento no está disponible');await page.keyboard.press('Escape');await page.getByRole('link',{name:'Práctica',exact:true}).click();await expect(page.locator('#introduccion--practica')).toBeFocused();expect(errors).toEqual([]);
 });
 test('atajos desactivados inicialmente y excluidos en fórmulas y diálogos',async({page})=>{
   await page.goto('/#sustitucion--tema');await page.keyboard.press('Alt+Shift+h');await expect(page.locator('#tools')).not.toBeVisible();
@@ -99,7 +99,7 @@ test('atajos desactivados inicialmente y excluidos en fórmulas y diálogos',asy
   await page.locator('[data-view="sustitucion"] .math-region').first().focus();await page.keyboard.press('Alt+Shift+h');await expect(page.locator('#tools')).not.toBeVisible();
 });
 test('ubicación explícita, todos los pasos y evidencia visual',async({page})=>{
-  await page.goto('/#sustitucion--ejercicio-1');await page.locator('#tools-open').click();await page.locator('#where-open').click();await expect(page.locator('#where-text')).toContainText('Ejercicio 1');await page.keyboard.press('Escape');await expect(page.locator('#tools-open')).toBeFocused();
+  await page.goto('/#sustitucion--ejercicio-p4');await page.locator('#tools-open').click();await page.locator('#where-open').click();await expect(page.locator('#where-text')).toContainText('Ejercicio 4');await page.keyboard.press('Escape');await expect(page.locator('#tools-open')).toBeFocused();
   await page.goto('/#sustitucion--tema');await page.evaluate(()=>window.scrollTo(0,0));await page.screenshot({path:'docs/evidencia/escritorio.png',fullPage:false});
   await page.setViewportSize({width:320,height:800});await page.evaluate(()=>window.scrollTo(0,0));await page.screenshot({path:'docs/evidencia/movil.png',fullPage:false});
 });

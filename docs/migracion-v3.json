@@ -1,0 +1,31 @@
+{
+  "source_sha256": "ca0a6d5f09b48d5784521c03f80bf238c5ad41abe17b7ecf91a45f644211d4b8",
+  "source_math_count": 184,
+  "omitted_rules_math_count": 3,
+  "relations": 12,
+  "examples": 13,
+  "exercises": 5,
+  "source_ids": [
+    "nocion",
+    "indefinida",
+    "sustitucion",
+    "e1a",
+    "e1b",
+    "e1c",
+    "e1d",
+    "e1e",
+    "e1f",
+    "e1g",
+    "e2",
+    "e3a",
+    "e3b",
+    "e4",
+    "e5",
+    "e6",
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5"
+  ]
+}

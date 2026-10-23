@@ -1,57 +1,62 @@
-import { mi, mn, mo, power, fraction, parens, integral, constant, formula } from './math.js';
-const x = mi('x'), u = mi('u'), eq = mo('='), plus = mo('+');
-const x2 = power(x, 2), inner = x2 + plus + mn(1);
-const substitution = mn(2) + x + parens(inner);
-const provisional = '<p class="provisional">Muestra académica provisional. Contenido creado para evaluar el prototipo. El material original ya está localizado en el repositorio; su integración y la revisión docente están pendientes.</p>';
-export const curriculum = [
-  {id:'1',title:'1. Integral indefinida',items:[
-    {label:'1.1 Antiderivadas y primitivas'},
-    {label:'1.2 Integral indefinida y constante de integración'},
-    {label:'1.3 Propiedades y reglas de integración'},
-    {label:'1.4 Integración inmediata',topic:'inmediata'}
-  ]},
-  {id:'2',title:'2. Técnicas de integración',items:[
-    {label:'2.1 Integración por sustitución',topic:'sustitucion'},
-    {label:'2.2 Integrales trigonométricas'},
-    {label:'2.3 Integración por fracciones parciales'}
-  ]}
-];
-export const topics = [
-  {
-    id:'inmediata', number:'1.4', title:'Integración inmediata', unit:'Unidad 1. Integral indefinida',
-    description:'Reconoce una regla conocida y encuentra una familia de primitivas.',
-    objective:'Aplicar la regla de la potencia y comprobar una primitiva mediante su derivada.',
-    theory:`<p>Integrar una función es encontrar sus primitivas: funciones cuya derivada es la función de partida. La constante de integración representa una familia de primitivas en un intervalo.</p><h3>La regla de la potencia</h3><p>Para un exponente entero no negativo n, sumamos uno al exponente y dividimos por el nuevo exponente. Esta versión de la regla es válida para todo x real.</p>${formula('regla de la potencia',integral(power(x,'n'))+eq+fraction(power(x,'n + 1'),mi('n')+plus+mn(1))+constant)}<p>En esta muestra solo utilizaremos polinomios. No se extiende esta regla al exponente −1.</p>`,
-    example:formula('inmediata, enunciado',integral(mn(3)+x2)),
-    steps:[['Identificar la potencia y extraer la constante',`<p>El integrando es tres veces x al cuadrado. Aplicamos la linealidad.</p>${formula('inmediata, paso 1',integral(mn(3)+x2)+eq+mn(3)+integral(x2))}`],['Aplicar la regla de la potencia',`<p>Sumamos uno al exponente y dividimos por tres.</p>${formula('inmediata, paso 2',mn(3)+fraction(power(x,3),mn(3))+constant+eq+power(x,3)+constant)}`],['Comprobar mediante la derivada',`<p>Para cualquier constante real C, la derivada devuelve el integrando.</p>${formula('inmediata, comprobación',fraction(mi('d'),mi('d')+x)+parens(power(x,3)+constant)+eq+mn(3)+x2)}`]],
-    result:formula('inmediata, resultado',integral(mn(3)+x2)+eq+power(x,3)+constant),
-    exercise:formula('inmediata, ejercicio 1',integral(mn(4)+power(x,3))),
-    solution:[['Integrar la potencia',formula('inmediata, solución 1',mn(4)+fraction(power(x,4),mn(4))+constant+eq+power(x,4)+constant)],['Verificar el resultado',`<p>La derivada de x a la cuarta más C es cuatro x al cubo. El resultado es válido para todo x real.</p>`]],
-    answer:formula('inmediata, respuesta',power(x,4)+constant)
-  },
-  {
-    id:'sustitucion', number:'2.1', title:'Integración por sustitución', unit:'Unidad 2. Técnicas de integración',
-    description:'Transforma una integral en otra más sencilla mediante un cambio de variable.',
-    objective:'Reconocer una función compuesta y su derivada para elegir una sustitución.',
-    theory:`<p>La sustitución utiliza la regla de la cadena en sentido inverso. Cuando aparece una función junto a su derivada, un cambio de variable puede simplificar la integral.</p><h3>Una nueva variable, la misma relación</h3><p>Elegimos u como la expresión interior. Calculamos su diferencial, reescribimos toda la integral en u e integramos. Al terminar, volvemos a la variable original y añadimos la constante.</p>${formula('relación de sustitución',u+eq+mi('g')+parens(x)+mo(',')+mi('d')+u+eq+power(mi('g'),'′')+parens(x)+mi('d')+x)}<p>La comprobación por derivación permite verificar que la primitiva obtenida corresponde al integrando original en el intervalo considerado.</p>`,
-    example:formula('sustitución, enunciado',integral(substitution)),
-    steps:[['Elegir la expresión interior',`<p>El factor 2x es la derivada de la expresión entre paréntesis. Elegimos:</p>${formula('sustitución, paso 1',u+eq+inner)}`],['Derivar la expresión utilizada en la sustitución',formula('sustitución, paso 2',mi('d')+u+eq+mn(2)+x+mi('d')+x)],['Reescribir e integrar en la nueva variable',`<p>Sustituimos ambos factores y aplicamos la regla de la potencia.</p>${formula('sustitución, paso 3',mo('∫')+u+mi('d')+u+eq+fraction(power(u,2),mn(2))+constant)}`],['Regresar a x y comprobar la primitiva',`${formula('sustitución, paso 4',fraction(power(parens(inner),2),mn(2))+constant)}<p>Por la regla de la cadena, su derivada es un medio por dos, por (x² + 1), por 2x: recuperamos el integrando. Válido para todo x real.</p>`]],
-    result:formula('sustitución, resultado',integral(substitution)+eq+fraction(power(parens(inner),2),mn(2))+constant),
-    exercise:formula('sustitución, ejercicio 1',integral(mn(2)+x+power(parens(x2+plus+mn(3)),2))),
-    solution:[['Elegir u y calcular su diferencial',formula('sustitución, solución 1',u+eq+x2+plus+mn(3)+mo(',')+mi('d')+u+eq+mn(2)+x+mi('d')+x)],['Integrar y regresar a la variable original',formula('sustitución, solución 2',mo('∫')+power(u,2)+mi('d')+u+eq+fraction(power(u,3),mn(3))+constant+eq+fraction(power(parens(x2+plus+mn(3)),3),mn(3))+constant)],['Comprobar por la regla de la cadena','<p>La derivada es un tercio por tres, por (x² + 3)², por 2x. Coincide con el integrando para todo x real.</p>']],
-    answer:formula('sustitución, respuesta',fraction(power(parens(x2+plus+mn(3)),3),mn(3))+constant)
-  }
-];
+import { academic } from './academic-content.js';
+export { help } from './help.js';
 export const sections = {tema:'Inicio del tema',teoria:'Teoría',ejemplos:'Ejemplos resueltos',practica:'Práctica',soluciones:'Soluciones'};
-function procedure(steps) {
-  return `<div class="procedure"><div class="procedure-header"><p>Consulta cada paso a tu ritmo.</p><button class="mode-toggle">Mostrar todos los pasos</button></div>${steps.map(([title,body],i)=>`<details class="step"><summary>Paso ${i+1}. ${title}</summary><div class="step-body">${body}</div></details>`).join('')}</div>`;
+import { curriculum, renderCurriculumItems } from './curriculum.js';
+export { curriculum } from './curriculum.js';
+export const topics = [
+  {id:'introduccion',number:'4.1',unit:curriculum[3].title,title:'Introducción a las integrales',
+    description:'Noción intuitiva, concepto de integral indefinida, ejemplos y práctica.',
+    objective:'Comprender la integración como búsqueda de una familia de primitivas, interpretar su notación y reconocer el papel de la constante C.',
+    readiness:'Recuerda cómo se deriva una función y qué ocurre al derivar una constante.',
+    ...academic.indefinite,
+    theory:'<h3>Noción intuitiva de integral</h3>' + academic.introduction.theory + '<h3>Concepto de integral indefinida</h3>' + academic.indefinite.theory.replaceAll('<h3>', '<h4>').replaceAll('</h3>', '</h4>'),
+    relations:academic.introduction.relations},
+  {id:'sustitucion',number:'4.3.1',unit:curriculum[3].title,title:'Integración por sustitución',
+    description:'Usa la regla de la cadena en sentido inverso y sigue cada cambio de variable.',
+    objective:'Reconocer una función interior y su derivada, cambiar la variable y el diferencial, y regresar a la variable original.',
+    readiness:'Recuerda la derivada de una composición. Puedes volver a la introducción a las integrales cuando lo necesites.',
+    ...academic.substitution}
+];
+export const routeAliases = {};
+for(const old of ['inmediata','indefinida']) {
+  for(const section of Object.keys(sections)) routeAliases[`${old}--${section}`]=`introduccion--${section}`;
 }
-export function renderTopic(t) {
-  return `<article data-view="${t.id}" hidden><p class="eyebrow">${t.unit} · Tema ${t.number}</p><h1 id="${t.id}--tema" tabindex="-1">${t.title}</h1><p class="lead">${t.description}</p>${provisional}<nav class="section-nav" aria-label="Secciones de ${t.title}">${Object.entries(sections).filter(([key])=>key!=='tema').map(([key,label])=>`<a href="#${t.id}--${key}">${label}</a>`).join('')}</nav>
-  <section class="academic-section" data-section="teoria"><h2 id="${t.id}--teoria" tabindex="-1"><span class="section-number" aria-hidden="true">01</span> Teoría</h2><div class="objective"><p><strong>Objetivo.</strong> ${t.objective}</p></div>${t.theory}</section>
-  <section class="academic-section" data-section="ejemplos"><h2 id="${t.id}--ejemplos" tabindex="-1"><span class="section-number" aria-hidden="true">02</span> Ejemplos resueltos</h2><h3 id="${t.id}--ejemplo-1" tabindex="-1">Ejemplo 1. ${t.id==='inmediata'?'Integrar un polinomio':'Reconocer una función y su derivada'}</h3><p>Calcula la siguiente integral indefinida, para x real.</p>${t.example}${procedure(t.steps)}<h3>Resultado</h3>${t.result}</section>
-  <section class="academic-section" data-section="practica"><h2 id="${t.id}--practica" tabindex="-1"><span class="section-number" aria-hidden="true">03</span> Práctica</h2><p>Intenta resolver el ejercicio antes de consultar el procedimiento.</p><nav class="practice-links" aria-label="Ejercicios de ${t.title}"><a href="#${t.id}--ejercicio-1">Ir al ejercicio 1</a></nav><h3 id="${t.id}--ejercicio-1" tabindex="-1">Ejercicio 1</h3><p>Encuentra una familia de primitivas y comprueba tu respuesta por derivación. Considera x real.</p>${t.exercise}<a href="#${t.id}--solucion-1">Consultar la solución del ejercicio 1</a></section>
-  <section class="academic-section" data-section="soluciones"><h2 id="${t.id}--soluciones" tabindex="-1"><span class="section-number" aria-hidden="true">04</span> Soluciones</h2><h3 id="${t.id}--solucion-1" tabindex="-1">Solución del ejercicio 1</h3>${procedure(t.solution)}<h3>Respuesta</h3>${t.answer}<div class="inline-actions"><a href="#${t.id}--ejercicio-1">Volver al ejercicio 1</a><a href="#${t.id}--tema">Volver al inicio del tema</a></div></section></article>`;
+for(const item of academic.indefinite.examples) routeAliases[`indefinida--ejemplo-${item.sourceId}`]=`introduccion--ejemplo-${item.sourceId}`;
+for(const item of academic.indefinite.exercises) for(const kind of ['ejercicio','solucion']) routeAliases[`indefinida--${kind}-${item.sourceId}`]=`introduccion--${kind}-${item.sourceId}`;
+Object.assign(routeAliases,{
+  'inmediata--ejemplo-1':'introduccion--ejemplo-e1a',
+  'inmediata--ejercicio-1':'introduccion--ejercicio-p1',
+  'inmediata--solucion-1':'introduccion--solucion-p1',
+  'sustitucion--ejemplo-1':'sustitucion--ejemplo-e2',
+  'sustitucion--ejercicio-1':'sustitucion--ejercicio-p4',
+  'sustitucion--solucion-1':'sustitucion--solucion-p4'
+});
+const sourceNote='<p class="source-note">Contenido del documento revisado v3. Se conservan la numeración, los dominios y las notas de revisión del material.</p>';
+function procedure(item){
+  return `<div class="procedure"><h4>Desarrollo paso a paso</h4><div class="procedure-header"><p>Abre los pasos que necesites; el resultado está disponible al final.</p><button class="mode-toggle">Mostrar todos los pasos</button></div>${item.steps.map(step=>`<details class="step"><summary>${step.title}</summary><div class="step-body">${step.body}</div></details>`).join('')}</div><h4>Resultado</h4>${item.answer}`;
 }
-export const home = `<article data-view="inicio"><p class="eyebrow">Cálculo Diferencial e Integral</p><h1 id="inicio" tabindex="-1">Un espacio para comprender las integrales.</h1><p class="lead">Teoría, ejemplos y práctica. Avanza a tu ritmo, con el teclado y con tu forma de leer matemáticas.</p><div class="inline-actions"><a class="primary-link" href="#sustitucion--tema">Estudiar sustitución</a><button data-continue>Continuar donde quedé</button></div>${provisional}<h2>Elige por dónde comenzar</h2><ul class="topic-list">${topics.map(t=>`<li><span class="tag">${t.unit} · ${t.number}</span><br><a href="#${t.id}--tema">${t.title} <span aria-hidden="true">→</span></a><p>${t.description}</p></li>`).join('')}</ul><h2>Tu lectura, a tu ritmo</h2><p>Abre los pasos que necesites o consulta el procedimiento completo. El centro de herramientas te permite cambiar de sección y consultar tu ubicación.</p><a href="#ayuda">Aprender a utilizar el Catálogo</a></article>`;
-export const help = `<article data-view="ayuda" hidden><p class="eyebrow">Ayuda y orientación</p><h1 id="ayuda" tabindex="-1">Aprender a utilizar el Catálogo</h1><p class="lead">Puedes recorrer todo el catálogo sin utilizar el ratón.</p><h2>Estructura y navegación</h2><ol class="help-list"><li>El primer enlace, «Saltar al contenido principal», evita recorrer la cabecera y el temario.</li><li>Usa «Mostrar temario» para abrirlo. Expande una unidad y elige un tema. En pantallas pequeñas se abre un diálogo; Escape lo cierra y devuelve el foco al botón.</li><li>En cada tema encontrarás enlaces a teoría, ejemplos, práctica y soluciones. Tab y Mayús + Tab recorren controles; Enter activa enlaces y botones.</li><li>«Abrir centro de herramientas» ofrece los mismos destinos y «¿Dónde estoy?». Escape cierra el diálogo sin cambiar de sección.</li><li>En los procedimientos, activa cada título de paso con Enter o Espacio. «Mostrar todos los pasos» cambia a lectura completa. La respuesta permanece disponible.</li><li>«Continuar donde quedé» recupera la última sección visitada, si el navegador permitió guardarla. Nunca se abre automáticamente al entrar.</li></ol><h2>NVDA y MathCAT</h2><p>En el modo exploración de NVDA, H y Mayús + H recorren encabezados; las teclas 1 a 6 permiten elegir el nivel. Estos son comandos del lector, no del catálogo.</p><p>Al llegar a una fórmula, utiliza la interacción matemática de NVDA (NVDA + Alt + M) o Espacio según tu versión y configuración. En MathCAT, las flechas exploran la estructura y Escape sale de la exploración. Consulta las guías oficiales para tu instalación. La aplicación no modifica el lector.</p><p><a href="https://download.nvaccess.org/documentation/userGuide.html">Guía oficial de NVDA</a> · <a href="https://daisy.github.io/MathCAT/users.html">Guía oficial de MathCAT</a></p><h2>Atajos opcionales</h2><p>Están desactivados inicialmente. Puedes activarlos en Preferencias tras revisar posibles conflictos, especialmente Alt + Shift para cambiar el idioma de Windows. No los actives si interfieren con tu configuración.</p><table><caption>Combinaciones candidatas: Alt + Shift más la letra indicada</caption><thead><tr><th>Letra</th><th>Destino</th></tr></thead><tbody><tr><td>H</td><td>Centro de herramientas</td></tr><tr><td>M</td><td>Mostrar u ocultar temario</td></tr><tr><td>T</td><td>Teoría</td></tr><tr><td>E</td><td>Ejemplos</td></tr><tr><td>P</td><td>Práctica</td></tr><tr><td>S</td><td>Soluciones</td></tr><tr><td>I</td><td>Inicio del tema</td></tr></tbody></table><h2>Recorrido inicial voluntario</h2><p>Sin audio ni avance automático. Puedes omitirlo o volver a esta ayuda para repetirlo.</p><ol><li><button id="tour-unit">Abrir la unidad de Técnicas de integración</button></li><li><a href="#sustitucion--ejemplo-1">Acceder al ejemplo de sustitución</a></li><li><a href="#sustitucion--practica">Ir directamente a la práctica</a></li></ol><a href="#inicio">Omitir el recorrido y volver al catálogo</a><h2>Pruebas de representación matemática</h2><p>Estos casos son de verificación técnica, no una unidad de integral definida. Las muestras polinómica y de sustitución están en los temas.</p><h3>Fracción: x distinto de cero</h3>${formula('prueba fracción',integral(fraction(mn(1),x)))}<h3>Radical: x mayor o igual que cero</h3>${formula('prueba radical',integral(`<msqrt>${x}</msqrt>`))}<h3>Integral definida: solo representación de límites</h3>${formula('prueba límites',`<msubsup>${mo('∫')}${mn(0)}${mn(1)}</msubsup>${x}${mi('d')}${x}`)}<p>No se ha verificado todavía el uso real con NVDA y MathCAT en Windows.</p></article>`;
+function indexList(topic,items,kind,label){
+  return `<nav class="item-index" aria-label="${label}"><p><strong>${label}</strong></p><ol>${items.map(item=>`<li><a href="#${topic}--${kind}-${item.sourceId}">${item.title}</a></li>`).join('')}</ol></nav>`;
+}
+function examples(t){
+  const relations = t.relations ? `<p>Lee cada relación en este orden: función original, derivada y familia de primitivas. Las relaciones 10, 11 y 12 permiten comparar distintas constantes.</p>${indexList(t.id,t.relations,'relacion','Relaciones de la noción intuitiva')}${t.relations.map(r=>`<div class="academic-item" data-source-id="${r.sourceId}"><h3 id="${t.id}--relacion-${r.sourceId}" tabindex="-1">${r.title}</h3>${r.body}<a href="#${t.id}--ejemplos">Volver al índice de relaciones</a></div>`).join('')}` : '';
+  return `${relations}<p>Conservamos la numeración del documento. El esquema de análisis precede al desarrollo y explica por qué se elige cada procedimiento.</p>${indexList(t.id,t.examples,'ejemplo','Índice de ejemplos')}${t.examples.map((e,i)=>`<div class="academic-item" data-source-id="${e.sourceId}"><h3 id="${t.id}--ejemplo-${e.sourceId}" tabindex="-1">${e.title}</h3>${e.statement}${e.review}${e.analysis}${procedure(e)}${e.notes}<div class="inline-actions"><a href="#${t.id}--ejemplos">Volver al índice de ejemplos</a>${t.examples[i+1]?`<a href="#${t.id}--ejemplo-${t.examples[i+1].sourceId}">Siguiente: ${t.examples[i+1].title}</a>`:''}</div></div>`).join('')}`;
+}
+function practice(t){
+  if(!t.exercises.length)return '<p>No hay ejercicios de práctica asignados a esta introducción. Puedes revisar las relaciones y continuar con el concepto de integral indefinida.</p>';
+  return `<p>Intenta resolver cada ejercicio antes de consultar el análisis y la solución. Atiende a su dominio real.</p>${indexList(t.id,t.exercises,'ejercicio','Índice de ejercicios')}${t.exercises.map(e=>`<div class="academic-item" data-source-id="${e.sourceId}"><h3 id="${t.id}--ejercicio-${e.sourceId}" tabindex="-1">${e.title}</h3>${e.statement}<div class="inline-actions"><a href="#${t.id}--solucion-${e.sourceId}">Consultar la solución del ejercicio ${e.sourceId.slice(1)}</a><a href="#${t.id}--practica">Volver al índice de ejercicios</a></div></div>`).join('')}`;
+}
+function solutions(t){
+  if(!t.exercises.length)return '<p>No hay soluciones de práctica asignadas a esta introducción. Las familias de primitivas aparecen en las relaciones de la sección de ejemplos.</p>';
+  return `${indexList(t.id,t.exercises,'solucion','Índice de soluciones')}${t.exercises.map(e=>`<div class="academic-item" data-source-id="${e.sourceId}"><h3 id="${t.id}--solucion-${e.sourceId}" tabindex="-1">Solución. ${e.title}</h3>${e.review}${e.analysis}${procedure(e)}${e.notes}<div class="inline-actions"><a href="#${t.id}--ejercicio-${e.sourceId}">Volver al ejercicio ${e.sourceId.slice(1)}</a><a href="#${t.id}--soluciones">Volver al índice de soluciones</a></div></div>`).join('')}`;
+}
+export function renderTopic(t){
+  const position=topics.indexOf(t),previous=topics[position-1],next=topics[position+1];
+  return `<article data-view="${t.id}" hidden><p class="eyebrow">${t.unit} · Tema ${t.number}</p><h1 id="${t.id}--tema" tabindex="-1">${t.title}</h1><p class="lead">${t.description}</p>${sourceNote}<nav class="section-nav" aria-label="Secciones de ${t.title}">${Object.entries(sections).filter(([key])=>key!=='tema').map(([key,label])=>`<a href="#${t.id}--${key}">${label}</a>`).join('')}</nav>
+  <section class="academic-section" data-section="teoria"><h2 id="${t.id}--teoria" tabindex="-1"><span class="section-number" aria-hidden="true">01</span> Teoría</h2><div class="objective"><p><strong>Objetivo.</strong> ${t.objective}</p></div><p><strong>Antes de comenzar.</strong> ${t.readiness}</p>${t.theory}${t.id==='introduccion'?'<h3 id="introduccion--reglas" tabindex="-1">Reglas de integración</h3><p>Pendiente de contenido.</p>':''}</section>
+  <section class="academic-section" data-section="ejemplos"><h2 id="${t.id}--ejemplos" tabindex="-1"><span class="section-number" aria-hidden="true">02</span> Ejemplos resueltos</h2>${examples(t)}</section>
+  <section class="academic-section" data-section="practica"><h2 id="${t.id}--practica" tabindex="-1"><span class="section-number" aria-hidden="true">03</span> Práctica</h2>${practice(t)}</section>
+  <section class="academic-section" data-section="soluciones"><h2 id="${t.id}--soluciones" tabindex="-1"><span class="section-number" aria-hidden="true">04</span> Soluciones</h2>${solutions(t)}</section>
+  <nav class="topic-navigation" aria-label="Continuar el estudio"><a href="#${t.id}--tema">Volver al inicio del tema</a>${previous?`<a href="#${previous.id}--tema">Anterior: ${previous.title}</a>`:''}${next?`<a href="#${next.id}--tema">Siguiente tema disponible: ${next.title}</a>`:''}</nav></article>`;
+}
+export const home = `<article data-view="inicio"><h1 id="inicio" tabindex="-1">Cálculo Diferencial e Integral</h1><div class="inline-actions"><button data-continue>Continuar donde quedé</button></div><h2>Contenido disponible</h2><p>Unidad 4. Integral indefinida</p><ol class="topic-list">${topics.map(t=>`<li><h3><a href="#${t.id}--tema">${t.title}</a></h3><p>${t.description}</p></li>`).join('')}</ol><p>El temario reúne las seis unidades del curso. Los apartados sin material están identificados como pendientes.</p><a href="#ayuda">Ayuda para utilizar el curso</a></article>`;

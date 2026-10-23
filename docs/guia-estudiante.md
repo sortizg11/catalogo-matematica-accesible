@@ -1,6 +1,6 @@
 # Aprender a utilizar el Catálogo
 
-El prototipo contiene dos muestras provisionales: integración inmediata e integración por sustitución. El resto del temario está pendiente de contenido. No necesitas una cuenta.
+El curso incorpora el documento revisado v3: noción intuitiva, concepto de integral indefinida y sustitución, con ejemplos y práctica. Reglas y los demás contenidos del programa permanecen pendientes. No necesitas una cuenta.
 
 ## Comenzar
 
@@ -20,6 +20,8 @@ En la práctica, «Consultar la solución del ejercicio 1» lleva al procedimien
 
 «¿Dónde estoy?» muestra el curso, unidad, tema y sección, con el ejemplo o ejercicio cuando se identificó. No anuncia cada movimiento. «Continuar donde quedé» recupera el último encabezado académico guardado en este navegador. El guardado se basa en enlaces y en los encabezados visibles; puede no coincidir exactamente con la posición del cursor del lector. No hay recuperación automática al abrir la página.
 
+El guardado es automático y local: no hay que pulsar Guardar. La referencia no se sincroniza entre dispositivos o navegadores y puede perderse al borrar los datos del sitio o al terminar una sesión privada. No guarda respuestas, progreso de aprendizaje ni el paso exacto de una fórmula. Si el almacenamiento está bloqueado, el curso sigue funcionando, pero el punto puede no conservarse.
+
 ## Personalizar
 
 En Preferencias puedes ajustar fuente, alto contraste, temario en escritorio y modo de lectura. Los cambios se guardan localmente si el navegador lo permite. Si no, puedes seguir trabajando en la sesión. «Restablecer preferencias» recupera los valores iniciales. En pantallas pequeñas el temario siempre comienza cerrado.
@@ -34,4 +36,4 @@ La compatibilidad real de este prototipo con NVDA todavía debe evaluarse en Win
 
 ## Recorrido voluntario
 
-En Ayuda puedes abrir la unidad de Técnicas de integración, acceder al ejemplo de sustitución e ir directamente a la práctica. Puedes omitir estas actividades o repetirlas en cualquier momento.
+En Ayuda puedes abrir Integral indefinida y consultar sus técnicas, acceder al ejemplo de sustitución e ir directamente a la práctica. Puedes omitir estas actividades o repetirlas en cualquier momento.

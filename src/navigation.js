@@ -1,14 +1,15 @@
-import { topics, sections, curriculum } from './content.js';
+import { topics, sections, curriculum, routeAliases } from './content.js';
+import { renderCurriculumItems, topicInUnit } from './curriculum.js';
 import { read, write } from './storage.js';
 import { prefs, setPreference } from './preferences.js';
 import { openDialog, closeDialog } from './dialogs.js';
 export const narrow = matchMedia('(max-width:64rem)');
-let currentTopic = 'sustitucion';
+let currentTopic = 'introduccion';
 let locationId = 'inicio';
 let observer;
 export const topicId = () => currentTopic;
 export function buildNavigation() {
-  document.querySelector('#nav-slot').innerHTML = `<nav class="syllabus" id="temario" aria-label="Temario académico"><p class="nav-kicker">Tu curso</p><p class="course-name">Cálculo Diferencial<br>e Integral</p>${curriculum.map(unit=>`<button class="unit-toggle" id="unit-${unit.id}" aria-expanded="true" aria-controls="unit-list-${unit.id}">${unit.title}</button><ul id="unit-list-${unit.id}">${unit.items.map(({label,topic:id})=>`<li>${id?`<a data-topic="${id}" href="#${id}--tema">${label}<span class="current-tag" hidden>Tema actual</span></a>`:`<span class="pending">${label}<small>Pendiente de contenido</small></span>`}</li>`).join('')}</ul>`).join('')}<a href="#inicio">Volver al catálogo</a></nav>`;
+  document.querySelector('#nav-slot').innerHTML = `<nav class="syllabus" id="temario" aria-label="Temario académico"><p class="nav-kicker">Tu curso</p><p class="course-name">Cálculo Diferencial<br>e Integral</p>${curriculum.map(unit=>`<button class="unit-toggle" id="unit-${unit.id}" aria-expanded="${unit.id==='4'}" aria-controls="unit-list-${unit.id}">${unit.title}</button><ul id="unit-list-${unit.id}" ${unit.id==='4'?'':'hidden'}>${renderCurriculumItems(unit.items)}</ul>`).join('')}<a href="#inicio">Volver al catálogo</a></nav>`;
   document.querySelectorAll('.unit-toggle').forEach(button=>button.addEventListener('click',()=> {
     const open = button.getAttribute('aria-expanded') !== 'true';
     button.setAttribute('aria-expanded',String(open));document.getElementById(button.getAttribute('aria-controls')).hidden=!open;
@@ -34,13 +35,19 @@ export function toggleMenu() {
 }
 function remember(id) { locationId=id;if(topics.some(t=>id.startsWith(t.id+'--'))) write('last-location',id); }
 export function go(id, focus=true) {
+  if(routeAliases[id]) {id=routeAliases[id];history.replaceState(null,'',`#${id}`);}
   const destination = document.getElementById(id);
   const view = destination?.closest('[data-view]');
   if(!view) return false;
   document.querySelectorAll('dialog[open]').forEach(dialog=>closeDialog(dialog,false));
   document.querySelectorAll('[data-view]').forEach(el=>el.hidden=el!==view);
   const topic=topics.find(t=>t.id===view.dataset.view);
-  if(topic) currentTopic=topic.id;
+  if(topic) {
+    currentTopic=topic.id;
+    const unit=curriculum.find(unit=>topicInUnit(unit,topic.id));
+    document.getElementById(`unit-${unit.id}`).setAttribute('aria-expanded','true');
+    document.getElementById(`unit-list-${unit.id}`).hidden=false;
+  }
   document.querySelectorAll('[data-topic]').forEach(link=>{
     const active=link.dataset.topic===topic?.id;
     if(active)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current');
@@ -48,7 +55,7 @@ export function go(id, focus=true) {
   });
   document.querySelectorAll('[data-section][href]').forEach(link=>link.href=`#${currentTopic}--${link.dataset.section}`);
   document.getElementById('breadcrumbs').innerHTML=`<ol><li><a href="#inicio">Catálogo</a></li><li>Cálculo Diferencial e Integral</li>${topic?`<li>${topic.unit}</li><li aria-current="page">${topic.number}</li>`:''}</ol>`;
-  document.title=`${topic?.title || (id==='ayuda'?'Ayuda':'Inicio')} · Catálogo de Matemática`;
+  document.title=`${topic?.title || (id==='ayuda'?'Ayuda':'Inicio')} · Cálculo Diferencial e Integral`;
   if(focus) {destination.focus();destination.scrollIntoView({block:'start'});}
   remember(id);
   observer?.disconnect();
@@ -60,7 +67,8 @@ export function navigate(id) {
   else location.hash=id;
 }
 export function continueStudy() {
-  const last=read('last-location',null);
+  const saved=read('last-location',null);
+  const last=routeAliases[saved] || saved;
   if(typeof last==='string' && topics.some(t=>last.startsWith(t.id+'--')) && document.getElementById(last))navigate(last);
   else openDialog('resume');
 }
@@ -93,7 +101,7 @@ export function initNavigation() {
   document.getElementById('tour-unit').addEventListener('click',()=>{
     if(narrow.matches)openDialog('menu-dialog',document.getElementById('tour-unit'));
     else if(!prefs.menu)setPreference('menu',true);
-    const button=document.getElementById('unit-2');button.setAttribute('aria-expanded','true');document.getElementById('unit-list-2').hidden=false;button.focus();updateMenuButton();
+    const button=document.getElementById('unit-4');button.setAttribute('aria-expanded','true');document.getElementById('unit-list-4').hidden=false;button.focus();updateMenuButton();
   });
   narrow.addEventListener('change',syncMenu);
   document.addEventListener('preferenceschange',syncMenu);
