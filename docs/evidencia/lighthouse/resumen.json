@@ -1,0 +1,178 @@
+[
+  {
+    "route": "inicio",
+    "profile": "mobile",
+    "requestedUrl": "http://127.0.0.1:4173/#inicio",
+    "finalUrl": "http://127.0.0.1:4173/#inicio",
+    "version": "13.5.0",
+    "fetchTime": "2026-10-27T19:17:58.732Z",
+    "score": 1,
+    "failures": [],
+    "manual": [
+      "custom-controls-labels",
+      "custom-controls-roles",
+      "focus-traps",
+      "focusable-controls",
+      "interactive-element-affordance",
+      "logical-tab-order",
+      "managed-focus",
+      "offscreen-content-hidden",
+      "use-landmarks",
+      "visual-order-follows-dom"
+    ]
+  },
+  {
+    "route": "introduccion--concepto",
+    "profile": "mobile",
+    "requestedUrl": "http://127.0.0.1:4173/#introduccion--concepto",
+    "finalUrl": "http://127.0.0.1:4173/#introduccion--concepto",
+    "version": "13.5.0",
+    "fetchTime": "2026-10-27T19:18:23.539Z",
+    "score": 1,
+    "failures": [],
+    "manual": [
+      "custom-controls-labels",
+      "custom-controls-roles",
+      "focus-traps",
+      "focusable-controls",
+      "interactive-element-affordance",
+      "logical-tab-order",
+      "managed-focus",
+      "offscreen-content-hidden",
+      "use-landmarks",
+      "visual-order-follows-dom"
+    ]
+  },
+  {
+    "route": "sustitucion--ejemplo-e2",
+    "profile": "mobile",
+    "requestedUrl": "http://127.0.0.1:4173/#sustitucion--ejemplo-e2",
+    "finalUrl": "http://127.0.0.1:4173/#sustitucion--ejemplo-e2",
+    "version": "13.5.0",
+    "fetchTime": "2026-10-27T19:18:43.867Z",
+    "score": 1,
+    "failures": [],
+    "manual": [
+      "custom-controls-labels",
+      "custom-controls-roles",
+      "focus-traps",
+      "focusable-controls",
+      "interactive-element-affordance",
+      "logical-tab-order",
+      "managed-focus",
+      "offscreen-content-hidden",
+      "use-landmarks",
+      "visual-order-follows-dom"
+    ]
+  },
+  {
+    "route": "ayuda",
+    "profile": "mobile",
+    "requestedUrl": "http://127.0.0.1:4173/#ayuda",
+    "finalUrl": "http://127.0.0.1:4173/#ayuda",
+    "version": "13.5.0",
+    "fetchTime": "2026-10-27T19:19:01.295Z",
+    "score": 1,
+    "failures": [],
+    "manual": [
+      "custom-controls-labels",
+      "custom-controls-roles",
+      "focus-traps",
+      "focusable-controls",
+      "interactive-element-affordance",
+      "logical-tab-order",
+      "managed-focus",
+      "offscreen-content-hidden",
+      "use-landmarks",
+      "visual-order-follows-dom"
+    ]
+  },
+  {
+    "route": "inicio",
+    "profile": "desktop",
+    "requestedUrl": "http://127.0.0.1:4173/#inicio",
+    "finalUrl": "http://127.0.0.1:4173/#inicio",
+    "version": "13.5.0",
+    "fetchTime": "2026-10-27T19:19:17.866Z",
+    "score": 1,
+    "failures": [],
+    "manual": [
+      "custom-controls-labels",
+      "custom-controls-roles",
+      "focus-traps",
+      "focusable-controls",
+      "interactive-element-affordance",
+      "logical-tab-order",
+      "managed-focus",
+      "offscreen-content-hidden",
+      "use-landmarks",
+      "visual-order-follows-dom"
+    ]
+  },
+  {
+    "route": "introduccion--concepto",
+    "profile": "desktop",
+    "requestedUrl": "http://127.0.0.1:4173/#introduccion--concepto",
+    "finalUrl": "http://127.0.0.1:4173/#introduccion--concepto",
+    "version": "13.5.0",
+    "fetchTime": "2026-10-27T19:19:36.885Z",
+    "score": 1,
+    "failures": [],
+    "manual": [
+      "custom-controls-labels",
+      "custom-controls-roles",
+      "focus-traps",
+      "focusable-controls",
+      "interactive-element-affordance",
+      "logical-tab-order",
+      "managed-focus",
+      "offscreen-content-hidden",
+      "use-landmarks",
+      "visual-order-follows-dom"
+    ]
+  },
+  {
+    "route": "sustitucion--ejemplo-e2",
+    "profile": "desktop",
+    "requestedUrl": "http://127.0.0.1:4173/#sustitucion--ejemplo-e2",
+    "finalUrl": "http://127.0.0.1:4173/#sustitucion--ejemplo-e2",
+    "version": "13.5.0",
+    "fetchTime": "2026-10-27T19:19:54.844Z",
+    "score": 1,
+    "failures": [],
+    "manual": [
+      "custom-controls-labels",
+      "custom-controls-roles",
+      "focus-traps",
+      "focusable-controls",
+      "interactive-element-affordance",
+      "logical-tab-order",
+      "managed-focus",
+      "offscreen-content-hidden",
+      "use-landmarks",
+      "visual-order-follows-dom"
+    ]
+  },
+  {
+    "route": "ayuda",
+    "profile": "desktop",
+    "requestedUrl": "http://127.0.0.1:4173/#ayuda",
+    "finalUrl": "http://127.0.0.1:4173/#ayuda",
+    "version": "13.5.0",
+    "fetchTime": "2026-10-27T19:20:23.390Z",
+    "score": 1,
+    "failures": [],
+    "manual": [
+      "custom-controls-labels",
+      "custom-controls-roles",
+      "focus-traps",
+      "focusable-controls",
+      "interactive-element-affordance",
+      "logical-tab-order",
+      "managed-focus",
+      "offscreen-content-hidden",
+      "use-landmarks",
+      "visual-order-follows-dom"
+    ]
+  }
+]

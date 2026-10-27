@@ -19,23 +19,30 @@
         <div class="institution-content"><p>Escuela de Matemática - Departamento de Orientación y Psicología</p><p>Tecnológico de Costa Rica</p></div>
       </details>
     </div>
-    <div class="header-actions"><button id="menu-toggle" aria-expanded="true" aria-controls="temario">Ocultar temario</button><button id="tools-open" class="primary">Abrir centro de herramientas</button><a href="#ayuda">Ayuda</a><button data-dialog="preferences">Preferencias</button></div>
+    <div class="header-actions"><button id="menu-toggle" aria-expanded="true" aria-controls="temario">Ocultar temario</button><button id="tools-open" class="primary">Abrir centro de herramientas</button><button data-dialog="search">Buscar contenidos</button><a href="#ayuda">Ayuda</a><button data-dialog="preferences">Preferencias</button></div>
   </header>
   <div class="layout">
     <aside id="sidebar"><div id="nav-slot"></div></aside>
     <main id="contenido" tabindex="-1">
       <nav aria-label="Ruta académica" class="breadcrumbs" id="breadcrumbs"></nav>
       <div id="views"></div>
-      <footer>Cálculo Diferencial e Integral <span>Prototipo 1.1 · Material revisado v3</span></footer>
+      <footer>Cálculo Diferencial e Integral <span>Prototipo 1.2</span></footer>
     </main>
   </div>
   <dialog id="menu-dialog" aria-labelledby="menu-title"><div class="dialog-head"><h2 id="menu-title">Temario del curso</h2><button data-close>Cerrar temario</button></div><div id="mobile-nav-slot"></div></dialog>
   <dialog id="tools" aria-labelledby="tools-title"><div class="dialog-head"><h2 id="tools-title">Centro de herramientas</h2><button data-close>Cerrar</button></div><p>Elige adónde quieres ir.</p><div class="tool-list">
     <a href="#inicio">Inicio del catálogo</a><a data-section="tema" href="#inicio">Inicio del tema</a><a data-section="teoria" href="#inicio">Teoría</a><a data-section="ejemplos" href="#inicio">Ejemplos resueltos</a><a data-section="practica" href="#inicio">Práctica</a><a data-section="soluciones" href="#inicio">Soluciones</a>
-    <button id="tools-menu">Mostrar u ocultar temario</button><button id="where-open">¿Dónde estoy?</button><button data-continue>Continuar donde quedé</button><a href="#ayuda">Aprender a utilizar el Catálogo</a><button data-dialog="preferences">Abrir preferencias</button>
+    <button id="tools-menu">Mostrar u ocultar temario</button><button id="where-open">¿Dónde estoy?</button><button id="save-current">Guardar ubicación conocida</button><button data-continue>Continuar donde quedé</button><a href="#ayuda">Aprender a utilizar el Catálogo</a><button data-dialog="preferences">Abrir preferencias</button>
   </div><p class="muted">Los atajos opcionales se activan en Preferencias.</p></dialog>
-  <dialog id="where" aria-labelledby="where-title"><div class="dialog-head"><h2 id="where-title">¿Dónde estoy?</h2><button data-close>Cerrar</button></div><p id="where-text"></p></dialog>
-  <dialog id="resume" aria-labelledby="resume-title"><h2 id="resume-title">Continuar estudiando</h2><p>Todavía no hay un punto guardado. Selecciona un tema para comenzar.</p><button data-close>Cerrar</button></dialog>
+  <dialog id="where" aria-labelledby="where-title"><div class="dialog-head"><h2 id="where-title">¿Dónde estoy?</h2><button data-close>Cerrar</button></div><p id="where-text" tabindex="-1" data-initial-focus></p><p>Esta es la última ubicación seleccionada o enfocada en el catálogo. No representa necesariamente la posición del cursor virtual de NVDA. Puedes guardar un punto desde el apartado o paso que estés estudiando.</p><button id="where-return">Volver a esta ubicación</button></dialog>
+  <dialog id="resume" aria-labelledby="resume-title"><h2 id="resume-title">Continuar estudiando</h2><p>Todavía no hay un punto guardado. Selecciona un tema o utiliza «Guardar este punto de estudio» en un apartado.</p><button data-close>Cerrar</button></dialog>
+  <dialog id="saved" aria-labelledby="saved-title"><div class="dialog-head"><h2 id="saved-title">Punto de estudio</h2><button data-close>Cerrar</button></div><p id="saved-text" tabindex="-1" data-initial-focus></p></dialog>
+  <dialog id="search" aria-labelledby="search-title"><div class="dialog-head"><h2 id="search-title">Buscar contenidos</h2><button data-close>Cerrar</button></div>
+    <form id="search-form"><label for="search-query">Título, apartado o número de ejemplo</label><input id="search-query" type="search" data-initial-focus autocomplete="off"><button type="submit">Buscar</button></form>
+    <p id="voice-note">También puedes dictar un título, como «Integración por sustitución». El micrófono solo se activa al pulsar «Buscar por voz». Según el navegador, el audio puede enviarse a su proveedor para reconocerlo. El catálogo no guarda grabaciones ni consultas. Si hay un único destino, se abrirá directamente.</p>
+    <div class="inline-actions"><button id="voice-start" aria-describedby="voice-note">Buscar por voz</button><button id="voice-stop" hidden>Cancelar escucha</button></div>
+    <p id="search-status" role="status"></p><ul id="search-results"></ul>
+  </dialog>
   <dialog id="preferences" aria-labelledby="preferences-title"><div class="dialog-head"><h2 id="preferences-title">Preferencias de lectura</h2><button data-close>Cerrar</button></div>
     <p>Los cambios se aplican al elegirlos y se guardan en este navegador cuando es posible.</p>
     <div class="field"><label><input id="shortcuts" type="checkbox"> Activar atajos personalizados</label><p id="shortcut-note">Provisionales: Alt + Shift + H, M, T, E, P, S, I. Pueden coincidir con el cambio de idioma de Windows, el navegador o tecnologías de asistencia. Pruébalos antes de usarlos; todos tienen alternativa con enlaces y botones. No se capturan al editar ni dentro de fórmulas o diálogos.</p></div>

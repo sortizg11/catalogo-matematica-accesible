@@ -3,3 +3,6 @@ test-results/
 playwright-report/
 .DS_Store
 .pnpm-store/
+
+tmp/
+__pycache__/

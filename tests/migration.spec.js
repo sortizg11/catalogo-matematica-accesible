@@ -17,7 +17,7 @@ test('ejemplos originales, todos los pasos y dominios en su unidad',async({page}
     await expect(block).toContainText('Dominio real:');
     await expect(block.locator('.step[open]')).toHaveCount(0);
   }
-  await page.getByRole('link',{name:'Ejemplo 3 segunda aparición Raíz de uno más x al cuadrado',exact:true}).first().click();
+  await page.getByRole('link',{name:'Ejemplo 3 b Raíz de uno más x al cuadrado',exact:true}).first().click();
   await expect(page.locator('#sustitucion--ejemplo-e3b')).toBeFocused();
   await page.locator('#sustitucion--ejemplo-e3b').locator('..').getByRole('button',{name:'Mostrar todos los pasos'}).click();
   expect(await page.locator('details.step:not([open])').count()).toBe(0);

@@ -10,6 +10,7 @@ import hashlib
 import json
 import re
 from source_html import Document
+from editorial import edit
 
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE = ROOT / 'materials/Integrales-completo-revisado-v3.html'
@@ -23,6 +24,7 @@ def is_return(node):
     return 'href="#indice"' in node.raw(source)
 
 def transform(html, context, heading_level=None):
+    html = edit(html)
     # Cambiar solo envoltorios HTML. El contenido <math> permanece byte a byte.
     if re.search(r'<script\b|\son\w+\s*=|javascript:', html, re.I):
         raise ValueError('Contenido activo no permitido en la importación')
@@ -35,7 +37,7 @@ def transform(html, context, heading_level=None):
     def region(match):
         nonlocal index
         index += 1
-        label = escape(f'Expresión matemática. {context}. {index}', quote=True)
+        label = escape(f'Expresión matemática {index}', quote=True)
         return f'<div class="math-region" tabindex="0" role="region" aria-label="{label}">'
     return re.sub(r'<div class="formula">', region, html)
 
@@ -45,7 +47,7 @@ def material(id):
     heading = nodes[0]
     analysis = next(n for n in nodes if n.attrs.get('class') == 'analisis')
     steps_node = next(n for n in nodes if n.tag == 'ol' and n.attrs.get('class') == 'pasos')
-    title = heading.text(source)
+    title = edit(heading.text(source))
     before = [n for n in nodes[1:nodes.index(analysis)] if not is_return(n)]
     revision = [n for n in before if 'Nota de revisión:' in n.text(source)]
     before = [n for n in before if n not in revision]

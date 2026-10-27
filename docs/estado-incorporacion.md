@@ -1,4 +1,6 @@
-# Estado de incorporación del documento revisado v3
+# Registro histórico de incorporación del documento revisado v3
+
+Este registro describe la versión 1.1. Para el comportamiento vigente de marcadores, voz y pruebas, consultar `intervencion-piloto-1.md` y `guia-estudiante.md`.
 
 Versión preparada para publicación autorizada en GitHub Pages. El estado del despliegue se consulta en Actions del repositorio.
 

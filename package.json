@@ -1,8 +1,16 @@
 {
   "name": "catalogo-matematica-accesible",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "private": true,
   "type": "module",
-  "scripts": { "start": "node scripts/serve.mjs", "test": "playwright test" },
-  "devDependencies": { "@playwright/test": "1.56.1", "@axe-core/playwright": "4.11.0" }
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "test": "playwright test",
+    "audit:accessibility": "node scripts/audit-accessibility.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.11.0",
+    "@playwright/test": "1.56.1",
+    "lighthouse": "13.5.0"
+  }
 }

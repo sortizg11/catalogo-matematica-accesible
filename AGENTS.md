@@ -18,3 +18,7 @@
 - No implementar el Explorador estructural de integrales hasta recibir especificación docente.
 
 - La introducción matemática reúne noción intuitiva y concepto de integral indefinida, con todos sus ejemplos y ejercicios. Después figuran Reglas de integración pendiente y Técnicas de integración. No agregar una introducción general al curso ni duplicar el programa completo en la portada sin solicitud.
+
+- La búsqueda por voz es opcional y se activa solo por botón. Usa los mismos destinos que la búsqueda escrita; no sintetiza otra voz. Cancelar/cerrar debe abortar la escucha y descartar resultados tardíos. Mantener alternativa escrita y explicar el posible procesamiento del navegador.
+- No inferir el cursor virtual de NVDA desde el desplazamiento visual. Los marcadores explícitos tienen prioridad y no se sobrescriben al desplazar la pantalla.
+- Lighthouse y axe son diagnósticos parciales: no declarar acreditación ni nivel AA a partir de sus puntuaciones. Registrar pruebas reales de NVDA y micrófono por separado de simulaciones.

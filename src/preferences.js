@@ -1,5 +1,6 @@
 import { read, write } from './storage.js';
 export const defaults = { shortcuts:false, menu:true, font:'100', contrast:false, mode:'progressive' };
+let appliedMode;
 const saved = read('preferences', {});
 export const prefs = { ...defaults };
 for (const key of ['shortcuts','menu','contrast']) if (typeof saved?.[key] === 'boolean') prefs[key] = saved[key];
@@ -13,7 +14,8 @@ export function applyPreferences() {
   document.querySelector('#font-size').value = prefs.font;
   document.querySelector('#contrast').checked = prefs.contrast;
   document.querySelector('#reading-mode').value = prefs.mode;
-  document.querySelectorAll('.step').forEach(el => el.open = prefs.mode === 'full');
+  if(appliedMode !== prefs.mode) document.querySelectorAll('.step').forEach(el => el.open = prefs.mode === 'full');
+  appliedMode = prefs.mode;
   document.querySelectorAll('.mode-toggle').forEach(el => {el.textContent = prefs.mode === 'full' ? 'Consultar por pasos' : 'Mostrar todos los pasos';});
   document.dispatchEvent(new Event('preferenceschange'));
 }

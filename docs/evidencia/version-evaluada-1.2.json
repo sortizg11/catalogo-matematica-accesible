@@ -1,0 +1,62 @@
+[
+  {
+    "path": "index.html",
+    "sha256": "a37225aa49ae7c07c0dfc9d3b7fd6befe0dc8201cd3a4ffcf962da7177459cc8"
+  },
+  {
+    "path": "styles.css",
+    "sha256": "d54e05d7ed371ff08d0620e73410644ee099cfccf4a26de2dba2013abba77541"
+  },
+  {
+    "path": "src/academic-content.js",
+    "sha256": "151016042ade83935bfb8d028b747393bde0a6e7bcb65385259746855cefef22"
+  },
+  {
+    "path": "src/app.js",
+    "sha256": "4acee09aaaeb1ae8c248df4a1c027026fa394157eccba34565e4808275ef3bb8"
+  },
+  {
+    "path": "src/content.js",
+    "sha256": "67c93c030f2512b6aa9afc8459b83a780bd25359c83de818d7c00380e4191bda"
+  },
+  {
+    "path": "src/curriculum.js",
+    "sha256": "dde14380f3dd49435dc897cfa1331c814e475d4d197399930ec7c9a33b016854"
+  },
+  {
+    "path": "src/dialogs.js",
+    "sha256": "f60683241a6e653aa33d288d3a90fc01e2f66d8ad8229662ab508f4851c9cf69"
+  },
+  {
+    "path": "src/help.js",
+    "sha256": "49b1e4491c78e37f3ad7b404dec55f4525731c89fa52fba5ddb47c8e40dec1e8"
+  },
+  {
+    "path": "src/math.js",
+    "sha256": "238e224bbba8519f805ff0e0d3287c859cde13e7de8da522a634e937be61e2b0"
+  },
+  {
+    "path": "src/navigation.js",
+    "sha256": "2d0086ae714b3c8268465bf0d7a12312ca2011476a35fa3092a307ff07b471ad"
+  },
+  {
+    "path": "src/preferences.js",
+    "sha256": "70fd72e0d79a39fcc3be8e4f32d79bddcf00e767085ff73e38124695c140b474"
+  },
+  {
+    "path": "src/search.js",
+    "sha256": "73e177d1a7d02c80868acdf2dad3cf65cb7a162d9ba9ba8468a7609e23594414"
+  },
+  {
+    "path": "src/shortcuts.js",
+    "sha256": "dc1236c655f6616667fa4e4f0935e0b906d09cb1506e1236d1fb7be71cc59a54"
+  },
+  {
+    "path": "src/storage.js",
+    "sha256": "6b1ae7d88d8a91fa94206fdf07af0097f111b228e55f38f3015f192660970c4c"
+  },
+  {
+    "path": "src/study.js",
+    "sha256": "2dae5f885f3f18dbf97adb931803cd1c240d4443b6fc985e34a52efdfa8c13b2"
+  }
+]

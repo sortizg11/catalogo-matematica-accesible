@@ -16,9 +16,9 @@ Fuentes consultadas el 23 de octubre de 2026. Las guías en línea pueden cambia
 
 El enlace de salto es el primer elemento interactivo. El temario oculto no está en el recorrido de foco. El h1 cambia por visibilidad del artículo, con una jerarquía h1/h2/h3 consistente. Las rutas usan fragmentos reales y el destino recibe foco. No se reemplaza el contenido al expandir un paso.
 
-La fórmula es un único árbol MathML dentro de una región desplazable enfocada por Tab; el nombre de la región solo la identifica. Puede haber varias fórmulas deliberadamente diferentes durante un procedimiento y repetición explícita como resultado, pero nunca una copia oculta para el lector.
+La fórmula es un único árbol MathML. Solo si desborda, su contenedor recibe role=region, un nombre de desplazamiento y tabindex=0. Los demás contenedores no añaden nombres ni paradas de Tab. Puede haber varias fórmulas deliberadamente diferentes durante un procedimiento y repetición explícita como resultado, pero nunca una copia oculta para el lector.
 
-Sin anuncios por desplazamiento ni aria-live para fórmulas o navegación. El único `role=status` comunica brevemente el guardado/restablecimiento explícito de preferencias. ¿Dónde estoy? usa un diálogo solo cuando se solicita.
+Sin anuncios por desplazamiento ni aria-live para fórmulas o navegación. Los estados breves de preferencias y búsqueda usan `role=status` tras una acción explícita; no contienen lecturas de fórmulas. ¿Dónde estoy? usa un diálogo solo cuando se solicita.
 
 Variables CSS para texto, fondos, acento, foco y contraste. Los controles tienen bordes o subrayados. «Tema actual» y aria-current refuerzan el color. Espaciado relativo, sin animaciones obligatorias; se respetan reduced-motion, prefers-contrast y forced-colors. Fuente de sistema, sin solicitudes de fuentes externas.
 
@@ -46,3 +46,7 @@ Resultados finales y entorno exacto en [resultados de pruebas](resultados-prueba
 - Material provisional: falta revisión docente e incorporación trazable del HTML original. No hay contenido de trigonometría ni fracciones parciales, ni unidad de integral definida.
 
 Próxima iteración recomendada: incorporar el archivo original y realizar una sesión de aceptación acompañada por la estudiante, registrando incidencias antes de ampliar contenidos o añadir herramientas.
+
+## Intervención 1.2
+
+La evidencia nueva se registra en `docs/intervencion-piloto-1.md` y `docs/evidencia/lighthouse/`. Marco de evaluación y límites en `docs/evaluacion-wcag.md`. Se mantiene pendiente la comprobación de la lectura matemática real con NVDA/MathCAT después de estos cambios.

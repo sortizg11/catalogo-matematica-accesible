@@ -54,3 +54,11 @@ Todos: Alt + Shift más H (herramientas), M (temario), T (teoría), E (ejemplos)
 - [Patrón de diálogo APG](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)
 
 Las versiones instaladas pueden diferir de las guías en línea. Registrar esa diferencia antes de atribuir un fallo al catálogo.
+
+## Segunda prueba posterior a la intervención
+
+Usar `output/pdf/CDI-instrumento-prueba-2.pdf` o la alternativa HTML. Registrar versión exacta del catálogo y del entorno. Incluir las seis muestras de `tests/fixtures/math-baseline.html` y comparar M01/M02 con el contenido integrado. No atribuir lectura deficiente al motor hasta aislar proveedor, navegador, MathML y modo de interacción.
+
+Verificar búsqueda real por voz bajo consentimiento: título único, selección entre resultados, pendiente, permiso denegado, cancelar, Escape, micrófono no disponible y posibles interferencias de la voz de NVDA. Las pruebas automáticas simulan la API y no acreditan el reconocimiento real.
+
+Revisar también Tab/Mayús+Tab desde el párrafo enfocado de «Dónde estoy» y del guardado, retorno a summary con paso abierto, marcadores resistentes a navegación/recarga y ausencia de sobrescritura por desplazamiento. Evaluar con Firefox y Chrome, reproduciendo primero el navegador original si se conoce. La revisión docente se registra por separado.

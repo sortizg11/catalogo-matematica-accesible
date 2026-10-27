@@ -42,3 +42,14 @@ NVDA y MathCAT en Windows, Firefox, lectura de fórmulas en español y braille, 
 ## Verificación para la subida a GitHub
 
 Al localizar el material original se actualizaron los avisos y la documentación, sin cambiar los procedimientos matemáticos. Un intento adicional agotó los límites de 30 segundos por prueba y 120 segundos globales durante axe. Se ampliaron los presupuestos de ejecución a 90 segundos por prueba, 120 segundos para el análisis axe de seis vistas y 300 segundos globales, sin eliminar ni relajar comprobaciones. La repetición completó las 12 pruebas en 3,3 minutos, con salida 0. El archivo original se mantiene con su blob Git 28c43c33505ad0daf05ecd7b0ef101f57efae6e1.
+
+## Intervención 1.2 - 27/10/2026
+
+- Suite completa: **32 pruebas aprobadas**, 3,0 minutos, Playwright 1.56.1 y Chrome local. Incluye axe-core 4.11.0 en vistas, diálogos, instrumento HTML y casos matemáticos aislados. Ninguna infracción detectada por las reglas utilizadas; no equivale a conformidad completa.
+- Las primeras ejecuciones encontraron falta del navegador empaquetado y dos fallos de búsqueda (duplicación de títulos de portada y Escape en input search). Se usó Chrome instalado y se corrigieron ambos; la suite anterior no se presenta como aprobada.
+- Lighthouse 13.5.0: ocho evaluaciones (cuatro vistas, perfiles móvil/escritorio), **100/100 en Accesibilidad**. Sin categorías de rendimiento/SEO. Los controles manuales aparecen pendientes en los informes. Informes completos locales en `docs/evidencia/lighthouse/`; resumen reproducible versionado en `resumen.json`.
+- Conservación académica: 181 MathML, 115 pasos, 12 relaciones, 13 ejemplos, 5 ejercicios; hash de la fuente comprobado. No se alteraron fórmulas para intentar corregir pronunciación.
+- Instrumento de segunda prueba: 18 páginas PDF renderizadas y revisadas visualmente; texto extraíble y pies presentes en todas. HTML semántico pasa las reglas axe ejecutadas. PDF sin declaración de etiquetado ni PDF/UA.
+- Reconocimiento de voz probado con API simulada (inicio explícito, navegación, cancelación, evento tardío y permiso denegado). **No se probó micrófono real, precisión del reconocimiento ni interacción real con NVDA en Windows.**
+- También pendientes: evaluación docente, segunda prueba de usuario, Firefox y auditoría completa WCAG 2.2 AA. No se declara acreditación por Lighthouse.
+- Tras retirar un encabezado editorial vacío se repitieron axe en vistas/diálogos, jerarquía/identificadores y búsqueda escrita: **3 pruebas aprobadas**. Lighthouse corresponde a la ejecución anterior a ese ajuste menor; sus informes conservan fecha y alcance, no se presentan como una auditoría exhaustiva del estado final.

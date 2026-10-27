@@ -1,6 +1,6 @@
 # Aprender a utilizar el Catálogo
 
-El curso incorpora el documento revisado v3: noción intuitiva, concepto de integral indefinida y sustitución, con ejemplos y práctica. Reglas y los demás contenidos del programa permanecen pendientes. No necesitas una cuenta.
+El curso reúne noción intuitiva, concepto de integral indefinida y sustitución, con ejemplos y práctica. Reglas y los demás contenidos del programa permanecen pendientes. No necesitas una cuenta.
 
 ## Comenzar
 
@@ -18,9 +18,17 @@ En la práctica, «Consultar la solución del ejercicio 1» lleva al procedimien
 
 «Abrir centro de herramientas» reúne los destinos del tema, la ayuda y las preferencias. Tab y Mayús + Tab permanecen dentro del diálogo. Escape lo cierra y devuelve el foco al botón de apertura. Al seleccionar un destino, el foco pasa a su encabezado.
 
-«¿Dónde estoy?» muestra el curso, unidad, tema y sección, con el ejemplo o ejercicio cuando se identificó. No anuncia cada movimiento. «Continuar donde quedé» recupera el último encabezado académico guardado en este navegador. El guardado se basa en enlaces y en los encabezados visibles; puede no coincidir exactamente con la posición del cursor del lector. No hay recuperación automática al abrir la página.
+«¿Dónde estoy?» describe la última ubicación seleccionada o enfocada en el curso: unidad, tema, sección y ejemplo o paso cuando están identificados. El texto recibe el foco. «Volver a esta ubicación» regresa al destino indicado. No conoce directamente el cursor virtual de NVDA.
 
-El guardado es automático y local: no hay que pulsar Guardar. La referencia no se sincroniza entre dispositivos o navegadores y puede perderse al borrar los datos del sitio o al terminar una sesión privada. No guarda respuestas, progreso de aprendizaje ni el paso exacto de una fórmula. Si el almacenamiento está bloqueado, el curso sigue funcionando, pero el punto puede no conservarse.
+Usa «Guardar este punto de estudio» junto a un apartado o ejemplo, o «Guardar este paso como punto de estudio» dentro de un paso abierto. La confirmación indica qué guardaste. «Continuar donde quedé» recupera ese marcador; si no hay uno, recupera el último destino académico seleccionado. El desplazamiento de la pantalla no sobrescribe el marcador. Al recuperar un paso, se abre y recibe el foco.
+
+El guardado es local a este navegador y dispositivo. No se sincroniza ni registra respuestas. Si el almacenamiento está bloqueado, el marcador funciona solo durante la sesión; se pierde al recargar. Borrar los datos del sitio elimina el marcador. Nunca se vuelve automáticamente al punto al abrir el curso.
+
+## Buscar contenidos
+
+Abre «Buscar contenidos». Escribe un título y pulsa Buscar. Un único resultado lleva directamente al destino; si hay varios, puedes elegir el enlace. Los contenidos pendientes no se presentan como páginas disponibles.
+
+Opcionalmente, pulsa «Buscar por voz» y dicta un título. El navegador puede enviar el audio a su proveedor de reconocimiento y solicita permiso de micrófono. El catálogo no guarda consultas ni grabaciones y no añade una respuesta hablada. Cancela con el botón o Escape. Si no hay reconocimiento disponible o niegas permiso, usa la búsqueda escrita. Utiliza auriculares si la voz de NVDA interfiere con el micrófono.
 
 ## Personalizar
 

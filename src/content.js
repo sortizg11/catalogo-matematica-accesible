@@ -9,7 +9,7 @@ export const topics = [
     objective:'Comprender la integración como búsqueda de una familia de primitivas, interpretar su notación y reconocer el papel de la constante C.',
     readiness:'Recuerda cómo se deriva una función y qué ocurre al derivar una constante.',
     ...academic.indefinite,
-    theory:'<h3>Noción intuitiva de integral</h3>' + academic.introduction.theory + '<h3>Concepto de integral indefinida</h3>' + academic.indefinite.theory.replaceAll('<h3>', '<h4>').replaceAll('</h3>', '</h4>'),
+    theory:'<h3 id="introduccion--nocion" tabindex="-1">Noción intuitiva de integral</h3>' + academic.introduction.theory + '<h3 id="introduccion--concepto" tabindex="-1">Concepto de integral indefinida</h3>' + academic.indefinite.theory.replaceAll('<h3>', '<h4>').replaceAll('</h3>', '</h4>'),
     relations:academic.introduction.relations},
   {id:'sustitucion',number:'4.3.1',unit:curriculum[3].title,title:'Integración por sustitución',
     description:'Usa la regla de la cadena en sentido inverso y sigue cada cambio de variable.',
@@ -31,16 +31,16 @@ Object.assign(routeAliases,{
   'sustitucion--ejercicio-1':'sustitucion--ejercicio-p4',
   'sustitucion--solucion-1':'sustitucion--solucion-p4'
 });
-const sourceNote='<p class="source-note">Contenido del documento revisado v3. Se conservan la numeración, los dominios y las notas de revisión del material.</p>';
-function procedure(item){
-  return `<div class="procedure"><h4>Desarrollo paso a paso</h4><div class="procedure-header"><p>Abre los pasos que necesites; el resultado está disponible al final.</p><button class="mode-toggle">Mostrar todos los pasos</button></div>${item.steps.map(step=>`<details class="step"><summary>${step.title}</summary><div class="step-body">${step.body}</div></details>`).join('')}</div><h4>Resultado</h4>${item.answer}`;
+const sourceNote='';
+function procedure(item, topic, kind){
+  return `<div class="procedure"><h4>Desarrollo paso a paso</h4><div class="procedure-header"><p>Abre los pasos que necesites; el resultado está disponible al final.</p><button class="mode-toggle">Mostrar todos los pasos</button></div>${item.steps.map((step,i)=>{const id=`${topic}--${kind}-${item.sourceId}--paso-${i+1}`;return `<details class="step"><summary id="${id}">${step.title}</summary><div class="step-body">${step.body}<button data-save="${id}">Guardar este paso como punto de estudio</button></div></details>`;}).join('')}</div><h4>Resultado</h4>${item.answer}`;
 }
 function indexList(topic,items,kind,label){
   return `<nav class="item-index" aria-label="${label}"><p><strong>${label}</strong></p><ol>${items.map(item=>`<li><a href="#${topic}--${kind}-${item.sourceId}">${item.title}</a></li>`).join('')}</ol></nav>`;
 }
 function examples(t){
   const relations = t.relations ? `<p>Lee cada relación en este orden: función original, derivada y familia de primitivas. Las relaciones 10, 11 y 12 permiten comparar distintas constantes.</p>${indexList(t.id,t.relations,'relacion','Relaciones de la noción intuitiva')}${t.relations.map(r=>`<div class="academic-item" data-source-id="${r.sourceId}"><h3 id="${t.id}--relacion-${r.sourceId}" tabindex="-1">${r.title}</h3>${r.body}<a href="#${t.id}--ejemplos">Volver al índice de relaciones</a></div>`).join('')}` : '';
-  return `${relations}<p>Conservamos la numeración del documento. El esquema de análisis precede al desarrollo y explica por qué se elige cada procedimiento.</p>${indexList(t.id,t.examples,'ejemplo','Índice de ejemplos')}${t.examples.map((e,i)=>`<div class="academic-item" data-source-id="${e.sourceId}"><h3 id="${t.id}--ejemplo-${e.sourceId}" tabindex="-1">${e.title}</h3>${e.statement}${e.review}${e.analysis}${procedure(e)}${e.notes}<div class="inline-actions"><a href="#${t.id}--ejemplos">Volver al índice de ejemplos</a>${t.examples[i+1]?`<a href="#${t.id}--ejemplo-${t.examples[i+1].sourceId}">Siguiente: ${t.examples[i+1].title}</a>`:''}</div></div>`).join('')}`;
+  return `${relations}<p>El esquema de análisis precede al desarrollo y explica por qué se elige cada procedimiento.</p>${indexList(t.id,t.examples,'ejemplo','Índice de ejemplos')}${t.examples.map((e,i)=>`<div class="academic-item" data-source-id="${e.sourceId}"><h3 id="${t.id}--ejemplo-${e.sourceId}" tabindex="-1">${e.title}</h3>${e.statement}${e.review}${e.analysis}${procedure(e,t.id,"ejemplo")}${e.notes}<div class="inline-actions"><a href="#${t.id}--ejemplos">Volver al índice de ejemplos</a>${t.examples[i+1]?`<a href="#${t.id}--ejemplo-${t.examples[i+1].sourceId}">Siguiente: ${t.examples[i+1].title}</a>`:''}</div></div>`).join('')}`;
 }
 function practice(t){
   if(!t.exercises.length)return '<p>No hay ejercicios de práctica asignados a esta introducción. Puedes revisar las relaciones y continuar con el concepto de integral indefinida.</p>';
@@ -48,7 +48,7 @@ function practice(t){
 }
 function solutions(t){
   if(!t.exercises.length)return '<p>No hay soluciones de práctica asignadas a esta introducción. Las familias de primitivas aparecen en las relaciones de la sección de ejemplos.</p>';
-  return `${indexList(t.id,t.exercises,'solucion','Índice de soluciones')}${t.exercises.map(e=>`<div class="academic-item" data-source-id="${e.sourceId}"><h3 id="${t.id}--solucion-${e.sourceId}" tabindex="-1">Solución. ${e.title}</h3>${e.review}${e.analysis}${procedure(e)}${e.notes}<div class="inline-actions"><a href="#${t.id}--ejercicio-${e.sourceId}">Volver al ejercicio ${e.sourceId.slice(1)}</a><a href="#${t.id}--soluciones">Volver al índice de soluciones</a></div></div>`).join('')}`;
+  return `${indexList(t.id,t.exercises,'solucion','Índice de soluciones')}${t.exercises.map(e=>`<div class="academic-item" data-source-id="${e.sourceId}"><h3 id="${t.id}--solucion-${e.sourceId}" tabindex="-1">Solución. ${e.title}</h3>${e.review}${e.analysis}${procedure(e,t.id,"solucion")}${e.notes}<div class="inline-actions"><a href="#${t.id}--ejercicio-${e.sourceId}">Volver al ejercicio ${e.sourceId.slice(1)}</a><a href="#${t.id}--soluciones">Volver al índice de soluciones</a></div></div>`).join('')}`;
 }
 export function renderTopic(t){
   const position=topics.indexOf(t),previous=topics[position-1],next=topics[position+1];

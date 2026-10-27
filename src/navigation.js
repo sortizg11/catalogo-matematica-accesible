@@ -6,7 +6,7 @@ import { openDialog, closeDialog } from './dialogs.js';
 export const narrow = matchMedia('(max-width:64rem)');
 let currentTopic = 'introduccion';
 let locationId = 'inicio';
-let observer;
+let memoryBookmark = null;
 export const topicId = () => currentTopic;
 export function buildNavigation() {
   document.querySelector('#nav-slot').innerHTML = `<nav class="syllabus" id="temario" aria-label="Temario académico"><p class="nav-kicker">Tu curso</p><p class="course-name">Cálculo Diferencial<br>e Integral</p>${curriculum.map(unit=>`<button class="unit-toggle" id="unit-${unit.id}" aria-expanded="${unit.id==='4'}" aria-controls="unit-list-${unit.id}">${unit.title}</button><ul id="unit-list-${unit.id}" ${unit.id==='4'?'':'hidden'}>${renderCurriculumItems(unit.items)}</ul>`).join('')}<a href="#inicio">Volver al catálogo</a></nav>`;
@@ -33,7 +33,7 @@ export function toggleMenu() {
   if(narrow.matches) {const dialog=document.getElementById('menu-dialog');dialog.open?closeDialog(dialog):openDialog('menu-dialog',document.getElementById('menu-toggle'));updateMenuButton();}
   else { if(prefs.menu && document.getElementById('temario').contains(document.activeElement)) document.getElementById('menu-toggle').focus();setPreference('menu',!prefs.menu); }
 }
-function remember(id) { locationId=id;if(topics.some(t=>id.startsWith(t.id+'--'))) write('last-location',id); }
+function remember(id, persist=false) { locationId=id;if(persist && topics.some(t=>id.startsWith(t.id+'--'))) write('last-location',id); }
 export function go(id, focus=true) {
   if(routeAliases[id]) {id=routeAliases[id];history.replaceState(null,'',`#${id}`);}
   const destination = document.getElementById(id);
@@ -54,12 +54,12 @@ export function go(id, focus=true) {
     link.querySelector('.current-tag').hidden=!active;
   });
   document.querySelectorAll('[data-section][href]').forEach(link=>link.href=`#${currentTopic}--${link.dataset.section}`);
-  document.getElementById('breadcrumbs').innerHTML=`<ol><li><a href="#inicio">Catálogo</a></li><li>Cálculo Diferencial e Integral</li>${topic?`<li>${topic.unit}</li><li aria-current="page">${topic.number}</li>`:''}</ol>`;
+  document.getElementById('breadcrumbs').innerHTML=`<ol><li><a href="#inicio">Catálogo</a></li><li>Cálculo Diferencial e Integral</li>${topic?`<li>${topic.unit}</li><li aria-current="page">${topic.number}. ${topic.title}</li>`:''}</ol>`;
   document.title=`${topic?.title || (id==='ayuda'?'Ayuda':'Inicio')} · Cálculo Diferencial e Integral`;
+  for(let el=destination.parentElement;el;el=el.parentElement) if(el.tagName==='DETAILS') el.open=true;
+  if(destination.tagName==='SUMMARY') destination.parentElement.open=true;
   if(focus) {destination.focus();destination.scrollIntoView({block:'start'});}
-  remember(id);
-  observer?.disconnect();
-  if(topic) view.querySelectorAll('h2[id],h3[id]').forEach(el=>observer?.observe(el));
+  remember(id,focus);
   return true;
 }
 export function navigate(id) {
@@ -67,24 +67,54 @@ export function navigate(id) {
   else location.hash=id;
 }
 export function continueStudy() {
-  const saved=read('last-location',null);
+  const saved=read('bookmark',memoryBookmark) || read('last-location',null);
   const last=routeAliases[saved] || saved;
   if(typeof last==='string' && topics.some(t=>last.startsWith(t.id+'--')) && document.getElementById(last))navigate(last);
   else openDialog('resume');
 }
-export function whereAmI() {
-  const t=topics.find(t=>locationId.startsWith(t.id+'--'));
-  const heading=document.getElementById(locationId);
+export function describeLocation(id=locationId) {
+  const heading=document.getElementById(id);
+  const t=topics.find(t=>id.startsWith(t.id+'--'));
+  if(!t) return `Cálculo Diferencial e Integral. ${id==='ayuda'?'Ayuda del catálogo.':'Inicio del catálogo.'}`;
   const section=heading?.closest('.academic-section')?.dataset.section;
-  document.getElementById('where-text').textContent=t?`Cálculo Diferencial e Integral. ${t.unit}. Tema ${t.number}: ${t.title}. ${sections[section] || 'Inicio del tema'}.${heading?.tagName==='H3'?' '+heading.textContent+'.':''}`:`Cálculo Diferencial e Integral. ${locationId==='ayuda'?'Ayuda del catálogo.':'Inicio del catálogo.'}`;
+  const item=heading?.closest('.academic-item')?.querySelector('h3');
+  const parts=['Cálculo Diferencial e Integral',t.unit,`Tema ${t.number}: ${t.title}`,sections[section] || 'Inicio del tema'];
+  if(item) parts.push(item.textContent);
+  if(heading && heading!==item && /^(H3|H4|SUMMARY)$/.test(heading.tagName)) parts.push(heading.textContent);
+  return parts.join('. ')+'.';
+}
+export function whereAmI() {
+  document.getElementById('where-text').textContent=describeLocation();
+  document.getElementById('where-return').dataset.destination=locationId;
   openDialog('where');
 }
+export function savePoint(id=locationId) {
+  if(!topics.some(t=>id.startsWith(t.id+'--')) || !document.getElementById(id)) {
+    document.getElementById('saved-text').textContent='Primero selecciona una sección, ejemplo o paso del curso.';
+  } else {
+    memoryBookmark=id;
+    const ok=write('bookmark',id);
+    document.getElementById('saved-text').textContent=`${ok?'Punto guardado en este navegador.':'Punto guardado solo para esta sesión; el almacenamiento no está disponible.'} ${describeLocation(id)}`;
+  }
+  openDialog('saved');
+}
 export function initNavigation() {
-  observer=new IntersectionObserver(entries=>{
-    // Solo actualiza el punto de lectura; nunca mueve el foco ni hace anuncios.
-    const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top);
-    if(visible.length)remember(visible[0].target.id);
-  },{rootMargin:'0px 0px -65% 0px',threshold:0});
+  // El cursor virtual de NVDA no es observable. Solo seguimos destinos y foco real;
+  // desplazarse por la pantalla nunca sobrescribe un marcador explícito.
+  document.addEventListener('focusin',e=>{
+    const view=e.target.closest('[data-view]');
+    if(!view || !topics.some(t=>t.id===view.dataset.view) || e.target.closest('nav')) return;
+    const explicit=e.target.closest('[data-save]')?.dataset.save;
+    if(explicit){remember(explicit);return;}
+    const headings=[...view.querySelectorAll('h1[id],h2[id],h3[id],h4[id],summary[id]')];
+    const heading=headings.filter(h=>h===e.target || (h.compareDocumentPosition(e.target)&Node.DOCUMENT_POSITION_FOLLOWING)).at(-1);
+    if(heading) remember(heading.id);
+  });
+  document.addEventListener('click',e=>{
+    const save=e.target.closest('[data-save]');if(save)savePoint(save.dataset.save);
+  });
+  document.getElementById('save-current').addEventListener('click',()=>savePoint());
+  document.getElementById('where-return').addEventListener('click',e=>navigate(e.currentTarget.dataset.destination));
   document.addEventListener('click',e=>{
     const a=e.target.closest('a[href^="#"]');
     if(!a || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey)return;

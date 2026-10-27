@@ -31,3 +31,11 @@ Proveniencia de todas las muestras: creación provisional, 23 de octubre de 2026
 ## Extensión futura
 
 El Explorador estructural de integrales está documentado, no implementado ni anunciado como herramienta disponible. Su contrato deberá acordarse con el docente y complementar MathCAT sin capturar sus teclas. No se incorporan técnicas adicionales.
+
+## Intervención 1.2
+
+`study.js` asigna destinos a subtítulos que no los tenían, añade marcadores explícitos y mantiene fuera de Tab las regiones matemáticas sin desbordamiento. `navigation.js` distingue ubicación conocida por foco/destino de marcador explícito persistente; no observa visibilidad para sobrescribir el punto de estudio. No puede leer el cursor virtual de NVDA.
+
+`search.js` indexa encabezados disponibles y reconoce contenidos pendientes. Texto y voz comparten resolución de destinos. SpeechRecognition se detecta por capacidad, solo se crea al pulsar el botón y se cancela al cerrar; un contador descarta respuestas tardías. El catálogo no almacena voz ni consultas. El navegador puede procesar audio externamente. No se incluye síntesis de voz ni dependencia de reconocimiento en el sitio.
+
+`editorial.py` documenta sustituciones de redacción para que el importador no reintroduzca referencias visuales o a páginas. La fuente permanece intacta y `verify_migration.py` comprueba conservación literal del MathML. Los títulos duplicados del ejemplo 3 pasan a a/b sin cambiar sus identificadores e3a/e3b.

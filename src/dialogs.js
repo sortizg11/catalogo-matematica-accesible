@@ -10,7 +10,7 @@ export function openDialog(id, origin = document.activeElement) {
   const dialog = document.getElementById(id);
   returnTargets.set(dialog,origin);
   dialog.showModal();
-  (dialog.querySelector('button, a, input, select') || dialog).focus();
+  (dialog.querySelector('[data-initial-focus]') || dialog.querySelector('button, a, input, select') || dialog).focus();
 }
 export function initDialogs() {
   document.querySelectorAll('dialog').forEach(dialog=> {
