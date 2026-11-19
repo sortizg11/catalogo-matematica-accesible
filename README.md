@@ -1,4 +1,4 @@
-# Cálculo Diferencial e Integral · Prototipo 1.3
+# Cálculo Diferencial e Integral · Prototipo 1.4
 
 Aplicación estática en español para estudiar matemática con teclado, MathML y lector de pantalla. Primer curso: Cálculo Diferencial e Integral. Prioridad: estudiante ciega que utiliza NVDA y MathCAT en Windows.
 
@@ -82,3 +82,12 @@ Marcadores explícitos por apartado y paso, orientación jerárquica basada en d
 ### Lighthouse y objetivo de conformidad
 
 Objetivo WCAG 2.2 AA (criterios A y AA aplicables), sin declaración de conformidad. Lighthouse no acredita niveles WCAG. Con el servidor activo: `pnpm audit:accessibility`. Si Chrome no se detecta, definir `CHROME_PATH`. Se guardan HTML y JSON de cuatro vistas en móvil y escritorio en `docs/evidencia/lighthouse/`. El comando considera un objetivo interno 100/100, que no sustituye revisión manual ni lectura matemática. Consultar `docs/evaluacion-wcag.md`.
+
+## Inicio y documentación de la versión 1.4
+
+La entrada principal es una búsqueda escrita y por voz opcional. Se conserva el temario como alternativa. El permiso de micrófono no garantiza la disponibilidad del servicio de reconocimiento; las pruebas reales de voz y NVDA siguen pendientes.
+
+- [Manual provisional](docs/manual-usuario-borrador.html).
+- [Cuadro de cambios y pendientes](docs/estado-cambios-2026-11-19.html).
+- [Revisión bibliográfica](docs/revision-bibliografica-accesibilidad.html).
+- [Registro de publicación](docs/publicaciones.md).

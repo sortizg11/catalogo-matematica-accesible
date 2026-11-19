@@ -19,3 +19,5 @@ dialog{overflow-wrap:anywhere}.dialog-head>*{min-width:0}.tool-list>*{min-width:
 
 /* Fórmulas extensas dentro de enunciados y respuestas importadas. */
 .math-inline{display:inline-block;vertical-align:middle;max-width:100%;padding:.15rem .25rem;margin:0;background:transparent;border:0}
+
+.home-search{margin:1.5rem 0 2rem;padding:1.5rem;background:var(--surface);border:1px solid var(--border);border-radius:.5rem}.home-search h2{margin-top:0}.home-search label{display:block;font-weight:600;margin-bottom:.5rem}.search-input-row{display:flex;gap:.75rem}.search-input-row input{flex:1;min-width:0;padding:.8rem;font:inherit;color:var(--text);background:var(--bg);border:1px solid var(--border);border-radius:.3rem}.home-topics{margin:2rem 0}.home-topics>summary{font-size:1.1rem;font-weight:600;padding:.8rem 0}.home-search p{font-size:.95rem}#home-search-results a{display:inline-block;padding:.5rem 0}@media(max-width:35rem){.search-input-row{flex-direction:column}.home-search{padding:1rem}}

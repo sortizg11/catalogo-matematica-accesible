@@ -22,3 +22,5 @@
 - La búsqueda por voz es opcional y se activa solo por botón. Usa los mismos destinos que la búsqueda escrita; no sintetiza otra voz. Cancelar/cerrar debe abortar la escucha y descartar resultados tardíos. Mantener alternativa escrita y explicar el posible procesamiento del navegador.
 - No inferir el cursor virtual de NVDA desde el desplazamiento visual. Los marcadores explícitos tienen prioridad y no se sobrescriben al desplazar la pantalla.
 - Lighthouse y axe son diagnósticos parciales: no declarar acreditación ni nivel AA a partir de sus puntuaciones. Registrar pruebas reales de NVDA y micrófono por separado de simulaciones.
+
+- Por autorización expresa del usuario del 19 de noviembre de 2026, publicar en `sortizg11/catalogo-matematica-accesible`, rama `main`, las actualizaciones terminadas y verificadas de este proyecto y su documentación. Registrar cada actualización en el historial de GitHub y comprobar el despliegue de Pages. No dejar la entrega únicamente local. Se mantiene la prohibición de publicar datos personales o presentar pruebas pendientes como aprobadas.
