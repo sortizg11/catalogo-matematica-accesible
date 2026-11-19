@@ -16,3 +16,6 @@ dialog{overflow-wrap:anywhere}.dialog-head>*{min-width:0}.tool-list>*{min-width:
 #search-results li { margin:.75rem 0; }
 #search-results a { display:block; padding:.5rem 0; }
 #where-text:focus, #saved-text:focus { outline:3px solid var(--accent, #2563eb); outline-offset:4px; }
+
+/* Fórmulas extensas dentro de enunciados y respuestas importadas. */
+.math-inline{display:inline-block;vertical-align:middle;max-width:100%;padding:.15rem .25rem;margin:0;background:transparent;border:0}

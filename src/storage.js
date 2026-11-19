@@ -2,7 +2,7 @@ const prefix = 'catalogo-v1:';
 const session = new Map();
 export let storageAvailable = true;
 export function read(key, fallback) {
-  try { const value = localStorage.getItem(prefix + key); return value ? JSON.parse(value) : fallback; }
+  try { const value = localStorage.getItem(prefix + key); return value ? JSON.parse(value) : session.has(key) ? session.get(key) : fallback; }
   catch { storageAvailable = false; return session.has(key) ? session.get(key) : fallback; }
 }
 export function write(key, value) {

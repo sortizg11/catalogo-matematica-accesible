@@ -22,7 +22,7 @@ test('temario propio inicia con límites y conserva el bloque de integrales',asy
   await page.goto('/');
   await expect(page.locator('.unit-toggle')).toHaveText(['Unidad 1. Límites y continuidad','Unidad 2. Derivada de una función','Unidad 3. Aplicaciones de la derivada','Unidad 4. Integral indefinida','Unidad 5. Integral definida','Unidad 6. Integrales impropias']);
   await page.locator('#unit-1').focus();await page.keyboard.press('Enter');
-  await expect(page.locator('#unit-list-1')).toBeVisible();await expect(page.locator('#unit-list-1 a')).toHaveCount(0);
+  await expect(page.locator('#unit-list-1')).toBeVisible();await expect(page.locator('#unit-list-1 a')).toHaveCount(2);
   await expect(page.locator('#unit-list-4')).toContainText('Reglas de integración');
   await page.locator('#temario [data-topic="sustitucion"]').click();await expect(page.locator('#sustitucion--tema')).toBeFocused();
   await expect(page.locator('#breadcrumbs')).toContainText('Unidad 4. Integral indefinida');

@@ -1,0 +1,98 @@
+{
+  "sha256": "58253b949bc28dff34e09875e09b891168d10ab7a9c84a929eccbfbf664b3c19",
+  "origen": "main.tex recibido por el usuario el 18 de noviembre de 2026; autoría no verificada",
+  "cambios": [
+    {
+      "original": "Portafolio de Cálculo",
+      "revisado": "Cálculo Diferencial e Integral",
+      "motivo": "Identidad común del catálogo"
+    },
+    {
+      "original": "Formalmente, se dice que:",
+      "revisado": "De manera intuitiva, se escribe:",
+      "motivo": "La explicación que sigue no es la definición formal épsilon-delta"
+    },
+    {
+      "original": "Si $g(a) \\neq 0$, el signo de $g(x)$ no cambia cerca de $a$",
+      "revisado": "Si $g$ es continua en $a$ y $g(a) \\neq 0$, el signo de $g(x)$ no cambia cerca de $a$",
+      "motivo": "Se explicita la hipótesis de continuidad necesaria"
+    },
+    {
+      "original": "que indica una división que crece sin límite",
+      "revisado": "que no está definida; el comportamiento de un cociente cuyo denominador tiende a cero debe analizarse por separado",
+      "motivo": "Dividir por cero no equivale a un límite infinito"
+    },
+    {
+      "original": "La más conocida es la rapidez, que compara el cambio de posición con el tiempo transcurrido:",
+      "revisado": "La velocidad media compara el desplazamiento con el tiempo transcurrido. La rapidez media compara la distancia recorrida con el tiempo:",
+      "motivo": "Distancia y desplazamiento son magnitudes diferentes"
+    },
+    {
+      "original": "\\text{rapidez} = \\frac{\\text{distancia}}{\\text{tiempo}} = ",
+      "revisado": "\\text{velocidad media} = ",
+      "motivo": "Corrección explícita de la magnitud representada por la fórmula"
+    },
+    {
+      "original": "Cuando $h \\to 0$, el segundo punto se acerca al primero y la recta secante se convierte en la \\textbf{recta tangente} a la gráfica en ese punto.",
+      "revisado": "Cuando $h \\to 0$, analiza el límite de las pendientes de las secantes. Si existe y es finito, determina la pendiente de la recta tangente.",
+      "motivo": "La existencia de derivada requiere una condición"
+    },
+    {
+      "original": "La derivada de $f$ es la pendiente de la recta tangente:",
+      "revisado": "Cuando el límite existe y es finito, la derivada de $f$ determina la pendiente de la recta tangente:",
+      "motivo": "Condición de derivabilidad"
+    },
+    {
+      "original": "Sean $k$ y $n$ constantes reales:",
+      "revisado": "Sean $k$ y $n$ constantes reales. Aplica las fórmulas en los puntos donde las funciones son derivables. Para logaritmos reales se requiere argumento positivo; la base cumple $a>0$ y $a\\neq1$. Para potencias reales, revisa el dominio antes de usar la regla:",
+      "motivo": "Condiciones de validez de las reglas"
+    },
+    {
+      "original": "Este es un límite notable cuyo resultado, demostrado geométricamente, es:",
+      "revisado": "Con el ángulo medido en radianes, este límite notable tiene el valor:",
+      "motivo": "Condición de unidad angular; no se incluye una demostración en la fuente"
+    },
+    {
+      "original": "La \\textbf{recta normal} es perpendicular a la recta tangente en el mismo punto, por lo que su pendiente es la recíproca y opuesta:",
+      "revisado": "La \\textbf{recta normal} es perpendicular a la recta tangente en el mismo punto. Si la pendiente tangente es finita y distinta de cero, la pendiente normal es la recíproca y opuesta. Si la tangente es horizontal, la normal es vertical:",
+      "motivo": "La fórmula de pendiente normal no admite pendiente tangente cero"
+    },
+    {
+      "original": "Recuerde",
+      "revisado": "Recuerda",
+      "motivo": "Tratamiento directo consistente"
+    },
+    {
+      "original": "Calcule",
+      "revisado": "Calcula",
+      "motivo": "Tratamiento directo consistente"
+    },
+    {
+      "original": "Use la definición",
+      "revisado": "Usa la definición",
+      "motivo": "Tratamiento directo consistente"
+    },
+    {
+      "original": "Determine",
+      "revisado": "Determina",
+      "motivo": "Tratamiento directo consistente"
+    },
+    {
+      "original": "Encuentre",
+      "revisado": "Encuentra",
+      "motivo": "Tratamiento directo consistente"
+    },
+    {
+      "original": "Obtenga",
+      "revisado": "Obtén",
+      "motivo": "Tratamiento directo consistente"
+    },
+    {
+      "original": "Halle",
+      "revisado": "Halla",
+      "motivo": "Tratamiento directo consistente"
+    }
+  ],
+  "formulas_convertidas": 612,
+  "temas": 9
+}

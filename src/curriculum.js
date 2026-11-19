@@ -1,18 +1,18 @@
 // Orden del catálogo, independiente de la numeración del programa suministrado.
 export const curriculum = [
   {id:'1',title:'Unidad 1. Límites y continuidad',items:[
-    {label:'Límite de una función en un punto'}, {label:'Teorema sobre límites'},
-    {label:'Cálculo de límites algebraicos, exponenciales, logarítmicos y trigonométricos'},
+    {label:'Límite de una función en un punto',topic:'limites'}, {label:'Teorema sobre límites'},
+    {label:'Cálculo de límites algebraicos, exponenciales, logarítmicos y trigonométricos',topic:'limites-algebraicos'},
     {label:'Límites infinitos y límites al infinito'}, {label:'Continuidad de una función'},
     {label:'Teoremas sobre continuidad de una función'}]},
   {id:'2',title:'Unidad 2. Derivada de una función',items:[
-    {label:'Derivada de una función en un punto'},
-    {label:'Derivada de una función',children:[{label:'Interpretación geométrica'},{label:'Movimiento rectilíneo y velocidad instantánea'}]},
-    {label:'Teoremas sobre derivadas'}, {label:'Derivada de una función compuesta'},
-    {label:'Derivada de funciones algebraicas, exponenciales, logarítmicas, trigonométricas y trigonométricas inversas'},
-    {label:'Diferencial de una función'}, {label:'Derivadas de orden superior'}, {label:'Derivación implícita'}]},
+    {label:'Derivada de una función en un punto',topic:'derivada'},
+    {label:'Derivada de una función',children:[{label:'Interpretación geométrica',topic:'tangente-normal'},{label:'Movimiento rectilíneo y velocidad instantánea'}]},
+    {label:'Teoremas sobre derivadas',topic:'reglas-derivacion'}, {label:'Derivada de una función compuesta',topic:'cadena'},
+    {label:'Derivada de funciones algebraicas, exponenciales, logarítmicas, trigonométricas y trigonométricas inversas',topic:'derivadas-trigonometricas'},
+    {label:'Diferencial de una función'}, {label:'Derivadas de orden superior'}, {label:'Derivación implícita',topic:'implicita'}]},
   {id:'3',title:'Unidad 3. Aplicaciones de la derivada',items:[
-    {label:'Movimiento rectilíneo'}, {label:'La derivada como razón de cambio'},
+    {label:'Movimiento rectilíneo'}, {label:'La derivada como razón de cambio',topic:'razones-cambio'},
     {label:'Crecimiento y decrecimiento de funciones'}, {label:'Máximos y mínimos de una función'},
     {label:'Regla de L’Hôpital'}, {label:'Concavidad y puntos de inflexión'},
     {label:'Asíntotas verticales, horizontales y oblicuas de una función'},

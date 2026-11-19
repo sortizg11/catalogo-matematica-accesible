@@ -1,0 +1,94 @@
+{
+  "date": "2026-11-18",
+  "results": [
+    {
+      "id": "limites",
+      "math": 145,
+      "duplicates": [],
+      "broken": [],
+      "tex": null,
+      "reflow": true
+    },
+    {
+      "id": "limites-algebraicos",
+      "math": 24,
+      "duplicates": [],
+      "broken": [],
+      "tex": null,
+      "reflow": true
+    },
+    {
+      "id": "derivada",
+      "math": 59,
+      "duplicates": [],
+      "broken": [],
+      "tex": null,
+      "reflow": true
+    },
+    {
+      "id": "tangente-normal",
+      "math": 88,
+      "duplicates": [],
+      "broken": [],
+      "tex": null,
+      "reflow": true
+    },
+    {
+      "id": "reglas-derivacion",
+      "math": 50,
+      "duplicates": [],
+      "broken": [],
+      "tex": null,
+      "reflow": true
+    },
+    {
+      "id": "cadena",
+      "math": 50,
+      "duplicates": [],
+      "broken": [],
+      "tex": null,
+      "reflow": true
+    },
+    {
+      "id": "derivadas-trigonometricas",
+      "math": 27,
+      "duplicates": [],
+      "broken": [],
+      "tex": null,
+      "reflow": true
+    },
+    {
+      "id": "implicita",
+      "math": 57,
+      "duplicates": [],
+      "broken": [],
+      "tex": null,
+      "reflow": true
+    },
+    {
+      "id": "razones-cambio",
+      "math": 110,
+      "duplicates": [],
+      "broken": [],
+      "tex": null,
+      "reflow": true
+    },
+    {
+      "id": "introduccion",
+      "math": 117,
+      "duplicates": [],
+      "broken": [],
+      "tex": null,
+      "reflow": true
+    },
+    {
+      "id": "sustitucion",
+      "math": 82,
+      "duplicates": [],
+      "broken": [],
+      "tex": null,
+      "reflow": true
+    }
+  ],
+  "errors": []
+}

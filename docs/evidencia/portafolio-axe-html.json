@@ -1,0 +1,38 @@
+[
+  {
+    "id": "limites-algebraicos",
+    "violations": []
+  },
+  {
+    "id": "derivada",
+    "violations": []
+  },
+  {
+    "id": "tangente-normal",
+    "violations": []
+  },
+  {
+    "id": "reglas-derivacion",
+    "violations": []
+  },
+  {
+    "id": "cadena",
+    "violations": []
+  },
+  {
+    "id": "derivadas-trigonometricas",
+    "violations": []
+  },
+  {
+    "id": "implicita",
+    "violations": []
+  },
+  {
+    "id": "razones-cambio",
+    "violations": []
+  },
+  {
+    "id": "limites",
+    "violations": []
+  }
+]

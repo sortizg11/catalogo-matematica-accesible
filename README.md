@@ -1,10 +1,12 @@
-# Cálculo Diferencial e Integral · Prototipo 1.2
+# Cálculo Diferencial e Integral · Prototipo 1.3
 
 Aplicación estática en español para estudiar matemática con teclado, MathML y lector de pantalla. Primer curso: Cálculo Diferencial e Integral. Prioridad: estudiante ciega que utiliza NVDA y MathCAT en Windows.
 
 ## Contenido y alcance
 
-El material revisado v3 está incorporado: noción intuitiva y concepto de integral indefinida reunidos en Introducción a las integrales, además de sustitución. Se conservan 12 relaciones, 13 ejemplos, 5 ejercicios y 115 pasos. Reglas permanece pendiente. El temario comienza con Límites y continuidad; por ahora hay contenido en la unidad 4.
+El catálogo dispone de once temas en las unidades 1 a 4: nueve incorporados desde el portafolio de límites, derivadas y aplicaciones, y los dos de integración existentes. No está completo el programa. La revisión docente del nuevo contenido está pendiente; las prácticas sin desarrollo y un ejemplo de logaritmos suspendido se identifican expresamente.
+
+El material de integración v3 conserva 12 relaciones, 13 ejemplos, 5 ejercicios y 115 pasos. Reglas de integración permanece pendiente. Consulta [la incorporación y sus límites](docs/incorporacion-portafolio.md). Los documentos independientes y el LaTeX revisado están en `materials/portafolio-calculo/`.
 
 Incluye temario adaptable, centro de herramientas modal, ayuda y recorrido voluntario, ubicación explícita, continuación local, preferencias, lectura progresiva/completa y atajos opcionales desactivados inicialmente. No incluye el futuro Explorador estructural de integrales.
 

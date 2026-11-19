@@ -12,8 +12,14 @@ export function initSearch(){
   curriculum.forEach(unit=>collect(unit.items));
   function search(){
     results.replaceChildren();
-    let query=normalize(input.value).replace(/^(ir a |ir al |buscar |mostrar |abrir |llevarme a )/,'');
+    let query=normalize(input.value);
+    // Texto y voz comparten comandos de búsqueda; no interpretamos conversaciones.
+    query=query.replace(/^(?:por favor )?(?:quiero |quisiera |puedes |podrias )?/, '');
+    query=query.replace(/^(?:buscar|busca|buscame|mostrar|muestra|abrir|abre|ir a|ir al|llevarme a|llevame a)\s+/, '');
+    query=query.replace(/^(?:el |la |al )?(?:capitulo|tema|apartado|seccion)\s+(?:de |del |sobre )?/, '');
     if(!query){status.textContent='Escribe o dicta un título para buscar.';return;}
+    const aliases={'regla de la cadena':'cadena--tema','derivacion implicita':'implicita--tema','integracion por sustitucion':'sustitucion--tema'};
+    if(aliases[query] && document.getElementById(aliases[query])){navigate(aliases[query]);return;}
     const exact=headings.filter(h=>normalize(h.title)===query);
     const words=query.split(' ').filter(w=>!['de','del','la','las','el','los','a','al','por','en'].includes(w));
     const found=exact.length?exact:headings.filter(h=>words.length && words.every(w=>normalize(h.title).split(' ').includes(w)));
@@ -33,9 +39,9 @@ export function initSearch(){
   }
   if(!Speech){start.disabled=true;status.textContent='Este navegador no ofrece reconocimiento de voz. Puedes buscar escribiendo.';}
   start.addEventListener('click',()=>{
-    finish();const token=generation;recognition=new Speech();recognition.lang='es-CR';recognition.continuous=false;recognition.interimResults=false;recognition.maxAlternatives=1;
-    start.disabled=true;stop.hidden=false;stop.focus();status.textContent='Escuchando. Di el título o cancela la escucha.';
-    recognition.onresult=e=>{if(token!==generation || !dialog.open)return;input.value=e.results[0][0].transcript;finish();input.focus();search();};
+    finish();const token=generation;try{recognition=new Speech();}catch{status.textContent='No se pudo iniciar el reconocimiento. Puedes buscar escribiendo.';input.focus();return;}recognition.lang='es-CR';recognition.continuous=false;recognition.interimResults=false;recognition.maxAlternatives=1;
+    start.disabled=true;stop.hidden=false;stop.focus();status.textContent='Buscador por voz escuchando. Di, por ejemplo, «buscar derivación implícita», o cancela la escucha.';
+    recognition.onresult=e=>{if(token!==generation || !dialog.open)return;const transcript=e.results?.[0]?.[0]?.transcript;finish();input.focus();if(typeof transcript!=='string'||!transcript.trim()){status.textContent='No se reconoció un título. Puedes volver a intentarlo o escribir.';return;}input.value=transcript;search();};
     recognition.onerror=e=>{if(token!==generation)return;finish(false);input.focus();status.textContent=e.error==='not-allowed' || e.error==='service-not-allowed'?'No se permitió usar el micrófono. Puedes buscar escribiendo.':e.error==='no-speech'?'No se detectó voz. Puedes intentarlo de nuevo o escribir.':'No se pudo reconocer la voz. Puedes buscar escribiendo.';};
     recognition.onend=()=>{if(token!==generation)return;finish(false);input.focus();status.textContent='La escucha terminó sin un destino. Puedes volver a intentarlo o escribir.';};
     try{recognition.start();timeout=setTimeout(()=>{if(token!==generation)return;finish();input.focus();status.textContent='La escucha terminó. Puedes volver a intentarlo o escribir.';},15000);}catch{finish();input.focus();status.textContent='No se pudo iniciar el micrófono. Puedes buscar escribiendo.';}

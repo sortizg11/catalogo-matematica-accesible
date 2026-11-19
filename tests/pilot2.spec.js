@@ -22,7 +22,7 @@ test('marcador en memoria cuando el almacenamiento está bloqueado',async({page}
 test('búsqueda escrita: único destino, ambigüedad, pendiente, desconocido y texto seguro',async({page})=>{
  await page.goto('/');const open=()=>page.locator('.header-actions [data-dialog="search"]').click();
  await open();await expect(page.locator('#search-query')).toBeFocused();await page.locator('#search-query').fill('concepto de integral indefinida');await page.locator('#search-query').press('Enter');await expect(page.locator('#introduccion--concepto')).toBeFocused();
- await open();await page.locator('#search-query').fill('teoría');await page.locator('#search-query').press('Enter');await expect(page.locator('#search-results a')).toHaveCount(2);
+ await open();await page.locator('#search-query').fill('teoría');await page.locator('#search-query').press('Enter');await expect(page.locator('#search-results a')).toHaveCount(11);
  await page.locator('#search-query').fill('integración por partes');await page.locator('#search-query').press('Enter');await expect(page.locator('#search-status')).toContainText('pendiente');
  await page.locator('#search-query').fill('<img src=x onerror=alert(1)>');await page.locator('#search-query').press('Enter');await expect(page.locator('#search-status')).toContainText('No se encontró');await expect(page.locator('#search-results img')).toHaveCount(0);
  await page.keyboard.press('Escape');await expect(page.locator('.header-actions [data-dialog="search"]')).toBeFocused();

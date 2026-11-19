@@ -1,0 +1,1861 @@
+\documentclass[12pt]{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\title{Cálculo Diferencial e Integral}
+\author{}
+\date{}
+
+
+
+\begin{document}
+
+\maketitle
+
+\section{Límite de una función en un punto}
+
+\subsection{Teoría}
+
+\textbf{Objetivo.} Interpretar límites y comparar aproximaciones laterales.
+
+\textbf{Antes de comenzar.} Recuerda funciones, factorización y operaciones algebraicas.
+
+
+El límite de una función describe el comportamiento de dicha función cuando la variable independiente se aproxima a un valor determinado, sin que necesariamente la función esté definida en ese punto.
+
+De manera intuitiva, se escribe:
+\[
+\lim_{x \to a} f(x) = L
+\]
+si a medida que $x$ se acerca a $a$ (por la izquierda y por la derecha), los valores de $f(x)$ se acercan cada vez más a $L$.
+
+
+
+\subsubsection{Definición intuitiva}
+
+
+El límite responde a la pregunta: \textit{¿A qué valor se aproxima $f(x)$ cuando $x$ se aproxima a $a$?} No importa si la función existe o no en $x = a$; lo que interesa es su comportamiento alrededor de ese punto.
+
+
+
+\subsubsection{Definición formal (épsilon-delta)}
+
+
+Se dice que:
+\[
+\lim_{x \to a} f(x) = L
+\]
+si para todo $\varepsilon > 0$ existe un $\delta > 0$ tal que, siempre que:
+\[
+0 < |x - a| < \delta
+\]
+se cumple que:
+\[
+|f(x) - L| < \varepsilon
+\]
+
+
+
+\subsubsection{Límites laterales}
+
+
+\begin{itemize}
+    \item \textbf{Límite por la izquierda:} $\displaystyle \lim_{x \to a^-} f(x)$
+    \item \textbf{Límite por la derecha:} $\displaystyle \lim_{x \to a^+} f(x)$
+\end{itemize}
+
+El límite de una función en un punto existe si y solo si los límites laterales existen y son iguales:
+\[
+\lim_{x \to a^-} f(x) = \lim_{x \to a^+} f(x) = L
+\]
+
+
+
+\subsubsection{Propiedades básicas de los límites}
+
+
+Sean $f(x)$ y $g(x)$ funciones tales que $\lim_{x \to a} f(x) = L$ y $\lim_{x \to a} g(x) = M$. Entonces:
+
+\begin{align*}
+\lim_{x \to a} [f(x) \pm g(x)] &= L \pm M \\
+\lim_{x \to a} [f(x) \cdot g(x)] &= L \cdot M \\
+\lim_{x \to a} \frac{f(x)}{g(x)} &= \frac{L}{M}, \quad M \neq 0 \\
+\lim_{x \to a} [k \cdot f(x)] &= k \cdot L, \quad k \in \mathbb{R} \\
+\lim_{x \to a} [f(x)]^n &= L^n
+\end{align*}
+
+
+
+\subsubsection{Límites con valor absoluto}
+
+
+Recuerda que el valor absoluto se define por partes:
+\[
+|x| =
+\begin{cases}
+x, & x \geq 0 \\
+-x, & x < 0
+\end{cases}
+\qquad \text{y en general} \qquad
+|g(x)| =
+\begin{cases}
+g(x), & g(x) \geq 0 \\
+-g(x), & g(x) < 0
+\end{cases}
+\]
+
+Para calcular un límite que contiene $|g(x)|$ cuando $x \to a$ se analiza el signo de $g(x)$ cerca de $a$:
+\begin{itemize}
+    \item Si $g$ es continua en $a$ y $g(a) \neq 0$, el signo de $g(x)$ no cambia cerca de $a$, así que se sustituye $|g(x)|$ por $g(x)$ o por $-g(x)$ según corresponda.
+    \item Si $g(a) = 0$, el signo puede cambiar a cada lado de $a$, por lo que se deben calcular los \textbf{límites laterales} por separado.
+\end{itemize}
+
+Además, si $\displaystyle \lim_{x \to a} f(x) = L$, entonces:
+\[
+\lim_{x \to a} |f(x)| = |L|
+\]
+
+
+
+
+En matemáticas, decir que una cantidad \textbf{tiende a} un valor significa que se acerca cada vez más a ese valor, tanto como se quiera, sin necesariamente llegar a alcanzarlo. Esta idea de aproximación progresiva es, precisamente, la esencia misma del límite.
+
+Por ejemplo, si se toman valores de $x$ cada vez más cercanos a $2$, como:
+\[
+1.9,\quad 1.99,\quad 1.999,\quad 1.9999,\ldots
+\]
+se dice que $x$ \textbf{tiende a} $2$, y se escribe $x \to 2$. Lo mismo ocurre si nos acercamos por el otro lado:
+\[
+2.1,\quad 2.01,\quad 2.001,\quad 2.0001,\ldots
+\]
+
+En ambos casos, $x$ se aproxima a $2$ sin necesidad de ser exactamente igual a $2$.
+
+
+
+\subsubsection{Toda tendencia es, en esencia, un límite}
+
+
+Cuando se dice que una función, una sucesión o una cantidad \textbf{tiende a} un valor, se está describiendo el comportamiento de un límite. Es decir:
+
+\begin{itemize}
+    \item Si $x \to a$, se está describiendo el comportamiento de la variable en el eje horizontal.
+    \item Si $f(x) \to L$ cuando $x \to a$, se está describiendo el comportamiento de la función, y esto es justamente lo que expresa la notación:
+    \[
+    \lim_{x \to a} f(x) = L
+    \]
+\end{itemize}
+
+Esta idea también se aplica a otros contextos:
+
+\begin{itemize}
+    \item En sucesiones: $a_n \to L$ cuando $n \to \infty$ significa que los términos de la sucesión se acercan a $L$ a medida que $n$ crece indefinidamente.
+\end{itemize}
+
+En resumen, cada vez que se habla de un proceso de acercamiento progresivo hacia un valor determinado, sin necesariamente alcanzarlo, se está hablando de un límite. Esto convierte al límite en la herramienta matemática formal para describir cualquier tipo de tendencia o aproximación.
+
+
+
+
+Los ejercicios de práctica fueron tomados de: S. Schmidt et al. \textit{Práctica del curso Cálculo Diferencial e Integral. Selección de ejercicios.} Revista digital Matemática, Educación e Internet.
+
+
+
+\subsection{Ejemplos resueltos}
+
+\subsubsection{Ejemplo 1}
+
+
+Calcular $\displaystyle \lim_{x \to 0} \frac{|x|}{x}$.
+
+\textbf{Solución:} Como $|x|$ se anula en $x = 0$, se calculan los límites laterales:
+\[
+\lim_{x \to 0^-} \frac{|x|}{x} = \lim_{x \to 0^-} \frac{-x}{x} = -1, \qquad
+\lim_{x \to 0^+} \frac{|x|}{x} = \lim_{x \to 0^+} \frac{x}{x} = 1
+\]
+Como los límites laterales son distintos, el límite no existe.
+
+
+
+\subsubsection{Ejemplo 2}
+
+
+Calcular $\displaystyle \lim_{x \to 3} \frac{x^2 - 9}{|x - 3|}$.
+
+\textbf{Solución:} Si $x < 3$, entonces $|x - 3| = -(x - 3)$; si $x > 3$, entonces $|x - 3| = x - 3$:
+\[
+\lim_{x \to 3^-} \frac{(x - 3)(x + 3)}{-(x - 3)} = \lim_{x \to 3^-} -(x + 3) = -6
+\]
+\[
+\lim_{x \to 3^+} \frac{(x - 3)(x + 3)}{x - 3} = \lim_{x \to 3^+} (x + 3) = 6
+\]
+Los límites laterales son distintos, por lo que el límite no existe.
+
+
+
+\subsubsection{Ejemplo 3}
+
+
+Calcular $\displaystyle \lim_{x \to 1} \frac{|x - 4| - 3}{x - 1}$.
+
+\textbf{Solución:} Al sustituir se obtiene $\frac{0}{0}$. Cerca de $x = 1$ se cumple que $x - 4 < 0$, así que $|x - 4| = -(x - 4) = 4 - x$ a ambos lados de $1$:
+\[
+\lim_{x \to 1} \frac{4 - x - 3}{x - 1} = \lim_{x \to 1} \frac{1 - x}{x - 1} = \lim_{x \to 1} (-1) = -1
+\]
+
+
+
+\subsubsection{Ejemplo 4}
+
+
+Calcular $\displaystyle \lim_{x \to 2^-} \frac{x^2 - 4}{|2 - x|}$.
+
+\textbf{Solución:} Si $x < 2$, entonces $2 - x > 0$, así que $|2 - x| = 2 - x$:
+\[
+\lim_{x \to 2^-} \frac{(x - 2)(x + 2)}{2 - x} = \lim_{x \to 2^-} \frac{-(2 - x)(x + 2)}{2 - x} = \lim_{x \to 2^-} -(x + 2) = -4
+\]
+
+
+
+\subsubsection{Ejercicio 1}
+
+
+Calcular:
+\[
+\lim_{x \to 2} (3x + 5)
+\]
+
+\textbf{Solución:}
+\[
+\lim_{x \to 2} (3x + 5) = 3(2) + 5 = 11
+\]
+
+
+
+\subsubsection{Ejercicio 2}
+
+
+Calcular:
+\[
+\lim_{x \to 3} (x^2 - 4x + 1)
+\]
+
+\textbf{Solución:}
+\[
+\lim_{x \to 3} (x^2 - 4x + 1) = (3)^2 - 4(3) + 1 = 9 - 12 + 1 = -2
+\]
+
+
+
+\subsubsection{Ejercicio 3 (indeterminación $0/0$)}
+
+
+Calcular:
+\[
+\lim_{x \to 1} \frac{x^2 - 1}{x - 1}
+\]
+
+\textbf{Solución:}
+Se factoriza el numerador:
+\[
+\frac{x^2 - 1}{x - 1} = \frac{(x-1)(x+1)}{x-1} = x + 1
+\]
+Por lo tanto:
+\[
+\lim_{x \to 1} \frac{x^2 - 1}{x - 1} = \lim_{x \to 1} (x+1) = 2
+\]
+
+
+
+\subsubsection{Ejercicio 4 (límites laterales)}
+
+
+Sea la función:
+\[
+f(x) =
+\begin{cases}
+x + 1, & x < 2 \\
+5, & x = 2 \\
+2x - 1, & x > 2
+\end{cases}
+\]
+Determinar si existe $\displaystyle \lim_{x \to 2} f(x)$.
+
+\textbf{Solución:}
+\[
+\lim_{x \to 2^-} f(x) = 2 + 1 = 3
+\]
+\[
+\lim_{x \to 2^+} f(x) = 2(2) - 1 = 3
+\]
+Como los límites laterales coinciden, el límite existe:
+\[
+\lim_{x \to 2} f(x) = 3
+\]
+(Nótese que este valor no coincide con $f(2) = 5$, lo cual ilustra que el límite no depende del valor de la función en el punto.)
+
+
+
+\subsubsection{Ejercicio 5 (límite al infinito)}
+
+
+Calcular:
+\[
+\lim_{x \to \infty} \frac{2x^2 + 3x}{x^2 - 1}
+\]
+
+\textbf{Solución:}
+Se divide numerador y denominador entre la mayor potencia de $x$, es decir $x^2$:
+\[
+\lim_{x \to \infty} \frac{2 + \dfrac{3}{x}}{1 - \dfrac{1}{x^2}} = \frac{2 + 0}{1 - 0} = 2
+\]
+
+
+
+\subsubsection{Ejercicio 6 (límite trigonométrico notable)}
+
+
+Calcular:
+\[
+\lim_{x \to 0} \frac{\sin x}{x}
+\]
+
+\textbf{Solución:}
+Con el ángulo medido en radianes, este límite notable tiene el valor:
+\[
+\lim_{x \to 0} \frac{\sin x}{x} = 1
+\]
+
+
+
+\subsection{Práctica}
+
+\subsubsection{Límites en un punto}
+
+
+Calcula los siguientes límites:
+\begin{enumerate}
+    \item $\displaystyle \lim_{x \to 3} \frac{2x^2 - 5x - 3}{x^3 + 5x - 3x^2 - 15}$
+    \item $\displaystyle \lim_{x \to 2} \frac{x^3 + 2x^2 - 5x - 6}{x^3 + x^2 - 4x - 4}$
+    \item $\displaystyle \lim_{t \to \frac{5}{2}} \frac{4 - \sqrt{2t + 11}}{2t - 5}$
+    \item $\displaystyle \lim_{t \to 4} \frac{3 - \sqrt{5 + t}}{1 - \sqrt{5 - t}}$
+    \item $\displaystyle \lim_{a \to 1} \frac{\sqrt{1 + 8a} - 3}{\sqrt{4a} - 2}$
+    \item $\displaystyle \lim_{x \to 0} \frac{\sqrt{1 + x} - 1}{\sqrt[3]{1 + x} - 1}$
+    \item $\displaystyle \lim_{t \to 0} \frac{2t - 1}{t^2 - t^4}$
+\end{enumerate}
+
+
+
+\subsubsection{Límites con valor absoluto}
+
+
+Calcula los siguientes límites:
+\begin{enumerate}
+    \item $\displaystyle \lim_{y \to 4} \frac{\sqrt{y} - |2 - y|}{y - 4}$
+    \item $\displaystyle \lim_{z \to \left(\frac{2}{3}\right)^+} \frac{|-3z + 2|}{18z^2 - 8}$
+    \item $\displaystyle \lim_{b \to -1} \left(\frac{5}{4}\right)^{\frac{|b| - 1}{b + 1}}$
+    \item $\displaystyle \lim_{x \to -2} \frac{\sqrt[4]{(x + 2)^4}}{|(x + 1)^2 - 1|}$
+\end{enumerate}
+
+
+
+\subsubsection{Límites trigonométricos}
+
+
+Calcula los siguientes límites:
+\begin{enumerate}
+    \item $\displaystyle \lim_{t \to 0} \frac{t - \sin(2t)}{t + \sin(3t)}$
+    \item $\displaystyle \lim_{n \to 0} \frac{1 - \cos^3 n}{\sin^2 n}$
+    \item $\displaystyle \lim_{x \to 1} \frac{\sin(x - 1)}{\sqrt{x} - 1}$
+    \item $\displaystyle \lim_{\beta \to 0} \frac{\sin 5\beta}{\beta}$
+    \item $\displaystyle \lim_{z \to 0} \frac{5\sin^2(3z)}{2z^2}$
+\end{enumerate}
+
+
+
+\subsubsection{Límites al infinito}
+
+
+Calcula los siguientes límites:
+\begin{enumerate}
+    \item $\displaystyle \lim_{x \to -\infty} \frac{x^2 - 4}{x^3 + 2x^2 + x + 2}$
+    \item $\displaystyle \lim_{r \to -\infty} \frac{3r + 2}{\sqrt{4r^2 - r + 1}}$
+    \item $\displaystyle \lim_{x \to -\infty} \frac{\sqrt{x^2 + 14} + x}{\sqrt{x^2 - 2} + x}$
+    \item $\displaystyle \lim_{x \to +\infty} \frac{x^2 + x + 3}{-x^3 + 1}$
+    \item $\displaystyle \lim_{x \to -\infty} \left(\sqrt{4x^2 - 6} - \sqrt{4x^2 - x}\right)$
+    \item $\displaystyle \lim_{x \to -\infty} \left(\sqrt{x^2 - 2x - 1} + x\right)$
+    \item $\displaystyle \lim_{x \to +\infty} \left(\sqrt{9x^2 + 1} - 3x\right)$
+\end{enumerate}
+
+
+
+\subsection{Soluciones}
+
+\subsubsection{Respuestas}
+
+
+\textbf{Límites en un punto}
+\begin{enumerate}
+    \item $\dfrac{1}{2}$
+    \item $\dfrac{5}{4}$
+    \item $-\dfrac{1}{8}$
+    \item $-\dfrac{1}{3}$
+    \item $\dfrac{4}{3}$
+    \item $\dfrac{3}{2}$
+    \item $-\infty$
+\end{enumerate}
+
+\textbf{Límites con valor absoluto}
+\begin{enumerate}
+    \item $-\dfrac{3}{4}$
+    \item $\dfrac{1}{8}$
+    \item $\dfrac{4}{5}$
+    \item $\dfrac{1}{2}$
+\end{enumerate}
+
+\textbf{Límites trigonométricos}
+\begin{enumerate}
+    \item $-\dfrac{1}{4}$
+    \item $\dfrac{3}{2}$
+    \item $2$
+    \item $5$
+    \item $\dfrac{45}{2}$
+\end{enumerate}
+
+\textbf{Límites al infinito}
+\begin{enumerate}
+    \item $0$
+    \item $-\dfrac{3}{2}$
+    \item $-7$
+    \item $0$
+    \item $-\dfrac{1}{4}$
+    \item $1$
+    \item $0$
+\end{enumerate}
+
+
+
+\section{Cálculo de límites e indeterminaciones}
+
+\subsection{Teoría}
+
+\textbf{Objetivo.} Reconocer formas indeterminadas y analizar transformaciones válidas.
+
+\textbf{Antes de comenzar.} Revisa la noción de límite y las operaciones algebraicas.
+
+
+Al calcular un límite, en ocasiones la sustitución directa del valor al que tiende la variable produce una expresión que \textbf{no tiene un valor numérico definido}. A estas expresiones se les llama \textbf{formas indeterminadas}, y su aparición no significa que el límite no exista, sino que se requiere de un procedimiento algebraico adicional (factorización, racionalización, simplificación, entre otros) para poder determinarlo.
+
+
+
+\subsubsection{Principales formas indeterminadas}
+
+
+Las formas indeterminadas más comunes son:
+\[
+\frac{0}{0}, \qquad \frac{\infty}{\infty}, \qquad \infty - \infty, \qquad 0 \cdot \infty, \qquad 1^{\infty}, \qquad 0^0, \qquad \infty^0
+\]
+
+
+
+\subsubsection{¿Por qué se llaman ``indeterminadas''?}
+
+
+Se llaman así porque, a diferencia de operaciones como $\dfrac{5}{0}$ (que no está definida; el comportamiento de un cociente cuyo denominador tiende a cero debe analizarse por separado) o $\dfrac{0}{5} = 0$ (que sí tiene un resultado claro), expresiones como $\dfrac{0}{0}$ no tienen un único valor posible: dependiendo de las funciones involucradas, el límite puede dar como resultado cualquier número, $\infty$, $-\infty$, o incluso no existir. Por ello, la sustitución directa no es válida y es necesario transformar la expresión antes de evaluar el límite.
+
+
+
+\subsubsection{Forma indeterminada $\dfrac{0}{0}$}
+
+
+Ocurre cuando, al sustituir el valor de $x$, tanto el numerador como el denominador se anulan. Por ejemplo:
+\[
+\lim_{x \to 1} \frac{x^2 - 1}{x - 1}
+\]
+Al sustituir $x = 1$ se obtiene $\dfrac{0}{0}$, lo cual es indeterminado. Sin embargo, factorizando el numerador:
+\[
+\frac{x^2 - 1}{x - 1} = \frac{(x-1)(x+1)}{x-1} = x + 1
+\]
+se elimina la indeterminación y se obtiene:
+\[
+\lim_{x \to 1} \frac{x^2 - 1}{x - 1} = \lim_{x \to 1} (x + 1) = 2
+\]
+
+
+
+\subsubsection{Forma indeterminada $\dfrac{\infty}{\infty}$}
+
+
+Se presenta cuando tanto el numerador como el denominador tienden a infinito. Un método común para resolverla es dividir cada término entre la mayor potencia de $x$ presente en la expresión. Por ejemplo:
+\[
+\lim_{x \to \infty} \frac{2x^2 + 3x}{x^2 - 1}
+\]
+Dividiendo numerador y denominador entre $x^2$:
+\[
+\lim_{x \to \infty} \frac{2 + \dfrac{3}{x}}{1 - \dfrac{1}{x^2}} = \frac{2 + 0}{1 - 0} = 2
+\]
+
+
+
+\subsubsection{Forma indeterminada $\infty - \infty$}
+
+
+Aparece al restar dos expresiones que, por separado, tienden a infinito. Suele resolverse combinando las expresiones en una sola fracción, racionalizando, o factorizando. Por ejemplo:
+\[
+\lim_{x \to \infty} \left( \sqrt{x^2 + x} - x \right)
+\]
+Racionalizando (multiplicando y dividiendo por el conjugado):
+\[
+\lim_{x \to \infty} \frac{(\sqrt{x^2+x} - x)(\sqrt{x^2+x}+x)}{\sqrt{x^2+x}+x} = \lim_{x \to \infty} \frac{x}{\sqrt{x^2+x}+x}
+\]
+Dividiendo entre $x$:
+\[
+\lim_{x \to \infty} \frac{1}{\sqrt{1 + \dfrac{1}{x}} + 1} = \frac{1}{1+1} = \frac{1}{2}
+\]
+
+
+
+\subsubsection{Estrategias generales para resolver indeterminaciones}
+
+
+\begin{itemize}
+    \item \textbf{Factorización:} útil cuando aparecen polinomios que comparten raíces comunes.
+    \item \textbf{Racionalización:} se emplea cuando hay raíces cuadradas involucradas, multiplicando por el conjugado.
+    \item \textbf{División entre la mayor potencia de $x$:} apropiada para límites al infinito con cocientes de polinomios.
+    \item \textbf{Simplificación algebraica:} eliminar factores comunes o simplificar fracciones complejas.
+\end{itemize}
+
+Es importante recordar que una forma indeterminada no implica la inexistencia del límite; simplemente señala que se requiere un análisis más detallado para conocer su verdadero valor.
+
+
+
+\subsection{Ejemplos resueltos}
+
+Los ejemplos se encuentran integrados en la teoría.
+
+\subsection{Práctica}
+
+No se incluye práctica adicional en este apartado.
+
+\subsection{Soluciones}
+
+Los desarrollos disponibles acompañan a los ejemplos.
+
+\section{Derivada de una función en un punto}
+
+\subsection{Teoría}
+
+\textbf{Objetivo.} Interpretar y calcular la derivada por definición.
+
+\textbf{Antes de comenzar.} Recuerda límites y pendientes.
+
+\subsubsection{De la recta secante a la recta tangente}
+
+
+La pendiente de una recta es una razón de cambio. Si se toman dos puntos de la gráfica de $f$, $(x, f(x))$ y $(x+h, f(x+h))$, con $h = x_2 - x_1$, la recta que los une es \textbf{secante} a la gráfica y su pendiente es:
+\[
+m_{\text{secante}} = \frac{f(x+h) - f(x)}{h}
+\]
+Cuando $h \to 0$, analiza el límite de las pendientes de las secantes. Si existe y es finito, determina la pendiente de la recta tangente.
+
+
+
+\subsubsection{Definición formal de derivada}
+
+
+Cuando el límite existe y es finito, la derivada de $f$ determina la pendiente de la recta tangente:
+\[
+m_{\text{tangente}} = f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
+\]
+De forma equivalente, en un punto $x = a$:
+\[
+m_{\text{tangente}} = f'(a) = \lim_{x \to a} \frac{f(x) - f(a)}{x - a}
+\]
+La derivada representa la \textbf{razón de cambio instantánea} de $f$ con respecto a $x$. Otras notaciones son $y'$, $\dfrac{dy}{dx}$ y $\dfrac{df}{dx}$.
+
+
+
+\subsection{Ejemplos resueltos}
+
+\subsubsection{Ejemplo 1 (derivada por definición)}
+
+
+Calcular $f'(x)$ si $f(x) = 4x - 7$.
+
+\textbf{Solución:}
+\[
+f(x+h) = 4(x+h) - 7 = 4x + 4h - 7
+\]
+\begin{align*}
+f'(x) &= \lim_{h \to 0} \frac{4x + 4h - 7 - (4x - 7)}{h} = \lim_{h \to 0} \frac{4x + 4h - 7 - 4x + 7}{h} \\
+&= \lim_{h \to 0} \frac{4h}{h} = \lim_{h \to 0} 4 = 4
+\end{align*}
+
+
+
+\subsubsection{Ejemplo 2 (derivada por definición)}
+
+
+Calcular $f'(x)$ si $f(x) = x^2 + 3x - 1$.
+
+\textbf{Solución:}
+\[
+f(x+h) = (x+h)^2 + 3(x+h) - 1 = x^2 + 2xh + h^2 + 3x + 3h - 1
+\]
+\begin{align*}
+f'(x) &= \lim_{h \to 0} \frac{x^2 + 2xh + h^2 + 3x + 3h - 1 - (x^2 + 3x - 1)}{h} \\
+&= \lim_{h \to 0} \frac{2xh + h^2 + 3h}{h} = \lim_{h \to 0} \frac{h(2x + h + 3)}{h} \\
+&= \lim_{h \to 0} (2x + h + 3) = 2x + 3
+\end{align*}
+\[
+\therefore f'(x) = 2x + 3
+\]
+
+
+
+\subsubsection{Ejemplo 3 (pendiente de la tangente en un punto)}
+
+
+Sea $f(x) = \dfrac{2x+3}{x-4}$. Calcular la pendiente de la recta tangente en $x = 3$.
+
+\textbf{Solución:}
+\[
+f(x+h) = \frac{2(x+h) + 3}{(x+h) - 4} = \frac{2x + 2h + 3}{x + h - 4}
+\]
+\begin{align*}
+f'(x) &= \lim_{h \to 0} \frac{\dfrac{2x + 2h + 3}{x + h - 4} - \dfrac{2x + 3}{x - 4}}{h}
+= \lim_{h \to 0} \frac{(2x + 2h + 3)(x - 4) - (2x + 3)(x + h - 4)}{h(x + h - 4)(x - 4)} \\
+&= \lim_{h \to 0} \frac{2x^2 + 2xh - 5x - 8h - 12 - (2x^2 + 2xh - 5x + 3h - 12)}{h(x + h - 4)(x - 4)} \\
+&= \lim_{h \to 0} \frac{-11h}{h(x + h - 4)(x - 4)} = \lim_{h \to 0} \frac{-11}{(x + h - 4)(x - 4)} = \frac{-11}{(x - 4)^2}
+\end{align*}
+Por lo tanto:
+\[
+m_{\text{tangente}} = f'(3) = \frac{-11}{(3 - 4)^2} = -11
+\]
+
+
+
+\subsubsection{Ejemplo 4 (por definición, con racionalización)}
+
+
+Sea $f(x) = \sqrt{x+3}$. Calcular $f'(1)$.
+
+\textbf{Solución:} Al sustituir $h = 0$ se obtiene la forma $\frac{0}{0}$, así que se racionaliza:
+\begin{align*}
+f'(x) &= \lim_{h \to 0} \frac{\sqrt{x + h + 3} - \sqrt{x + 3}}{h} \cdot \frac{\sqrt{x + h + 3} + \sqrt{x + 3}}{\sqrt{x + h + 3} + \sqrt{x + 3}} \\
+&= \lim_{h \to 0} \frac{(x + h + 3) - (x + 3)}{h\left(\sqrt{x + h + 3} + \sqrt{x + 3}\right)}
+= \lim_{h \to 0} \frac{h}{h\left(\sqrt{x + h + 3} + \sqrt{x + 3}\right)} \\
+&= \lim_{h \to 0} \frac{1}{\sqrt{x + h + 3} + \sqrt{x + 3}} = \frac{1}{2\sqrt{x + 3}}
+\end{align*}
+\[
+f'(1) = \frac{1}{2\sqrt{1 + 3}} = \frac{1}{4}
+\]
+
+
+
+\subsubsection{Ejemplo 5 (por definición, función trigonométrica)}
+
+
+Sea $f(x) = \sin x - 3\cos x$. Calcular $f'\left(\frac{\pi}{3}\right)$.
+
+\textbf{Solución:} Se usan las identidades y límites notables:
+\[
+\sin(x + h) = \sin x \cos h + \cos x \sin h, \qquad \cos(x + h) = \cos x \cos h - \sin x \sin h
+\]
+\[
+\lim_{h \to 0} \frac{\sin h}{h} = 1, \qquad \lim_{h \to 0} \frac{1 - \cos h}{h} = 0
+\]
+Separando el límite en dos partes:
+\[
+f'(x) = \underbrace{\lim_{h \to 0} \frac{\sin(x + h) - \sin x}{h}}_{(1)} + 3 \cdot \underbrace{\lim_{h \to 0} \frac{\cos x - \cos(x + h)}{h}}_{(2)}
+\]
+Para (1):
+\begin{align*}
+\lim_{h \to 0} \frac{\sin x \cos h + \cos x \sin h - \sin x}{h} &= \lim_{h \to 0} \left[ \cos x \cdot \frac{\sin h}{h} - \sin x \cdot \frac{1 - \cos h}{h} \right] \\
+&= \cos x \cdot 1 - \sin x \cdot 0 = \cos x
+\end{align*}
+Para (2):
+\begin{align*}
+\lim_{h \to 0} \frac{\cos x - \cos x \cos h + \sin x \sin h}{h} &= \lim_{h \to 0} \left[ \cos x \cdot \frac{1 - \cos h}{h} + \sin x \cdot \frac{\sin h}{h} \right] \\
+&= \cos x \cdot 0 + \sin x \cdot 1 = \sin x
+\end{align*}
+Entonces $f'(x) = \cos x + 3\sin x$ y:
+\[
+f'\left(\frac{\pi}{3}\right) = \cos\left(\frac{\pi}{3}\right) + 3\sin\left(\frac{\pi}{3}\right) = \frac{1}{2} + 3 \cdot \frac{\sqrt{3}}{2} = \frac{1 + 3\sqrt{3}}{2}
+\]
+
+
+
+\subsection{Práctica}
+
+\subsubsection{Práctica}
+
+
+Usa la definición para calcular la derivada de la función:
+\begin{enumerate}
+    \item $f(x) = 1 - 3x + x^2$ en $x = -6$
+    \item $f(y) = \sqrt{2y^2 - 5}$ en $y = 2$
+    \item $f(x) = 5\cos(x - \pi)$ en $x = \pi$
+    \item $h(x) = \dfrac{-1}{\sqrt{x + 1}}$
+    \item $g(x) = x + \sqrt{x}$
+    \item $h(x) = \dfrac{x + 1}{x - 1}$
+\end{enumerate}
+
+
+
+\subsection{Soluciones}
+
+\subsubsection{Respuestas de la práctica}
+
+
+\begin{enumerate}
+    \item $f'(-6) = -15$
+    \item $f'(2) = \dfrac{4}{\sqrt{3}}$
+    \item $f'(\pi) = 0$
+    \item $h'(x) = \dfrac{1}{2(x + 1)^{3/2}}$
+    \item $g'(x) = 1 + \dfrac{1}{2\sqrt{x}}$
+    \item $h'(x) = \dfrac{-2}{(x - 1)^2}$
+\end{enumerate}
+
+
+
+\section{Teoremas y reglas sobre derivadas}
+
+\subsection{Teoría}
+
+\textbf{Objetivo.} Aplicar reglas de derivación justificando su elección.
+
+\textbf{Antes de comenzar.} Revisa la definición de derivada.
+
+
+Calcular derivadas por definición es largo, por eso se usan reglas que se deducen de ella.
+
+
+
+\subsubsection{Derivadas básicas}
+
+
+Sean $k$ y $n$ constantes reales. Aplica las fórmulas en los puntos donde las funciones son derivables. Para logaritmos reales se requiere argumento positivo; la base cumple $a>0$ y $a\neq1$. Para potencias reales, revisa el dominio antes de usar la regla:
+\begin{align*}
+[k]' &= 0 & [x^n]' &= n\,x^{n-1} \\
+[e^x]' &= e^x & [a^x]' &= a^x \ln a \\
+[\ln x]' &= \frac{1}{x} & [\log_a x]' &= \frac{1}{x \ln a}
+\end{align*}
+
+
+
+\subsubsection{Propiedades}
+
+
+\begin{align*}
+[k \cdot f(x)]' &= k \cdot f'(x) \\
+[f(x) \pm g(x)]' &= f'(x) \pm g'(x)
+\end{align*}
+
+
+
+\subsubsection{Regla del producto}
+
+
+\[
+[f(x) \cdot g(x)]' = f'(x) \cdot g(x) + f(x) \cdot g'(x)
+\]
+
+
+
+\subsubsection{Regla del cociente}
+
+
+\[
+\left[\frac{f(x)}{g(x)}\right]' = \frac{f'(x) \cdot g(x) - f(x) \cdot g'(x)}{[g(x)]^2}, \qquad g(x) \neq 0
+\]
+
+
+
+\subsection{Ejemplos resueltos}
+
+\subsubsection{Ejemplo 1 (suma de funciones)}
+
+
+Derivar $f(x) = -8x^3 + 5e^x + \log_3 x$.
+
+\textbf{Solución:}
+\[
+f'(x) = -24x^2 + 5e^x + \frac{1}{x \ln 3}
+\]
+
+
+
+\subsubsection{Ejemplo 2 (simplificar antes de derivar)}
+
+
+Derivar $f(x) = \dfrac{6\sqrt{x^5} - 9\sqrt{x}}{3\sqrt{x^3}}$.
+
+\textbf{Solución:} Se escribe con exponentes y se simplifica:
+\[
+f(x) = \frac{6x^{5/2}}{3x^{3/2}} - \frac{9x^{1/2}}{3x^{3/2}} = 2x - 3x^{-1}
+\]
+\[
+f'(x) = 2 - 3(-1)x^{-2} = 2 + 3x^{-2} = 2 + \frac{3}{x^2}
+\]
+
+
+
+\subsubsection{Ejemplo 3 (regla del producto)}
+
+
+Derivar $f(x) = (x^2 + 2x)(x + 1) - 6x^2 + 5$.
+
+\textbf{Solución:}
+\[
+[x^2 + 2x]' = 2x + 2, \qquad [x + 1]' = 1
+\]
+\[
+f'(x) = (2x + 2)(x + 1) + (x^2 + 2x)(1) - 12x
+\]
+(También se puede multiplicar primero los polinomios y luego derivar.)
+
+
+
+\subsubsection{Ejemplo 4 (regla del producto)}
+
+
+Derivar $f(x) = \sqrt[3]{x} \cdot \ln x = x^{1/3} \cdot \ln x$.
+
+\textbf{Solución:}
+\[
+\left[x^{1/3}\right]' = \frac{1}{3}x^{-2/3} = \frac{1}{3\sqrt[3]{x^2}}, \qquad [\ln x]' = \frac{1}{x}
+\]
+\[
+f'(x) = \frac{1}{3\sqrt[3]{x^2}} \cdot \ln x + \sqrt[3]{x} \cdot \frac{1}{x}
+\]
+
+
+
+\subsubsection{Ejemplo 5 (regla del cociente)}
+
+
+Derivar $f(x) = \dfrac{2x + 3}{x - 4}$ y evaluar en $x = 3$.
+
+\textbf{Solución:}
+\[
+[2x + 3]' = 2, \qquad [x - 4]' = 1
+\]
+\[
+f'(x) = \frac{2(x - 4) - (2x + 3)(1)}{(x - 4)^2} = \frac{2x - 8 - 2x - 3}{(x - 4)^2} = \frac{-11}{(x - 4)^2}
+\]
+\[
+f'(3) = \frac{-11}{(3 - 4)^2} = -11
+\]
+Se obtiene el mismo resultado que por definición, pero con mucho menos trabajo.
+
+
+
+\subsubsection{Ejemplo 6 (regla del cociente)}
+
+
+Derivar $f(x) = \dfrac{1 + \ln x}{1 - \ln x}$.
+
+\textbf{Solución:}
+\[
+[1 + \ln x]' = \frac{1}{x}, \qquad [1 - \ln x]' = -\frac{1}{x}
+\]
+\[
+f'(x) = \frac{\left(\frac{1}{x}\right)(1 - \ln x) - (1 + \ln x)\left(-\frac{1}{x}\right)}{(1 - \ln x)^2}
+= \frac{\frac{1}{x}\left[(1 - \ln x) + (1 + \ln x)\right]}{(1 - \ln x)^2}
+= \frac{2}{x(1 - \ln x)^2}
+\]
+
+
+
+\subsubsection{Ejemplo 7 (cociente con un producto en el numerador)}
+
+
+Derivar $f(x) = \dfrac{x \ln x}{1 - e^x}$.
+
+\textbf{Solución:} El numerador es un producto, así que se deriva con la regla del producto:
+\[
+[x \ln x]' = 1 \cdot \ln x + x \cdot \frac{1}{x} = \ln x + 1, \qquad [1 - e^x]' = -e^x
+\]
+\[
+f'(x) = \frac{(\ln x + 1)(1 - e^x) - (x \ln x)(-e^x)}{(1 - e^x)^2} = \frac{(\ln x + 1)(1 - e^x) + x e^x \ln x}{(1 - e^x)^2}
+\]
+
+
+
+\subsection{Práctica}
+
+\subsubsection{Práctica}
+
+
+Calcula la derivada de las siguientes funciones:
+\begin{enumerate}
+    \item $f(x) = 2x^8 - 3x^5 + 5$
+    \item $f(x) = 3x^{4/3} - 6x^{2/3} - 2$
+    \item $g(z) = \sqrt{z} - \dfrac{1}{\sqrt{z}}$
+    \item $h(z) = 3z + \dfrac{1}{z} - \dfrac{2}{z^2} + \dfrac{3}{\sqrt[3]{z}}$
+    \item $f(s) = (s^2 + s + 1)(s^2 + 2)$
+    \item $f(x) = \dfrac{ax + b}{cx + d}$
+    \item $f(u) = (2u - 5)\dfrac{u + 1}{u + 2}$
+    \item $f(x) = \dfrac{2}{x + 1}\left(1 - \dfrac{3}{x + 1}\right)$
+    \item $g(t) = \dfrac{1 - t^2}{1 + t^2}$
+    \item $g(t) = \dfrac{\ln t}{t + 1}$
+\end{enumerate}
+
+
+
+\subsection{Soluciones}
+
+\subsubsection{Respuestas de la práctica}
+
+
+\begin{enumerate}
+    \item $f'(x) = 16x^7 - 15x^4$
+    \item $f'(x) = 4x^{1/3} - 4x^{-1/3}$
+    \item $g'(z) = \dfrac{1}{2\sqrt{z}} + \dfrac{1}{2z\sqrt{z}}$
+    \item $h'(z) = 3 - z^{-2} + 4z^{-3} - z^{-4/3}$
+    \item $f'(s) = 4s^3 + 3s^2 + 6s + 2$
+    \item $f'(x) = \dfrac{ad - bc}{(cx + d)^2}$
+    \item $f'(u) = \dfrac{2u^2 + 8u - 1}{(u + 2)^2}$
+    \item $f'(x) = \dfrac{10 - 2x}{(x + 1)^3}$
+    \item $g'(t) = \dfrac{-4t}{(1 + t^2)^2}$
+    \item $g'(t) = \dfrac{1 + t - t\ln t}{t(t + 1)^2}$
+\end{enumerate}
+
+
+
+\section{Derivadas trigonométricas e inversas}
+
+\subsection{Teoría}
+
+\textbf{Objetivo.} Derivar expresiones trigonométricas y sus inversas.
+
+\textbf{Antes de comenzar.} Recuerda producto, cociente y notación trigonométrica.
+
+\subsubsection{Funciones trigonométricas}
+
+
+\begin{align*}
+[\sin x]' &= \cos x & [\cos x]' &= -\sin x \\
+[\tan x]' &= \sec^2 x & [\cot x]' &= -\csc^2 x \\
+[\sec x]' &= \sec x \tan x & [\csc x]' &= -\csc x \cot x
+\end{align*}
+
+
+
+\subsubsection{Funciones trigonométricas inversas}
+
+
+\begin{align*}
+[\arcsin x]' &= \frac{1}{\sqrt{1 - x^2}} & [\arccos x]' &= \frac{-1}{\sqrt{1 - x^2}} \\
+[\arctan x]' &= \frac{1}{1 + x^2} & [\operatorname{arccot} x]' &= \frac{-1}{1 + x^2}
+\end{align*}
+
+
+
+\subsection{Ejemplos resueltos}
+
+\subsubsection{Ejemplo 1}
+
+
+Derivar $f(x) = \sin x - 3\cos x$ y evaluar en $x = \frac{\pi}{3}$.
+
+\textbf{Solución:}
+\[
+f'(x) = \cos x - 3(-\sin x) = \cos x + 3\sin x
+\]
+\[
+f'\left(\frac{\pi}{3}\right) = \frac{1}{2} + 3 \cdot \frac{\sqrt{3}}{2} = \frac{1 + 3\sqrt{3}}{2}
+\]
+Coincide con el resultado obtenido por definición.
+
+
+
+\subsubsection{Ejemplo 2}
+
+
+Derivar $f(x) = (3x^2 - 5x + 2) \sec x$.
+
+\textbf{Solución:}
+\[
+[3x^2 - 5x + 2]' = 6x - 5, \qquad [\sec x]' = \sec x \tan x
+\]
+\[
+f'(x) = (6x - 5)\sec x + (3x^2 - 5x + 2)\sec x \tan x
+\]
+
+
+
+\subsubsection{Ejemplo 3}
+
+
+Derivar $f(x) = 2x^{-2} \arctan x$.
+
+\textbf{Solución:}
+\[
+f'(x) = -4x^{-3} \arctan x + 2x^{-2} \cdot \frac{1}{x^2 + 1}
+\]
+
+
+
+\subsubsection{Ejemplo 4}
+
+
+Derivar $h(x) = \dfrac{\sin x}{1 + \cos x}$.
+
+\textbf{Solución:}
+\[
+[\sin x]' = \cos x, \qquad [1 + \cos x]' = -\sin x
+\]
+\[
+h'(x) = \frac{\cos x (1 + \cos x) - \sin x(-\sin x)}{(1 + \cos x)^2} = \frac{\cos x + \cos^2 x + \sin^2 x}{(1 + \cos x)^2} = \frac{1 + \cos x}{(1 + \cos x)^2} = \frac{1}{1 + \cos x}
+\]
+
+
+
+\subsubsection{Ejemplo 5}
+
+
+Derivar $h(x) = \dfrac{e^x}{\arccos x}$.
+
+\textbf{Solución:}
+\[
+h'(x) = \frac{e^x \arccos x - e^x \cdot \dfrac{-1}{\sqrt{1 - x^2}}}{(\arccos x)^2} = \frac{e^x \arccos x + \dfrac{e^x}{\sqrt{1 - x^2}}}{(\arccos x)^2}
+\]
+
+
+
+\subsubsection{Ejemplo 6}
+
+
+Derivar $f(x) = \dfrac{x \ln x}{\tan x - \arccos x}$.
+
+\textbf{Solución:}
+\[
+[x \ln x]' = \ln x + 1, \qquad [\tan x - \arccos x]' = \sec^2 x + \frac{1}{\sqrt{1 - x^2}}
+\]
+\[
+f'(x) = \frac{(\ln x + 1)(\tan x - \arccos x) - (x \ln x)\left(\sec^2 x + \dfrac{1}{\sqrt{1 - x^2}}\right)}{(\tan x - \arccos x)^2}
+\]
+
+
+
+\subsection{Práctica}
+
+\subsubsection{Práctica}
+
+
+Calcula la derivada de las siguientes funciones:
+\begin{enumerate}
+    \item $g(x) = (\arccos x)(\arcsin x)$
+    \item $h(x) = \dfrac{\tan x - 1}{\sec x}$
+    \item $h(z) = \dfrac{e^z}{\arccos z}$
+    \item $h(z) = \dfrac{\operatorname{arccot} z}{\sqrt{z}}$
+\end{enumerate}
+
+
+
+\subsection{Soluciones}
+
+\subsubsection{Respuestas de la práctica}
+
+
+\begin{enumerate}
+    \item $g'(x) = \dfrac{\arccos x - \arcsin x}{\sqrt{1 - x^2}}$
+    \item $h'(x) = \cos x + \sin x$
+    \item $h'(z) = \dfrac{e^z\left(\sqrt{1 - z^2}\arccos z + 1\right)}{\sqrt{1 - z^2}\,(\arccos z)^2}$
+    \item $h'(z) = \dfrac{-1}{\sqrt{z}\,(1 + z^2)} - \dfrac{\operatorname{arccot} z}{2z\sqrt{z}}$
+\end{enumerate}
+
+
+
+\section{Derivada de una función compuesta}
+
+\subsection{Teoría}
+
+\textbf{Objetivo.} Identificar composiciones y aplicar la regla de la cadena.
+
+\textbf{Antes de comenzar.} Recuerda derivadas básicas y composición.
+
+
+La regla de la cadena se usa para derivar una \textbf{composición de funciones}, es decir, una función dentro de otra. Si $y = f(g(x))$, entonces:
+\[
+[f(g(x))]' = f'(g(x)) \cdot g'(x)
+\]
+Se deriva la función ``de afuera'' dejando igual la de adentro, y se multiplica por la derivada de la función ``de adentro''.
+
+
+
+\subsubsection{Formas generales}
+
+
+Si $u = g(x)$:
+\begin{align*}
+[u^n]' &= n\,u^{n-1} \cdot u' & [e^u]' &= e^u \cdot u' & [\ln u]' &= \frac{u'}{u} \\
+[\sin u]' &= \cos u \cdot u' & [\cos u]' &= -\sin u \cdot u' & [\arctan u]' &= \frac{u'}{1 + u^2}
+\end{align*}
+
+
+
+\subsection{Ejemplos resueltos}
+
+\subsubsection{Ejemplo 1}
+
+
+Derivar $f(x) = \ln(x^2)$.
+
+\textbf{Solución:}
+\[
+f'(x) = \frac{1}{x^2} \cdot 2x = \frac{2}{x}
+\]
+
+
+
+\subsubsection{Ejemplo 2}
+
+
+Derivar $f(x) = (5x^4 - 3x^3 + 4x - 1)^6$.
+
+\textbf{Solución:}
+\[
+f'(x) = 6(5x^4 - 3x^3 + 4x - 1)^5 \cdot (20x^3 - 9x^2 + 4)
+\]
+
+
+
+\subsubsection{Ejemplo 3 (comprobación)}
+
+
+Derivar $f(x) = (2x - 1)^2$ de dos formas.
+
+\textbf{Solución:} Desarrollando primero:
+\[
+f(x) = 4x^2 - 4x + 1 \quad \Rightarrow \quad f'(x) = 8x - 4
+\]
+Con la regla de la cadena:
+\[
+f'(x) = 2(2x - 1) \cdot 2 = 4(2x - 1) = 8x - 4
+\]
+Ambos resultados coinciden.
+
+
+
+\subsubsection{Ejemplo 4}
+
+
+Derivar $f(x) = e^{x^2 - 5x + 9}$ y $g(x) = e^{-x}$.
+
+\textbf{Solución:}
+\[
+f'(x) = e^{x^2 - 5x + 9} \cdot (2x - 5), \qquad g'(x) = e^{-x} \cdot (-1) = -e^{-x}
+\]
+
+
+
+\subsubsection{Ejemplo 5}
+
+
+Derivar $f(x) = \left(x - 3e^{x/3}\right)^5$.
+
+\textbf{Solución:}
+\[
+f'(x) = 5\left(x - 3e^{x/3}\right)^4 \cdot \left(1 - 3e^{x/3} \cdot \frac{1}{3}\right) = 5\left(x - 3e^{x/3}\right)^4 \left(1 - e^{x/3}\right)
+\]
+
+
+
+\subsubsection{Ejemplo 6 (con una función $g$ desconocida)}
+
+
+Si $g$ es derivable, derivar $f(x) = e^{3x} \, g(\ln^2 x)$.
+
+\textbf{Solución:} Recuerda que $\ln^2 x = (\ln x)^2 \neq \ln(x^2)$. Es un producto, y cada factor requiere la regla de la cadena:
+\[
+\left[e^{3x}\right]' = 3e^{3x}, \qquad \left[g\left((\ln x)^2\right)\right]' = g'\left((\ln x)^2\right) \cdot 2\ln x \cdot \frac{1}{x}
+\]
+\[
+f'(x) = 3e^{3x} \, g(\ln^2 x) + e^{3x} \, g'(\ln^2 x) \cdot \frac{2\ln x}{x}
+\]
+
+
+
+\subsubsection{Ejemplo 7 (cadena y cociente)}
+
+
+Derivar $f(x) = \sqrt{\dfrac{(x - 1)^3}{(2x + 7)(5 - x)^2}}$.
+
+\textbf{Solución:} Se escribe $f(x) = \left(\dfrac{(x - 1)^3}{(2x + 7)(5 - x)^2}\right)^{1/2}$. Derivadas auxiliares:
+\[
+\left[(x - 1)^3\right]' = 3(x - 1)^2
+\]
+\[
+\left[(2x + 7)(5 - x)^2\right]' = 2(5 - x)^2 + (2x + 7) \cdot 2(5 - x)(-1) = 2(5 - x)^2 - 2(2x + 7)(5 - x)
+\]
+Entonces:
+\begin{align*}
+f'(x) = {} & \frac{1}{2}\left(\frac{(x - 1)^3}{(2x + 7)(5 - x)^2}\right)^{-1/2} \\
+& \cdot \frac{3(x - 1)^2 (2x + 7)(5 - x)^2 - (x - 1)^3\left[2(5 - x)^2 - 2(2x + 7)(5 - x)\right]}{\left[(2x + 7)(5 - x)^2\right]^2}
+\end{align*}
+
+
+
+\subsubsection{Ejemplo 8 (usando propiedades de logaritmos)}
+
+
+Derivar $f(x) = \ln\left[\dfrac{(x^3 - 1)\,e^{-x^2}}{\sqrt{1 - 5x}}\right]$.
+
+\textbf{Pendiente de revisión docente.} El argumento del logaritmo no es positivo en ningún punto del dominio real. Se suspende el desarrollo; la fuente original se conserva por separado.
+
+\subsubsection{Ejemplo 9 (verificación de una derivada)}
+
+
+Verificar que si $f(x) = \arctan\left(\dfrac{x + 1}{1 - x}\right) - \arctan x$, entonces $f'(x) = 0$.
+
+\textbf{Solución:} La derivada del cociente interno es:
+\[
+\left[\frac{x + 1}{1 - x}\right]' = \frac{1 \cdot (1 - x) - (x + 1)(-1)}{(1 - x)^2} = \frac{2}{(1 - x)^2}
+\]
+Aplicando la regla de la cadena:
+\begin{align*}
+f'(x) &= \frac{1}{\left(\frac{x + 1}{1 - x}\right)^2 + 1} \cdot \frac{2}{(1 - x)^2} - \frac{1}{x^2 + 1}
+= \frac{(1 - x)^2}{(x + 1)^2 + (1 - x)^2} \cdot \frac{2}{(1 - x)^2} - \frac{1}{x^2 + 1} \\
+&= \frac{2}{2x^2 + 2} - \frac{1}{x^2 + 1} = \frac{1}{x^2 + 1} - \frac{1}{x^2 + 1} = 0
+\end{align*}
+
+
+
+\subsection{Práctica}
+
+\subsubsection{Práctica}
+
+
+Calcula la derivada de las siguientes funciones:
+\begin{enumerate}
+    \item $f(\theta) = \sin(5\theta)\sec^2(5\theta)$
+    \item $f(x) = \left(\dfrac{x - 7}{x + 2}\right)^3$
+    \item $f(t) = \dfrac{3t^4}{\sqrt{t^2 - 5t}}$
+    \item $f(x) = e^{2x^2 - 5x + 3}$
+    \item $f(x) = \dfrac{e^x - 1}{e^x + 1}$
+    \item $f(t) = \ln\left(t\sqrt{t^2 + 1}\right)$
+    \item $f(y) = \ln^2(2y + 6)$
+    \item $g(z) = \sec\left(e^{1 - 2z}\right)$
+    \item Si $f$ es derivable, derive $y = \dfrac{f(\ln z)}{z e^z}$.
+\end{enumerate}
+
+
+
+\subsection{Soluciones}
+
+\subsubsection{Respuestas de la práctica}
+
+
+\begin{enumerate}
+    \item $f'(\theta) = 5\sec(5\theta) + 10\sin^2(5\theta)\sec^3(5\theta)$
+    \item $f'(x) = \dfrac{27(x - 7)^2}{(x + 2)^4}$
+    \item $f'(t) = \dfrac{18t^5 - 105t^4}{2(t^2 - 5t)^{3/2}}$
+    \item $f'(x) = (4x - 5)\,e^{2x^2 - 5x + 3}$
+    \item $f'(x) = \dfrac{2e^x}{(e^x + 1)^2}$
+    \item $f'(t) = \dfrac{1}{t} + \dfrac{t}{t^2 + 1}$
+    \item $f'(y) = \dfrac{2\ln(2y + 6)}{y + 3}$
+    \item $g'(z) = -2e^{1 - 2z}\sec\left(e^{1 - 2z}\right)\tan\left(e^{1 - 2z}\right)$
+    \item $y' = \dfrac{f'(\ln z) - (1 + z)f(\ln z)}{z^2 e^z}$
+\end{enumerate}
+
+
+
+\section{Derivación implícita}
+
+\subsection{Teoría}
+
+\textbf{Objetivo.} Derivar relaciones implícitas y despejar la derivada.
+
+\textbf{Antes de comenzar.} Revisa producto y regla de la cadena.
+
+\subsubsection{Funciones explícitas e implícitas}
+
+
+Una función es \textbf{explícita} cuando la variable dependiente está despejada, por ejemplo:
+\[
+y = 4x^5 - 7x^3 + 2x^2 + 11, \qquad y = 7e^{5x + 4}
+\]
+Una función es \textbf{implícita} cuando la variable dependiente no está despejada, por ejemplo:
+\[
+3xy = 2y^2 + 4x^2
+\]
+
+
+
+\subsubsection{Idea principal}
+
+
+En la derivación implícita se deriva ambos lados de la ecuación con respecto a $x$, considerando que:
+\begin{itemize}
+    \item $x$ es la variable, por lo que $[x]' = 1$.
+    \item $y$ es una función de $x$, $y = f(x)$, aunque no se conozca su fórmula. Por eso, cada vez que se deriva una expresión con $y$ se aplica la regla de la cadena y aparece $y' = \dfrac{dy}{dx}$.
+\end{itemize}
+Por ejemplo:
+\[
+[5y]' = 5y', \qquad [y^2]' = 2y \cdot y', \qquad [\cos y]' = -\sin y \cdot y'
+\]
+Al final se agrupan los términos con $y'$ a un lado y se despeja.
+
+
+
+\subsection{Ejemplos resueltos}
+
+\subsubsection{Ejemplo 1}
+
+
+Determinar $\dfrac{dy}{dx}$ si $3y = 2y^2 + 4x^2$.
+
+\textbf{Solución:}
+\begin{align*}
+[3y]' &= [2y^2 + 4x^2]' \\
+3y' &= 4y \cdot y' + 8x \\
+3y' - 4y \cdot y' &= 8x \\
+y'(3 - 4y) &= 8x \\
+y' &= \frac{8x}{3 - 4y}
+\end{align*}
+
+
+
+\subsubsection{Ejemplo 2}
+
+
+Determinar $\dfrac{dy}{dx}$ si $e^{xy} = y^3 - x$.
+
+\textbf{Solución:} El exponente $xy$ es un producto, así que se deriva con la regla del producto:
+\begin{align*}
+e^{xy}(1 \cdot y + x \cdot y') &= 3y^2 y' - 1 \\
+y e^{xy} + x e^{xy} y' &= 3y^2 y' - 1 \\
+x e^{xy} y' - 3y^2 y' &= -1 - y e^{xy} \\
+y'\left(x e^{xy} - 3y^2\right) &= -1 - y e^{xy} \\
+y' &= \frac{-1 - y e^{xy}}{x e^{xy} - 3y^2}
+\end{align*}
+
+
+
+\subsubsection{Ejemplo 3}
+
+
+Determinar $\dfrac{dy}{dx}$ si $\sin(x + y) = \sqrt{y}\,\cos(xy)$.
+
+\textbf{Solución:} El lado derecho es un producto:
+\[
+\cos(x + y)(1 + y') = \frac{y'}{2\sqrt{y}}\cos(xy) + \sqrt{y}\left(-\sin(xy)\right)(y + x y')
+\]
+Distribuyendo:
+\[
+\cos(x + y) + \cos(x + y)\,y' = \frac{\cos(xy)}{2\sqrt{y}}\,y' - y\sqrt{y}\sin(xy) - x\sqrt{y}\sin(xy)\,y'
+\]
+Agrupando los términos con $y'$:
+\[
+y'\left(\cos(x + y) - \frac{\cos(xy)}{2\sqrt{y}} + x\sqrt{y}\sin(xy)\right) = -y\sqrt{y}\sin(xy) - \cos(x + y)
+\]
+\[
+y' = \frac{-y\sqrt{y}\sin(xy) - \cos(x + y)}{\cos(x + y) - \dfrac{\cos(xy)}{2\sqrt{y}} + x\sqrt{y}\sin(xy)}
+\]
+
+
+
+\subsubsection{Ejemplo 4 (evaluar en un punto)}
+
+
+Determinar $\dfrac{dx}{dt}$ en el punto $(t, x) = (4, -4)$ si $x + t + e^{x + t} = 1$.
+
+\textbf{Solución:} Aquí $t$ es la variable y $x$ es la función:
+\begin{align*}
+x' + 1 + e^{x + t}(x' + 1) &= 0 \\
+x' + e^{x + t} x' &= -e^{x + t} - 1 \\
+x'\left(1 + e^{x + t}\right) &= -\left(1 + e^{x + t}\right) \\
+x' &= -1
+\end{align*}
+Por lo tanto, $x'(4, -4) = -1$.
+
+
+
+\subsubsection{Ejemplo 5}
+
+
+Determinar $\dfrac{dz}{dw}$ si $z^2 = \ln(w + z)$.
+
+\textbf{Solución:}
+\begin{align*}
+2z \cdot z' &= \frac{1}{w + z} \cdot (1 + z') \\
+2z(w + z)\,z' &= 1 + z' \\
+2z(w + z)\,z' - z' &= 1 \\
+z'\left[2z(w + z) - 1\right] &= 1 \\
+z' &= \frac{1}{2z(w + z) - 1}
+\end{align*}
+
+
+
+\subsection{Práctica}
+
+\subsubsection{Práctica}
+
+
+\begin{enumerate}
+    \item Calcula $\dfrac{dz}{dx}$ en $(-3, 0)$, dado $x^2 z + x z^2 = 3x + 9$.
+    \item Calcula $\dfrac{dx}{dy}$, dado $4x\ln(2x + y) = 4$.
+    \item Suponga que $e^y = y^2 \cdot e^x$ define a $y$ como función de $x$. Determina $\dfrac{dy}{dx}$ y $\dfrac{d^2y}{dx^2}$ en términos de $y$.
+    \item Obtén $y'$ si $x + \cos x + xy^2 = e^y$.
+    \item Obtén $y'$ si $x + e^{xy} - y^3 - y = 3$.
+\end{enumerate}
+
+
+
+\subsection{Soluciones}
+
+\subsubsection{Respuestas de la práctica}
+
+
+\begin{enumerate}
+    \item $\dfrac{dz}{dx} = \dfrac{1}{3}$
+    \item $\dfrac{dx}{dy} = \dfrac{-x}{(2x + y)\ln(2x + y) + 2x}$
+    \item $\dfrac{dy}{dx} = \dfrac{y}{y - 2}$ \quad y \quad $\dfrac{d^2y}{dx^2} = \dfrac{-2y}{(y - 2)^3}$
+    \item $y' = \dfrac{\sin x - y^2 - 1}{2xy - e^y}$
+    \item $y' = \dfrac{1 + y e^{xy}}{1 + 3y^2 - x e^{xy}}$
+\end{enumerate}
+
+
+
+\section{Recta tangente y recta normal}
+
+\subsection{Teoría}
+
+\textbf{Objetivo.} Relacionar la derivada con las ecuaciones tangente y normal.
+
+\textbf{Antes de comenzar.} Recuerda pendientes y ecuaciones de rectas.
+
+
+La derivada evaluada en un punto da la pendiente de la recta tangente en ese punto:
+\[
+m_t = f'(x_1)
+\]
+La \textbf{recta normal} es perpendicular a la recta tangente en el mismo punto. Si la pendiente tangente es finita y distinta de cero, la pendiente normal es la recíproca y opuesta. Si la tangente es horizontal, la normal es vertical:
+\[
+m_n = \frac{-1}{m_t}, \qquad m_t \cdot m_n = -1
+\]
+Ambas rectas tienen la forma $y = mx + b$, y $b$ se calcula con el punto $(x_1, y_1)$:
+\[
+b = y_1 - m\,x_1
+\]
+Recuerda además:
+\begin{itemize}
+    \item Rectas \textbf{paralelas} tienen la misma pendiente.
+    \item Una recta tangente \textbf{horizontal} tiene pendiente $0$, es decir, $f'(x) = 0$.
+\end{itemize}
+
+
+
+\subsection{Ejemplos resueltos}
+
+\subsubsection{Ejemplo 1}
+
+
+Encontrar la recta tangente a $y = \sqrt{x + 1}$ en el punto $(8, 3)$.
+
+\textbf{Solución:}
+\[
+f'(x) = \frac{1}{2}(x + 1)^{-1/2} = \frac{1}{2\sqrt{x + 1}} \quad \Rightarrow \quad m_t = f'(8) = \frac{1}{2\sqrt{9}} = \frac{1}{6}
+\]
+\[
+b = 3 - \frac{1}{6} \cdot 8 = \frac{5}{3}
+\]
+\[
+\therefore y = \frac{1}{6}x + \frac{5}{3}
+\]
+
+
+
+\subsubsection{Ejemplo 2}
+
+
+Encontrar la recta tangente y la recta normal a $f(x) = 1 - x^2$ en el punto $(2, -3)$.
+
+\textbf{Solución:}
+\[
+f'(x) = -2x \quad \Rightarrow \quad m_t = f'(2) = -4
+\]
+Recta tangente:
+\[
+b = -3 - (-4)(2) = 5 \quad \Rightarrow \quad y = -4x + 5
+\]
+Recta normal:
+\[
+m_n = \frac{-1}{-4} = \frac{1}{4}, \qquad b = -3 - \frac{1}{4} \cdot 2 = -\frac{7}{2} \quad \Rightarrow \quad y = \frac{1}{4}x - \frac{7}{2}
+\]
+Si se usa otro punto de la misma curva, por ejemplo $(-3, -8)$: $m_t = f'(-3) = 6$, $b = -8 - 6(-3) = 10$, y la recta tangente es $y = 6x + 10$.
+
+
+
+\subsubsection{Ejemplo 3 (encontrar la función)}
+
+
+Encontrar una parábola $f(x) = ax^2 + bx$ cuya recta tangente en el punto $(1, 1)$ sea $y = 3x - 2$.
+
+\textbf{Solución:} Usando la pendiente (la tangente tiene pendiente $3$):
+\[
+f'(x) = 2ax + b \quad \Rightarrow \quad f'(1) = 2a + b = 3
+\]
+Usando el punto (el punto $(1, 1)$ pertenece a $f$):
+\[
+f(1) = a + b = 1
+\]
+Resolviendo el sistema:
+\[
+\begin{cases}
+2a + b = 3 \\
+a + b = 1
+\end{cases}
+\quad \Rightarrow \quad a = 2, \quad b = -1
+\]
+\[
+\therefore f(x) = 2x^2 - x
+\]
+
+
+
+\subsubsection{Ejemplo 4 (recta normal paralela a otra recta)}
+
+
+Encontrar la recta normal a $f(x) = x \ln x$ que sea paralela a $2x - 2y + 3 = 0$. ¿En qué punto la gráfica tiene tangente horizontal?
+
+\textbf{Solución:} Despejando, $y = x + \frac{3}{2}$, así que su pendiente es $1$. Como la normal es paralela, $m_n = 1$ y entonces $m_t = -1$.
+\[
+f'(x) = \ln x + x \cdot \frac{1}{x} = \ln x + 1
+\]
+\[
+\ln x + 1 = -1 \quad \Rightarrow \quad \ln x = -2 \quad \Rightarrow \quad x = e^{-2}
+\]
+\[
+f(e^{-2}) = e^{-2} \ln(e^{-2}) = -2e^{-2}
+\]
+El punto es $(e^{-2}, -2e^{-2})$ y:
+\[
+b = -2e^{-2} - 1 \cdot e^{-2} = -3e^{-2} \quad \Rightarrow \quad y = x - 3e^{-2}
+\]
+Para la tangente horizontal, $f'(x) = 0$:
+\[
+\ln x + 1 = 0 \quad \Rightarrow \quad x = e^{-1}, \qquad f(e^{-1}) = e^{-1}\ln(e^{-1}) = -e^{-1}
+\]
+El punto es $(e^{-1}, -e^{-1})$.
+
+
+
+\subsubsection{Ejemplo 5 (tangente paralela a una recta)}
+
+
+Encontrar el punto donde la recta tangente a $y = 4u^2 - 5u + 6$ es paralela a $y = 7u - 2$.
+
+\textbf{Solución:} Se necesita $m_t = 7$:
+\[
+y' = 8u - 5 = 7 \quad \Rightarrow \quad u = \frac{12}{8} = \frac{3}{2}
+\]
+\[
+y\left(\frac{3}{2}\right) = 4\left(\frac{3}{2}\right)^2 - 5\left(\frac{3}{2}\right) + 6 = 9 - \frac{15}{2} + 6 = \frac{15}{2}
+\]
+El punto es $\left(\frac{3}{2}, \frac{15}{2}\right)$.
+
+
+
+\subsubsection{Ejemplo 6 (con derivación implícita)}
+
+
+Encontrar la recta tangente a la elipse $3x^2 + 5y^2 = 48$ en el punto $(-1, 3)$.
+
+\textbf{Solución:}
+\[
+6x + 10y\,y' = 0 \quad \Rightarrow \quad y' = \frac{-6x}{10y} = \frac{-3x}{5y}
+\]
+\[
+m_t = y'(-1, 3) = \frac{-3(-1)}{5(3)} = \frac{1}{5}
+\]
+\[
+b = 3 - \frac{1}{5}(-1) = \frac{16}{5} \quad \Rightarrow \quad y = \frac{1}{5}x + \frac{16}{5}
+\]
+
+
+
+\subsection{Práctica}
+
+\subsubsection{Práctica}
+
+
+\begin{enumerate}
+    \item ¿Para qué valores de $a$ y $b$ la recta $2x + y = b$ es tangente a la parábola $f(x) = ax^2$ cuando $x = 2$?
+    \item Encuentra la ecuación de la recta tangente a $w = \dfrac{1}{\sqrt{2u + 5}}$ en $u = -2$.
+    \item Encuentra la ecuación de la recta tangente a $y = \dfrac{1}{\sqrt[3]{x^2}}$ en $x = 8$.
+    \item Encuentra la ecuación de la recta tangente a $y = \sin x + 2\cos x$ en $x = \frac{\pi}{2}$.
+    \item Encuentra los puntos donde la recta tangente a $y = \dfrac{2x}{(3 - x)^2}$ es paralela a la recta $10x - y = 5$.
+    \item Encuentra los puntos donde la recta tangente a $y = e^{u^2 + 2u}$ es horizontal.
+    \item Encuentra la ecuación de la recta perpendicular a $\dfrac{1}{x} + \dfrac{1}{y} + \dfrac{1}{6} = 0$ en $(3, -2)$.
+    \item Halla los puntos de la curva $f(x) = x^3 - 3x + 5$ en los que la recta tangente es perpendicular a la recta $y = -\frac{x}{9}$. ¿En cuáles puntos la gráfica de $f$ posee rectas tangentes horizontales?
+\end{enumerate}
+
+
+
+\subsection{Soluciones}
+
+\subsubsection{Respuestas de la práctica}
+
+
+\begin{enumerate}
+    \item $a = -\dfrac{1}{2}$ y $b = 2$
+    \item $w = -u - 1$
+    \item $y = -\dfrac{1}{48}x + \dfrac{5}{12}$
+    \item $y = -2x + \pi + 1$
+    \item $(2, 4)$
+    \item $\left(-1, e^{-1}\right)$
+    \item $y = \dfrac{9}{4}x - \dfrac{35}{4}$
+    \item Tangente perpendicular en $(-2, 3)$ y $(2, 7)$. Tangentes horizontales en $(1, 3)$ y $(-1, 7)$.
+\end{enumerate}
+
+
+
+\section{La derivada como razón de cambio}
+
+\subsection{Teoría}
+
+\textbf{Objetivo.} Relacionar magnitudes variables y calcular sus razones de cambio.
+
+\textbf{Antes de comenzar.} Revisa derivación implícita, unidades y modelos geométricos.
+
+
+Una \textbf{razón de cambio} compara cuánto cambia una cantidad con respecto a otra. La velocidad media compara el desplazamiento con el tiempo transcurrido. La rapidez media compara la distancia recorrida con el tiempo:
+\[
+\text{velocidad media} = \frac{\text{posición final} - \text{posición inicial}}{\text{tiempo final} - \text{tiempo inicial}} = \frac{\Delta\, \text{posición}}{\Delta\, \text{tiempo}}
+\]
+
+En general, si $y = f(x)$, la \textbf{razón de cambio promedio} de $f$ entre $x_1$ y $x_2$ es:
+\[
+\frac{\Delta y}{\Delta x} = \frac{f(x_2) - f(x_1)}{x_2 - x_1}
+\]
+
+
+
+
+En estos problemas varias cantidades cambian con el tiempo $t$ y están relacionadas por una ecuación. Se conoce la razón de cambio de una de ellas y se pide la de otra en un instante determinado.
+
+
+
+\subsubsection{Procedimiento}
+
+
+\begin{enumerate}
+    \item Hacer un dibujo e identificar las variables.
+    \item \textbf{Tasa de cambio conocida:} escribirla como derivada con respecto al tiempo (por ejemplo, $\dfrac{dV}{dt}$). Las unidades ayudan a identificarla. Si la cantidad disminuye, la derivada es negativa.
+    \item \textbf{¿Qué se solicita?:} escribir la derivada buscada (por ejemplo, $\dfrac{dr}{dt}$).
+    \item \textbf{Ecuación:} buscar una fórmula que relacione las variables (volumen, área, Pitágoras, trigonometría). Si tiene variables de más, usar una ecuación auxiliar (por ejemplo, triángulos semejantes).
+    \item \textbf{Derivar implícitamente} con respecto a $t$.
+    \item \textbf{Sustituir los datos del instante pedido} y despejar la incógnita. Es importante sustituir después de derivar, nunca antes.
+\end{enumerate}
+
+
+
+\subsection{Ejemplos resueltos}
+
+\subsubsection{Ejemplo}
+
+
+Tres personas recorren la misma distancia de $16$ km: una caminando en $48$ horas, otra corriendo en $2$ horas y otra en motocicleta en $\frac{1}{4}$ de hora. Sus rapideces son:
+\[
+r_1 = \frac{16\ \text{km}}{48\ \text{h}} = \frac{1}{3}\ \frac{\text{km}}{\text{h}}, \qquad
+r_2 = \frac{16\ \text{km}}{2\ \text{h}} = 8\ \frac{\text{km}}{\text{h}}, \qquad
+r_3 = \frac{16\ \text{km}}{\frac{1}{4}\ \text{h}} = 64\ \frac{\text{km}}{\text{h}}
+\]
+Entre menor es el tiempo para recorrer la misma distancia, mayor es la razón de cambio. A partir de las razones se pueden establecer conjeturas sobre cómo se comporta una cantidad.
+
+
+
+\subsubsection{Ejemplo 1 (globo esférico)}
+
+
+Se bombea aire a un globo esférico de modo que su volumen aumenta a $100\ \text{cm}^3/\text{s}$. ¿Con qué rapidez aumenta el radio cuando el diámetro es de $50$ cm?
+
+\textbf{Solución:}
+\[
+\frac{dV}{dt} = 100, \qquad \frac{dr}{dt} = \ ?, \qquad r = 25\ \text{cm}, \qquad V = \frac{4}{3}\pi r^3
+\]
+Derivando con respecto al tiempo:
+\[
+V' = \frac{4}{3}\pi \cdot 3r^2 \cdot r' = 4\pi r^2 \cdot r'
+\]
+\[
+100 = 4\pi (25)^2 \, r' = 2500\pi \, r' \quad \Rightarrow \quad r' = \frac{1}{25\pi} \approx 0.013\ \frac{\text{cm}}{\text{s}}
+\]
+
+
+
+\subsubsection{Ejemplo 2 (escalera que resbala)}
+
+
+Una escalera de $10$ m se apoya en un muro vertical. Su extremo inferior se aleja de la pared a $1$ m/s. ¿Con qué velocidad baja el extremo superior cuando el inferior está a $6$ m de la pared?
+
+\textbf{Solución:} Sea $x$ la distancia del pie a la pared y $y$ la altura del extremo superior:
+\[
+\frac{dx}{dt} = 1, \qquad \frac{dy}{dt} = \ ?, \qquad x^2 + y^2 = 100
+\]
+Cuando $x = 6$: $36 + y^2 = 100 \Rightarrow y = 8$. Derivando:
+\[
+2x\,x' + 2y\,y' = 0 \quad \Rightarrow \quad 2(6)(1) + 2(8)\,y' = 0 \quad \Rightarrow \quad y' = \frac{-12}{16} = -0.75\ \frac{\text{m}}{\text{s}}
+\]
+El extremo superior baja a $0.75$ m/s.
+
+
+
+\subsubsection{Ejemplo 3 (tanque cónico)}
+
+
+Un tanque en forma de cono invertido tiene radio $2$ m y altura $4$ m. Se bombea agua a $2\ \text{m}^3/\text{min}$. ¿Con qué velocidad sube el nivel cuando el agua alcanza $3$ m?
+
+\textbf{Solución:}
+\[
+\frac{dV}{dt} = 2, \qquad \frac{dh}{dt} = \ ?, \qquad V = \frac{\pi r^2 h}{3}
+\]
+Como no se conoce $r'$, se usa una ecuación auxiliar por triángulos semejantes:
+\[
+\frac{r}{2} = \frac{h}{4} \quad \Rightarrow \quad r = \frac{h}{2}
+\]
+\[
+V = \frac{\pi \left(\frac{h}{2}\right)^2 h}{3} = \frac{\pi h^3}{12} \quad \Rightarrow \quad V' = \frac{3\pi h^2 \, h'}{12} = \frac{\pi h^2 \, h'}{4}
+\]
+\[
+2 = \frac{\pi (3)^2 \, h'}{4} \quad \Rightarrow \quad h' = \frac{8}{9\pi} \approx 0.28\ \frac{\text{m}}{\text{min}}
+\]
+
+
+
+\subsubsection{Ejemplo 4 (dos automóviles hacia un cruce)}
+
+
+El automóvil A viaja al oeste a $50$ km/h y el B al norte a $60$ km/h, ambos hacia el mismo cruce. ¿A qué velocidad se acercan cuando A está a $0.3$ km y B a $0.4$ km del cruce?
+
+\textbf{Solución:} Sean $a$ y $b$ las distancias al cruce y $c$ la distancia entre los autos. Como las distancias disminuyen:
+\[
+a' = -50, \qquad b' = -60, \qquad c' = \ ?, \qquad c^2 = a^2 + b^2
+\]
+En el instante pedido: $c = \sqrt{0.3^2 + 0.4^2} = 0.5$ km. Derivando:
+\[
+2c\,c' = 2a\,a' + 2b\,b' \quad \Rightarrow \quad 2(0.5)\,c' = 2(0.3)(-50) + 2(0.4)(-60)
+\]
+\[
+c' = -30 - 48 = -78\ \frac{\text{km}}{\text{h}}
+\]
+La distancia entre los autos disminuye a $78$ km/h.
+
+
+
+\subsubsection{Ejemplo 5 (esfera de hielo)}
+
+
+Una esfera de hielo se derrite de modo que su superficie decrece a $2\ \text{cm}^2/\text{min}$. ¿A qué velocidad disminuye el radio cuando mide $15$ cm?
+
+\textbf{Solución:}
+\[
+\frac{dA}{dt} = -2, \qquad \frac{dr}{dt} = \ ?, \qquad A = 4\pi r^2
+\]
+\[
+A' = 8\pi r \, r' \quad \Rightarrow \quad -2 = 8\pi (15)\, r' \quad \Rightarrow \quad r' = \frac{-1}{60\pi} \approx -0.0053\ \frac{\text{cm}}{\text{min}}
+\]
+El radio disminuye a razón de $0.0053$ cm/min.
+
+
+
+\subsubsection{Ejemplo 6 (ángulo entre la escalera y la pared)}
+
+
+Una escalera de $4$ m está apoyada en una pared. Su pie se aleja de la pared a $25$ cm/s. ¿A qué velocidad aumenta el ángulo $\beta$ entre la pared y la escalera cuando el extremo superior está a $2$ m del suelo?
+
+\textbf{Solución:} Trabajando en centímetros:
+\[
+x' = 25, \qquad \beta' = \ ?, \qquad \sin\beta = \frac{x}{400}
+\]
+En el instante pedido, la altura es $200$ cm, así que:
+\[
+\cos\beta = \frac{200}{400} = \frac{1}{2} \quad \Rightarrow \quad \beta = \frac{\pi}{3}
+\]
+Derivando:
+\[
+\cos\beta \cdot \beta' = \frac{1}{400} \, x' \quad \Rightarrow \quad \frac{1}{2}\,\beta' = \frac{25}{400} = \frac{1}{16} \quad \Rightarrow \quad \beta' = \frac{1}{8} = 0.125\ \frac{\text{rad}}{\text{s}}
+\]
+
+
+
+\subsubsection{Ejemplo 7 (canoa de desagüe)}
+
+
+Una canoa mide $3$ m de largo y sus extremos son triángulos isósceles de $10$ cm de base y $10$ cm de altura, con el vértice hacia abajo. Recibe agua a $50\ \text{cm}^3/\text{s}$. ¿A qué velocidad sube el nivel cuando alcanza $8$ cm?
+
+\textbf{Solución:} Sea $x$ el ancho de la superficie del agua y $h$ su altura. El volumen es el área del triángulo por el largo ($300$ cm):
+\[
+V = \frac{x\,h}{2} \cdot 300 = 150\,x\,h
+\]
+Ecuación auxiliar por semejanza:
+\[
+\frac{h}{10} = \frac{x/2}{5} \quad \Rightarrow \quad h = x
+\]
+\[
+V = 150h^2 \quad \Rightarrow \quad V' = 300h \, h'
+\]
+\[
+50 = 300(8)\,h' \quad \Rightarrow \quad h' = \frac{50}{2400} = \frac{1}{48} \approx 0.0208\ \frac{\text{cm}}{\text{s}}
+\]
+
+
+
+\subsubsection{Ejemplo 8 (automóvil y camión)}
+
+
+Un auto se acerca a un cruce a $9$ m/s. Cuando está a $36$ m del cruce, un camión que viaja a $12$ m/s pasa por el cruce en dirección perpendicular. ¿Con qué rapidez se separan $2$ s después?
+
+\textbf{Solución:} Sea $y$ la distancia recorrida por el auto y $x$ la del camión:
+\[
+x' = 12, \qquad y' = 9, \qquad d^2 = x^2 + (36 - y)^2
+\]
+A los $2$ s: $x = 24$, $y = 18$, así que $36 - y = 18$ y $d = \sqrt{24^2 + 18^2} = 30$ m. Derivando:
+\[
+2d\,d' = 2x\,x' + 2(36 - y)(-1)\,y'
+\]
+\[
+2(30)\,d' = 2(24)(12) - 2(18)(9) = 576 - 324 = 252 \quad \Rightarrow \quad d' = \frac{252}{60} = 4.2\ \frac{\text{m}}{\text{s}}
+\]
+
+
+
+\subsection{Práctica}
+
+\subsubsection{Práctica}
+
+
+\begin{enumerate}
+    \item Un hombre está parado en el borde de un muelle, remolcando hacia sí con una cuerda una lancha. Él recoge la cuerda a $40$ cm/s, y sus manos se mantienen $2$ m más altas que el punto en que la cuerda está atada a la lancha. ¿A qué velocidad se acerca la lancha al muelle cuando le faltan $3$ m para llegar?
+    \item Una piedra cae en una laguna, creando una onda circular centrada en el punto de contacto. El radio de la onda aumenta a $30$ cm/s. ¿A qué velocidad crece el área del círculo encerrado por la onda cuando su radio es $1$ m?
+    \item De un tubo sale arena a razón de $16\ \text{dm}^3/\text{s}$. Si la arena forma una pirámide cónica en el suelo cuya altura es siempre $\frac{1}{4}$ del diámetro de la base, ¿con qué rapidez aumenta la altura de la pirámide cuando tiene $4$ dm de altura?
+    \item Una mujer, en un muelle, tira de un bote a razón de $15$ m/min sirviéndose de una soga amarrada al bote a nivel del agua. Si las manos de la mujer se hallan a $4.8$ m por arriba del nivel del agua, ¿con qué rapidez se aproxima el bote al muelle cuando le falta por recoger $6$ m de cuerda?
+    \item Un avión vuela con velocidad constante, a una altura de $3000$ m, en una trayectoria recta que lo llevará directamente sobre un observador en tierra. En un instante dado, el observador advierte que el ángulo de elevación del avión es de $\frac{\pi}{3}$ radianes y aumenta a razón de $\frac{1}{60}$ rad/s. Determina la velocidad del avión.
+\end{enumerate}
+
+
+
+\subsection{Soluciones}
+
+\subsubsection{Respuestas de la práctica}
+
+
+\begin{enumerate}
+    \item Se acerca a $0.4807$ m/s aproximadamente.
+    \item Crece a $6000\pi \approx 18\,849.6\ \text{cm}^2/\text{s}$.
+    \item Aumenta a $\dfrac{1}{4\pi} \approx 0.0796$ dm/s.
+    \item Se acerca a $25$ m/min.
+    \item $-\dfrac{200}{3} \approx -66.67$ m/s, es decir, el avión vuela a $66.67$ m/s hacia el observador.
+\end{enumerate}
+
+
+
+\end{document}
