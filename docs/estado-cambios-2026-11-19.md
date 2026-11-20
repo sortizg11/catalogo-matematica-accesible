@@ -1,6 +1,6 @@
 # Cambios y pendientes del catálogo
 
-Corte de revisión: 19 de noviembre de 2026. «Publicado» corresponde a la versión de GitHub; La actualización 1.4 incorpora el nuevo inicio y publica estos documentos; su despliegue se registra en GitHub Actions.
+Registro iniciado el 19 y actualizado el 20 de noviembre de 2026. «Publicado» corresponde a la versión de GitHub; La actualización 1.4 incorpora el nuevo inicio y publica estos documentos; su despliegue se registra en GitHub Actions.
 
 | Cambio conversado | Estatus | Observaciones | Pendiente de tu parte |
 | --- | --- | --- | --- |
@@ -25,3 +25,12 @@ Corte de revisión: 19 de noviembre de 2026. «Publicado» corresponde a la vers
 Acordar tareas y consentimiento; registrar sistema, navegador, NVDA y proveedor matemático; usar auriculares si el micrófono capta al lector; y anotar ayudas, errores y resultados de cada tarea. No publicar nombres, grabaciones ni respuestas individuales en GitHub.
 
 La sesión propuesta debe comprobar uso autónomo y lectura matemática. Si la investigación pretende medir aprendizaje, hará falta además una actividad matemática y criterios adecuados a ese objetivo.
+
+## Actualización 1.5 del 20 de noviembre
+
+| Cambio | Estatus | Observaciones | Pendiente de tu parte |
+| --- | --- | --- | --- |
+| Controles más claros de voz | Incorporado en 1.5 | Iniciar, terminar y cancelar diferenciados; foco estable y estado real del servicio | Observar si la persona identifica dónde pulsar sin ayuda |
+| Revisar texto y elegir resultado | Incorporado en 1.5 | Revisión previa opcional, corrección escrita y foco en enlaces | Comparar revisión previa y apertura directa |
+| Instrumento de persona usuaria | Publicado como borrador de pilotaje | HTML, Word y PDF con nueve tareas; no validado psicométricamente | Aplicar con la persona participante y recoger evidencia real |
+| Lectura del lector y precisión de voz | Pendiente real | Las simulaciones no acreditan pronunciación ni precisión del micrófono | Registrar entorno, lectura literal y resultado por tarea |

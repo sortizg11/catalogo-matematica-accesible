@@ -1,4 +1,4 @@
-# Cálculo Diferencial e Integral · Prototipo 1.4
+# Cálculo Diferencial e Integral · Prototipo 1.5
 
 Aplicación estática en español para estudiar matemática con teclado, MathML y lector de pantalla. Primer curso: Cálculo Diferencial e Integral. Prioridad: estudiante ciega que utiliza NVDA y MathCAT en Windows.
 
@@ -91,3 +91,11 @@ La entrada principal es una búsqueda escrita y por voz opcional. Se conserva el
 - [Cuadro de cambios y pendientes](docs/estado-cambios-2026-11-19.html).
 - [Revisión bibliográfica](docs/revision-bibliografica-accesibilidad.html).
 - [Registro de publicación](docs/publicaciones.md).
+
+## Voz y evaluación de uso en la versión 1.5
+
+El botón conserva el foco y distingue iniciar, terminar dictado y cancelar. La revisión del texto antes de navegar es opcional. Los resultados múltiples reciben foco en su primer enlace. No se garantiza disponibilidad del servicio de voz del navegador ni pronunciación matemática sin prueba real.
+
+- [Instrumento de evaluación con persona ciega en HTML](output/evaluacion-usuario-1.5/Instrumento-persona-usuaria-CDI.html).
+- [Word editable](output/evaluacion-usuario-1.5/Instrumento-persona-usuaria-CDI.docx).
+- [PDF para imprimir](output/evaluacion-usuario-1.5/Instrumento-persona-usuaria-CDI.pdf).

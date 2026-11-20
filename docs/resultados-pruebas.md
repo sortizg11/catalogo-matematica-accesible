@@ -53,3 +53,7 @@ Al localizar el material original se actualizaron los avisos y la documentación
 - Reconocimiento de voz probado con API simulada (inicio explícito, navegación, cancelación, evento tardío y permiso denegado). **No se probó micrófono real, precisión del reconocimiento ni interacción real con NVDA en Windows.**
 - También pendientes: evaluación docente, segunda prueba de usuario, Firefox y auditoría completa WCAG 2.2 AA. No se declara acreditación por Lighthouse.
 - Tras retirar un encabezado editorial vacío se repitieron axe en vistas/diálogos, jerarquía/identificadores y búsqueda escrita: **3 pruebas aprobadas**. Lighthouse corresponde a la ejecución anterior a ese ajuste menor; sus informes conservan fecha y alcance, no se presentan como una auditoría exhaustiva del estado final.
+
+## Actualización 1.5 del 20 de noviembre de 2026
+
+Doce pruebas focalizadas de búsqueda y voz simulada aprobadas (1,7 minutos). Se repitieron cuatro y se añadió una sobre tiempo de conexión: cinco aprobadas (30,8 segundos). Instrumento HTML: una prueba aprobada (13,9 segundos), con 15 secciones, 56 campos etiquetados, escritura por teclado, reflujo a 320 píxeles y axe sin infracciones en las reglas A/AA ejecutadas. Catorce pruebas distintas entre ejecuciones; no se registra una nueva suite completa. Conservación académica aprobada por verify_migration.py. Documento de 15 páginas renderizadas e inspeccionadas, texto extraíble y sin páginas vacías. Capturas de interfaz revisadas. Voz real, NVDA y auditoría completa pendientes.

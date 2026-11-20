@@ -1,0 +1,238 @@
+[
+  {
+    "title": "Evaluación del catálogo con una persona ciega",
+    "paragraphs": [
+      "Cálculo Diferencial e Integral · Versión del instrumento 1.0 · Recurso 1.5 · 20 de noviembre de 2026.",
+      "Propósito: identificar barreras y apoyos al buscar, leer matemática y estudiar con el catálogo. Se evalúa el recurso, no la capacidad de la persona. Instrumento propio de evaluación formativa, pendiente de pilotaje y juicio de contenido; no es una escala validada, una medición de aprendizaje ni una auditoría completa WCAG.",
+      "Para la persona participante: puedes responder oralmente, en Word o en esta versión HTML. Puedes omitir una pregunta, pedir una pausa o terminar sin justificarte. La voz es opcional y puede usar un proveedor del navegador; no estás obligada a conceder permiso. El catálogo no guarda las respuestas de esta ficha.",
+      "Para el equipo: antes de aplicar, informar finalidad investigativa, custodia, acceso, plazo de conservación y retiro de datos conforme al procedimiento institucional. Esta hoja no sustituye el consentimiento requerido. No registrar nombres, correos ni respuestas individuales en GitHub. Grabar requiere autorización separada y expresa.",
+      "Aplicación sugerida: 40–55 minutos con pausas; dividir la sesión si la carga resulta excesiva. El tiempo sirve para describir la experiencia, no para calificar a la persona. Este instrumento complementa los anteriores y no hace equivalentes sus puntuaciones.",
+      "La versión HTML permite navegar por encabezados y completar notas temporales. No envía ni guarda respuestas: cerrar o recargar puede perderlas. Para conservarlas, utiliza una copia de Word o el registro acordado con el equipo. El PDF es de impresión; no se declara PDF/UA."
+    ],
+    "fields": [
+      "Código de sesión sin datos personales",
+      "Confirmación de información y consentimiento; voz aceptada o no; grabación autorizada o no; pausas acordadas"
+    ]
+  },
+  {
+    "title": "Preparación y criterios de registro",
+    "paragraphs": [
+      "Identificar la versión o commit realmente probado, fecha, URL, sistema, navegador, lector, proveedor matemático, idioma y voz efectiva. No asumir que MathCAT está activo solo por estar instalado. Registrar auriculares y micrófono elegido, sin identificadores personales del dispositivo.",
+      "Comenzar con las preferencias habituales y atajos personalizados apagados. Antes de cada tarea restablecer el punto de partida acordado. Leer solo la consigna de participante; la preparación y los criterios son para observación. No adelantar la solución ni sugerir una valoración favorable.",
+      "Ayuda H0: ninguna. H1: repetir la consigna sin añadir pista. H2: orientación general. H3: indicar el control o comando. H4: intervención del facilitador. Registrar el máximo nivel y las palabras de ayuda; H1 a H4 no equivalen a desempeño independiente.",
+      "Resultado C: criterio esencial cumplido sin ayuda. A: cumplido con ayuda registrada. F: intento realizado sin cumplir el criterio, indicando si la barrera fue del sitio, navegador, lector, micrófono u origen no confirmado. NE: no se intentó o faltaron condiciones; indicar motivo. NA: no corresponde al alcance acordado, con justificación. No contar NE o NA como aprobaciones.",
+      "No sumar las tareas como puntuación de accesibilidad. Si una tarea contiene varias acciones, describir cuáles se completaron. Los tiempos e intentos son opcionales; detener la tarea cuando haya bloqueo, cansancio o petición de la persona. No insistir en repetir una función que ya falló de la misma manera.",
+      "Registrar voz real, observación directa, relato de la persona y simulación técnica por separado. Si la API no está disponible antes de iniciar, marcar NE para dictado real. Si se intentó y falló el servicio, registrar F por barrera técnica, sin atribuirlo a la persona."
+    ],
+    "fields": [
+      "Versión o commit y URL; fecha",
+      "Sistema y navegador; NVDA u otro lector; proveedor matemático; idioma y voz",
+      "Configuración de audio y preferencias; condiciones iniciales; experiencia relevante declarada sin datos personales"
+    ]
+  },
+  {
+    "title": "T01 Buscar por escrito",
+    "paragraphs": [
+      "Consigna para la persona participante: Encuentra el tema de derivación implícita desde el inicio. Usa la búsqueda escrita.",
+      "Preparación del observador: Inicio sin consulta ni resultados. No señalar el campo antes del primer intento.",
+      "Criterio de observación: Localiza un campo con etiqueta, introduce el título y llega al encabezado de derivación implícita; reconoce el tema abierto.",
+      "Qué registrar: Localización del control, teclas usadas, destino real y qué información anuncia el lector.",
+      "Pregunta después del intento: ¿Cómo supiste dónde escribir y adónde habías llegado?"
+    ],
+    "fields": [
+      "Resultado C / A / F / NE / NA; motivo y subresultados",
+      "Ayuda H0–H4; palabras de ayuda; intentos; tiempo solo si se midió",
+      "Qué ocurrió y qué anunció el lector; destino y evidencia",
+      "Respuesta de la persona y mejora sugerida"
+    ]
+  },
+  {
+    "title": "T02 Activar y comprender la voz",
+    "paragraphs": [
+      "Consigna para la persona participante: Si deseas usar el micrófono, encuentra la búsqueda por voz y busca derivación implícita.",
+      "Preparación del observador: Volver a Inicio. Explicar antes de la sesión el posible servicio externo. Auriculares recomendados. No indicar qué botón pulsar hasta registrar el intento independiente.",
+      "Criterio de observación: Distingue activación, permiso y aviso de escucha; dicta una frase y llega al destino previsto. Si falla, registrar la voz como tarea no lograda y la recuperación escrita como subresultado separado.",
+      "Qué registrar: Separar éxito por voz de recuperación escrita: la alternativa no convierte la transcripción fallida en exitosa. Registrar frase literal, aviso, transcripción, resultado final o provisional, número de intentos y causa observada.",
+      "Pregunta después del intento: ¿Supiste cuándo comenzar a hablar? ¿Qué parte del control te resultó confusa?"
+    ],
+    "fields": [
+      "Resultado C / A / F / NE / NA; motivo y subresultados",
+      "Ayuda H0–H4; palabras de ayuda; intentos; tiempo solo si se midió",
+      "Qué ocurrió y qué anunció el lector; destino y evidencia",
+      "Respuesta de la persona y mejora sugerida"
+    ]
+  },
+  {
+    "title": "T03 Terminar y revisar el dictado",
+    "paragraphs": [
+      "Consigna para la persona participante: Busca cómo revisar lo que se entiende antes de abrir un tema. Dicta regla de la cadena, termina el dictado y revisa el texto antes de buscar.",
+      "Preparación del observador: Inicio. La revisión previa está desactivada inicialmente. Si el servicio no funciona, marcar NE para esta tarea y registrar el motivo, sin simular un resultado real.",
+      "Criterio de observación: Activa la revisión, distingue terminar de cancelar, conserva el texto reconocido, puede editarlo y abre el tema elegido al confirmar Buscar tema.",
+      "Qué registrar: ¿El foco permanece en el mismo botón al iniciar? ¿Se anuncia el texto final? ¿Hay navegación antes de confirmar? Si no hubo error de reconocimiento, no inventar que lo hubo: ofrecer una corrección de prueba con conocimiento de la persona y anotarla como guiada.",
+      "Pregunta después del intento: ¿Preferirías revisar el texto antes de abrir un tema o ir directamente? ¿Por qué?"
+    ],
+    "fields": [
+      "Resultado C / A / F / NE / NA; motivo y subresultados",
+      "Ayuda H0–H4; palabras de ayuda; intentos; tiempo solo si se midió",
+      "Qué ocurrió y qué anunció el lector; destino y evidencia",
+      "Respuesta de la persona y mejora sugerida"
+    ]
+  },
+  {
+    "title": "T04 Cancelar y recuperarse",
+    "paragraphs": [
+      "Consigna para la persona participante: Inicia una búsqueda por voz, cancélala y después encuentra integración por sustitución escribiendo.",
+      "Preparación del observador: No desactivar permisos del sistema sin acuerdo. No provocar un fallo técnico deliberado en el equipo de la persona. Si la voz no se puede iniciar, registrar ese estado y evaluar solo la recuperación escrita.",
+      "Criterio de observación: Encuentra Cancelar escucha, recibe una confirmación, recupera el campo y puede continuar por escrito. Después de cancelar no aparece una navegación inesperada atribuible al dictado anterior.",
+      "Qué registrar: Registrar por separado cancelación y recuperación. Un evento tardío solo se marca observado si ocurre; una simulación técnica del equipo desarrollador no es observación de esta sesión.",
+      "Pregunta después del intento: ¿Quedó claro qué se canceló y cómo continuar?"
+    ],
+    "fields": [
+      "Resultado C / A / F / NE / NA; motivo y subresultados",
+      "Ayuda H0–H4; palabras de ayuda; intentos; tiempo solo si se midió",
+      "Qué ocurrió y qué anunció el lector; destino y evidencia",
+      "Respuesta de la persona y mejora sugerida"
+    ]
+  },
+  {
+    "title": "T05 Elegir entre varias coincidencias",
+    "paragraphs": [
+      "Consigna para la persona participante: Busca teoría y elige el resultado correspondiente a integración por sustitución.",
+      "Preparación del observador: Inicio con campo vacío. Permitir que utilice texto o voz; registrar la modalidad. No revelar la posición del enlace.",
+      "Criterio de observación: Reconoce que hay varios resultados, identifica el contexto de cada enlace y selecciona la teoría del tema previsto.",
+      "Qué registrar: Cantidad anunciada, enlace enfocado inicialmente, navegación entre opciones, destino y posibles repeticiones del lector.",
+      "Pregunta después del intento: ¿La lista te permitió distinguir los temas sin tener que abrirlos todos?"
+    ],
+    "fields": [
+      "Resultado C / A / F / NE / NA; motivo y subresultados",
+      "Ayuda H0–H4; palabras de ayuda; intentos; tiempo solo si se midió",
+      "Qué ocurrió y qué anunció el lector; destino y evidencia",
+      "Respuesta de la persona y mejora sugerida"
+    ]
+  },
+  {
+    "title": "T06 Leer y explorar matemática",
+    "paragraphs": [
+      "Consigna para la persona participante: En el tema de derivadas trigonométricas, lee una expresión con secante y otra con tangente. Después explora una fracción y una integral de sustitución. Describe lo que escuchas y cómo distingues sus partes.",
+      "Preparación del observador: Usar las expresiones acordadas en la ficha matemática. La docente verifica previamente su estructura esperada. Si no se localiza la expresión, registrar esa dificultad antes de ofrecer un enlace directo como ayuda.",
+      "Criterio de observación: Puede acceder a la expresión, distinguir los componentes y salir de su exploración sin perder el contexto. Registrar idioma y lectura literal, sin exigir una única redacción verbal válida.",
+      "Qué registrar: No proporcionar primero el resultado esperado para que la persona lo repita. Separar lectura, interpretación y conocimiento de cálculo. Comprobar si el recuadro anuncia palabras adicionales o duplica la expresión. Comparar con los casos aislados en el mismo entorno.",
+      "Pregunta después del intento: ¿Qué símbolos o partes resultaron ambiguos o difíciles de explorar?"
+    ],
+    "fields": [
+      "Resultado C / A / F / NE / NA; motivo y subresultados",
+      "Ayuda H0–H4; palabras de ayuda; intentos; tiempo solo si se midió",
+      "Qué ocurrió y qué anunció el lector; destino y evidencia",
+      "Respuesta de la persona y mejora sugerida"
+    ]
+  },
+  {
+    "title": "T07 Estudiar pasos y volver del resultado",
+    "paragraphs": [
+      "Consigna para la persona participante: Abre el ejemplo 2 de integración por sustitución. Consulta los pasos que necesites. Después abre el ejercicio 4, consulta su solución y vuelve al enunciado.",
+      "Preparación del observador: Mantener el mismo entorno. No se exige resolver la integral ni demostrar aprendizaje durante esta tarea.",
+      "Criterio de observación: Reconoce pasos abiertos y cerrados, controla su lectura, encuentra el resultado y vuelve de la solución al ejercicio exacto.",
+      "Qué registrar: Distinguir dificultad para navegar de dificultad matemática. Anotar si el aviso común sobre pasos y resultado ayuda o añade lectura innecesaria.",
+      "Pregunta después del intento: ¿Pudiste controlar cuánto leer y mantener claro qué ejercicio estabas consultando?"
+    ],
+    "fields": [
+      "Resultado C / A / F / NE / NA; motivo y subresultados",
+      "Ayuda H0–H4; palabras de ayuda; intentos; tiempo solo si se midió",
+      "Qué ocurrió y qué anunció el lector; destino y evidencia",
+      "Respuesta de la persona y mejora sugerida"
+    ]
+  },
+  {
+    "title": "T08 Guardar y retomar un punto",
+    "paragraphs": [
+      "Consigna para la persona participante: Guarda un punto dentro de un paso de sustitución. Ve al inicio y retoma el punto. Si aceptas, repite después de cerrar y abrir el sitio en el mismo navegador.",
+      "Preparación del observador: La persona decide si desea crear o reemplazar un marcador en su navegador. Registrar consentimiento para ese cambio local. No borrar sus datos. Si no acepta cerrar, evaluar solo la recuperación en la sesión.",
+      "Criterio de observación: Reconoce qué punto se guardó, vuelve al paso correcto y lo encuentra abierto. Distingue un marcador persistente de uno temporal si el sitio informa un fallo.",
+      "Qué registrar: Destino guardado y recuperado, apertura del paso, mensaje de persistencia y condiciones del navegador. No inferir el cursor virtual de NVDA desde la pantalla.",
+      "Pregunta después del intento: ¿Qué esperarías conservar al regresar otro día?"
+    ],
+    "fields": [
+      "Resultado C / A / F / NE / NA; motivo y subresultados",
+      "Ayuda H0–H4; palabras de ayuda; intentos; tiempo solo si se midió",
+      "Qué ocurrió y qué anunció el lector; destino y evidencia",
+      "Respuesta de la persona y mejora sugerida"
+    ]
+  },
+  {
+    "title": "T09 Orientarse y pedir ayuda",
+    "paragraphs": [
+      "Consigna para la persona participante: Consulta dónde estás, vuelve al lugar de estudio y busca ayuda para una dificultad que hayas tenido. Abre y cierra Preferencias sin cambiar tus ajustes del lector.",
+      "Preparación del observador: Permitir los comandos habituales de la persona. Los atajos personalizados del catálogo permanecen apagados inicialmente. No cambiarlos ni modificar NVDA sin acuerdo.",
+      "Criterio de observación: Comprende la ubicación informada, puede regresar, encuentra ayuda y cierra el diálogo con foco recuperable. No queda atrapada con teclado.",
+      "Qué registrar: Registrar foco real, destino, ayuda consultada y cualquier conflicto de teclas. Si solo una parte se completó, detallar cada subresultado; no aprobar todo por una respuesta positiva.",
+      "Pregunta después del intento: ¿Qué información o ayuda faltó para seguir sin apoyo del facilitador?"
+    ],
+    "fields": [
+      "Resultado C / A / F / NE / NA; motivo y subresultados",
+      "Ayuda H0–H4; palabras de ayuda; intentos; tiempo solo si se midió",
+      "Qué ocurrió y qué anunció el lector; destino y evidencia",
+      "Respuesta de la persona y mejora sugerida"
+    ]
+  },
+  {
+    "title": "Ficha matemática para la observación",
+    "paragraphs": [
+      "Completar por cada caso real. No convertir una lectura esperada en observación. La docente verifica el contenido antes de la sesión; si hay duda académica, conservarla separada del comportamiento del lector.",
+      "M01: función secante en el ejemplo 2 de derivadas trigonométricas. Estructura: producto de un polinomio por secante de x. M02: tangente en la regla de derivación de secante del mismo tema. Pedir lectura literal antes de interpretar.",
+      "M03: fracción del ejercicio 4 de sustitución: numerador x, denominador raíz cuadrada de 3 más x al cuadrado, diferencial dx. M04: integral y cambio de variable en el ejemplo 2 de sustitución. Confirmar la expresión exacta de la versión aplicada antes de fijar una lectura de referencia.",
+      "Casos aislados para secante, tangente y fracción: https://sortizg11.github.io/catalogo-matematica-accesible/tests/fixtures/pronunciacion-es.html . Casos matemáticos anteriores: https://sortizg11.github.io/catalogo-matematica-accesible/tests/fixtures/math-baseline.html . Comparar con el mismo navegador, lector, idioma y proveedor; no modificar fórmulas para inducir una pronunciación favorable.",
+      "Una pronunciación diferente puede ser comprensible y estructuralmente correcta. Registrar errores de idioma, letras separadas, pérdida de paréntesis o agrupación, componentes omitidos y anuncios del contenedor por separado. No exigir una sola frase textual como criterio universal."
+    ],
+    "fields": [
+      "Caso, destino estable y expresión exacta; revisión docente previa",
+      "Lectura esperada y fundamento; lectura literal realmente escuchada",
+      "Componentes identificados por la persona; navegación interna y salida",
+      "Comparación aislada e integrada; hipótesis y prueba necesaria"
+    ]
+  },
+  {
+    "title": "Valoración de la persona participante",
+    "paragraphs": [
+      "Responder después de las tareas. Escala local de facilidad: 1 muy difícil, 2 difícil, 3 ni fácil ni difícil, 4 fácil, 5 muy fácil. NA: no usé esa función. NR: prefiero no responder. No usar estas respuestas como escala psicométrica validada ni promediarlas como nota global.",
+      "P01. ¿Qué tan fácil fue encontrar dónde escribir una búsqueda?\nP02. ¿Qué tan fácil fue reconocer cuándo la voz estaba lista para escucharte?\nP03. ¿Qué tan fácil fue revisar o corregir el texto reconocido?\nP04. ¿Qué tan fácil fue elegir el tema entre varios resultados?\nP05. ¿Qué tan fácil fue distinguir las partes de las expresiones matemáticas?\nP06. ¿Qué tan fácil fue guardar y recuperar tu lugar?",
+      "Preguntar sin sugerir acuerdo: ¿qué conservarías?, ¿qué cambiarías primero?, ¿en qué momento necesitaste ayuda?, ¿qué no te permitió estudiar como querías?, ¿qué modalidad prefieres para buscar y por qué? Si participaste antes, pedir un ejemplo concreto de mejora, persistencia o empeoramiento.",
+      "La preferencia por la voz no sustituye su eficacia observada. Distinguir gusto, facilidad, logro de la tarea y precisión de la transcripción."
+    ],
+    "fields": [
+      "P01–P06 por separado; comentarios y NA o NR cuando corresponda",
+      "Qué conservar y qué cambiar primero; ejemplo concreto",
+      "Preferencia de búsqueda y razón; comparación con la sesión anterior si aplica"
+    ]
+  },
+  {
+    "title": "Ficha de incidente reproducible",
+    "paragraphs": [
+      "Duplicar esta ficha por problema. Describir hechos antes de proponer una causa. No publicar respuestas individuales ni grabaciones en el repositorio.",
+      "Origen de evidencia: observación directa, lectura literal cotejada, respuesta de participante, simulación o hipótesis. Un error de red del navegador no prueba por sí solo un defecto de navegación del sitio.",
+      "Impacto crítico: impide una tarea esencial o cambia de manera ambigua el significado matemático sin alternativa utilizable. Alto: requiere ayuda para continuar. Medio: dificultad recuperable. Bajo: detalle sin bloqueo. Fundamentar la clasificación, sin sustituir la descripción del problema."
+    ],
+    "fields": [
+      "Código de incidente; tarea y versión",
+      "Destino exacto; expresión o control; acciones reproducibles",
+      "Esperado frente a observado; mensaje literal; repeticiones reales",
+      "Impacto y alternativa utilizada; ayuda proporcionada",
+      "Hipótesis separada de evidencia; corrección propuesta y nueva comprobación"
+    ]
+  },
+  {
+    "title": "Cierre y análisis del equipo",
+    "paragraphs": [
+      "Vinculación provisional: búsqueda escrita y elección de resultados T01 y T05; descubrimiento y control de voz T02–T04; acceso matemático T06 y M01–M04; estudio T07; persistencia y orientación T08; ayuda y diálogo T09. P01–P06 recogen percepción, no eficacia ni aprendizaje.",
+      "Informar por tarea resultados, ayudas, entorno y evidencias. Si se cuentan C, A y F, indicar denominador y mantener NE y NA separados. No comparar con la primera sesión como si fueran medidas equivalentes cuando cambian interfaz, instrucciones o condiciones.",
+      "Antes de recomendar implementación: revisar barreras críticas, lectura matemática y tareas esenciales. Una muestra individual orienta mejoras y no representa a toda la población. No declarar la voz operativa sin una frase real reconocida, destino correcto y cancelación observados en el entorno objetivo. Mantener alternativa escrita si el servicio no está disponible.",
+      "Decisión justificada: continuar correcciones, realizar otro piloto o recomendar uso acompañado en la muestra revisada. Las opiniones favorables no compensan una lectura matemática ambigua. Este instrumento no certifica WCAG ni eficacia educativa.",
+      "Fuentes de orientación: W3C WAI, Involving Users in Evaluating Web Accessibility, https://www.w3.org/WAI/test-evaluate/involving-users/ ; WCAG 2.2, https://www.w3.org/TR/WCAG22/ ; MathCAT User Guide, https://daisy.github.io/MathCAT/users.html ; MDN SpeechRecognition, https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition . Consultadas en la preparación del proyecto y actualización del 20 de noviembre de 2026. No prescriben ni validan este cuestionario.",
+      "Versión elaborada con asistencia de IA. Pendiente de juicio de contenido, pilotaje y ajuste a objetivos concretos de investigación. Registrar cambios de ítems y volver a comprobar su claridad antes de interpretar resultados."
+    ],
+    "fields": [
+      "Resumen por tarea y barreras críticas pendientes",
+      "Acción, responsable por código, criterio de aceptación y nueva prueba",
+      "Decisión, alcance y fundamento; observaciones sobre claridad del instrumento"
+    ]
+  }
+]

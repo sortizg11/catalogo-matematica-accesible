@@ -30,7 +30,7 @@ test('búsqueda escrita: único destino, ambigüedad, pendiente, desconocido y t
 async function mockVoice(page){await page.addInitScript(()=>{window.SpeechRecognition=class {constructor(){window.recognition=this;}start(){window.startCount=(window.startCount||0)+1;}abort(){window.aborted=true;} };});}
 test('voz simulada: permiso explícito de inicio, destino real, cancelación y eventos tardíos',async({page})=>{
  await mockVoice(page);await page.goto('/');await page.locator('.header-actions [data-dialog="search"]').click();expect(await page.evaluate(()=>window.startCount||0)).toBe(0);
- await page.locator('#voice-start').click();await expect(page.locator('#voice-stop')).toBeFocused();
+ await page.locator('#voice-start').click();await expect(page.locator('#voice-start')).toBeFocused();
  await page.evaluate(()=>window.recognition.onresult({results:[[{transcript:'integración por sustitución'}]]}));await expect(page.locator('#sustitucion--tema')).toBeFocused();
  await page.locator('.header-actions [data-dialog="search"]').click();await page.locator('#voice-start').click();await page.keyboard.press('Escape');
  await page.evaluate(()=>window.recognition.onresult({results:[[{transcript:'concepto de integral indefinida'}]]}));await expect(page.locator('#sustitucion--tema')).toBeVisible();expect(await page.evaluate(()=>window.aborted)).toBe(true);

@@ -1,14 +1,14 @@
 # Manual de uso de Cálculo Diferencial e Integral
 
-Borrador para revisión · 19 de noviembre de 2026 · Interfaz 1.4
+Borrador para revisión · 20 de noviembre de 2026 · Interfaz 1.5
 
 Este catálogo permite consultar teoría, ejemplos, práctica y soluciones mediante enlaces, teclado y un lector de pantalla. Algunos contenidos del programa siguen pendientes. No requiere cuenta y no evalúa ni guarda tus respuestas.
 
 ## Pantalla de inicio
 
-Al entrar, encontrarás «Buscar un tema», con un campo escrito y el botón «Buscar por voz». Escribe, por ejemplo, «derivación implícita» y pulsa Buscar o Enter. Un destino único abre el tema; varias coincidencias muestran enlaces para elegir. No es un chat y no genera respuestas.
+Al entrar, encontrarás «Buscar un tema», con un campo escrito y el botón «Iniciar búsqueda por voz». Escribe, por ejemplo, «derivación implícita» y pulsa Buscar o Enter. Un destino único abre el tema; varias coincidencias muestran enlaces para elegir. No es un chat y no genera respuestas.
 
-Si prefieres explorar, abre «Temas disponibles» o utiliza el temario por unidades. «Continuar donde quedé» conserva tu acceso al marcador, sin convertirse en una lista de actividad reciente. Esta organización corresponde a la actualización 1.4 del catálogo público.
+Si prefieres explorar, abre «Temas disponibles» o utiliza el temario por unidades. «Continuar donde quedé» conserva tu acceso al marcador, sin convertirse en una lista de actividad reciente. Esta organización corresponde a la actualización 1.5 del catálogo público.
 
 ## Entrar y elegir un tema
 
@@ -42,7 +42,7 @@ Si no se puede guardar de forma persistente, el catálogo avisa y conserva el ma
 
 «Buscar contenidos» es un motor de búsqueda del catálogo, no un chat. Escribe un título y activa Buscar. Si hay una coincidencia única se abre directamente; si hay varias, elige uno de los enlaces. Un contenido pendiente se informa como tal.
 
-Para dictar, pulsa «Buscar por voz» y permite el uso del micrófono si deseas utilizarlo. Puedes decir:
+Para dictar, pulsa «Iniciar búsqueda por voz» y permite el uso del micrófono si deseas utilizarlo. El foco permanece en el botón. Primero se informa de la conexión; comienza a hablar cuando se anuncie «Escuchando». El mismo botón pasa a llamarse «Terminar dictado»: puedes pulsarlo para dejar de captar audio y solicitar el resultado. «Cancelar escucha» descarta el intento y devuelve el foco al campo. Si el resultado tarda más de cinco segundos tras terminar, podrás revisar el texto que haya quedado y continuar por escrito. Puedes decir:
 
 - «Buscar derivación implícita».
 - «Abrir el capítulo de regla de la cadena».
@@ -50,7 +50,9 @@ Para dictar, pulsa «Buscar por voz» y permite el uso del micrófono si deseas 
 
 La búsqueda identifica títulos y apartados disponibles; no responde preguntas ni genera explicaciones. Usa los mismos destinos que la búsqueda escrita. No se añade una voz sintética: tu lector de pantalla lee el destino seleccionado.
 
-Durante el reconocimiento puede aparecer texto provisional en el campo; no se abre un tema hasta recibir un resultado final o hasta que pulses Buscar. La escucha termina al obtener un resultado final, cancelar, cerrar el diálogo, salir de Inicio o alcanzar el límite de 15 segundos. Cancelar o cerrar aborta la escucha y descarta los resultados que lleguen tarde. Puedes volver a intentarlo.
+Si quieres confirmar el texto antes de navegar, marca «Revisar dictado antes de abrir un tema». Esta opción está desactivada inicialmente para conservar el acceso directo. Al activarla, el resultado final permanece en el campo para corregirlo y pulsar «Buscar tema». Sin esa opción, una coincidencia única se abre directamente. Si hay varias, el foco llega al primer enlace de resultados y también se ofrece «Ir a los resultados».
+
+Durante el reconocimiento puede aparecer texto provisional en el campo; no se abre un tema hasta recibir un resultado final o hasta que pulses Buscar. La escucha termina al obtener un resultado final, cancelar, cerrar el diálogo, salir de Inicio o alcanzar el límite de 15 segundos de escucha. La espera de conexión tiene un límite separado de 20 segundos, para que conceder el permiso no consuma el tiempo de dictado. Cancelar o cerrar aborta la escucha y descarta los resultados que lleguen tarde. Puedes volver a intentarlo.
 
 Según el navegador, el audio puede enviarse a su proveedor de reconocimiento. El catálogo no almacena grabaciones ni consultas. Si no hay soporte, no hay micrófono o niegas el permiso, utiliza la entrada escrita. El servicio del navegador puede necesitar conexión. Usa auriculares si la voz del lector entra en el micrófono. Si se informa de un fallo de conexión, el permiso del micrófono no basta para resolverlo: el servicio de reconocimiento también debe estar disponible. Si termina sin un resultado final, revisa el texto provisional y pulsa Buscar o vuelve a intentarlo. Si no hay audio, revisa el micrófono seleccionado. Una simulación no garantiza precisión con tu micrófono: esa prueba sigue pendiente.
 
