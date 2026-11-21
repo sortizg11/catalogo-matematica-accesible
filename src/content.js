@@ -176,7 +176,7 @@ topics.unshift(...[
         "title": "Ejercicio 1 · Límites en un punto",
         "statement": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mo>lim</mo><mrow><mi>x</mi><mo>&#x02192;</mo><mn>3</mn></mrow></msub><mfrac><mrow><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>5</mn><mi>x</mi><mo>&#x02212;</mo><mn>3</mn></mrow><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>&#x0002B;</mo><mn>5</mn><mi>x</mi><mo>&#x02212;</mo><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>15</mn></mrow></mfrac></mstyle></mrow></math></span></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -186,7 +186,7 @@ topics.unshift(...[
         "title": "Ejercicio 2 · Límites en un punto",
         "statement": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mo>lim</mo><mrow><mi>x</mi><mo>&#x02192;</mo><mn>2</mn></mrow></msub><mfrac><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>&#x0002B;</mo><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>5</mn><mi>x</mi><mo>&#x02212;</mo><mn>6</mn></mrow><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>&#x0002B;</mo><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>4</mn><mi>x</mi><mo>&#x02212;</mo><mn>4</mn></mrow></mfrac></mstyle></mrow></math></span></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>5</mn></mrow><mrow><mn>4</mn></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -196,7 +196,7 @@ topics.unshift(...[
         "title": "Ejercicio 3 · Límites en un punto",
         "statement": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mo>lim</mo><mrow><mi>t</mi><mo>&#x02192;</mo><mfrac><mrow><mn>5</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></msub><mfrac><mrow><mn>4</mn><mo>&#x02212;</mo><msqrt><mrow><mn>2</mn><mi>t</mi><mo>&#x0002B;</mo><mn>11</mn></mrow></msqrt></mrow><mrow><mn>2</mn><mi>t</mi><mo>&#x02212;</mo><mn>5</mn></mrow></mfrac></mstyle></mrow></math></span></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>&#x02212;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>8</mn></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -206,7 +206,7 @@ topics.unshift(...[
         "title": "Ejercicio 4 · Límites en un punto",
         "statement": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mo>lim</mo><mrow><mi>t</mi><mo>&#x02192;</mo><mn>4</mn></mrow></msub><mfrac><mrow><mn>3</mn><mo>&#x02212;</mo><msqrt><mrow><mn>5</mn><mo>&#x0002B;</mo><mi>t</mi></mrow></msqrt></mrow><mrow><mn>1</mn><mo>&#x02212;</mo><msqrt><mrow><mn>5</mn><mo>&#x02212;</mo><mi>t</mi></mrow></msqrt></mrow></mfrac></mstyle></mrow></math></span></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>&#x02212;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -216,7 +216,7 @@ topics.unshift(...[
         "title": "Ejercicio 5 · Límites en un punto",
         "statement": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mo>lim</mo><mrow><mi>a</mi><mo>&#x02192;</mo><mn>1</mn></mrow></msub><mfrac><mrow><msqrt><mrow><mn>1</mn><mo>&#x0002B;</mo><mn>8</mn><mi>a</mi></mrow></msqrt><mo>&#x02212;</mo><mn>3</mn></mrow><mrow><msqrt><mrow><mn>4</mn><mi>a</mi></mrow></msqrt><mo>&#x02212;</mo><mn>2</mn></mrow></mfrac></mstyle></mrow></math></span></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>4</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -226,7 +226,7 @@ topics.unshift(...[
         "title": "Ejercicio 6 · Límites en un punto",
         "statement": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mo>lim</mo><mrow><mi>x</mi><mo>&#x02192;</mo><mn>0</mn></mrow></msub><mfrac><mrow><msqrt><mrow><mn>1</mn><mo>&#x0002B;</mo><mi>x</mi></mrow></msqrt><mo>&#x02212;</mo><mn>1</mn></mrow><mrow><mroot><mrow><mn>1</mn><mo>&#x0002B;</mo><mi>x</mi></mrow><mn>3</mn></mroot><mo>&#x02212;</mo><mn>1</mn></mrow></mfrac></mstyle></mrow></math></span></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>3</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -236,7 +236,7 @@ topics.unshift(...[
         "title": "Ejercicio 7 · Límites en un punto",
         "statement": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mo>lim</mo><mrow><mi>t</mi><mo>&#x02192;</mo><mn>0</mn></mrow></msub><mfrac><mrow><mn>2</mn><mi>t</mi><mo>&#x02212;</mo><mn>1</mn></mrow><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>&#x02212;</mo><msup><mi>t</mi><mn>4</mn></msup></mrow></mfrac></mstyle></mrow></math></span></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>&#x02212;</mo><mo>&#x0221E;</mo></mrow></math></p>",
         "notes": ""
@@ -246,7 +246,7 @@ topics.unshift(...[
         "title": "Ejercicio 8 · Límites con valor absoluto",
         "statement": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mo>lim</mo><mrow><mi>y</mi><mo>&#x02192;</mo><mn>4</mn></mrow></msub><mfrac><mrow><msqrt><mrow><mi>y</mi></mrow></msqrt><mo>&#x02212;</mo><mo stretchy=\"false\">&#x0007C;</mo><mn>2</mn><mo>&#x02212;</mo><mi>y</mi><mo stretchy=\"false\">&#x0007C;</mo></mrow><mrow><mi>y</mi><mo>&#x02212;</mo><mn>4</mn></mrow></mfrac></mstyle></mrow></math></span></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>&#x02212;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>3</mn></mrow><mrow><mn>4</mn></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -256,7 +256,7 @@ topics.unshift(...[
         "title": "Ejercicio 9 · Límites con valor absoluto",
         "statement": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mo>lim</mo><mrow><mi>z</mi><mo>&#x02192;</mo><msup><mrow><mo stretchy=\"true\" fence=\"true\" form=\"prefix\">&#x00028;</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mo stretchy=\"true\" fence=\"true\" form=\"postfix\">&#x00029;</mo></mrow><mo>&#x0002B;</mo></msup></mrow></msub><mfrac><mrow><mo stretchy=\"false\">&#x0007C;</mo><mo>&#x02212;</mo><mn>3</mn><mi>z</mi><mo>&#x0002B;</mo><mn>2</mn><mo stretchy=\"false\">&#x0007C;</mo></mrow><mrow><mn>18</mn><msup><mi>z</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>8</mn></mrow></mfrac></mstyle></mrow></math></span></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>8</mn></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -266,7 +266,7 @@ topics.unshift(...[
         "title": "Ejercicio 10 · Límites con valor absoluto",
         "statement": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mo>lim</mo><mrow><mi>b</mi><mo>&#x02192;</mo><mo>&#x02212;</mo><mn>1</mn></mrow></msub><msup><mrow><mo stretchy=\"true\" fence=\"true\" form=\"prefix\">&#x00028;</mo><mfrac><mrow><mn>5</mn></mrow><mrow><mn>4</mn></mrow></mfrac><mo stretchy=\"true\" fence=\"true\" form=\"postfix\">&#x00029;</mo></mrow><mrow><mfrac><mrow><mo stretchy=\"false\">&#x0007C;</mo><mi>b</mi><mo stretchy=\"false\">&#x0007C;</mo><mo>&#x02212;</mo><mn>1</mn></mrow><mrow><mi>b</mi><mo>&#x0002B;</mo><mn>1</mn></mrow></mfrac></mrow></msup></mstyle></mrow></math></span></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>4</mn></mrow><mrow><mn>5</mn></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -276,7 +276,7 @@ topics.unshift(...[
         "title": "Ejercicio 11 · Límites con valor absoluto",
         "statement": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mo>lim</mo><mrow><mi>x</mi><mo>&#x02192;</mo><mo>&#x02212;</mo><mn>2</mn></mrow></msub><mfrac><mrow><mroot><mrow><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo>&#x0002B;</mo><mn>2</mn><msup><mo stretchy=\"false\">&#x00029;</mo><mn>4</mn></msup></mrow><mn>4</mn></mroot></mrow><mrow><mo stretchy=\"false\">&#x0007C;</mo><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo>&#x0002B;</mo><mn>1</mn><msup><mo stretchy=\"false\">&#x00029;</mo><mn>2</mn></msup><mo>&#x02212;</mo><mn>1</mn><mo stretchy=\"false\">&#x0007C;</mo></mrow></mfrac></mstyle></mrow></math></span></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -286,7 +286,7 @@ topics.unshift(...[
         "title": "Ejercicio 12 · Límites trigonométricos",
         "statement": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mo>lim</mo><mrow><mi>t</mi><mo>&#x02192;</mo><mn>0</mn></mrow></msub><mfrac><mrow><mi>t</mi><mo>&#x02212;</mo><mi>sin</mi><mo stretchy=\"false\">&#x00028;</mo><mn>2</mn><mi>t</mi><mo stretchy=\"false\">&#x00029;</mo></mrow><mrow><mi>t</mi><mo>&#x0002B;</mo><mi>sin</mi><mo stretchy=\"false\">&#x00028;</mo><mn>3</mn><mi>t</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></mfrac></mstyle></mrow></math></span></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>&#x02212;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>4</mn></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -296,7 +296,7 @@ topics.unshift(...[
         "title": "Ejercicio 13 · Límites trigonométricos",
         "statement": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mo>lim</mo><mrow><mi>n</mi><mo>&#x02192;</mo><mn>0</mn></mrow></msub><mfrac><mrow><mn>1</mn><mo>&#x02212;</mo><msup><mi>cos</mi><mn>3</mn></msup><mi>n</mi></mrow><mrow><msup><mi>sin</mi><mn>2</mn></msup><mi>n</mi></mrow></mfrac></mstyle></mrow></math></span></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>3</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -306,7 +306,7 @@ topics.unshift(...[
         "title": "Ejercicio 14 · Límites trigonométricos",
         "statement": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mo>lim</mo><mrow><mi>x</mi><mo>&#x02192;</mo><mn>1</mn></mrow></msub><mfrac><mrow><mi>sin</mi><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo>&#x02212;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow><mrow><msqrt><mrow><mi>x</mi></mrow></msqrt><mo>&#x02212;</mo><mn>1</mn></mrow></mfrac></mstyle></mrow></math></span></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>2</mn></mrow></math></p>",
         "notes": ""
@@ -316,7 +316,7 @@ topics.unshift(...[
         "title": "Ejercicio 15 · Límites trigonométricos",
         "statement": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mo>lim</mo><mrow><mi>&#x003B2;</mi><mo>&#x02192;</mo><mn>0</mn></mrow></msub><mfrac><mrow><mi>sin</mi><mn>5</mn><mi>&#x003B2;</mi></mrow><mrow><mi>&#x003B2;</mi></mrow></mfrac></mstyle></mrow></math></span></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>5</mn></mrow></math></p>",
         "notes": ""
@@ -326,7 +326,7 @@ topics.unshift(...[
         "title": "Ejercicio 16 · Límites trigonométricos",
         "statement": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mo>lim</mo><mrow><mi>z</mi><mo>&#x02192;</mo><mn>0</mn></mrow></msub><mfrac><mrow><mn>5</mn><msup><mi>sin</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00028;</mo><mn>3</mn><mi>z</mi><mo stretchy=\"false\">&#x00029;</mo></mrow><mrow><mn>2</mn><msup><mi>z</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></math></span></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>45</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -336,7 +336,7 @@ topics.unshift(...[
         "title": "Ejercicio 17 · Límites al infinito",
         "statement": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mo>lim</mo><mrow><mi>x</mi><mo>&#x02192;</mo><mo>&#x02212;</mo><mo>&#x0221E;</mo></mrow></msub><mfrac><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>4</mn></mrow><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>&#x0002B;</mo><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mi>x</mi><mo>&#x0002B;</mo><mn>2</mn></mrow></mfrac></mstyle></mrow></math></span></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>0</mn></mrow></math></p>",
         "notes": ""
@@ -346,7 +346,7 @@ topics.unshift(...[
         "title": "Ejercicio 18 · Límites al infinito",
         "statement": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mo>lim</mo><mrow><mi>r</mi><mo>&#x02192;</mo><mo>&#x02212;</mo><mo>&#x0221E;</mo></mrow></msub><mfrac><mrow><mn>3</mn><mi>r</mi><mo>&#x0002B;</mo><mn>2</mn></mrow><mrow><msqrt><mrow><mn>4</mn><msup><mi>r</mi><mn>2</mn></msup><mo>&#x02212;</mo><mi>r</mi><mo>&#x0002B;</mo><mn>1</mn></mrow></msqrt></mrow></mfrac></mstyle></mrow></math></span></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>&#x02212;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>3</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -356,7 +356,7 @@ topics.unshift(...[
         "title": "Ejercicio 19 · Límites al infinito",
         "statement": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mo>lim</mo><mrow><mi>x</mi><mo>&#x02192;</mo><mo>&#x02212;</mo><mo>&#x0221E;</mo></mrow></msub><mfrac><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mn>14</mn></mrow></msqrt><mo>&#x0002B;</mo><mi>x</mi></mrow><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>2</mn></mrow></msqrt><mo>&#x0002B;</mo><mi>x</mi></mrow></mfrac></mstyle></mrow></math></span></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>&#x02212;</mo><mn>7</mn></mrow></math></p>",
         "notes": ""
@@ -366,7 +366,7 @@ topics.unshift(...[
         "title": "Ejercicio 20 · Límites al infinito",
         "statement": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mo>lim</mo><mrow><mi>x</mi><mo>&#x02192;</mo><mo>&#x0002B;</mo><mo>&#x0221E;</mo></mrow></msub><mfrac><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mi>x</mi><mo>&#x0002B;</mo><mn>3</mn></mrow><mrow><mo>&#x02212;</mo><msup><mi>x</mi><mn>3</mn></msup><mo>&#x0002B;</mo><mn>1</mn></mrow></mfrac></mstyle></mrow></math></span></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>0</mn></mrow></math></p>",
         "notes": ""
@@ -376,7 +376,7 @@ topics.unshift(...[
         "title": "Ejercicio 21 · Límites al infinito",
         "statement": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mo>lim</mo><mrow><mi>x</mi><mo>&#x02192;</mo><mo>&#x02212;</mo><mo>&#x0221E;</mo></mrow></msub><mrow><mo stretchy=\"true\" fence=\"true\" form=\"prefix\">&#x00028;</mo><msqrt><mrow><mn>4</mn><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>6</mn></mrow></msqrt><mo>&#x02212;</mo><msqrt><mrow><mn>4</mn><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mi>x</mi></mrow></msqrt><mo stretchy=\"true\" fence=\"true\" form=\"postfix\">&#x00029;</mo></mrow></mstyle></mrow></math></span></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>&#x02212;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>4</mn></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -386,7 +386,7 @@ topics.unshift(...[
         "title": "Ejercicio 22 · Límites al infinito",
         "statement": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mo>lim</mo><mrow><mi>x</mi><mo>&#x02192;</mo><mo>&#x02212;</mo><mo>&#x0221E;</mo></mrow></msub><mrow><mo stretchy=\"true\" fence=\"true\" form=\"prefix\">&#x00028;</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>2</mn><mi>x</mi><mo>&#x02212;</mo><mn>1</mn></mrow></msqrt><mo>&#x0002B;</mo><mi>x</mi><mo stretchy=\"true\" fence=\"true\" form=\"postfix\">&#x00029;</mo></mrow></mstyle></mrow></math></span></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>1</mn></mrow></math></p>",
         "notes": ""
@@ -396,7 +396,7 @@ topics.unshift(...[
         "title": "Ejercicio 23 · Límites al infinito",
         "statement": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mo>lim</mo><mrow><mi>x</mi><mo>&#x02192;</mo><mo>&#x0002B;</mo><mo>&#x0221E;</mo></mrow></msub><mrow><mo stretchy=\"true\" fence=\"true\" form=\"prefix\">&#x00028;</mo><msqrt><mrow><mn>9</mn><msup><mi>x</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mn>1</mn></mrow></msqrt><mo>&#x02212;</mo><mn>3</mn><mi>x</mi><mo stretchy=\"true\" fence=\"true\" form=\"postfix\">&#x00029;</mo></mrow></mstyle></mrow></math></span></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>0</mn></mrow></math></p>",
         "notes": ""
@@ -507,7 +507,7 @@ topics.unshift(...[
         "title": "Ejercicio 1 · Práctica",
         "statement": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>f</mi><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mn>1</mn><mo>&#x02212;</mo><mn>3</mn><mi>x</mi><mo>&#x0002B;</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></math> en <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>x</mi><mo>&#x0003D;</mo><mo>&#x02212;</mo><mn>6</mn></mrow></math></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mo>&#x02212;</mo><mn>6</mn><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mo>&#x02212;</mo><mn>15</mn></mrow></math></p>",
         "notes": ""
@@ -517,7 +517,7 @@ topics.unshift(...[
         "title": "Ejercicio 2 · Práctica",
         "statement": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>f</mi><mo stretchy=\"false\">&#x00028;</mo><mi>y</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><msqrt><mrow><mn>2</mn><msup><mi>y</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>5</mn></mrow></msqrt></mrow></math> en <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>y</mi><mo>&#x0003D;</mo><mn>2</mn></mrow></math></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mn>2</mn><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>4</mn></mrow><mrow><msqrt><mrow><mn>3</mn></mrow></msqrt></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -527,7 +527,7 @@ topics.unshift(...[
         "title": "Ejercicio 3 · Práctica",
         "statement": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>f</mi><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mn>5</mn><mi>cos</mi><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo>&#x02212;</mo><mi>&#x003C0;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math> en <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>x</mi><mo>&#x0003D;</mo><mi>&#x003C0;</mi></mrow></math></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mi>&#x003C0;</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mn>0</mn></mrow></math></p>",
         "notes": ""
@@ -537,7 +537,7 @@ topics.unshift(...[
         "title": "Ejercicio 4 · Práctica",
         "statement": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>h</mi><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mo>&#x02212;</mo><mn>1</mn></mrow><mrow><msqrt><mrow><mi>x</mi><mo>&#x0002B;</mo><mn>1</mn></mrow></msqrt></mrow></mfrac></mstyle></mrow></math></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>h</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo>&#x0002B;</mo><mn>1</mn><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><mn>3</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -547,7 +547,7 @@ topics.unshift(...[
         "title": "Ejercicio 5 · Práctica",
         "statement": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>g</mi><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mi>x</mi><mo>&#x0002B;</mo><msqrt><mrow><mi>x</mi></mrow></msqrt></mrow></math></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>g</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mn>1</mn><mo>&#x0002B;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><msqrt><mrow><mi>x</mi></mrow></msqrt></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -557,7 +557,7 @@ topics.unshift(...[
         "title": "Ejercicio 6 · Práctica",
         "statement": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>h</mi><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mi>x</mi><mo>&#x0002B;</mo><mn>1</mn></mrow><mrow><mi>x</mi><mo>&#x02212;</mo><mn>1</mn></mrow></mfrac></mstyle></mrow></math></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>h</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mo>&#x02212;</mo><mn>2</mn></mrow><mrow><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo>&#x02212;</mo><mn>1</mn><msup><mo stretchy=\"false\">&#x00029;</mo><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -671,7 +671,7 @@ topics.unshift(...[
         "title": "Ejercicio 1 · Práctica",
         "statement": "<p>¿Para qué valores de <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>a</mi></mrow></math> y <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>b</mi></mrow></math> la recta <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>2</mn><mi>x</mi><mo>&#x0002B;</mo><mi>y</mi><mo>&#x0003D;</mo><mi>b</mi></mrow></math> es tangente a la parábola <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>f</mi><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mi>a</mi><msup><mi>x</mi><mn>2</mn></msup></mrow></math> cuando <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>x</mi><mo>&#x0003D;</mo><mn>2</mn></mrow></math>?</p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>a</mi><mo>&#x0003D;</mo><mo>&#x02212;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle></mrow></math> y <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>b</mi><mo>&#x0003D;</mo><mn>2</mn></mrow></math></p>",
         "notes": ""
@@ -681,7 +681,7 @@ topics.unshift(...[
         "title": "Ejercicio 2 · Práctica",
         "statement": "<p>Encuentra la ecuación de la recta tangente a <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>w</mi><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mn>2</mn><mi>u</mi><mo>&#x0002B;</mo><mn>5</mn></mrow></msqrt></mrow></mfrac></mstyle></mrow></math> en <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>u</mi><mo>&#x0003D;</mo><mo>&#x02212;</mo><mn>2</mn></mrow></math>.</p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>w</mi><mo>&#x0003D;</mo><mo>&#x02212;</mo><mi>u</mi><mo>&#x02212;</mo><mn>1</mn></mrow></math></p>",
         "notes": ""
@@ -691,7 +691,7 @@ topics.unshift(...[
         "title": "Ejercicio 3 · Práctica",
         "statement": "<p>Encuentra la ecuación de la recta tangente a <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>y</mi><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>1</mn></mrow><mrow><mroot><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow><mn>3</mn></mroot></mrow></mfrac></mstyle></mrow></math> en <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>x</mi><mo>&#x0003D;</mo><mn>8</mn></mrow></math>.</p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>y</mi><mo>&#x0003D;</mo><mo>&#x02212;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>48</mn></mrow></mfrac></mstyle><mi>x</mi><mo>&#x0002B;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>5</mn></mrow><mrow><mn>12</mn></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -701,7 +701,7 @@ topics.unshift(...[
         "title": "Ejercicio 4 · Práctica",
         "statement": "<p>Encuentra la ecuación de la recta tangente a <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>y</mi><mo>&#x0003D;</mo><mi>sin</mi><mi>x</mi><mo>&#x0002B;</mo><mn>2</mn><mi>cos</mi><mi>x</mi></mrow></math> en <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>x</mi><mo>&#x0003D;</mo><mfrac><mrow><mi>&#x003C0;</mi></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>.</p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>y</mi><mo>&#x0003D;</mo><mo>&#x02212;</mo><mn>2</mn><mi>x</mi><mo>&#x0002B;</mo><mi>&#x003C0;</mi><mo>&#x0002B;</mo><mn>1</mn></mrow></math></p>",
         "notes": ""
@@ -711,7 +711,7 @@ topics.unshift(...[
         "title": "Ejercicio 5 · Práctica",
         "statement": "<p>Encuentra los puntos donde la recta tangente a <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>y</mi><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>2</mn><mi>x</mi></mrow><mrow><mo stretchy=\"false\">&#x00028;</mo><mn>3</mn><mo>&#x02212;</mo><mi>x</mi><msup><mo stretchy=\"false\">&#x00029;</mo><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></math> es paralela a la recta <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>10</mn><mi>x</mi><mo>&#x02212;</mo><mi>y</mi><mo>&#x0003D;</mo><mn>5</mn></mrow></math>.</p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x00028;</mo><mn>2</mn><mo>&#x0002C;</mo><mn>4</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></math></p>",
         "notes": ""
@@ -721,7 +721,7 @@ topics.unshift(...[
         "title": "Ejercicio 6 · Práctica",
         "statement": "<p>Encuentra los puntos donde la recta tangente a <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>y</mi><mo>&#x0003D;</mo><msup><mi>e</mi><mrow><msup><mi>u</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mn>2</mn><mi>u</mi></mrow></msup></mrow></math> es horizontal.</p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mrow><mo stretchy=\"true\" fence=\"true\" form=\"prefix\">&#x00028;</mo><mo>&#x02212;</mo><mn>1</mn><mo>&#x0002C;</mo><msup><mi>e</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo stretchy=\"true\" fence=\"true\" form=\"postfix\">&#x00029;</mo></mrow></mrow></math></p>",
         "notes": ""
@@ -731,7 +731,7 @@ topics.unshift(...[
         "title": "Ejercicio 7 · Práctica",
         "statement": "<p>Encuentra la ecuación de la recta perpendicular a <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>1</mn></mrow><mrow><mi>x</mi></mrow></mfrac></mstyle><mo>&#x0002B;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>1</mn></mrow><mrow><mi>y</mi></mrow></mfrac></mstyle><mo>&#x0002B;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>6</mn></mrow></mfrac></mstyle><mo>&#x0003D;</mo><mn>0</mn></mrow></math> en <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x00028;</mo><mn>3</mn><mo>&#x0002C;</mo><mo>&#x02212;</mo><mn>2</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></math>.</p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>y</mi><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>9</mn></mrow><mrow><mn>4</mn></mrow></mfrac></mstyle><mi>x</mi><mo>&#x02212;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>35</mn></mrow><mrow><mn>4</mn></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -741,7 +741,7 @@ topics.unshift(...[
         "title": "Ejercicio 8 · Práctica",
         "statement": "<p>Halla los puntos de la curva <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>f</mi><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><msup><mi>x</mi><mn>3</mn></msup><mo>&#x02212;</mo><mn>3</mn><mi>x</mi><mo>&#x0002B;</mo><mn>5</mn></mrow></math> en los que la recta tangente es perpendicular a la recta <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>y</mi><mo>&#x0003D;</mo><mo>&#x02212;</mo><mfrac><mrow><mi>x</mi></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math>. ¿En cuáles puntos la gráfica de <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>f</mi></mrow></math> posee rectas tangentes horizontales?</p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p>Tangente perpendicular en <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x00028;</mo><mo>&#x02212;</mo><mn>2</mn><mo>&#x0002C;</mo><mn>3</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></math> y <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x00028;</mo><mn>2</mn><mo>&#x0002C;</mo><mn>7</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></math>. Tangentes horizontales en <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo>&#x0002C;</mo><mn>3</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></math> y <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x00028;</mo><mo>&#x02212;</mo><mn>1</mn><mo>&#x0002C;</mo><mn>7</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></math>.</p>",
         "notes": ""
@@ -865,7 +865,7 @@ topics.unshift(...[
         "title": "Ejercicio 1 · Práctica",
         "statement": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>f</mi><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mn>2</mn><msup><mi>x</mi><mn>8</mn></msup><mo>&#x02212;</mo><mn>3</mn><msup><mi>x</mi><mn>5</mn></msup><mo>&#x0002B;</mo><mn>5</mn></mrow></math></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mn>16</mn><msup><mi>x</mi><mn>7</mn></msup><mo>&#x02212;</mo><mn>15</mn><msup><mi>x</mi><mn>4</mn></msup></mrow></math></p>",
         "notes": ""
@@ -875,7 +875,7 @@ topics.unshift(...[
         "title": "Ejercicio 2 · Práctica",
         "statement": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>f</mi><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mn>3</mn><msup><mi>x</mi><mrow><mn>4</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo>&#x02212;</mo><mn>6</mn><msup><mi>x</mi><mrow><mn>2</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo>&#x02212;</mo><mn>2</mn></mrow></math></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mn>4</mn><msup><mi>x</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo>&#x02212;</mo><mn>4</mn><msup><mi>x</mi><mrow><mo>&#x02212;</mo><mn>1</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup></mrow></math></p>",
         "notes": ""
@@ -885,7 +885,7 @@ topics.unshift(...[
         "title": "Ejercicio 3 · Práctica",
         "statement": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>g</mi><mo stretchy=\"false\">&#x00028;</mo><mi>z</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><msqrt><mrow><mi>z</mi></mrow></msqrt><mo>&#x02212;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mi>z</mi></mrow></msqrt></mrow></mfrac></mstyle></mrow></math></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>g</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mi>z</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><msqrt><mrow><mi>z</mi></mrow></msqrt></mrow></mfrac></mstyle><mo>&#x0002B;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mi>z</mi><msqrt><mrow><mi>z</mi></mrow></msqrt></mrow></mfrac></mstyle></mrow></math></span></p>",
         "notes": ""
@@ -895,7 +895,7 @@ topics.unshift(...[
         "title": "Ejercicio 4 · Práctica",
         "statement": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>h</mi><mo stretchy=\"false\">&#x00028;</mo><mi>z</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mn>3</mn><mi>z</mi><mo>&#x0002B;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>1</mn></mrow><mrow><mi>z</mi></mrow></mfrac></mstyle><mo>&#x02212;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>2</mn></mrow><mrow><msup><mi>z</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>&#x0002B;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>3</mn></mrow><mrow><mroot><mrow><mi>z</mi></mrow><mn>3</mn></mroot></mrow></mfrac></mstyle></mrow></math></span></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>h</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mi>z</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mn>3</mn><mo>&#x02212;</mo><msup><mi>z</mi><mrow><mo>&#x02212;</mo><mn>2</mn></mrow></msup><mo>&#x0002B;</mo><mn>4</mn><msup><mi>z</mi><mrow><mo>&#x02212;</mo><mn>3</mn></mrow></msup><mo>&#x02212;</mo><msup><mi>z</mi><mrow><mo>&#x02212;</mo><mn>4</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup></mrow></math></p>",
         "notes": ""
@@ -905,7 +905,7 @@ topics.unshift(...[
         "title": "Ejercicio 5 · Práctica",
         "statement": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>f</mi><mo stretchy=\"false\">&#x00028;</mo><mi>s</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mo stretchy=\"false\">&#x00028;</mo><msup><mi>s</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mi>s</mi><mo>&#x0002B;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00028;</mo><msup><mi>s</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mn>2</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></math></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mi>s</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mn>4</mn><msup><mi>s</mi><mn>3</mn></msup><mo>&#x0002B;</mo><mn>3</mn><msup><mi>s</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mn>6</mn><mi>s</mi><mo>&#x0002B;</mo><mn>2</mn></mrow></math></p>",
         "notes": ""
@@ -915,7 +915,7 @@ topics.unshift(...[
         "title": "Ejercicio 6 · Práctica",
         "statement": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>f</mi><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mi>a</mi><mi>x</mi><mo>&#x0002B;</mo><mi>b</mi></mrow><mrow><mi>c</mi><mi>x</mi><mo>&#x0002B;</mo><mi>d</mi></mrow></mfrac></mstyle></mrow></math></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mi>a</mi><mi>d</mi><mo>&#x02212;</mo><mi>b</mi><mi>c</mi></mrow><mrow><mo stretchy=\"false\">&#x00028;</mo><mi>c</mi><mi>x</mi><mo>&#x0002B;</mo><mi>d</mi><msup><mo stretchy=\"false\">&#x00029;</mo><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -925,7 +925,7 @@ topics.unshift(...[
         "title": "Ejercicio 7 · Práctica",
         "statement": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>f</mi><mo stretchy=\"false\">&#x00028;</mo><mi>u</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mo stretchy=\"false\">&#x00028;</mo><mn>2</mn><mi>u</mi><mo>&#x02212;</mo><mn>5</mn><mo stretchy=\"false\">&#x00029;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mi>u</mi><mo>&#x0002B;</mo><mn>1</mn></mrow><mrow><mi>u</mi><mo>&#x0002B;</mo><mn>2</mn></mrow></mfrac></mstyle></mrow></math></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mi>u</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>2</mn><msup><mi>u</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mn>8</mn><mi>u</mi><mo>&#x02212;</mo><mn>1</mn></mrow><mrow><mo stretchy=\"false\">&#x00028;</mo><mi>u</mi><mo>&#x0002B;</mo><mn>2</mn><msup><mo stretchy=\"false\">&#x00029;</mo><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -935,7 +935,7 @@ topics.unshift(...[
         "title": "Ejercicio 8 · Práctica",
         "statement": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>f</mi><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>2</mn></mrow><mrow><mi>x</mi><mo>&#x0002B;</mo><mn>1</mn></mrow></mfrac></mstyle><mrow><mo stretchy=\"true\" fence=\"true\" form=\"prefix\">&#x00028;</mo><mn>1</mn><mo>&#x02212;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>3</mn></mrow><mrow><mi>x</mi><mo>&#x0002B;</mo><mn>1</mn></mrow></mfrac></mstyle><mo stretchy=\"true\" fence=\"true\" form=\"postfix\">&#x00029;</mo></mrow></mrow></math></span></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>10</mn><mo>&#x02212;</mo><mn>2</mn><mi>x</mi></mrow><mrow><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo>&#x0002B;</mo><mn>1</mn><msup><mo stretchy=\"false\">&#x00029;</mo><mn>3</mn></msup></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -945,7 +945,7 @@ topics.unshift(...[
         "title": "Ejercicio 9 · Práctica",
         "statement": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>g</mi><mo stretchy=\"false\">&#x00028;</mo><mi>t</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>1</mn><mo>&#x02212;</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mrow><mn>1</mn><mo>&#x0002B;</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></math></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>g</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mi>t</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mo>&#x02212;</mo><mn>4</mn><mi>t</mi></mrow><mrow><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo>&#x0002B;</mo><msup><mi>t</mi><mn>2</mn></msup><msup><mo stretchy=\"false\">&#x00029;</mo><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -955,7 +955,7 @@ topics.unshift(...[
         "title": "Ejercicio 10 · Práctica",
         "statement": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>g</mi><mo stretchy=\"false\">&#x00028;</mo><mi>t</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mi>ln</mi><mi>t</mi></mrow><mrow><mi>t</mi><mo>&#x0002B;</mo><mn>1</mn></mrow></mfrac></mstyle></mrow></math></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>g</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mi>t</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>1</mn><mo>&#x0002B;</mo><mi>t</mi><mo>&#x02212;</mo><mi>t</mi><mi>ln</mi><mi>t</mi></mrow><mrow><mi>t</mi><mo stretchy=\"false\">&#x00028;</mo><mi>t</mi><mo>&#x0002B;</mo><mn>1</mn><msup><mo stretchy=\"false\">&#x00029;</mo><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -1089,7 +1089,7 @@ topics.unshift(...[
         "title": "Ejercicio 1 · Práctica",
         "statement": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>f</mi><mo stretchy=\"false\">&#x00028;</mo><mi>&#x003B8;</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mi>sin</mi><mo stretchy=\"false\">&#x00028;</mo><mn>5</mn><mi>&#x003B8;</mi><mo stretchy=\"false\">&#x00029;</mo><msup><mi>sec</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00028;</mo><mn>5</mn><mi>&#x003B8;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mi>&#x003B8;</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mn>5</mn><mi>sec</mi><mo stretchy=\"false\">&#x00028;</mo><mn>5</mn><mi>&#x003B8;</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0002B;</mo><mn>10</mn><msup><mi>sin</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00028;</mo><mn>5</mn><mi>&#x003B8;</mi><mo stretchy=\"false\">&#x00029;</mo><msup><mi>sec</mi><mn>3</mn></msup><mo stretchy=\"false\">&#x00028;</mo><mn>5</mn><mi>&#x003B8;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span></p>",
         "notes": ""
@@ -1099,7 +1099,7 @@ topics.unshift(...[
         "title": "Ejercicio 2 · Práctica",
         "statement": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>f</mi><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><msup><mrow><mo stretchy=\"true\" fence=\"true\" form=\"prefix\">&#x00028;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mi>x</mi><mo>&#x02212;</mo><mn>7</mn></mrow><mrow><mi>x</mi><mo>&#x0002B;</mo><mn>2</mn></mrow></mfrac></mstyle><mo stretchy=\"true\" fence=\"true\" form=\"postfix\">&#x00029;</mo></mrow><mn>3</mn></msup></mrow></math></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>27</mn><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo>&#x02212;</mo><mn>7</mn><msup><mo stretchy=\"false\">&#x00029;</mo><mn>2</mn></msup></mrow><mrow><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo>&#x0002B;</mo><mn>2</mn><msup><mo stretchy=\"false\">&#x00029;</mo><mn>4</mn></msup></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -1109,7 +1109,7 @@ topics.unshift(...[
         "title": "Ejercicio 3 · Práctica",
         "statement": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>f</mi><mo stretchy=\"false\">&#x00028;</mo><mi>t</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>3</mn><msup><mi>t</mi><mn>4</mn></msup></mrow><mrow><msqrt><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>5</mn><mi>t</mi></mrow></msqrt></mrow></mfrac></mstyle></mrow></math></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mi>t</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>18</mn><msup><mi>t</mi><mn>5</mn></msup><mo>&#x02212;</mo><mn>105</mn><msup><mi>t</mi><mn>4</mn></msup></mrow><mrow><mn>2</mn><mo stretchy=\"false\">&#x00028;</mo><msup><mi>t</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>5</mn><mi>t</mi><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><mn>3</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -1119,7 +1119,7 @@ topics.unshift(...[
         "title": "Ejercicio 4 · Práctica",
         "statement": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>f</mi><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><msup><mi>e</mi><mrow><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>5</mn><mi>x</mi><mo>&#x0002B;</mo><mn>3</mn></mrow></msup></mrow></math></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mo stretchy=\"false\">&#x00028;</mo><mn>4</mn><mi>x</mi><mo>&#x02212;</mo><mn>5</mn><mo stretchy=\"false\">&#x00029;</mo><mspace width=\"0.167em\" /><msup><mi>e</mi><mrow><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>5</mn><mi>x</mi><mo>&#x0002B;</mo><mn>3</mn></mrow></msup></mrow></math></p>",
         "notes": ""
@@ -1129,7 +1129,7 @@ topics.unshift(...[
         "title": "Ejercicio 5 · Práctica",
         "statement": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>f</mi><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>&#x02212;</mo><mn>1</mn></mrow><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>&#x0002B;</mo><mn>1</mn></mrow></mfrac></mstyle></mrow></math></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>2</mn><msup><mi>e</mi><mi>x</mi></msup></mrow><mrow><mo stretchy=\"false\">&#x00028;</mo><msup><mi>e</mi><mi>x</mi></msup><mo>&#x0002B;</mo><mn>1</mn><msup><mo stretchy=\"false\">&#x00029;</mo><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -1139,7 +1139,7 @@ topics.unshift(...[
         "title": "Ejercicio 6 · Práctica",
         "statement": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>f</mi><mo stretchy=\"false\">&#x00028;</mo><mi>t</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mi>ln</mi><mrow><mo stretchy=\"true\" fence=\"true\" form=\"prefix\">&#x00028;</mo><mi>t</mi><msqrt><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mn>1</mn></mrow></msqrt><mo stretchy=\"true\" fence=\"true\" form=\"postfix\">&#x00029;</mo></mrow></mrow></math></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mi>t</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>1</mn></mrow><mrow><mi>t</mi></mrow></mfrac></mstyle><mo>&#x0002B;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mi>t</mi></mrow><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mn>1</mn></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -1149,7 +1149,7 @@ topics.unshift(...[
         "title": "Ejercicio 7 · Práctica",
         "statement": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>f</mi><mo stretchy=\"false\">&#x00028;</mo><mi>y</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><msup><mi>ln</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00028;</mo><mn>2</mn><mi>y</mi><mo>&#x0002B;</mo><mn>6</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></math></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mi>y</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>2</mn><mi>ln</mi><mo stretchy=\"false\">&#x00028;</mo><mn>2</mn><mi>y</mi><mo>&#x0002B;</mo><mn>6</mn><mo stretchy=\"false\">&#x00029;</mo></mrow><mrow><mi>y</mi><mo>&#x0002B;</mo><mn>3</mn></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -1159,7 +1159,7 @@ topics.unshift(...[
         "title": "Ejercicio 8 · Práctica",
         "statement": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>g</mi><mo stretchy=\"false\">&#x00028;</mo><mi>z</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mi>sec</mi><mrow><mo stretchy=\"true\" fence=\"true\" form=\"prefix\">&#x00028;</mo><msup><mi>e</mi><mrow><mn>1</mn><mo>&#x02212;</mo><mn>2</mn><mi>z</mi></mrow></msup><mo stretchy=\"true\" fence=\"true\" form=\"postfix\">&#x00029;</mo></mrow></mrow></math></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>g</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mi>z</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mo>&#x02212;</mo><mn>2</mn><msup><mi>e</mi><mrow><mn>1</mn><mo>&#x02212;</mo><mn>2</mn><mi>z</mi></mrow></msup><mi>sec</mi><mrow><mo stretchy=\"true\" fence=\"true\" form=\"prefix\">&#x00028;</mo><msup><mi>e</mi><mrow><mn>1</mn><mo>&#x02212;</mo><mn>2</mn><mi>z</mi></mrow></msup><mo stretchy=\"true\" fence=\"true\" form=\"postfix\">&#x00029;</mo></mrow><mi>tan</mi><mrow><mo stretchy=\"true\" fence=\"true\" form=\"prefix\">&#x00028;</mo><msup><mi>e</mi><mrow><mn>1</mn><mo>&#x02212;</mo><mn>2</mn><mi>z</mi></mrow></msup><mo stretchy=\"true\" fence=\"true\" form=\"postfix\">&#x00029;</mo></mrow></mrow></math></span></p>",
         "notes": ""
@@ -1169,7 +1169,7 @@ topics.unshift(...[
         "title": "Ejercicio 9 · Práctica",
         "statement": "<p>Si <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>f</mi></mrow></math> es derivable, derive <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>y</mi><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mi>f</mi><mo stretchy=\"false\">&#x00028;</mo><mi>ln</mi><mi>z</mi><mo stretchy=\"false\">&#x00029;</mo></mrow><mrow><mi>z</mi><msup><mi>e</mi><mi>z</mi></msup></mrow></mfrac></mstyle></mrow></math>.</p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>y</mi><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><msup><mi>f</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mi>ln</mi><mi>z</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x02212;</mo><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo>&#x0002B;</mo><mi>z</mi><mo stretchy=\"false\">&#x00029;</mo><mi>f</mi><mo stretchy=\"false\">&#x00028;</mo><mi>ln</mi><mi>z</mi><mo stretchy=\"false\">&#x00029;</mo></mrow><mrow><msup><mi>z</mi><mn>2</mn></msup><msup><mi>e</mi><mi>z</mi></msup></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -1273,7 +1273,7 @@ topics.unshift(...[
         "title": "Ejercicio 1 · Práctica",
         "statement": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>g</mi><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mo stretchy=\"false\">&#x00028;</mo><mi>arccos</mi><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00028;</mo><mi>arcsin</mi><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>g</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mi>arccos</mi><mi>x</mi><mo>&#x02212;</mo><mi>arcsin</mi><mi>x</mi></mrow><mrow><msqrt><mrow><mn>1</mn><mo>&#x02212;</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow></mfrac></mstyle></mrow></math></span></p>",
         "notes": ""
@@ -1283,7 +1283,7 @@ topics.unshift(...[
         "title": "Ejercicio 2 · Práctica",
         "statement": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>h</mi><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mi>tan</mi><mi>x</mi><mo>&#x02212;</mo><mn>1</mn></mrow><mrow><mi>sec</mi><mi>x</mi></mrow></mfrac></mstyle></mrow></math></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>h</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mi>cos</mi><mi>x</mi><mo>&#x0002B;</mo><mi>sin</mi><mi>x</mi></mrow></math></p>",
         "notes": ""
@@ -1293,7 +1293,7 @@ topics.unshift(...[
         "title": "Ejercicio 3 · Práctica",
         "statement": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>h</mi><mo stretchy=\"false\">&#x00028;</mo><mi>z</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><msup><mi>e</mi><mi>z</mi></msup></mrow><mrow><mi>arccos</mi><mi>z</mi></mrow></mfrac></mstyle></mrow></math></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>h</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mi>z</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><msup><mi>e</mi><mi>z</mi></msup><mrow><mo stretchy=\"true\" fence=\"true\" form=\"prefix\">&#x00028;</mo><msqrt><mrow><mn>1</mn><mo>&#x02212;</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></msqrt><mi>arccos</mi><mi>z</mi><mo>&#x0002B;</mo><mn>1</mn><mo stretchy=\"true\" fence=\"true\" form=\"postfix\">&#x00029;</mo></mrow></mrow><mrow><msqrt><mrow><mn>1</mn><mo>&#x02212;</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></msqrt><mspace width=\"0.167em\" /><mo stretchy=\"false\">&#x00028;</mo><mi>arccos</mi><mi>z</mi><msup><mo stretchy=\"false\">&#x00029;</mo><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></math></span></p>",
         "notes": ""
@@ -1303,7 +1303,7 @@ topics.unshift(...[
         "title": "Ejercicio 4 · Práctica",
         "statement": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>h</mi><mo stretchy=\"false\">&#x00028;</mo><mi>z</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mo>arccot</mo><mi>z</mi></mrow><mrow><msqrt><mrow><mi>z</mi></mrow></msqrt></mrow></mfrac></mstyle></mrow></math></p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>h</mi><mi>&#x02032;</mi></msup><mo stretchy=\"false\">&#x00028;</mo><mi>z</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mo>&#x02212;</mo><mn>1</mn></mrow><mrow><msqrt><mrow><mi>z</mi></mrow></msqrt><mspace width=\"0.167em\" /><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo>&#x0002B;</mo><msup><mi>z</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></mfrac></mstyle><mo>&#x02212;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mo>arccot</mo><mi>z</mi></mrow><mrow><mn>2</mn><mi>z</mi><msqrt><mrow><mi>z</mi></mrow></msqrt></mrow></mfrac></mstyle></mrow></math></span></p>",
         "notes": ""
@@ -1392,7 +1392,7 @@ topics.unshift(...[
         "title": "Ejercicio 1 · Práctica",
         "statement": "<p>Calcula <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mi>d</mi><mi>z</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mstyle></mrow></math> en <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x00028;</mo><mo>&#x02212;</mo><mn>3</mn><mo>&#x0002C;</mo><mn>0</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></math>, dado <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>x</mi><mn>2</mn></msup><mi>z</mi><mo>&#x0002B;</mo><mi>x</mi><msup><mi>z</mi><mn>2</mn></msup><mo>&#x0003D;</mo><mn>3</mn><mi>x</mi><mo>&#x0002B;</mo><mn>9</mn></mrow></math>.</p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mi>d</mi><mi>z</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mstyle><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -1402,7 +1402,7 @@ topics.unshift(...[
         "title": "Ejercicio 2 · Práctica",
         "statement": "<p>Calcula <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><mi>d</mi><mi>y</mi></mrow></mfrac></mstyle></mrow></math>, dado <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>4</mn><mi>x</mi><mi>ln</mi><mo stretchy=\"false\">&#x00028;</mo><mn>2</mn><mi>x</mi><mo>&#x0002B;</mo><mi>y</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mn>4</mn></mrow></math>.</p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><span class=\"math-region math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><mi>d</mi><mi>y</mi></mrow></mfrac></mstyle><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mo>&#x02212;</mo><mi>x</mi></mrow><mrow><mo stretchy=\"false\">&#x00028;</mo><mn>2</mn><mi>x</mi><mo>&#x0002B;</mo><mi>y</mi><mo stretchy=\"false\">&#x00029;</mo><mi>ln</mi><mo stretchy=\"false\">&#x00028;</mo><mn>2</mn><mi>x</mi><mo>&#x0002B;</mo><mi>y</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0002B;</mo><mn>2</mn><mi>x</mi></mrow></mfrac></mstyle></mrow></math></span></p>",
         "notes": ""
@@ -1412,7 +1412,7 @@ topics.unshift(...[
         "title": "Ejercicio 3 · Práctica",
         "statement": "<p>Suponga que <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>e</mi><mi>y</mi></msup><mo>&#x0003D;</mo><msup><mi>y</mi><mn>2</mn></msup><mo>&#x000B7;</mo><msup><mi>e</mi><mi>x</mi></msup></mrow></math> define a <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>y</mi></mrow></math> como función de <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>x</mi></mrow></math>. Determina <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mstyle></mrow></math> y <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>y</mi></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></math> en términos de <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>y</mi></mrow></math>.</p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mstyle><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mi>y</mi></mrow><mrow><mi>y</mi><mo>&#x02212;</mo><mn>2</mn></mrow></mfrac></mstyle></mrow></math> \\quad y \\quad <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>y</mi></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mo>&#x02212;</mo><mn>2</mn><mi>y</mi></mrow><mrow><mo stretchy=\"false\">&#x00028;</mo><mi>y</mi><mo>&#x02212;</mo><mn>2</mn><msup><mo stretchy=\"false\">&#x00029;</mo><mn>3</mn></msup></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -1422,7 +1422,7 @@ topics.unshift(...[
         "title": "Ejercicio 4 · Práctica",
         "statement": "<p>Obtén <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>y</mi><mi>&#x02032;</mi></msup></mrow></math> si <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>x</mi><mo>&#x0002B;</mo><mi>cos</mi><mi>x</mi><mo>&#x0002B;</mo><mi>x</mi><msup><mi>y</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>e</mi><mi>y</mi></msup></mrow></math>.</p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>y</mi><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mi>sin</mi><mi>x</mi><mo>&#x02212;</mo><msup><mi>y</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>1</mn></mrow><mrow><mn>2</mn><mi>x</mi><mi>y</mi><mo>&#x02212;</mo><msup><mi>e</mi><mi>y</mi></msup></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -1432,7 +1432,7 @@ topics.unshift(...[
         "title": "Ejercicio 5 · Práctica",
         "statement": "<p>Obtén <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>y</mi><mi>&#x02032;</mi></msup></mrow></math> si <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>x</mi><mo>&#x0002B;</mo><msup><mi>e</mi><mrow><mi>x</mi><mi>y</mi></mrow></msup><mo>&#x02212;</mo><msup><mi>y</mi><mn>3</mn></msup><mo>&#x02212;</mo><mi>y</mi><mo>&#x0003D;</mo><mn>3</mn></mrow></math>.</p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>y</mi><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>1</mn><mo>&#x0002B;</mo><mi>y</mi><msup><mi>e</mi><mrow><mi>x</mi><mi>y</mi></mrow></msup></mrow><mrow><mn>1</mn><mo>&#x0002B;</mo><mn>3</mn><msup><mi>y</mi><mn>2</mn></msup><mo>&#x02212;</mo><mi>x</mi><msup><mi>e</mi><mrow><mi>x</mi><mi>y</mi></mrow></msup></mrow></mfrac></mstyle></mrow></math></p>",
         "notes": ""
@@ -1591,7 +1591,7 @@ topics.unshift(...[
         "title": "Ejercicio 1 · Práctica",
         "statement": "<p>Un hombre está parado en el borde de un muelle, remolcando hacia sí con una cuerda una lancha. Él recoge la cuerda a <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>40</mn></mrow></math> cm/s, y sus manos se mantienen <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>2</mn></mrow></math> m más altas que el punto en que la cuerda está atada a la lancha. ¿A qué velocidad se acerca la lancha al muelle cuando le faltan <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>3</mn></mrow></math> m para llegar?</p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p>Se acerca a <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>0.4807</mn></mrow></math> m/s aproximadamente.</p>",
         "notes": ""
@@ -1601,7 +1601,7 @@ topics.unshift(...[
         "title": "Ejercicio 2 · Práctica",
         "statement": "<p>Una piedra cae en una laguna, creando una onda circular centrada en el punto de contacto. El radio de la onda aumenta a <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>30</mn></mrow></math> cm/s. ¿A qué velocidad crece el área del círculo encerrado por la onda cuando su radio es <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>1</mn></mrow></math> m?</p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p>Crece a <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>6000</mn><mi>&#x003C0;</mi><mo>&#x02248;</mo><mn>18</mn><mspace width=\"0.167em\" /><mn>849.6</mn><mtext>&#x000A0;</mtext><msup><mtext>cm</mtext><mn>2</mn></msup><mo>&#x0002F;</mo><mtext>s</mtext></mrow></math>.</p>",
         "notes": ""
@@ -1611,7 +1611,7 @@ topics.unshift(...[
         "title": "Ejercicio 3 · Práctica",
         "statement": "<p>De un tubo sale arena a razón de <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>16</mn><mtext>&#x000A0;</mtext><msup><mtext>dm</mtext><mn>3</mn></msup><mo>&#x0002F;</mo><mtext>s</mtext></mrow></math>. Si la arena forma una pirámide cónica en el suelo cuya altura es siempre <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>4</mn></mrow></mfrac></mrow></math> del diámetro de la base, ¿con qué rapidez aumenta la altura de la pirámide cuando tiene <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>4</mn></mrow></math> dm de altura?</p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p>Aumenta a <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>4</mn><mi>&#x003C0;</mi></mrow></mfrac></mstyle><mo>&#x02248;</mo><mn>0.0796</mn></mrow></math> dm/s.</p>",
         "notes": ""
@@ -1621,7 +1621,7 @@ topics.unshift(...[
         "title": "Ejercicio 4 · Práctica",
         "statement": "<p>Una mujer, en un muelle, tira de un bote a razón de <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>15</mn></mrow></math> m/min sirviéndose de una soga amarrada al bote a nivel del agua. Si las manos de la mujer se hallan a <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>4.8</mn></mrow></math> m por arriba del nivel del agua, ¿con qué rapidez se aproxima el bote al muelle cuando le falta por recoger <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>6</mn></mrow></math> m de cuerda?</p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p>Se acerca a <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>25</mn></mrow></math> m/min.</p>",
         "notes": ""
@@ -1631,7 +1631,7 @@ topics.unshift(...[
         "title": "Ejercicio 5 · Práctica",
         "statement": "<p>Un avión vuela con velocidad constante, a una altura de <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>3000</mn></mrow></math> m, en una trayectoria recta que lo llevará directamente sobre un observador en tierra. En un instante dado, el observador advierte que el ángulo de elevación del avión es de <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mfrac><mrow><mi>&#x003C0;</mi></mrow><mrow><mn>3</mn></mrow></mfrac></mrow></math> radianes y aumenta a razón de <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>60</mn></mrow></mfrac></mrow></math> rad/s. Determina la velocidad del avión.</p>",
         "review": "",
-        "analysis": "<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>",
+        "analysis": "",
         "steps": [],
         "answer": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>&#x02212;</mo><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mfrac><mrow><mn>200</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mstyle><mo>&#x02248;</mo><mo>&#x02212;</mo><mn>66.67</mn></mrow></math> m/s, es decir, el avión vuela a <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>66.67</mn></mrow></math> m/s hacia el observador.</p>",
         "notes": ""
@@ -1654,25 +1654,31 @@ Object.assign(routeAliases,{
   'sustitucion--ejercicio-1':'sustitucion--ejercicio-p4',
   'sustitucion--solucion-1':'sustitucion--solucion-p4'
 });
+routeAliases['cadena--ejemplo-e8']='cadena--ejemplo-e9';
 const sourceNote='';
+function analysis(item){
+  if(!item.analysis) return '';
+  return item.analysis.includes('<h4>') ? item.analysis : `<div class="analisis"><h4>Esquema de análisis</h4>${item.analysis}</div>`;
+}
 function procedure(item, topic, kind){
-  return `<div class="procedure"><h4>Desarrollo paso a paso</h4><div class="procedure-header"><p>El resultado está disponible al final. Cuando hay desarrollo, puedes abrir los pasos que necesites.</p>${item.steps.length?'<button class="mode-toggle">Mostrar todos los pasos</button>':'<p>Este material no incluye un desarrollo por pasos. Revisa las indicaciones y pendientes del ejemplo o ejercicio.</p>'}</div>${item.steps.map((step,i)=>{const id=`${topic}--${kind}-${item.sourceId}--paso-${i+1}`;return `<details class="step"><summary id="${id}">${step.title}</summary><div class="step-body">${step.body}<button data-save="${id}">Guardar este paso como punto de estudio</button></div></details>`;}).join('')}</div><h4>Resultado</h4>${item.answer}`;
+  const steps = item.steps.length ? `<div class="procedure"><h4>Desarrollo paso a paso</h4><div class="procedure-header"><p>Abre los pasos que necesites. El resultado está disponible al final.</p><button class="mode-toggle">Mostrar todos los pasos</button></div>${item.steps.map((step,i)=>{const id=`${topic}--${kind}-${item.sourceId}--paso-${i+1}`;return `<details class="step"><summary id="${id}">${step.title}</summary><div class="step-body">${step.body}<button data-save="${id}">Guardar este paso como punto de estudio</button></div></details>`;}).join('')}</div>` : '';
+  return `${steps}<h4>Resultado</h4>${item.answer}`;
 }
 function indexList(topic,items,kind,label){
   return `<nav class="item-index" aria-label="${label}"><p><strong>${label}</strong></p><ol>${items.map(item=>`<li><a href="#${topic}--${kind}-${item.sourceId}">${item.title}</a></li>`).join('')}</ol></nav>`;
 }
-function examples(t){
+function examples(source){
+  const t = {...source, examples:source.examples.filter(e=>!(source.id==='cadena' && e.sourceId==='e8'))};
   if(!t.examples.length) return '<p>Los ejemplos disponibles están integrados en la explicación teórica de este tema.</p>';
   const relations = t.relations ? `<p>Lee cada relación en este orden: función original, derivada y familia de primitivas. Las relaciones 10, 11 y 12 permiten comparar distintas constantes.</p>${indexList(t.id,t.relations,'relacion','Relaciones de la noción intuitiva')}${t.relations.map(r=>`<div class="academic-item" data-source-id="${r.sourceId}"><h3 id="${t.id}--relacion-${r.sourceId}" tabindex="-1">${r.title}</h3>${r.body}<a href="#${t.id}--ejemplos">Volver al índice de relaciones</a></div>`).join('')}` : '';
-  return `${relations}<p>El esquema de análisis precede al desarrollo y explica por qué se elige cada procedimiento.</p>${indexList(t.id,t.examples,'ejemplo','Índice de ejemplos')}${t.examples.map((e,i)=>`<div class="academic-item" data-source-id="${e.sourceId}"><h3 id="${t.id}--ejemplo-${e.sourceId}" tabindex="-1">${e.title}</h3>${e.statement}${e.review}${e.analysis}${procedure(e,t.id,"ejemplo")}${e.notes}<div class="inline-actions"><a href="#${t.id}--ejemplos">Volver al índice de ejemplos</a>${t.examples[i+1]?`<a href="#${t.id}--ejemplo-${t.examples[i+1].sourceId}">Siguiente: ${t.examples[i+1].title}</a>`:''}</div></div>`).join('')}`;
+  return `${relations}<p>El esquema de análisis precede al desarrollo y explica por qué se elige cada procedimiento.</p>${indexList(t.id,t.examples,'ejemplo','Índice de ejemplos')}${t.examples.map((e,i)=>`<div class="academic-item" data-source-id="${e.sourceId}"><h3 id="${t.id}--ejemplo-${e.sourceId}" tabindex="-1">${e.title}</h3>${e.statement}${analysis(e)}${procedure(e,t.id,"ejemplo")}${e.notes}<div class="inline-actions"><a href="#${t.id}--ejemplos">Volver al índice de ejemplos</a>${t.examples[i+1]?`<a href="#${t.id}--ejemplo-${t.examples[i+1].sourceId}">Siguiente: ${t.examples[i+1].title}</a>`:''}</div></div>`).join('')}`;
 }
 function practice(t){
-  if(!t.exercises.length)return '<p>No se incluyen ejercicios adicionales en este tema. Consulta las actividades indicadas en la teoría.</p>';
-  return `<p>Intenta resolver cada ejercicio antes de consultar el análisis y la solución. Atiende a su dominio real.</p>${indexList(t.id,t.exercises,'ejercicio','Índice de ejercicios')}${t.exercises.map(e=>`<div class="academic-item" data-source-id="${e.sourceId}"><h3 id="${t.id}--ejercicio-${e.sourceId}" tabindex="-1">${e.title}</h3>${e.statement}<div class="inline-actions"><a href="#${t.id}--solucion-${e.sourceId}">Consultar la solución del ejercicio ${e.sourceId.slice(1)}</a><a href="#${t.id}--practica">Volver al índice de ejercicios</a></div></div>`).join('')}`;
+  if(!t.exercises.length)return '<p>Consulta las actividades incluidas en la teoría y los ejemplos de este tema.</p>';
+  return `<p>Intenta resolver cada ejercicio. Después, abre su solución para comparar el resultado.</p>${indexList(t.id,t.exercises,'ejercicio','Índice de ejercicios')}${t.exercises.map(e=>`<div class="academic-item" data-source-id="${e.sourceId}"><h3 id="${t.id}--ejercicio-${e.sourceId}" tabindex="-1">${e.title}</h3>${e.statement}<details class="exercise-solution"><summary id="${t.id}--solucion-${e.sourceId}">Ver solución: ${e.title}</summary><div class="solution-body">${e.review && t.id==='introduccion' && e.sourceId==='p1' ? '<p>Atiende al signo al integrar: la primitiva tiene más uno dividido entre dos x al cuadrado.</p>' : ''}${analysis(e)}${procedure(e,t.id,"solucion")}${e.notes}<a href="#${t.id}--ejercicio-${e.sourceId}">Volver al enunciado: ${e.title}</a></div></details><a href="#${t.id}--practica">Volver al índice de ejercicios</a></div>`).join('')}`;
 }
 function solutions(t){
-  if(!t.exercises.length)return '<p>No hay soluciones adicionales en este tema. Consulta los desarrollos incluidos en la teoría y los ejemplos.</p>';
-  return `${indexList(t.id,t.exercises,'solucion','Índice de soluciones')}${t.exercises.map(e=>`<div class="academic-item" data-source-id="${e.sourceId}"><h3 id="${t.id}--solucion-${e.sourceId}" tabindex="-1">Solución. ${e.title}</h3>${e.review}${e.analysis}${procedure(e,t.id,"solucion")}${e.notes}<div class="inline-actions"><a href="#${t.id}--ejercicio-${e.sourceId}">Volver al ejercicio ${e.sourceId.slice(1)}</a><a href="#${t.id}--soluciones">Volver al índice de soluciones</a></div></div>`).join('')}`;
+  return `<p>Las soluciones están junto a sus ejercicios. Selecciona uno para abrir su solución.</p>${indexList(t.id,t.exercises,'solucion','Soluciones de la práctica')}`;
 }
 export function renderTopic(t){
   const position=topics.indexOf(t),previous=topics[position-1],next=topics[position+1];
@@ -1683,4 +1689,4 @@ export function renderTopic(t){
   <section class="academic-section" data-section="soluciones"><h2 id="${t.id}--soluciones" tabindex="-1"><span class="section-number" aria-hidden="true">04</span> Soluciones</h2>${solutions(t)}</section>
   <nav class="topic-navigation" aria-label="Continuar el estudio"><a href="#${t.id}--tema">Volver al inicio del tema</a>${previous?`<a href="#${previous.id}--tema">Anterior: ${previous.title}</a>`:''}${next?`<a href="#${next.id}--tema">Siguiente tema disponible: ${next.title}</a>`:''}</nav></article>`;
 }
-export const home = `<article data-view="inicio"><h1 id="inicio" tabindex="-1">Cálculo Diferencial e Integral</h1><p class="lead">¿Qué tema quieres estudiar?</p><section class="home-search" aria-labelledby="home-search-title"><h2 id="home-search-title">Buscar un tema</h2><form id="home-search-form" role="search" aria-label="Buscar en el catálogo"><label for="home-search-query">Tema, apartado o ejemplo</label><div class="search-input-row"><input id="home-search-query" type="search" placeholder="Por ejemplo, derivación implícita" autocomplete="off" aria-describedby="home-voice-note"><button type="submit" class="primary">Buscar</button></div></form><div class="inline-actions"><button id="home-voice-start" aria-describedby="home-voice-note">Buscar por voz</button><button id="home-voice-stop" hidden>Cancelar escucha</button></div><p id="home-voice-note">Escribe lo que quieres encontrar o pulsa «Iniciar búsqueda por voz», espera «Escuchando» y di el tema. El micrófono es opcional; el navegador puede procesar el audio mediante su proveedor. Si el navegador del chat no reconoce la voz, abre el catálogo en un navegador externo o busca escribiendo.</p><p id="home-search-status" role="status"></p><ul id="home-search-results"></ul></section><div class="inline-actions"><button data-continue>Continuar donde quedé</button><a href="#home-topics">Explorar temas disponibles</a></div><details class="home-topics"><summary id="home-topics">Temas disponibles</summary><ol class="topic-list">${topics.map(t=>`<li><h3><a href="#${t.id}--tema">${t.title}</a></h3><p>${t.description}</p></li>`).join('')}</ol></details><p>También puedes usar el temario por unidades. Los contenidos sin material están identificados como pendientes.</p><a href="#ayuda">Ayuda para utilizar el curso</a></article>`;
+export const home = `<article data-view="inicio"><h1 id="inicio" tabindex="-1">Cálculo Diferencial e Integral</h1><p class="lead">¿Qué tema quieres estudiar?</p><section class="home-search" aria-labelledby="home-search-title"><h2 id="home-search-title">Buscar un tema</h2><form id="home-search-form" role="search" aria-label="Buscar en el catálogo"><label for="home-search-query">Tema, apartado o ejemplo</label><div class="search-input-row"><input id="home-search-query" type="search" placeholder="Por ejemplo, derivación implícita" autocomplete="off"><button type="submit" class="primary">Buscar</button></div></form><div class="inline-actions"><button id="home-voice-start" aria-describedby="home-voice-note">Buscar por voz</button><button id="home-voice-stop" hidden>Cancelar escucha</button></div><p id="home-search-status" role="status"></p><ul id="home-search-results"></ul><details class="voice-privacy"><summary>Acerca del micrófono</summary><p id="home-voice-note">El navegador puede enviar audio a su proveedor de reconocimiento. El catálogo no guarda grabaciones ni consultas. Si el servicio no responde, escribe o usa el dictado del dispositivo en el campo de búsqueda.</p></details></section><div class="inline-actions"><button data-continue>Continuar donde quedé</button><a href="#home-topics">Explorar temas disponibles</a></div><details class="home-topics"><summary id="home-topics">Temas disponibles</summary><ol class="topic-list">${topics.map(t=>`<li><h3><a href="#${t.id}--tema">${t.title}</a></h3><p>${t.description}</p></li>`).join('')}</ol></details><p>También puedes usar el temario por unidades. Los contenidos sin material están identificados como pendientes.</p><a href="#ayuda">Ayuda para utilizar el curso</a></article>`;

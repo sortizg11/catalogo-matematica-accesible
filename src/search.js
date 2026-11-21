@@ -43,16 +43,9 @@ export function initSearch() {
     const instructions = document.createElement('p');
     instructions.id = prefix + 'voice-instructions';
     instructions.className = 'voice-instructions';
-    instructions.textContent = '1. Pulsa Iniciar búsqueda por voz. 2. Espera «Escuchando». 3. Di el tema. Puedes terminar el dictado con el mismo botón o cancelar.';
+    instructions.textContent = 'Pulsa el micrófono, espera «Escuchando» y di el tema. Al terminar de hablar, espera unos segundos y elige el resultado. No necesitas detener el dictado.';
     start.parentElement.after(instructions);
     start.setAttribute('aria-describedby', instructions.id);
-    const reviewLabel = document.createElement('label');
-    reviewLabel.className = 'voice-review';
-    const review = document.createElement('input');
-    review.type = 'checkbox';
-    review.id = prefix + 'voice-review';
-    reviewLabel.append(review, ' Revisar dictado antes de abrir un tema');
-    instructions.after(reviewLabel);
     const jump = document.createElement('a');
     jump.href = '#' + results.id;
     jump.hidden = true;
@@ -62,7 +55,7 @@ export function initSearch() {
     });
     results.before(jump);
 
-    function search() {
+    function search(preview = false) {
       results.replaceChildren();
       jump.hidden = true;
       let query = normalize(input.value)
@@ -70,14 +63,16 @@ export function initSearch() {
         .replace(/^(?:buscar|busca|buscame|mostrar|muestra|abrir|abre|ir a|ir al|llevarme a|llevame a)\s+/, '')
         .replace(/^(?:el |la |al )?(?:capitulo|tema|apartado|seccion)\s+(?:de |del |sobre )?/, '');
       if (!query) { status.textContent = 'Escribe o dicta un título para buscar.'; return; }
-      if (aliases[query] && document.getElementById(aliases[query])) { navigate(aliases[query]); return; }
+      const alias = aliases[query] && document.getElementById(aliases[query]);
+      if (alias && !preview) { navigate(alias.id); return; }
       const exact = headings.filter(h => normalize(h.title) === query);
       const words = query.split(' ').filter(w => !['de','del','la','las','el','los','a','al','por','en'].includes(w));
-      const found = exact.length ? exact : headings.filter(h => words.length && words.every(w => normalize(h.title).split(' ').includes(w)));
-      if (found.length === 1) { navigate(found[0].id); return; }
+      const found = alias ? headings.filter(h => h.id === alias.id) : exact.length ? exact : headings.filter(h => words.length && words.every(w => normalize(h.title).split(' ').includes(w)));
+      if (found.length === 1 && !preview) { navigate(found[0].id); return; }
       status.textContent = found.length ? `${found.length} resultados. Elige un destino.`
         : pending.some(p => normalize(p).includes(query)) ? 'Ese contenido está pendiente. Puedes elegir otro título.'
         : 'No se encontró un destino. Prueba con «sustitución», «teoría» o «concepto de integral indefinida».';
+      if (preview) status.textContent = `Texto reconocido: «${input.value}». ` + (found.length ? `${found.length === 1 ? 'Tema encontrado' : found.length + ' resultados'}: ${found.map(h=>h.title).join('; ')}. Pulsa el enlace para abrirlo, o corrige el texto y pulsa Buscar tema.` : status.textContent);
       for (const entry of found) {
         const li = document.createElement('li'), link = document.createElement('a');
         link.href = '#' + entry.id;
@@ -86,8 +81,8 @@ export function initSearch() {
       }
       if (found.length) {
         jump.textContent = `Ir a los ${found.length} resultados`;
-        jump.hidden = false;
-        results.querySelector('a').focus();
+        jump.hidden = preview;
+        if (!preview) results.querySelector('a').focus();
       }
     }
     form.addEventListener('submit', event => {
@@ -100,104 +95,120 @@ export function initSearch() {
     });
 
     const Speech = window.SpeechRecognition || window.webkitSpeechRecognition;
-    let recognition = null, generation = 0, timer = null, phase = 'idle';
+    let recognition = null, generation = 0, timer = null, silenceTimer = null;
+    let phase = 'idle';
+    status.setAttribute('aria-atomic', 'true');
     function finish(abort = true) {
       generation++;
       clearTimeout(timer);
+      clearTimeout(silenceTimer);
       const current = recognition;
       recognition = null;
       phase = 'idle';
       if (abort && current) try { current.abort(); } catch {}
       start.disabled = !Speech;
-      start.removeAttribute('aria-disabled');
       start.textContent = 'Iniciar búsqueda por voz';
       cancel.hidden = true;
     }
     function endWithoutFinal(message) {
       finish();
       input.focus();
-      status.textContent = input.value.trim()
-        ? message + ' Revisa el texto del campo y pulsa Buscar tema, o vuelve a dictar.'
-        : message + ' Puedes volver a dictar o escribir el tema.';
+      status.textContent = message + ' Escribe el tema o usa el dictado del dispositivo en el campo de búsqueda.';
     }
     finish(false);
-    if (!Speech) status.textContent = 'Este navegador no ofrece reconocimiento de voz. Puedes buscar escribiendo.';
+    if (!Speech) status.textContent = 'La búsqueda por voz no está disponible en este navegador. Escribe o usa el dictado del dispositivo en el campo de búsqueda.';
 
     start.addEventListener('click', () => {
-      if (phase === 'finishing') return;
-      if (recognition) {
-        phase = 'finishing';
-        start.textContent = 'Procesando dictado';
-        start.setAttribute('aria-disabled', 'true');
-        status.textContent = 'Dictado terminado. Esperando el texto reconocido.';
-        clearTimeout(timer);
-        const token = generation;
-        timer = setTimeout(() => { if (token === generation) endWithoutFinal('No llegó un resultado final.'); }, 5000);
-        try { recognition.stop(); } catch { endWithoutFinal('El navegador no pudo terminar el dictado.'); }
-        return;
-      }
+      // El mismo botón permite cancelar, pero el cierre normal es automático.
+      if (recognition) { finish(); status.textContent = 'Escucha cancelada.'; return; }
       cancelActive?.();
       finish();
-      cancelActive = () => { finish(); status.textContent = 'Escucha cancelada.'; };
+      cancelActive = () => { if (recognition) { finish(); status.textContent = 'Escucha cancelada.'; } };
       const token = generation;
-      let partial = '';
-      try { recognition = new Speech(); } catch { endWithoutFinal('No se pudo iniciar el reconocimiento.'); return; }
-      recognition.lang = 'es';
-      recognition.continuous = false;
-      recognition.interimResults = true;
-      recognition.maxAlternatives = 1;
-      phase = 'connecting';
-      start.textContent = 'Terminar dictado';
-      cancel.hidden = false;
-      // El foco permanece en el botón activado; no se desplaza a Cancelar.
-      status.textContent = 'Conectando el reconocimiento. Si aparece un permiso, respóndelo. Espera el aviso «Escuchando».';
-      const ready = () => {
-        if (token !== generation || phase !== 'connecting') return;
-        phase = 'listening';
-        clearTimeout(timer);
-        timer = setTimeout(() => { if (token === generation) endWithoutFinal('Se alcanzó el límite de 15 segundos de escucha.'); }, 15000);
-        status.textContent = 'Escuchando. Di el tema.';
-      };
-      recognition.onstart = ready;
-      recognition.onaudiostart = ready;
-      recognition.onresult = event => {
+      let transcript = '', attempts = 0;
+      results.replaceChildren(); jump.hidden = true;
+      const complete = () => {
         if (token !== generation || !visible()) return;
-        const result = event.results?.[event.resultIndex ?? 0];
-        const text = result?.[0]?.transcript;
-        if (typeof text !== 'string' || !text.trim()) { endWithoutFinal('No se reconoció un título.'); return; }
-        input.value = text;
-        partial = text;
-        if (result.isFinal === false) return;
+        if (!transcript.trim()) { endWithoutFinal('No se recibió una transcripción.'); return; }
+        input.value = transcript.trim();
         finish();
-        input.focus();
-        if (review.checked) status.textContent = `Texto reconocido: «${text}». Revísalo y pulsa Buscar tema.`;
-        else search();
+        // Un solo anuncio del resultado, sin voz propia ni cambio de página/foco.
+        search(true);
       };
-      recognition.onerror = event => {
-        if (token !== generation) return;
-        finish(false);
-        input.focus();
-        const messages = {
-          'not-allowed': 'No se permitió usar el micrófono. Puedes buscar escribiendo.',
-          'service-not-allowed': 'Este navegador no permite el servicio de reconocimiento, aunque hayas concedido permiso al micrófono. Abre el catálogo en un navegador externo o busca escribiendo.',
-          'network': 'El servicio de reconocimiento no pudo conectarse. El permiso de micrófono no garantiza este servicio. Prueba un navegador externo o busca escribiendo.',
-          'audio-capture': 'No se recibió audio del micrófono. Comprueba el dispositivo seleccionado o escribe.',
-          'no-speech': 'No se detectó voz. Comprueba el micrófono o escribe la búsqueda.',
-          'language-not-supported': 'El servicio no admite español en este navegador. Puedes buscar escribiendo.'
+      const waitForSilence = () => {
+        clearTimeout(silenceTimer);
+        silenceTimer = setTimeout(complete, 3500);
+      };
+      const connect = () => {
+        if (token !== generation || !visible()) return;
+        try { recognition = new Speech(); } catch { endWithoutFinal('No se pudo iniciar el reconocimiento.'); return; }
+        const current = recognition;
+        const valid = () => token === generation && recognition === current && visible();
+        recognition.lang = 'es-CR';
+        recognition.continuous = true;
+        recognition.interimResults = true;
+        recognition.maxAlternatives = 1;
+        phase = 'connecting';
+        start.textContent = 'Cancelar búsqueda por voz';
+        cancel.hidden = false;
+        status.textContent = 'Conectando el micrófono. Si aparece un permiso, respóndelo. Espera «Escuchando».';
+        const ready = () => {
+          if (!valid() || phase !== 'connecting') return;
+          phase = 'listening';
+          clearTimeout(timer);
+          timer = setTimeout(() => transcript ? complete() : endWithoutFinal('No se detectó un tema en 20 segundos.'), 20000);
+          status.textContent = 'Escuchando. Di el tema y deja de hablar para buscar.';
         };
-        status.textContent = messages[event.error] || 'No se pudo reconocer la voz. Puedes volver a intentarlo o escribir.';
+        recognition.onstart = ready;
+        recognition.onaudiostart = ready;
+        recognition.onspeechstart = () => { if (valid()) clearTimeout(silenceTimer); };
+        recognition.onspeechend = () => { if (valid() && transcript) waitForSilence(); };
+        recognition.onresult = event => {
+          if (!valid()) return;
+          // La lista contiene los resultados acumulados de esta conexión.
+          const parts = Array.from(event.results || []).map(result => result[0]?.transcript || '');
+          const text = parts.join(' ').trim();
+          if (!text) return;
+          transcript = text;
+          input.value = transcript;
+          waitForSilence();
+        };
+        recognition.onerror = event => {
+          if (!valid()) return;
+          const messages = {
+            'not-allowed': 'No se permitió usar el micrófono. Revisa el permiso del sitio.',
+            'service-not-allowed': 'Este navegador no permite el servicio de reconocimiento. Abre el catálogo en un navegador externo.',
+            'network': 'No se pudo conectar con el servicio de reconocimiento. Comprueba la conexión o prueba con otro navegador.',
+            'audio-capture': 'No se recibió audio. Comprueba el micrófono seleccionado.',
+            'no-speech': 'No se detectó voz.',
+            'language-not-supported': 'El servicio no admite el idioma de dictado en este navegador.'
+          };
+          endWithoutFinal(messages[event.error] || 'No se pudo reconocer la voz.');
+        };
+        recognition.onnomatch = () => { if (valid()) endWithoutFinal('No se reconoció un tema.'); };
+        recognition.onend = () => {
+          if (!valid()) return;
+          clearTimeout(timer);
+          if (transcript) { waitForSilence(); return; }
+          // Algunos navegadores cierran al responder el permiso. Un solo reintento,
+          // sin bucle de micrófono ni solicitudes indefinidas.
+          if (attempts++ === 0) { connect(); }
+          else endWithoutFinal('El servicio de voz se cerró sin devolver texto.');
+        };
+        try {
+          clearTimeout(timer);
+          timer = setTimeout(() => { if (valid()) endWithoutFinal('El servicio de voz no respondió.'); }, 20000);
+          recognition.start();
+        } catch { endWithoutFinal('No se pudo iniciar el micrófono.'); }
       };
-      recognition.onnomatch = () => { if (token === generation) endWithoutFinal('El servicio no reconoció un título.'); };
-      recognition.onend = () => {
-        if (token !== generation) return;
-        // Un cierre no convierte un texto provisional en resultado confirmado.
-        endWithoutFinal(partial || input.value.trim() ? 'La escucha terminó sin resultado final.' : 'La escucha terminó sin devolver una transcripción.');
-      };
-      try {
-        timer = setTimeout(() => { if (token === generation) endWithoutFinal('El servicio no confirmó la conexión en 20 segundos.'); }, 20000);
-        recognition.start();
-      } catch { endWithoutFinal('No se pudo iniciar el micrófono.'); }
+      connect();
     });
+    scope.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && recognition && prefix) {
+        event.preventDefault(); finish(); input.focus(); status.textContent = 'Escucha cancelada.';
+      }
+    });
+    input.addEventListener('input', () => { if (recognition) { finish(); status.textContent = 'Dictado cancelado. Puedes editar la búsqueda.'; } });
     cancel.addEventListener('click', () => { finish(); input.focus(); status.textContent = 'Escucha cancelada.'; });
     if (!prefix) dialog.addEventListener('close', () => {
       finish(); input.value = ''; results.replaceChildren(); jump.hidden = true;

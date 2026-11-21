@@ -1,6 +1,6 @@
 # Manual de uso de Cálculo Diferencial e Integral
 
-Borrador para revisión · 20 de noviembre de 2026 · Interfaz 1.5
+Versión 2.0 · 21 de noviembre de 2026
 
 Este catálogo permite consultar teoría, ejemplos, práctica y soluciones mediante enlaces, teclado y un lector de pantalla. Algunos contenidos del programa siguen pendientes. No requiere cuenta y no evalúa ni guarda tus respuestas.
 
@@ -8,7 +8,7 @@ Este catálogo permite consultar teoría, ejemplos, práctica y soluciones media
 
 Al entrar, encontrarás «Buscar un tema», con un campo escrito y el botón «Iniciar búsqueda por voz». Escribe, por ejemplo, «derivación implícita» y pulsa Buscar o Enter. Un destino único abre el tema; varias coincidencias muestran enlaces para elegir. No es un chat y no genera respuestas.
 
-Si prefieres explorar, abre «Temas disponibles» o utiliza el temario por unidades. «Continuar donde quedé» conserva tu acceso al marcador, sin convertirse en una lista de actividad reciente. Esta organización corresponde a la actualización 1.5 del catálogo público.
+Si prefieres explorar, abre «Temas disponibles» o utiliza el temario por unidades. «Continuar donde quedé» conserva tu acceso al marcador, sin convertirse en una lista de actividad reciente. Esta organización corresponde a la actualización 2.0 del catálogo público.
 
 ## Entrar y elegir un tema
 
@@ -20,11 +20,11 @@ La información institucional está en un desplegable cerrado al entrar. Ábrelo
 
 ## Leer y practicar
 
-Cada tema dispone de teoría, ejemplos resueltos, práctica y soluciones. El objetivo y los conocimientos previos aparecen en la teoría. En cada ejemplo y solución se mantiene la misma indicación: «El resultado está disponible al final. Cuando hay desarrollo, puedes abrir los pasos que necesites».
+Cada tema dispone de teoría, ejemplos resueltos y práctica. El objetivo y los conocimientos previos aparecen en la teoría. En los procedimientos se mantiene la indicación: «Abre los pasos que necesites. El resultado está disponible al final».
 
-Activa un título de paso con Enter o Espacio para desplegarlo. «Mostrar todos los pasos» permite abrir el desarrollo completo. Si la fuente no incluye desarrollo, se indica expresamente y no aparece un botón sin función. Una respuesta disponible no significa que se haya elaborado una solución explicada ni que ya haya sido validada por las docentes.
+Activa un título de paso con Enter o Espacio. «Mostrar todos los pasos» abre el desarrollo completo. Cuando se ofrece únicamente una respuesta, encontrarás el resultado sin controles de pasos adicionales.
 
-Desde un ejercicio puedes consultar su solución y regresar al enunciado exacto mediante el enlace de retorno. Los materiales señalados como pendientes de revisión no deben interpretarse como ejemplos matemáticos avalados.
+Debajo de cada ejercicio, activa «Ver solución» con Enter o Espacio. La solución se despliega junto al enunciado, sin cambiar de página. Puedes cerrarla con el mismo control. «Volver al enunciado» lleva al ejercicio exacto. El índice «Soluciones» conserva los accesos directos a estos desplegables.
 
 ## Guardar y recuperar tu lugar
 
@@ -42,29 +42,21 @@ Si no se puede guardar de forma persistente, el catálogo avisa y conserva el ma
 
 «Buscar contenidos» es un motor de búsqueda del catálogo, no un chat. Escribe un título y activa Buscar. Si hay una coincidencia única se abre directamente; si hay varias, elige uno de los enlaces. Un contenido pendiente se informa como tal.
 
-Para dictar, pulsa «Iniciar búsqueda por voz» y permite el uso del micrófono si deseas utilizarlo. El foco permanece en el botón. Primero se informa de la conexión; comienza a hablar cuando se anuncie «Escuchando». El mismo botón pasa a llamarse «Terminar dictado»: puedes pulsarlo para dejar de captar audio y solicitar el resultado. «Cancelar escucha» descarta el intento y devuelve el foco al campo. Si el resultado tarda más de cinco segundos tras terminar, podrás revisar el texto que haya quedado y continuar por escrito. Puedes decir:
+Para dictar, pulsa «Iniciar búsqueda por voz» y concede el permiso si quieres usar el micrófono. Espera «Escuchando», di por ejemplo «buscar derivación implícita» y deja de hablar. El catálogo espera unos 3,5 segundos sin nuevas transcripciones para cerrar la escucha automáticamente. No necesitas pulsar un botón para terminar. El tiempo concreto también depende del servicio del navegador.
 
-- «Buscar derivación implícita».
-- «Abrir el capítulo de regla de la cadena».
-- «Integración por sustitución».
+El texto reconocido aparece en el campo. El lector de pantalla anuncia el texto y los temas encontrados mediante el aviso de estado, sin añadir otra voz. Elige el enlace del tema para abrirlo con un clic o con Enter. Si quieres corregirlo, edita el campo y pulsa «Buscar tema». La búsqueda escrita conserva la apertura directa cuando encuentra un destino único.
 
-La búsqueda identifica títulos y apartados disponibles; no responde preguntas ni genera explicaciones. Usa los mismos destinos que la búsqueda escrita. No se añade una voz sintética: tu lector de pantalla lee el destino seleccionado.
+«Cancelar escucha» o Escape descartan el intento. Editar el campo, cerrar el diálogo o cambiar de sección también cancela la escucha y descarta respuestas tardías. Si el proveedor cierra sin transcribir, se intenta reconectar una vez; después se informa del fallo. La espera de conexión y la escucha sin texto tienen un límite de 20 segundos cada una.
 
-Si quieres confirmar el texto antes de navegar, marca «Revisar dictado antes de abrir un tema». Esta opción está desactivada inicialmente para conservar el acceso directo. Al activarla, el resultado final permanece en el campo para corregirlo y pulsar «Buscar tema». Sin esa opción, una coincidencia única se abre directamente. Si hay varias, el foco llega al primer enlace de resultados y también se ofrece «Ir a los resultados».
+El reconocimiento es opcional y depende del navegador y de su proveedor, que puede procesar el audio por internet. El catálogo no guarda grabaciones ni consultas. Si el servicio no está disponible, puedes escribir o activar el dictado del dispositivo sobre el mismo campo de búsqueda. Ese dictado se inicia con los controles propios de tu equipo. Utiliza auriculares para evitar que el micrófono recoja la voz del lector.
 
-Durante el reconocimiento puede aparecer texto provisional en el campo; no se abre un tema hasta recibir un resultado final o hasta que pulses Buscar. La escucha termina al obtener un resultado final, cancelar, cerrar el diálogo, salir de Inicio o alcanzar el límite de 15 segundos de escucha. La espera de conexión tiene un límite separado de 20 segundos, para que conceder el permiso no consuma el tiempo de dictado. Cancelar o cerrar aborta la escucha y descarta los resultados que lleguen tarde. Puedes volver a intentarlo.
-
-Según el navegador, el audio puede enviarse a su proveedor de reconocimiento. El catálogo no almacena grabaciones ni consultas. Si no hay soporte, no hay micrófono o niegas el permiso, utiliza la entrada escrita. El servicio del navegador puede necesitar conexión. Usa auriculares si la voz del lector entra en el micrófono. Si se informa de un fallo de conexión, el permiso del micrófono no basta para resolverlo: el servicio de reconocimiento también debe estar disponible. Si termina sin un resultado final, revisa el texto provisional y pulsa Buscar o vuelve a intentarlo. Si no hay audio, revisa el micrófono seleccionado. Una simulación no garantiza precisión con tu micrófono: esa prueba sigue pendiente.
-
-### Si usas el navegador integrado del chat
-
-El navegador integrado puede pedir permiso al micrófono y, aun así, no disponer de un servicio de transcripción operativo. El permiso no confirma que la búsqueda por voz vaya a funcionar. Si termina sin reconocer texto o indica un servicio no permitido, abre la dirección pública del catálogo en un navegador externo y repite una frase breve. Esto es una prueba de comparación, no una garantía de compatibilidad. La causa concreta del fallo comunicado todavía no está confirmada. Mientras tanto, utiliza el mismo campo para escribir.
+Si usas un navegador integrado y el servicio se cierra sin devolver texto, abre el enlace público en un navegador externo. Conceder permiso al micrófono no asegura que el servicio de transcripción esté disponible.
 
 ## Navegar con teclado y NVDA
 
 Tab y Mayús más Tab recorren los controles. Enter activa enlaces; Enter o Espacio activan botones y desplegables. Escape cierra los diálogos y permite recuperar el control anterior. Dentro de la exploración matemática, utiliza los comandos de tu lector y proveedor matemático.
 
-Los atajos personalizados son opcionales y están apagados inicialmente. Si los activas en Preferencias, se utilizan Alt más Mayús más la letra:
+Los atajos personalizados están activos inicialmente. Puedes desactivarlos en Preferencias; se respeta tu elección guardada. Se utilizan Alt más Mayús más la letra:
 
 | Letra | Destino |
 | --- | --- |
@@ -76,7 +68,7 @@ Los atajos personalizados son opcionales y están apagados inicialmente. Si los 
 | S | Soluciones del tema actual |
 | I | Inicio del tema actual |
 
-Estas combinaciones son provisionales: no se garantiza que estén libres de conflictos con NVDA, Windows o el navegador. Alt más Mayús puede coincidir con el cambio de idioma del sistema. No necesitas activarlas para usar ninguna función. El catálogo no las captura al editar texto, dentro de diálogos ni cuando el foco está en una fórmula o su región. Esto no permite detectar por sí solo el cursor virtual de NVDA. La opción más conservadora es mantenerlas desactivadas y usar enlaces, botones y los comandos habituales del lector.
+Las combinaciones pueden coincidir con funciones de Windows o del navegador. Alt más Mayús puede coincidir con el cambio de idioma del sistema. Todas las funciones cuentan también con enlaces o botones. El catálogo no las captura al editar texto, dentro de diálogos ni cuando el foco está en una fórmula o su región. Esto no permite detectar por sí solo el cursor virtual de NVDA. Si interfieren con tu configuración, desactívalas y utiliza los comandos habituales del lector.
 
 ## Escuchar las expresiones matemáticas
 
@@ -86,7 +78,7 @@ Para explorar una fórmula, consulta los comandos correspondientes a tu versión
 
 Solo las fórmulas que necesitan desplazamiento horizontal añaden una región de teclado. Las fórmulas cortas no deben agregar paradas innecesarias de Tab. No se añaden etiquetas habladas que sustituyan o dupliquen la fórmula.
 
-La lectura real en español de fracciones, integrales, secante y tangente, y la experiencia con los recuadros matemáticos siguen pendientes de comprobación con la persona participante en Windows. No se declara que estos problemas estén resueltos solo por ver MathML o aprobar una prueba automática.
+Desde Ayuda puedes abrir páginas separadas de comprobación del lector de pantalla, con fracciones, raíces, integrales, secante y tangente.
 
 ## Si encuentras un problema
 
@@ -98,4 +90,4 @@ Registra el tema, ejemplo y paso; el navegador; las versiones del lector y prove
 - Reconocimiento de voz y límites del navegador: https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition
 - Guía de MathCAT y elección de idioma: https://daisy.github.io/MathCAT/users.html
 
-Estas referencias orientan el uso; no acreditan la accesibilidad del catálogo. Borrador elaborado con asistencia de IA y pendiente de revisión humana.
+Consulta las guías oficiales para los comandos correspondientes a tu configuración.

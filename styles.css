@@ -22,3 +22,14 @@ dialog{overflow-wrap:anywhere}.dialog-head>*{min-width:0}.tool-list>*{min-width:
 
 .home-search{margin:1.5rem 0 2rem;padding:1.5rem;background:var(--surface);border:1px solid var(--border);border-radius:.5rem}.home-search h2{margin-top:0}.home-search label{display:block;font-weight:600;margin-bottom:.5rem}.search-input-row{display:flex;gap:.75rem}.search-input-row input{flex:1;min-width:0;padding:.8rem;font:inherit;color:var(--text);background:var(--bg);border:1px solid var(--border);border-radius:.3rem}.home-topics{margin:2rem 0}.home-topics>summary{font-size:1.1rem;font-weight:600;padding:.8rem 0}.home-search p{font-size:.95rem}#home-search-results a{display:inline-block;padding:.5rem 0}@media(max-width:35rem){.search-input-row{flex-direction:column}.home-search{padding:1rem}}
 .voice-primary{font-weight:650;border:2px solid var(--accent);min-height:3rem}.voice-primary[aria-disabled="true"]{cursor:wait}.voice-instructions{line-height:1.65}.voice-review{display:block;margin:1rem 0}.voice-review input{vertical-align:middle}#home-search-results a:focus,#search-results a:focus{outline:3px solid var(--focus);outline-offset:3px}
+
+/* Soluciones al alcance del enunciado, sin cambiar de vista. */
+.exercise-solution { margin: 1.25rem 0; border: 1px solid var(--line, #b3bfcc); border-radius: .65rem; background: var(--surface, #fff); }
+.exercise-solution > summary { padding: 1rem; cursor: pointer; font-weight: 700; color: var(--ink, #162b45); }
+.exercise-solution[open] > summary { border-bottom: 1px solid var(--line, #b3bfcc); }
+.solution-body { padding: 1rem; }
+.home-search .voice-primary { min-height: 3rem; padding: .8rem 1.25rem; }
+#home-search-status:not(:empty), #search-status:not(:empty) { padding: 1rem; border-left: .25rem solid currentColor; background: var(--surface, #fff); }
+#home-search-results a, #search-results a { display: block; padding: .8rem; margin-block: .5rem; border: 1px solid currentColor; border-radius: .5rem; }
+.high-contrast .exercise-solution, .high-contrast #home-search-status, .high-contrast #search-status { background: #000; color: #fff; }
+.high-contrast .exercise-solution > summary { color: #fff; }

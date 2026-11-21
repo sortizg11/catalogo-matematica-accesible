@@ -1,3 +1,21 @@
+# Estado de la versión 2.0 — 21 de noviembre de 2026
+
+| Cambio | Estado actual | Observaciones | Aporte pendiente del usuario |
+| --- | --- | --- | --- |
+| Cierre de dictado tras silencio | Implementado | Espera 3,5 segundos sin nuevas transcripciones; no requiere terminar manualmente | Comprobar en el navegador de uso |
+| Anuncio y apertura del resultado de voz | Implementado | Aviso de texto reconocido y enlace al tema, sin navegación automática | Confirmar anuncio con el lector habitual |
+| Fallo de servicio de micrófono | Control y recuperación mejorados | Reconexión única, errores claros y entrada escrita; disponibilidad depende del proveedor | Chrome confirmado; indicar versión y sistema de la sesión fallida |
+| Solución bajo cada ejercicio | Implementado | Desplegable nativo y retorno al enunciado; enlaces anteriores conservados | Observar comodidad en el siguiente uso |
+| Lectura matemática | Funcionamiento satisfactorio comunicado | Se conserva MathML y su implementación; reporte de la aplicación parcial | Compartir el registro completado sin datos personales |
+| Dónde estoy y dónde quedé | Conservados | Marcadores explícitos y navegación por foco/destino | Ninguno para publicar la interfaz |
+| Notas internas | Retiradas de la lectura de estudio | Documentación y trazabilidad separadas; no se borran fuentes | Revisión académica por el equipo docente |
+| Atajos | Activos inicialmente | Se respeta una desactivación guardada; excluidos de edición, matemáticas y diálogos | Comprobar la configuración de teclas del equipo |
+| Informe, créditos y guía definitiva | Siguiente etapa | No se publican nombres ni resultados individuales | Compartir resultados y datos editoriales autorizados |
+
+La aplicación del instrumento anterior fue parcial: las tareas no realizadas no se consideran aprobadas. Las tablas siguientes son registros históricos de las versiones anteriores.
+
+---
+
 # Cambios y pendientes del catálogo
 
 Registro iniciado el 19 y actualizado el 20 de noviembre de 2026. «Publicado» corresponde a la versión de GitHub; La actualización 1.4 incorpora el nuevo inicio y publica estos documentos; su despliegue se registra en GitHub Actions.

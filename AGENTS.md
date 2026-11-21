@@ -5,7 +5,7 @@
 - Preferir HTML nativo; no usar ARIA para ocultar problemas de estructura o foco.
 - No reemplazar MathML estructural por imágenes ni duplicar su lectura con alternativas ocultas.
 - No modificar silenciosamente contenido académico. Registrar origen, cambios y dudas para revisión docente.
-- No introducir atajos incompatibles con NVDA. Mantenerlos opcionales y desactivados inicialmente; no interceptar edición, matemáticas ni diálogos.
+- No introducir atajos incompatibles con NVDA. Por petición del usuario del 21 de noviembre de 2026, mantenerlos activos inicialmente y permitir desactivarlos en Preferencias; no interceptar edición, matemáticas ni diálogos.
 - No eliminar funciones que ya estén comprobadas. Toda función nueva requiere una alternativa accesible.
 - Toda modificación debe acompañarse de una verificación proporcional a su alcance. Registrar únicamente pruebas ejecutadas.
 - Mantener una estética limpia, consistente y profesional, fuentes locales y reflujo sin desbordamiento de página.

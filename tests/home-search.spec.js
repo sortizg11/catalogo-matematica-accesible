@@ -10,13 +10,13 @@ test('inicio centrado en búsqueda con resultados, alternativa de temario y foco
  await page.setViewportSize({width:320,height:800});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
 });
 test('voz inicial distingue provisional, red y final; cancela al navegar',async({page})=>{
- await voice(page);await page.goto('/');await page.locator('#home-voice-start').click();
+ await voice(page);await page.goto('/');await page.clock.install();await page.locator('#home-voice-start').click();
  await page.evaluate(()=>{const r=[[{transcript:'derivación'}]];r[0].isFinal=false;window.recognition.onresult({results:r,resultIndex:0});});
  await expect(page.locator('#home-search-query')).toHaveValue('derivación');await expect(page.locator('#home-voice-stop')).toBeVisible();
- await page.evaluate(()=>window.recognition.onerror({error:'network'}));await expect(page.locator('#home-search-status')).toContainText('no pudo conectarse');
- await page.locator('#home-voice-start').click();await page.evaluate(()=>window.recognition.onerror({error:'service-not-allowed'}));await expect(page.locator('#home-search-status')).toContainText('aunque hayas concedido permiso');
- await page.locator('#home-voice-start').click();await page.evaluate(()=>window.recognition.onend());await expect(page.locator('#home-search-status')).toContainText('sin resultado final');
- await page.locator('#home-voice-start').click();await page.evaluate(()=>window.recognition.onresult({results:[[{transcript:'buscar derivación implícita'}]]}));await expect(page.locator('#implicita--tema')).toBeFocused();
+ await page.evaluate(()=>window.recognition.onerror({error:'network'}));await expect(page.locator('#home-search-status')).toContainText('No se pudo conectar');
+ await page.locator('#home-voice-start').click();await page.evaluate(()=>window.recognition.onerror({error:'service-not-allowed'}));await expect(page.locator('#home-search-status')).toContainText('no permite el servicio');
+ await page.locator('#home-voice-start').click();await page.evaluate(()=>{window.recognition.onend();window.recognition.onend();});await expect(page.locator('#home-search-status')).toContainText('sin devolver texto');
+ await page.locator('#home-voice-start').click();await page.evaluate(()=>window.recognition.onresult({results:[[{transcript:'buscar derivación implícita'}]]}));await page.clock.fastForward(3501);await page.locator('#home-search-results a').click();await expect(page.locator('#implicita--tema')).toBeFocused();
  await page.goto('/');await page.locator('#home-voice-start').click();await page.evaluate(()=>{location.hash='sustitucion--tema';});await expect(page.locator('#sustitucion--tema')).toBeVisible();await page.evaluate(()=>window.recognition.onresult?.({results:[[{transcript:'derivación implícita'}]]}));await expect(page.locator('#sustitucion--tema')).toBeVisible();
 });
 test('inicio sin API y diagnóstico axe acotado al nuevo formulario',async({page})=>{

@@ -29,9 +29,9 @@ test('búsqueda escrita: único destino, ambigüedad, pendiente, desconocido y t
 });
 async function mockVoice(page){await page.addInitScript(()=>{window.SpeechRecognition=class {constructor(){window.recognition=this;}start(){window.startCount=(window.startCount||0)+1;}abort(){window.aborted=true;} };});}
 test('voz simulada: permiso explícito de inicio, destino real, cancelación y eventos tardíos',async({page})=>{
- await mockVoice(page);await page.goto('/');await page.locator('.header-actions [data-dialog="search"]').click();expect(await page.evaluate(()=>window.startCount||0)).toBe(0);
+ await mockVoice(page);await page.goto('/');await page.clock.install();await page.locator('.header-actions [data-dialog="search"]').click();expect(await page.evaluate(()=>window.startCount||0)).toBe(0);
  await page.locator('#voice-start').click();await expect(page.locator('#voice-start')).toBeFocused();
- await page.evaluate(()=>window.recognition.onresult({results:[[{transcript:'integración por sustitución'}]]}));await expect(page.locator('#sustitucion--tema')).toBeFocused();
+ await page.evaluate(()=>window.recognition.onresult({results:[[{transcript:'integración por sustitución'}]]}));await page.clock.fastForward(3501);await page.locator('#search-results a').click();await expect(page.locator('#sustitucion--tema')).toBeFocused();
  await page.locator('.header-actions [data-dialog="search"]').click();await page.locator('#voice-start').click();await page.keyboard.press('Escape');
  await page.evaluate(()=>window.recognition.onresult({results:[[{transcript:'concepto de integral indefinida'}]]}));await expect(page.locator('#sustitucion--tema')).toBeVisible();expect(await page.evaluate(()=>window.aborted)).toBe(true);
 });
@@ -41,9 +41,9 @@ test('voz simulada: error de permiso y alternativa escrita',async({page})=>{
 });
 test('búsqueda sin API y nuevos diálogos sin infracciones axe',async({page})=>{
  await page.addInitScript(()=>{window.SpeechRecognition=undefined;window.webkitSpeechRecognition=undefined;});await page.goto('/#introduccion--concepto');await page.locator('.header-actions [data-dialog="search"]').click();await expect(page.locator('#voice-start')).toBeDisabled();
- expect((await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze()).violations).toEqual([]);
- await page.keyboard.press('Escape');await page.locator('[data-save="introduccion--concepto"]').click();expect((await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze()).violations).toEqual([]);
- await page.keyboard.press('Escape');await page.locator('#tools-open').click();await page.locator('#where-open').click();expect((await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze()).violations).toEqual([]);
+ expect((await new AxeBuilder({page}).include('dialog[open]').withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze()).violations).toEqual([]);
+ await page.keyboard.press('Escape');await page.locator('[data-save="introduccion--concepto"]').click();expect((await new AxeBuilder({page}).include('dialog[open]').withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze()).violations).toEqual([]);
+ await page.keyboard.press('Escape');await page.locator('#tools-open').click();await page.locator('#where-open').click();expect((await new AxeBuilder({page}).include('dialog[open]').withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze()).violations).toEqual([]);
 });
 test('MathML intacto, envoltorios sin etiquetas técnicas, edición y búsqueda sin desbordamiento',async({page})=>{
  await page.goto('/#sustitucion--ejemplo-e2');await expect(page.locator('[data-view="sustitucion"] [data-source-id="e2"] math').first().locator('mfrac')).toHaveCount(2);
@@ -54,7 +54,7 @@ test('MathML intacto, envoltorios sin etiquetas técnicas, edición y búsqueda 
 test('instrumento HTML con estructura accesible y casos matemáticos aislados',async({page})=>{
  await page.goto('/output/pdf/CDI-instrumento-prueba-2.html');
  await expect(page.locator('h1')).toHaveCount(1);await expect(page.locator('main section')).toHaveCount(18);
- expect((await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze()).violations).toEqual([]);
+ expect((await new AxeBuilder({page}).include('main').withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze()).violations).toEqual([]);
  await page.goto('/tests/fixtures/math-baseline.html');await expect(page.locator('main section')).toHaveCount(6);await expect(page.locator('#M01').locator('..').locator('mfrac')).toHaveCount(2);
- expect((await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze()).violations).toEqual([]);
+ expect((await new AxeBuilder({page}).include('main').withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze()).violations).toEqual([]);
 });

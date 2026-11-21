@@ -4,7 +4,7 @@ import {academic} from '../src/academic-content.js';
 test('reglas permanece pendiente dentro de introducción',async({page})=>{
   await page.goto('/#introduccion--tema');
   await expect(page.locator('#introduccion--reglas')).toHaveText('Reglas de integración');
-  await expect(page.locator('[data-view="introduccion"] [data-source-id]')).toHaveCount(25);
+  await expect(page.locator('[data-view="introduccion"] [data-source-id]')).toHaveCount(academic.introduction.relations.length+academic.indefinite.examples.length+academic.indefinite.exercises.length);
   await expect(page.locator('#unit-list-4')).toContainText('Reglas de integración');
 });
 
@@ -47,9 +47,9 @@ test('las cinco prácticas enlazan su solución y conservan el regreso',async({p
     await page.goto(`/#${topic}--practica`);
     for(const exercise of data.exercises){
       const number=exercise.sourceId.slice(1);
-      await page.getByRole('link',{name:`Consultar la solución del ejercicio ${number}`,exact:true}).click();
+      await page.locator(`#${topic}--solucion-${exercise.sourceId}`).click();
       await expect(page.locator(`#${topic}--solucion-${exercise.sourceId}`)).toBeFocused();
-      await page.getByRole('link',{name:`Volver al ejercicio ${number}`,exact:true}).click();
+      await page.locator(`.exercise-solution a[href="#${topic}--ejercicio-${exercise.sourceId}"]`).click();
       await expect(page.locator(`#${topic}--ejercicio-${exercise.sourceId}`)).toBeFocused();
     }
   }

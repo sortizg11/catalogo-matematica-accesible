@@ -2,7 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {topics, renderTopic} from '../src/content.js';
+import {topics, renderTopic, routeAliases} from '../src/content.js';
 const output = new URL('../materials/portafolio-calculo/html/', import.meta.url);
 fs.mkdirSync(output, {recursive:true});
 for (const topic of topics) {
@@ -17,7 +17,9 @@ body{font:1.1rem/1.65 Arial,sans-serif;max-width:75ch;margin:auto;padding:1rem;c
 </style></head><body><a href="#${topic.id}--tema">Saltar al contenido</a><main>${article}</main><script>
 function updateMath(){for(const region of document.querySelectorAll('.math-region')){const overflow=region.scrollWidth>region.clientWidth||region.scrollHeight>region.clientHeight;if(overflow&&region.getClientRects().length){region.tabIndex=0;region.setAttribute('role','region');region.setAttribute('aria-label','Fórmula con desplazamiento horizontal');}else{region.removeAttribute('tabindex');region.removeAttribute('role');region.removeAttribute('aria-label');}}}
 requestAnimationFrame(updateMath);document.fonts.ready.then(updateMath);addEventListener('resize',updateMath);document.addEventListener('toggle',()=>requestAnimationFrame(updateMath),true);
-function reveal(){const target=document.getElementById(location.hash.slice(1));if(target){for(let parent=target.parentElement;parent;parent=parent.parentElement)if(parent.tagName==='DETAILS')parent.open=true;target.focus();}}
+document.addEventListener('click',event=>{if(event.target.closest('.mode-toggle')){const steps=[...document.querySelectorAll('details.step')];const open=steps.some(d=>!d.open);steps.forEach(d=>d.open=open);document.querySelectorAll('.mode-toggle').forEach(b=>b.textContent=open?'Consultar por pasos':'Mostrar todos los pasos');}});
+const aliases=${JSON.stringify(routeAliases)};
+function reveal(){const id=location.hash.slice(1);const target=document.getElementById(aliases[id]||id);if(target){if(target.tagName==='SUMMARY')target.parentElement.open=true;for(let parent=target.parentElement;parent;parent=parent.parentElement)if(parent.tagName==='DETAILS')parent.open=true;target.focus();}}
 addEventListener('hashchange',reveal);reveal();addEventListener('beforeprint',()=>{for(const d of document.querySelectorAll('details')){d.dataset.wasOpen=d.open;d.open=true;}});addEventListener('afterprint',()=>{for(const d of document.querySelectorAll('details'))d.open=d.dataset.wasOpen==='true';});
 </script></body></html>`;
   fs.writeFileSync(path.join(fileURLToPath(output),topic.id+'.html'),markup);

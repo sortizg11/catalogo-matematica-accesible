@@ -1,14 +1,14 @@
-# Cálculo Diferencial e Integral · Prototipo 1.5
+# Cálculo Diferencial e Integral · Versión 2.0
 
 Aplicación estática en español para estudiar matemática con teclado, MathML y lector de pantalla. Primer curso: Cálculo Diferencial e Integral. Prioridad: estudiante ciega que utiliza NVDA y MathCAT en Windows.
 
 ## Contenido y alcance
 
-El catálogo dispone de once temas en las unidades 1 a 4: nueve incorporados desde el portafolio de límites, derivadas y aplicaciones, y los dos de integración existentes. No está completo el programa. La revisión docente del nuevo contenido está pendiente; las prácticas sin desarrollo y un ejemplo de logaritmos suspendido se identifican expresamente.
+El catálogo dispone de once temas en las unidades 1 a 4: nueve incorporados desde el portafolio de límites, derivadas y aplicaciones, y los dos de integración existentes. No está completo el programa. Las soluciones se despliegan junto a cada ejercicio. Las fuentes y decisiones editoriales se conservan en la documentación; el ejemplo de logaritmos sin dominio real no se ofrece como ejemplo resuelto.
 
 El material de integración v3 conserva 12 relaciones, 13 ejemplos, 5 ejercicios y 115 pasos. Reglas de integración permanece pendiente. Consulta [la incorporación y sus límites](docs/incorporacion-portafolio.md). Los documentos independientes y el LaTeX revisado están en `materials/portafolio-calculo/`.
 
-Incluye temario adaptable, centro de herramientas modal, ayuda y recorrido voluntario, ubicación explícita, continuación local, preferencias, lectura progresiva/completa y atajos opcionales desactivados inicialmente. No incluye el futuro Explorador estructural de integrales.
+Incluye temario adaptable, centro de herramientas modal, ayuda y recorrido voluntario, ubicación explícita, continuación local, preferencias, lectura progresiva/completa y atajos activos inicialmente, con opción de desactivarlos. No incluye el futuro Explorador estructural de integrales.
 
 ## Ejecución
 
@@ -94,8 +94,10 @@ La entrada principal es una búsqueda escrita y por voz opcional. Se conserva el
 
 ## Voz y evaluación de uso en la versión 1.5
 
-El botón conserva el foco y distingue iniciar, terminar dictado y cancelar. La revisión del texto antes de navegar es opcional. Los resultados múltiples reciben foco en su primer enlace. No se garantiza disponibilidad del servicio de voz del navegador ni pronunciación matemática sin prueba real.
+El instrumento de la versión 1.5 se conserva como documento de esa aplicación. En la versión 2 el dictado termina automáticamente y ofrece enlaces antes de navegar. No se garantiza disponibilidad del servicio de voz del navegador ni pronunciación matemática sin prueba real.
 
 - [Instrumento de evaluación con persona ciega en HTML](output/evaluacion-usuario-1.5/Instrumento-persona-usuaria-CDI.html).
 - [Word editable](output/evaluacion-usuario-1.5/Instrumento-persona-usuaria-CDI.docx).
 - [PDF para imprimir](output/evaluacion-usuario-1.5/Instrumento-persona-usuaria-CDI.pdf).
+
+Consulta los cambios de la versión 2 y sus límites en [el registro de versión](docs/version-2.md).

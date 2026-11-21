@@ -15,7 +15,7 @@ Dentro de Integral indefinida se organizan Introducción a las integrales (noci�
 - **Práctica:** índice de ejercicios, enunciado y dominio; enlace a la solución sin exponer de entrada su desarrollo.
 - **Soluciones:** análisis, pasos, resultado, comprobación cuando esté disponible y retorno al ejercicio exacto.
 
-No inventar contenido para completar campos vacíos. Identificar las secciones pendientes. Conservar las notas de revisión y la numeración académica original, distinguiéndola de la numeración curricular cuando sea necesario.
+No inventar contenido para completar campos vacíos. Identificar las secciones pendientes. Conservar las notas internas de revisión en el registro editorial y las fuentes; no mostrarlas como instrucciones de estudio. Mantener la numeración académica original. Las soluciones se despliegan junto a cada ejercicio, conservando sus identificadores y el índice de acceso.
 
 ## Redacción y accesibilidad
 

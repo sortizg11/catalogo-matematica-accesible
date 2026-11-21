@@ -1,3 +1,15 @@
+## Versión 2.0 — 21 de noviembre de 2026
+
+Actualización autorizada para publicación en main y GitHub Pages. Incluye cierre automático de dictado, anuncio accesible del texto, enlace de confirmación al destino, reconexión única y cancelación segura. Soluciones desplegables junto a cada ejercicio, enlaces y marcadores conservados, plantilla compartida en once temas y sus HTML independientes, ayuda sin pruebas incrustadas y atajos activos inicialmente con opción de desactivación.
+
+Las fuentes académicas y el MathML se conservan. El ejemplo 8 de regla de la cadena, sin dominio real según el registro previo, se retira de la lista de ejemplos resueltos y su ruta anterior remite al ejemplo 9. Se conserva la trazabilidad interna y se retiran de la lectura de estudio las notas editoriales.
+
+La evidencia de lectura matemática satisfactoria, ubicación y marcador proviene del reporte del usuario sobre una aplicación parcial. El fallo del micrófono también es un reporte de esa sesión. Las pruebas automatizadas de voz simulan el proveedor; no acreditan captura o precisión con micrófono real. Véase [el registro de esta versión](version-2.md) y [los resultados de pruebas](resultados-pruebas.md).
+
+El historial de GitHub identifica el commit de esta actualización y Actions registra su despliegue. No se publican instrumentos cumplimentados, grabaciones ni datos personales.
+
+---
+
 # Registro de publicaciones del catálogo
 
 Sitio público: https://sortizg11.github.io/catalogo-matematica-accesible/ . Repositorio: https://github.com/sortizg11/catalogo-matematica-accesible . Rama: main.

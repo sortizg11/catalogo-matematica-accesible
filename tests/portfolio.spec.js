@@ -11,7 +11,7 @@ test('temas importados: destinos, matemática, teclado y reflujo',async({page})=
   expect(await article.innerText()).not.toMatch(/\\(?:begin|end|frac|dfrac|textbf|lim|subsection)\b|@@M\d/);
   if(topic.exercises.length){
    await page.goto('/#'+topic.id+'--ejercicio-p1');
-   await article.getByRole('link',{name:'Consultar la solución del ejercicio 1',exact:true}).click();
+   await page.locator('#'+topic.id+'--solucion-p1').click();
    await expect(page.locator('#'+topic.id+'--solucion-p1')).toBeFocused();
   }
   await page.setViewportSize({width:320,height:800});

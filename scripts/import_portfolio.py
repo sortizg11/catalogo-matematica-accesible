@@ -100,7 +100,7 @@ for tid,num,unit,title,indices,obj,ready in configs:
      entry=entry.split(r'\end{enumerate}')[0]
      answer=answers[answer_index].split(r'\end{enumerate}')[0] if answer_index<len(answers) else ''
      answer_index+=1
-     exercises.append(dict(sourceId='p'+str(len(exercises)+1),title='Ejercicio '+str(len(exercises)+1)+' · '+re.sub(r'\$.*?\$','',h),statement=prose(entry),review='',analysis='<p>La fuente aporta una respuesta, pero no un desarrollo de esta práctica. La revisión docente de su validez está pendiente.</p>',steps=[],answer=prose(answer) if answer else '<p>Respuesta pendiente.</p>',notes=''))
+     exercises.append(dict(sourceId='p'+str(len(exercises)+1),title='Ejercicio '+str(len(exercises)+1)+' · '+re.sub(r'\$.*?\$','',h),statement=prose(entry),review='',analysis='',steps=[],answer=prose(answer) if answer else '<p>Respuesta pendiente.</p>',notes=''))
    else:
     theory.append('<h3>'+re.sub(r'^<p>|</p>$', '', prose(h))+'</h3>'+prose(b))
  t=dict(id=tid,number=num,unit=['Unidad 1. Límites y continuidad','Unidad 2. Derivada de una función','Unidad 3. Aplicaciones de la derivada'][unit],title=title,description='Teoría, ejemplos y práctica del material recibido, con revisión docente pendiente.',objective=obj,readiness=ready,theory=''.join(theory),examples=examples,exercises=exercises)

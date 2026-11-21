@@ -1,5 +1,5 @@
 import { read, write } from './storage.js';
-export const defaults = { shortcuts:false, menu:true, font:'100', contrast:false, mode:'progressive' };
+export const defaults = { shortcuts:true, menu:true, font:'100', contrast:false, mode:'progressive' };
 let appliedMode;
 const saved = read('preferences', {});
 export const prefs = { ...defaults };
