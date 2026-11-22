@@ -1,5 +1,13 @@
 # Registro de publicaciones del catálogo
 
+## Actualización de los manuales — 22 de noviembre de 2026
+
+- El [manual de incorporación](manual-incorporar-materiales.md) documenta la revisión matemática, el HTML de referencia, la edición del temario y la publicación. Los dos prompts admiten texto pegado.
+- El [manual de usuario](manual-usuario.html) reúne navegación, búsqueda por voz, lectura de fórmulas con NVDA y preferencias. Se enlaza desde la ayuda y el README.
+- Se verificaron la jerarquía HTML, los destinos de enlaces internos, el contraste de texto y enlaces, la sintaxis del enlace de ayuda y la compilación LaTeX. Se mantiene pendiente la comprobación con lector de pantalla real.
+
+---
+
 ## Versión 2.1.1 — 22 de noviembre de 2026
 
 Las unidades del temario aparecen cerradas al cargar el inicio. Un enlace directo abre la unidad del tema indicado. Los atajos parten activos, respetan el ajuste guardado en Preferencias y reconocen la combinación cuando el teclado produce un símbolo. Se incorpora el [manual para aportar materiales](manual-incorporar-materiales.md) con plantilla LaTeX, dos prompts y edición del temario paso a paso. El [registro de pruebas](resultados-pruebas.md) documenta el alcance de la verificación.

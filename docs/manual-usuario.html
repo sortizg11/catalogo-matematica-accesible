@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manual de usuario del catálogo</title>
+  <style>
+    :root { color: #172b40; background: #fff; font: 100%/1.65 system-ui, sans-serif; }
+    body { max-width: 67ch; margin: 0 auto; padding: clamp(1rem, 4vw, 2rem); overflow-wrap: anywhere; }
+    h1, h2 { line-height: 1.25; }
+    h1 { margin-block: .55em; }
+    h2 { margin-block: 1.5em .35em; }
+    p, ul, ol { margin-block: .5em; }
+    li + li { margin-block-start: .35em; }
+    a { color: #154e89; text-decoration: underline; text-underline-offset: .15em; }
+    nav { border-block: 1px solid #8997a4; padding-block: .65rem; }
+    nav a, .skip { display: inline-block; min-height: 1.5rem; padding-block: .125rem; }
+    :focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
+    kbd { font: inherit; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header>
+    <h1>Manual de usuario del catálogo</h1>
+    <p>Consulta los temas con el teclado, el lector de pantalla o el ratón. <a href="https://sortizg11.github.io/catalogo-matematica-accesible/">Abrir el catálogo</a>.</p>
+  </header>
+  <nav aria-label="Secciones del manual">
+    <ul>
+      <li><a href="#temas">Encontrar y estudiar un tema</a></li>
+      <li><a href="#voz">Buscar por voz</a></li>
+      <li><a href="#nvda">Leer fórmulas con NVDA</a></li>
+      <li><a href="#preferencias">Ajustar la lectura y retomar el estudio</a></li>
+    </ul>
+  </nav>
+  <main id="contenido" tabindex="-1">
+    <h2 id="temas" tabindex="-1">Encontrar y estudiar un tema</h2>
+    <p>Escribe el título o un apartado en la búsqueda del inicio. También puedes abrir el temario, desplegar una unidad y seleccionar un tema. Usa <kbd>Tab</kbd> y <kbd>Mayús + Tab</kbd> para recorrer los controles, <kbd>Enter</kbd> para activarlos y <kbd>Escape</kbd> para cerrar un diálogo.</p>
+    <p>Cada tema ofrece teoría, ejemplos, práctica y soluciones. Abre los pasos con <kbd>Enter</kbd> o <kbd>Espacio</kbd>. Puedes consultar la solución junto al ejercicio.</p>
+
+    <h2 id="voz" tabindex="-1">Buscar por voz</h2>
+    <ol>
+      <li>Activa el botón de micrófono y concede permiso si el navegador lo solicita.</li>
+      <li>Espera el aviso «Escuchando», di el tema y haz una pausa.</li>
+      <li>Revisa el texto reconocido y selecciona el enlace del resultado.</li>
+    </ol>
+    <p>Para detener el dictado, usa «Cancelar escucha» o <kbd>Escape</kbd>. Si la voz no está disponible, escribe la consulta. El navegador puede enviar el audio a su proveedor. El catálogo no guarda grabaciones ni consultas.</p>
+
+    <h2 id="nvda" tabindex="-1">Leer fórmulas con NVDA</h2>
+    <p>En modo exploración, usa <kbd>H</kbd> y <kbd>Mayús + H</kbd> para recorrer encabezados. Al llegar a una fórmula, pulsa <kbd>Enter</kbd> para explorarla. También puedes usar <kbd>NVDA + Alt + M</kbd> desde el cursor de revisión. Con MathCAT, utiliza las flechas para explorar la expresión y <kbd>Escape</kbd> para salir.</p>
+    <p>Si NVDA no anuncia la fórmula, revisa que MathCAT esté disponible y activo en tu versión. Consulta la <a href="https://api.nvaccess.org/documentation/es/userGuide.html">guía oficial de NVDA en español</a>.</p>
+
+    <h2 id="preferencias" tabindex="-1">Ajustar la lectura y retomar el estudio</h2>
+    <p>En «Preferencias» puedes cambiar el tamaño del texto, el contraste y la lectura por pasos. Los atajos vienen activos y se pueden desactivar allí. <kbd>Alt + Mayús + H</kbd> abre Herramientas y <kbd>Alt + Mayús + M</kbd> muestra u oculta el temario. En «Herramientas» encontrarás «¿Dónde estoy?», que informa el último destino seleccionado o enfocado.</p>
+    <p>Activa «Guardar este punto de estudio» junto al contenido y luego «Continuar donde quedé» desde el inicio. El marcador se guarda en el mismo navegador cuando el almacenamiento está disponible.</p>
+  </main>
+</body>
+</html>

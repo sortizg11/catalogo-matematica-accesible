@@ -2,6 +2,17 @@
 
 Aplicación estática en español para estudiar matemática con teclado, MathML y lector de pantalla. Primer curso: Cálculo Diferencial e Integral. Prioridad: estudiante ciega que utiliza NVDA y MathCAT en Windows.
 
+## Dónde encontrar cada recurso
+
+| Recurso | Ruta y función |
+| --- | --- |
+| Manual de usuario | [Guía HTML breve](docs/manual-usuario.html) para navegar, buscar por voz, leer fórmulas y retomar el estudio. |
+| Incorporación de materiales | [Manual de incorporación](docs/manual-incorporar-materiales.md) con el recorrido de publicación, la edición del temario y dos prompts de uso gratuito. |
+| Temario | [`src/curriculum.js`](src/curriculum.js) contiene las unidades, los nombres visibles y los identificadores de sus enlaces. |
+| Contenido del sitio | [`src/content.js`](src/content.js) contiene los temas que consulta la aplicación y sus ejemplos, ejercicios y soluciones. |
+| Fuentes y HTML de referencia | [`materials/`](materials/) conserva los originales autorizados, las páginas independientes y, cuando corresponde, `registro.json`, el archivo de procedencia y decisiones editoriales. |
+| Convenciones y comprobaciones | [`docs/`](docs/) reúne la [plantilla editorial](docs/convenciones-contenido.md), los [resultados de las pruebas](docs/resultados-pruebas.md) y el [historial de publicaciones](docs/publicaciones.md). |
+
 ## Contenido y alcance
 
 El catálogo dispone de once temas en las unidades 1 a 4: nueve incorporados desde el portafolio de límites, derivadas y aplicaciones, y los dos de integración existentes. No está completo el programa. Las soluciones se despliegan junto a cada ejercicio. Las fuentes y decisiones editoriales se conservan en la documentación; el ejemplo de logaritmos sin dominio real no se ofrece como ejemplo resuelto.
@@ -57,7 +68,7 @@ Las pruebas no sustituyen una auditoría WCAG ni una sesión real con NVDA. Cons
 
 ## Mantenimiento
 
-Lee `AGENTS.md`. Conserva los identificadores de temas y ejercicios: los fragmentos se comparten y guardan localmente. Al añadir contenido usa el contrato `topics` y el inventario `curriculum` de `src/content.js`, sin cambiar el motor de navegación. Registra el origen y cambios académicos. No uses cadenas procedentes del usuario como HTML: los contenidos son módulos locales de confianza.
+Lee `AGENTS.md`. Conserva los identificadores de temas y ejercicios: los fragmentos se comparten y guardan localmente. Al añadir contenido usa `topics` en `src/content.js` y el inventario `curriculum` en `src/curriculum.js`. Conserva el motor de navegación. Registra el origen y cambios académicos. No uses cadenas procedentes del usuario como HTML: los contenidos son módulos locales de confianza.
 
 ## Publicación y actualizaciones
 
@@ -87,7 +98,7 @@ Objetivo WCAG 2.2 AA (criterios A y AA aplicables), sin declaración de conformi
 
 La entrada principal es una búsqueda escrita y por voz opcional. Se conserva el temario como alternativa. El permiso de micrófono no garantiza la disponibilidad del servicio de reconocimiento; las pruebas reales de voz y NVDA siguen pendientes.
 
-- [Manual provisional](docs/manual-usuario-borrador.html).
+- [Manual de usuario del catálogo](docs/manual-usuario.html).
 - [Cuadro de cambios y pendientes](docs/estado-cambios-2026-11-19.html).
 - [Revisión bibliográfica](docs/revision-bibliografica-accesibilidad.html).
 - [Registro de publicación](docs/publicaciones.md).
@@ -106,4 +117,4 @@ Versión 2.1: se restaura el perfil de voz de 1.4 (español general, escucha no 
 
 ## Aportar materiales al catálogo
 
-El [manual para incorporar materiales](docs/manual-incorporar-materiales.md) explica cómo preparar un TeX con la plantilla común, subirlo para revisión, editar el temario y habilitar el tema. Incluye prompts maestros que se pueden copiar y adaptar.
+El [manual para incorporar documentos](docs/manual-incorporar-materiales.md) explica cómo revisar un texto o LaTeX, convertirlo en HTML con MathML, subirlo desde el editor de GitHub y habilitarlo en el temario. Incluye dos prompts que funcionan al pegar el material en una herramienta de IA de uso gratuito.

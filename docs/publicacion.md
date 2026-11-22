@@ -36,4 +36,4 @@ Guía oficial: https://docs.github.com/en/pages/getting-started-with-github-page
 
 ## Guía para aportar materiales
 
-Consulta el [manual para incorporar materiales](manual-incorporar-materiales.md) para preparar un archivo LaTeX con la plantilla común, subirlo a revisión y publicar su tema desde el temario.
+Consulta el [manual para incorporar materiales](manual-incorporar-materiales.md) para revisar un texto o LaTeX, convertirlo en HTML, subirlo desde el editor web y activar su tema en el catálogo.

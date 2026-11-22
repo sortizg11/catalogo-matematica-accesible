@@ -1,113 +1,134 @@
-# Manual para incorporar materiales al catálogo
+# Manual para incorporar documentos al catálogo
 
-Guía para quienes preparan, suben o integran materiales de Cálculo Diferencial e Integral. Podés empezar con un archivo de LaTeX y seguir la ruta sin usar la terminal. Si solo aportás material, llegá hasta el paso 4. Si además vas a editar el catálogo, seguí hasta el paso 7.
+## Presentación
 
-| Qué querés hacer | Dónde lo hacés | Qué obtenés |
-| --- | --- | --- |
-| Preparar el material | Tu computadora y la IA que uses para revisar el TeX | Una copia para revisión con teoría, ejemplos, práctica y soluciones |
-| Aportar el archivo | La carpeta `materials/` del repositorio | Una fuente disponible para que el equipo la integre |
-| Anunciar un tema pendiente | `src/curriculum.js` | Un nombre en el temario con el aviso «Pendiente de contenido» |
-| Habilitar un tema para estudiar | `src/content.js` y `src/curriculum.js` | Un enlace que abre el tema en el catálogo |
+El catálogo organiza materiales de estudio en cursos, unidades y temas. Cada tema conserva una misma estructura de teoría, ejemplos resueltos, práctica y soluciones. Este manual describe cómo revisar un original, convertirlo en HTML de referencia, editar el temario y publicar una actualización. El procedimiento se aplica a cualquier curso que utilice esta estructura. Los ejemplos de rutas y unidades corresponden al repositorio de Cálculo Diferencial e Integral.
 
-## Paso 1. Reuní tus archivos
+La preparación puede realizarse con una herramienta de IA de uso gratuito que acepte texto pegado y con el editor web de GitHub. Los prompts funcionan con el texto de los apuntes o con el código LaTeX copiado desde un archivo `.tex`. Si el material es extenso, se puede procesar un tema por vez, incluyendo sus enunciados y soluciones. La revisión docente sigue siendo la instancia que confirma las decisiones matemáticas y didácticas.
 
-1. Creá en tu computadora una carpeta con el nombre del tema, por ejemplo `limites-infinitos`.
-2. Guardá una copia intacta del archivo original. Un `.tex` es el texto editable de un documento LaTeX. Si usa otros archivos mediante comandos como `\input` o incluye figuras, reunilos también. Si tenés el PDF de la misma versión, conserválo para revisar cómo se ven las fórmulas.
-3. Anotá el nombre de la unidad y del tema, la versión del material y la procedencia. Separá las erratas y las dudas para que la persona docente pueda revisarlas.
-4. Confirmá el permiso de publicación. El repositorio es público. Incluí únicamente fuentes autorizadas y excluí datos personales, instrumentos respondidos y grabaciones.
+## Qué compone el catálogo
 
-Para este ejemplo se usará **Unidad 1. Límites y continuidad**, tema **Límites infinitos y límites al infinito**. El nombre técnico del tema será `limites-infinitos`. Usá minúsculas sin tildes, con guiones en lugar de espacios. Si el tema ya existe, conservá el identificador que usa el catálogo.
+El [README](../README.md) es la página de orientación que GitHub muestra bajo la lista de archivos. Indica dónde se guardan los materiales, qué archivos se editan, cómo abrir el sitio publicado y dónde consultar las convenciones y el historial.
 
-## Paso 2. Adjuntá el TeX y usá el primer prompt maestro
+| Ruta | Función |
+| --- | --- |
+| `materials/<curso>/fuente/` | Conserva las fuentes autorizadas, como el LaTeX original. |
+| `materials/<curso>/html/` | Contiene los documentos HTML de referencia que pueden abrirse como páginas independientes. |
+| `materials/<curso>/registro.json` | Registra la procedencia y las decisiones editoriales de acuerdo con los campos que utilice el curso. |
+| `src/curriculum.js` | Define las unidades, las etiquetas del temario y los identificadores a los que enlazan. |
+| `src/content.js` | Contiene los temas que presenta la aplicación y los datos de sus ejemplos, ejercicios y soluciones. |
+| `docs/` | Reúne convenciones, guías, registros de pruebas y publicaciones. |
 
-1. Descargá la [plantilla editable en LaTeX](plantilla-material-catalogo.tex). Si se abre como texto en GitHub, usá el botón de descarga del archivo original o **Raw** y guardá el archivo con extensión `.tex`.
-2. Abrí un chat en tu herramienta de IA. Usá el botón de adjuntar para agregar el TeX original, la plantilla y los archivos auxiliares indispensables. Si la herramienta rechaza la extensión, abrí el TeX en un editor de texto y pegá el contenido completo, indicando cuál es el original y cuál es la plantilla.
-3. Copiá el prompt que sigue y sustituí lo que aparece entre corchetes. Pedí que la IA entregue el documento completo, desde el preámbulo hasta el cierre.
+Un archivo **HTML** es un documento que el navegador presenta con títulos, enlaces, listas y expresiones matemáticas. **MathML** es el marcado que conserva la estructura de una fórmula, por ejemplo qué elementos son numerador y denominador. Un archivo **JSON** es texto estructurado en campos y valores, como `"origen": "Apuntes de la unidad 1"`. El registro de procedencia permite volver al original y revisar por qué se cambió una definición o un procedimiento. Cuando exista un registro, se conserva su esquema. Los archivos **JavaScript** de `src/` contienen el inventario y los datos que utiliza la aplicación.
 
-### Prompt maestro 1. Dar formato al material
+Publicar el HTML permite consultarlo como documento independiente. Incorporar ese tema a la búsqueda y al temario requiere asociar su contenido con un identificador, según las partes 2 y 3.
 
-> Prepará un documento para el catálogo accesible de Cálculo Diferencial e Integral. Trabajá con el TeX original adjunto y usá plantilla-material-catalogo.tex como modelo de formato. Unidad [NÚMERO Y NOMBRE]. Tema [TÍTULO EXACTO]. Identificador [ID DEL TEMA]. Fuente y versión [REFERENCIA].
->
-> Generá un archivo completo llamado [ID]-catalogo.tex. Conservá el preámbulo, los estilos y las cuatro secciones de la plantilla. En teoría incluí objetivo, conocimientos previos, definiciones, notación y condiciones disponibles. En ejemplos usá enunciado, dominio cuando proceda, criterio de elección, desarrollo con un paso por acción y resultado. En práctica dejá los enunciados por separado. En soluciones vinculá cada desarrollo con el identificador de su ejercicio e incluí comprobación cuando la fuente la traiga.
->
-> Usá español claro y español matemático consistente. Conservá el significado, la notación, los dominios, los procedimientos, la numeración académica y las respuestas de la fuente. Mantené las fórmulas como código matemático editable. Describí por escrito cualquier información indispensable que dependa de una figura o posición visual. Conservá el orden de la fuente dentro de cada sección.
->
-> Si detectás una posible errata, una referencia incompleta, una macro sin definición o una parte ilegible, anotá su ubicación y la duda en registro-editorial.md. Indicá qué partes de la plantilla quedan pendientes. Entregá el TeX para revisar y el registro por separado. Dejá cualquier corrección matemática propuesta en el registro hasta que la persona docente la apruebe. Indicá si pudiste compilar el archivo y qué verificaste realmente.
+## Parte 1. Cómo preparar y subir un documento
 
-**Qué deberías recibir.** Un archivo como `limites-infinitos-catalogo.tex` y un `registro-editorial.md` aparte. Si la IA pega el TeX en el chat, guardá su contenido en un editor de texto plano con la extensión `.tex`. Conservá el original para cotejar la copia.
+### Paso 1. Identificación de la fuente
 
-## Paso 3. Revisá la copia antes de subirla
+Identificar el curso, la unidad, el título del tema y la versión del texto original. Abrir el LaTeX en el editor que se utilice habitualmente y copiar el código del tema, con las definiciones de macros que sean necesarias para interpretar las fórmulas. Si la fuente está en Word, en un PDF con texto seleccionable o en apuntes digitales, se puede copiar directamente el contenido. En una página escaneada, conviene cotejar primero la transcripción. El repositorio es público. La versión que se publique debe estar autorizada y libre de información personal.
 
-1. Abrí el TeX en el editor LaTeX que ya uses. En Overleaf, podés crear un proyecto vacío, pegar el contenido en `main.tex` y pulsar **Recompile**. Si hay archivos auxiliares autorizados, subilos al mismo proyecto y mantené sus rutas.
-2. Abrí el PDF que genera la compilación. Compará contra la fuente el enunciado, los signos, los exponentes, los límites de integración, las restricciones de dominio y el resultado de cada ejercicio. Comprobá que cada solución corresponde al ejercicio indicado.
-3. Revisá que el documento tenga las cuatro secciones y que los títulos y pasos se entiendan al leerlos en orden. Si falta una sección o hay una errata, consultá el registro y resolvé la duda con la persona docente.
-4. Guardá la copia revisada. Para la incorporación, el equipo usará el TeX como fuente y preparará HTML con MathML, el marcado que conserva la estructura de cada fórmula en la web.
+### Paso 2. Revisión matemática y homologación
 
-## Paso 4. Subí la copia para revisión en GitHub
+Pegar el **prompt maestro 1** y, debajo, el material del tema. Completar los campos entre corchetes. El resultado esperado es un texto reorganizado y un registro de hallazgos. Confirmar cada corrección académica antes de aceptarla. Una diferencia de método o de notación solo requiere corrección cuando afecta el significado, las condiciones de aplicación o la validez del razonamiento.
 
-1. Iniciá sesión y abrí el [repositorio del catálogo](https://github.com/sortizg11/catalogo-matematica-accesible). En **Code**, abrí `materials/` y la carpeta correspondiente al tema o a la fuente.
-2. Para una carpeta existente, seleccioná **Add file → Upload files**. Elegí el archivo `limites-infinitos-catalogo.tex` y el registro editorial autorizado. Adjuntá también el original si está autorizado y hace falta para el cotejo.
-3. Si hace falta una carpeta y tenés permiso de edición, desde `materials/` podés usar **Add file → Create new file** y escribir `limites-infinitos/limites-infinitos-catalogo.tex` como nombre. Pegá el texto completo. GitHub crea la carpeta al guardar el archivo.
-4. Escribí un mensaje de guardado como «Aportar material de límites infinitos». Elegí una rama nueva para revisión, confirmá con **Propose changes** o **Commit changes**, según la pantalla, y abrí el **pull request**. Un pull request es la solicitud para que el equipo revise e incorpore tus cambios. Si GitHub no te ofrece editar, compartí los archivos y la unidad con la persona responsable del repositorio.
-5. En la solicitud agregá la unidad, el título público, el identificador si ya existe, la ruta del TeX, el permiso de publicación y las dudas pendientes.
+### Paso 3. Generación del HTML de referencia
 
-Al terminar, abrí el archivo dentro de la rama y verificá que coincidan el nombre, la carpeta y el contenido. Subir el archivo deja una fuente lista para que el equipo la revise. La aparición en el sitio se completa en los pasos siguientes.
+Pegar el **prompt maestro 2** con el texto revisado y las correcciones aprobadas. El resultado es un documento HTML completo. Copiar el código desde `<!doctype html>` hasta `</html>`, sin las marcas de bloque que pueda mostrar el chat. Si se necesita una comprobación local, es suficiente guardar ese texto como `.html` y abrirlo en el navegador. La creación y edición del archivo también se pueden realizar directamente en GitHub.
 
-## Paso 5. Agregá o actualizá el nombre en el temario
+### Paso 4. Creación o carga desde GitHub
 
-En GitHub abrí **Code → src → curriculum.js** y pulsá el lápiz para editar. Trabajá en la rama de revisión. Usá la búsqueda del editor para localizar el título de la unidad y su lista `items`.
+1. En el repositorio, abrir **Code** y seleccionar la rama de trabajo. Si el cambio se revisará antes de publicarse, utilizar una rama de revisión. Desde el selector de ramas se puede crear una a partir de `main`, si se dispone de ese permiso. Si ya existe, seleccionar esa misma rama para todos los archivos del cambio.
+2. Abrir la carpeta HTML del curso. En el repositorio de referencia es `materials/portafolio-calculo/html/`. Si se tiene el código en el portapapeles, seleccionar **Add file › Create new file**, indicar un nombre como `limites-infinitos.html` y pegar el HTML en el editor. Si el archivo ya está guardado, seleccionar **Add file › Upload files**.
+3. Para crear una ruta aún inexistente, indicar la ruta relativa al directorio abierto en el nombre del archivo. Por ejemplo, desde la raíz puede escribirse `materials/nuevo-curso/html/tema.html`. GitHub crea los directorios intermedios cuando guarda el archivo.
+4. Seleccionar **Commit changes**, escribir un mensaje descriptivo, por ejemplo «Agregar HTML de referencia de límites infinitos», y confirmar la rama. Un *commit* es un registro del cambio guardado. Si se propone desde una rama, el *pull request* permite revisar qué archivos cambiarán en `main`. Si falta permiso de escritura, se puede entregar el HTML al equipo responsable o proponerlo desde una copia del repositorio cuando GitHub ofrezca esa opción.
 
-### Mostrar un tema pendiente
+### Paso 5. Comprobación del documento
 
-Agregá un elemento como el siguiente dentro de `items`, en el lugar que le corresponde, con coma entre elementos. En el ejemplo el título ya existe, así que revisá la entrada actual y evitá crear otra igual.
+Abrir el archivo en la rama y comprobar el nombre, la ruta y que el código esté completo. Para verificar su presentación, abrir el HTML en un navegador. Comprobar los títulos, el orden de lectura, los enlaces internos, los pasos desplegables, las soluciones y el MathML. Un archivo visible en GitHub puede inspeccionarse como código. Su URL pública de Pages estará disponible cuando se publique la rama configurada.
+
+## Parte 2. Cómo modificar el temario
+
+### Paso 1. Localización del archivo y de la unidad
+
+En **Code**, seleccionar la rama de trabajo y abrir **src › curriculum.js**. Seleccionar **Editar este archivo** (icono de lápiz). Buscar el título de la unidad dentro de `curriculum`. Cada unidad mantiene sus entradas en la lista `items`. Si el tema debe quedar dentro de un grupo, su entrada se coloca en la lista `children` de ese grupo.
+
+### Paso 2. Inclusión de un tema pendiente
+
+Si el tema todavía no tiene contenido integrado, agregar una entrada con `label`, el nombre que se mostrará en el temario. Se mantienen las comas entre entradas. Si el tema ya figura en el inventario, editar su entrada en vez de añadir una copia. En el ejemplo del repositorio, «Límites infinitos y límites al infinito» ya figura como pendiente.
 
 ```js
 {label:'Límites infinitos y límites al infinito'},
 ```
 
-El catálogo mostrará la etiqueta y el aviso «Pendiente de contenido». Para un subtema, buscá la lista `children` del grupo y agregalo ahí. Por ejemplo, Técnicas de integración está dentro de la Unidad 4.
+### Paso 3. Cambio del nombre visible
 
-### Habilitar un tema revisado
+Modificar `label` en `src/curriculum.js`. Para un tema activo, actualizar también `title` en el objeto correspondiente de `src/content.js`, de modo que el temario, la búsqueda y el encabezado presenten el nombre acordado. Mantener el valor de `topic`, el `id` del contenido y los identificadores de secciones, ejercicios y pasos. Los enlaces guardados dependen de esos valores.
 
-Cuando `src/content.js` tenga el contenido validado, agregá `topic` en la misma entrada. Su valor debe ser idéntico al `id` del contenido.
+### Paso 4. Activación del enlace
+
+Una vez integrado el objeto del tema en `src/content.js`, agregar `topic` a la entrada del temario. Debe coincidir exactamente con el `id` del objeto. El catálogo construye el enlace `#limites-infinitos--tema` a partir de ese identificador.
 
 ```js
-{label:'Límites infinitos y límites al infinito', topic:'limites-infinitos'},
+{label:'Límites infinitos y límites al infinito',
+ topic:'limites-infinitos'},
 ```
 
-El enlace que construye el sitio será `#limites-infinitos--tema`. Si solo corregís el título visible de un tema publicado, editá `label` aquí y `title` en su objeto de contenido. Conservá `topic`, `id` y los identificadores de ejercicios y pasos. La numeración visible sigue el orden propio del catálogo. Revisá también el orden de los temas activos en `src/content.js`, porque de ahí salen los enlaces Anterior y Siguiente.
+### Paso 5. Guardado y revisión
 
-## Paso 6. Prepará el contenido web con el segundo prompt maestro
+Guardar el cambio con **Commit changes** en la misma rama que contiene el material. Revisar en **Files changed** que las entradas estén en la unidad correcta y que los archivos incluyan solo los cambios previstos. Comprobar la etiqueta en el sitio de prueba o, tras publicar, en Pages. Para una entrada activa, abrirla desde el temario y desde la búsqueda. Para una entrada pendiente, comprobar que se muestre el aviso correspondiente.
 
-Esta parte la realiza quien integra el contenido. Adjuntá a la IA el TeX aprobado, el registro editorial, `docs/convenciones-contenido.md` y una muestra de un tema vigente de `src/content.js`. Si la herramienta tiene acceso al repositorio, indicá estas rutas directamente y trabajá en la rama de revisión.
+## Parte 3. Cómo incorporar el tema y publicar
 
-### Prompt maestro 2. Preparar la incorporación web
+### Paso 1. Preparación del objeto de contenido
 
-> Prepará la incorporación de [TÍTULO] a [UNIDAD] para el catálogo accesible de Cálculo Diferencial e Integral. Usá como fuente [RUTA DEL TEX APROBADO]. Usá el identificador [ID] y la numeración [NÚMERO DEL CATÁLOGO]. Leé las convenciones del proyecto y tomá como referencia la estructura de un tema completo de src/content.js.
+El HTML de referencia es la copia legible del material aprobado. Para que el catálogo lo muestre con sus propios controles, el contenido se organiza en un objeto de `topics` en `src/content.js`. Se puede solicitar ese bloque adicional con el segundo prompt, pegando como ejemplo un objeto vigente del repositorio. Conservar los mismos campos, estructura HTML y MathML. Revisar en especial el `id`, la numeración del catálogo, la unidad y los identificadores de ejemplos y ejercicios.
+
+### Paso 2. Inclusión en el archivo de contenido
+
+Buscar un tema próximo como referencia y localizar dónde se construye `topics`, antes de `export const routeAliases`. Si se amplía un tema existente, editar su fuente de datos y conservar sus identificadores. Para un tema nuevo, incorporar el objeto en el orden de estudio correspondiente. El orden de `topics` determina también los enlaces Anterior y Siguiente. Cuando haya un bloque mantenido por un importador, conservar la incorporación nueva fuera de sus marcas o actualizar la fuente que lo genera. La revisión en **Files changed** debe mostrar el objeto previsto y conservar el motor de navegación.
+
+### Paso 3. Registro y verificación
+
+Registrar la procedencia y las decisiones de revisión en los archivos del curso. Comprobar al menos una entrada desde temario y búsqueda, la apertura de un paso, la consulta de una solución y el regreso al ejercicio. Revisar el orden de Tab y Mayús + Tab, activación con Enter, foco visible, ampliación y una ventana estrecha. Cuando se prueben fórmulas con lector de pantalla, registrar el navegador, el lector, el proveedor matemático y el resultado observado.
+
+### Paso 4. Integración y despliegue
+
+En el *pull request*, revisar **Files changed** con el equipo responsable. Integrar la rama en `main` cuando el cambio esté aprobado y la cuenta tenga permisos. Abrir **Actions** y localizar la ejecución de **pages build and deployment** correspondiente al commit publicado. Cuando termine correctamente, abrir [el catálogo público](https://sortizg11.github.io/catalogo-matematica-accesible/) y, para el documento independiente, añadir a esa dirección la ruta guardada. Por ejemplo, `materials/portafolio-calculo/html/limites-infinitos.html`.
+
+## Prompts maestros
+
+### Prompt maestro 1. Revisión matemática y homologación
+
+> Actúa como revisor matemático y editor académico de un catálogo de estudio. Curso [CURSO]. Unidad [UNIDAD]. Tema [TEMA]. Fuente [TÍTULO Y VERSIÓN]. El original, en texto o código LaTeX, se incluye al final.
 >
-> Generá la propuesta de objeto de tema con id, number, unit, title, description, objective, readiness, theory, examples y exercises, con la forma que usa el catálogo. Conservá los campos del modelo para enunciados, análisis, pasos, resultados e identificadores locales. Colocá el objeto en el orden correcto, fuera de bloques regenerados si la fuente se incorpora por separado. Prepará la línea label/topic de src/curriculum.js con el mismo id. Si el contenido todavía está en revisión, entregá la entrada pendiente sin topic.
+> Examina primero las definiciones, las hipótesis, el dominio, la notación, cada transformación y el resultado de los ejercicios. Para las soluciones, distingue entre un error que cambia la validez del razonamiento y un procedimiento alternativo que conduce a un resultado equivalente. Cuando sea viable, comprueba el resultado mediante una operación inversa, sustitución, un contraejemplo o un caso representativo. Explica qué comprobaste y cuáles son los límites de la comprobación.
 >
-> Convertí cada expresión en MathML estructural con una sola representación accesible. Cotejá operación, agrupación, signos, dominios, numeración y resultados contra el TeX aprobado. Usá HTML semántico y la plantilla del catálogo. Conservá la lectura progresiva y las soluciones con retorno al ejercicio. Señalá en el registro las secciones ausentes y las dudas. Conservá los identificadores publicados y el comportamiento del motor de navegación.
+> Entrega un registro con la ubicación del hallazgo, el fragmento original, la razón matemática o didáctica, la corrección propuesta y su estado. Señala qué material tendría que aportar la persona responsable, por ejemplo hipótesis, un enunciado completo, una figura o una solución ausente. Si el original es ambiguo, conserva el pasaje para decisión docente.
 >
-> Entregá por separado la propuesta para src/content.js, el cambio en src/curriculum.js y el registro de procedencia y verificaciones. Si podés ejecutar pruebas, indicá el comando y lo que observaste. Dejá como pendientes las comprobaciones que requieran un entorno que no tenés, incluida la interacción real con NVDA y MathCAT. Esperá la revisión antes de publicar.
+> Entrega después una versión homologada en español académico claro. Organízala en Teoría, Ejemplos resueltos, Práctica y Soluciones. Conserva fórmulas, dominios, numeración original y resultados mientras las correcciones matemáticas estén pendientes. En los ejemplos incluye enunciado, criterio de elección, pasos informativos y resultado. Vincula cada solución con su ejercicio. Identifica los apartados pendientes sin inventar contenido.
+>
+> MATERIAL ORIGINAL. [PEGAR AQUÍ EL TEXTO O EL CÓDIGO LATEX].
 
-El `.tex` es el insumo que se guarda en `materials/`. El objeto preparado añade el tema a `src/content.js`. Revisá el objeto antes de pegarlo en el editor. Si la IA entregó un archivo completo, compará los cambios y aplicá únicamente los del tema. Usá el mismo identificador en ambos archivos y guardalos en la misma rama de revisión.
+### Prompt maestro 2. Generación del HTML para GitHub
 
-## Paso 7. Verificá y publicá el tema
+> Genera el archivo [ID-DEL-TEMA].html a partir del texto revisado que se incluye al final. Curso [CURSO]. Unidad [UNIDAD]. Tema [TEMA]. Identificador estable [ID]. Incorpora solamente las correcciones académicas aprobadas.
+>
+> Devuelve un HTML autónomo completo con <!doctype html>, idioma español, título de página, encabezado principal único, elemento main y secciones en este orden: Teoría, Ejemplos resueltos, Práctica y Soluciones. Usa encabezados jerárquicos, listas y enlaces nativos. Añade un índice con enlaces reales a las secciones y utiliza identificadores únicos y descriptivos. Incluye pasos desplegables con details y summary cuando haya un procedimiento por etapas. Si las soluciones quedan junto a cada ejercicio, el índice de Soluciones debe enlazar a esos mismos controles y cada solución debe permitir volver al enunciado. Conserva el mismo patrón y la misma terminología para futuros cursos.
+>
+> Convierte las fórmulas a MathML estructural nativo. Usa elementos como mfrac, msup, msub y mrow según la expresión y coteja términos, signos y agrupaciones con el original. Las fórmulas se presentan una sola vez con su estructura. Las figuras indispensables deben contar con la información que permita interpretarlas mediante texto. Aplica un diseño sencillo, adaptable y con foco visible. El archivo debe funcionar sin JavaScript externo, fuentes remotas ni servicios de pago.
+>
+> Devuelve un único bloque de código con el HTML completo. Fuera del bloque, enumera las verificaciones efectuadas y las que requieren revisión humana. Si se solicita también integrar el tema al sitio, entrega por separado la propuesta de un objeto para topics conforme al ejemplo vigente de src/content.js que se incluye abajo. Mantén id, number, unit, title, description, objective, readiness, theory, examples y exercises, y conserva los campos de cada ejemplo y ejercicio. Indica la línea label/topic de src/curriculum.js. Si falta un ejemplo del objeto vigente, deja pendiente ese bloque y conserva el HTML independiente.
+>
+> TEXTO REVISADO. [PEGAR EL CONTENIDO HOMOLOGADO Y LAS CORRECCIONES APROBADAS].
+>
+> EJEMPLO DE OBJETO DEL CATÁLOGO. [PEGAR SOLO SI SE SOLICITA EL OBJETO PARA TOPICS].
 
-1. Cotejá el tema con la fuente aprobada. Revisá que ejemplos, práctica y soluciones mantengan su correspondencia y que el registro explique las decisiones.
-2. Abrí la vista de prueba. Entrá al tema desde el temario y desde la búsqueda escrita. Abrí un ejemplo, desplegá sus pasos, llegá a la solución de un ejercicio y volvé a ese ejercicio. Probá esos recorridos con Tab, Mayús + Tab y Enter. Comprobá que el foco sea visible.
-3. Probá el tema en una ventana estrecha y con ampliación. Verificá que las fórmulas extensas se puedan consultar, que sus estructuras se conserven y que el contenido siga legible. Si hay una sesión con NVDA y MathCAT, registrá qué fórmula se exploró y qué se oyó.
-4. En el pull request, revisá **Files changed**, confirmá las rutas y anotá los resultados ejecutados. Si encontrás un error, corregilo en la misma rama y repetí la comprobación correspondiente.
-5. Después de la aprobación y la integración en `main`, revisá en **Actions** que termine la publicación de GitHub Pages. Abrí el [sitio del catálogo](https://sortizg11.github.io/catalogo-matematica-accesible/), buscá el tema y probá el enlace del temario en la versión publicada.
-
-Si el tema aparece como pendiente, revisá primero si la entrada incluye `topic`. Si el enlace abre otro destino o vuelve al inicio, compará ese valor con `id` y verificá que el contenido esté en la rama publicada. Si un acceso cambia de nombre, probá también el enlace que ya estaba guardado.
-
-## Referencias del proyecto
+## Referencias
 
 - [Convenciones de contenido](convenciones-contenido.md)
-- [Código del temario](../src/curriculum.js)
-- [Código del contenido](../src/content.js)
+- [Manual de usuario del catálogo](manual-usuario.html)
 - [Publicación del catálogo](publicacion.md)
 - [GitHub Docs sobre cómo agregar archivos](https://docs.github.com/es/repositories/working-with-files/managing-files/adding-a-file-to-a-repository)
 - [GitHub Docs sobre cómo editar archivos](https://docs.github.com/es/repositories/working-with-files/managing-files/editing-files)
