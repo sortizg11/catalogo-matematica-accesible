@@ -1,4 +1,4 @@
-# Cálculo Diferencial e Integral · Versión 2.0
+# Cálculo Diferencial e Integral · Versión 2.1
 
 Aplicación estática en español para estudiar matemática con teclado, MathML y lector de pantalla. Primer curso: Cálculo Diferencial e Integral. Prioridad: estudiante ciega que utiliza NVDA y MathCAT en Windows.
 
@@ -101,3 +101,5 @@ El instrumento de la versión 1.5 se conserva como documento de esa aplicación.
 - [PDF para imprimir](output/evaluacion-usuario-1.5/Instrumento-persona-usuaria-CDI.pdf).
 
 Consulta los cambios de la versión 2 y sus límites en [el registro de versión](docs/version-2.md).
+
+Versión 2.1: se restaura el perfil de voz de 1.4 (español general, escucha no continua, sin reinicio automático), conservando confirmación por enlace. Se renueva la identidad visual sin añadir modelos descargables, bibliotecas externas ni servicios propios de transcripción. Véase [el registro 2.1](docs/version-2.1.md).

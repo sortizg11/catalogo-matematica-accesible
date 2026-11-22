@@ -33,3 +33,82 @@ dialog{overflow-wrap:anywhere}.dialog-head>*{min-width:0}.tool-list>*{min-width:
 #home-search-results a, #search-results a { display: block; padding: .8rem; margin-block: .5rem; border: 1px solid currentColor; border-radius: .5rem; }
 .high-contrast .exercise-solution, .high-contrast #home-search-status, .high-contrast #search-status { background: #000; color: #fff; }
 .high-contrast .exercise-solution > summary { color: #fff; }
+
+/* Identidad 2.1: herramientas de estudio con navegación y lectura estables. */
+:root { --bg:#fff; --surface:#f2f6fb; --text:#142439; --muted:#465972; --accent:#164fc4; --border:#c9d5e4; --selected:#e4efff; --focus:#a33d00; }
+body { background:#edf2f8; }
+.topbar { background:#0d1b30; color:#f3f7ff; border-bottom:1px solid #314258; padding:.85rem 1.5rem; }
+.topbar .brand { color:#fff; font-size:.95rem; }
+.brand-mark { background:#67e5d0; color:#0d1b30; border-radius:.65rem .2rem .65rem .2rem; }
+.topbar button { background:#172b45; color:#f1f6ff; border-color:#4a607b; border-radius:.6rem; }
+.topbar button:hover { background:#264262; border-color:#91bdf2; }
+.topbar button.primary { background:#67e5d0; border-color:#67e5d0; color:#0d1b30; font-weight:700; }
+.topbar a:not(.brand), .topbar .institution { color:#d0deef; }
+.topbar :focus-visible { outline-color:#fff; }
+.topbar .institution summary { color:#d0deef; }
+.topbar .institution-content { background:#fff; color:#142439; border-color:#7891ad; }
+.header-actions { font-size:.875rem; gap:.5rem; }
+.layout { grid-template-columns:16.5rem minmax(0,1fr); }
+aside { background:#13253d; color:#e1eafa; border-color:#334a65; padding:1.5rem 1rem; }
+.syllabus .nav-kicker { color:#87dbd4; font-size:.75rem; }
+.syllabus .course-name { color:#fff; }
+.syllabus a { color:#c5d9f5; border-radius:.5rem; }
+.syllabus a:hover { background:#1e3655; color:#fff; }
+.syllabus .unit-toggle { color:#e8f0fc; }
+.syllabus .unit-toggle:hover { background:#203a59; }
+.syllabus a[aria-current] { color:#fff; background:#29496e; border-left-color:#67e5d0; }
+.syllabus .pending { color:#b3c2d6; }
+.syllabus .topic-group { border-color:#50647e; }
+.syllabus :focus-visible { outline-color:#9df3e4; }
+main { padding:1.5rem clamp(1rem,3vw,3rem) 0; }
+.breadcrumbs { max-width:84ch; font-size:.85rem; margin-bottom:1.5rem; }
+article { max-width:84ch; }
+article[data-view]:not([data-view="inicio"]) { background:#fff; border:1px solid #d5deeb; border-radius:1rem; padding:clamp(1rem,3vw,2.5rem); box-shadow:0 8px 30px #14243906; }
+article[data-view="inicio"] { max-width:58rem; }
+.home-hero { position:relative; isolation:isolate; overflow:hidden; background:#10243e; color:#fff; border:1px solid #334b68; border-radius:1.25rem; padding:2.5rem 2.25rem 4rem; }
+.home-hero::after { content:''; position:absolute; inset:0; z-index:-1; opacity:.16; background-image:linear-gradient(#9ecaff 1px,transparent 1px),linear-gradient(90deg,#9ecaff 1px,transparent 1px); background-size:3rem 3rem; mask-image:linear-gradient(100deg,transparent 35%,#000); }
+.home-kicker { font-size:.8rem; letter-spacing:.16em; font-weight:750; color:#82eedc; margin:0 0 1.25rem; }
+.home-hero h1 { font-size:clamp(2.1rem,3.5vw,3.3rem); max-width:20ch; letter-spacing:-.04em; line-height:1.1; margin:0 0 1.3rem; }
+.home-hero .lead { color:#d5e2f4; font-size:1.2rem; margin-bottom:0; }
+.home-search { position:relative; margin:-1.9rem 1.25rem 1.5rem; padding:1.7rem; background:#fff; border:1px solid #c8d6e8; border-radius:1rem; box-shadow:0 12px 28px #13253d0d; }
+.home-search h2 { font-size:1.35rem; }
+.search-input-row { gap:.6rem; }
+.search-input-row input { border:1px solid #9eafc6; border-radius:.65rem; padding:1rem; background:#f8faff; }
+.search-input-row input::placeholder { color:#5f6f85; opacity:1; }
+.search-input-row .primary { border-radius:.65rem; padding-inline:1.25rem; font-weight:700; }
+.voice-primary { display:inline-flex; align-items:center; gap:.7rem; background:#153c55; color:#fff; border:1px solid #153c55; border-radius:.65rem; }
+.voice-primary::before { content:''; width:1.2rem; height:1.2rem; flex-shrink:0; background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round'%3E%3Crect x='9' y='2' width='6' height='12' rx='3'/%3E%3Cpath d='M5 10v2a7 7 0 0014 0v-2M12 19v3M8 22h8'/%3E%3C/svg%3E") center/contain no-repeat; }
+.voice-primary:hover { background:#225573; color:#fff; }
+.voice-primary:disabled { background:#52667a; color:#fff; opacity:1; cursor:not-allowed; }
+.voice-instructions { color:#465972; max-width:65ch; }
+.voice-privacy { border-top:1px solid #d8e1ec; margin-top:1.2rem; padding-top:.5rem; }
+.voice-privacy summary { font-size:.875rem; padding-left:0; }
+#home-search-results, #search-results { padding-left:0; list-style:none; }
+#home-search-results a, #search-results a { padding:1rem; border-color:#a2b9d6; background:#edf4ff; text-decoration:none; font-weight:650; border-radius:.65rem; }
+#home-search-results a:hover, #search-results a:hover { background:#e0edff; text-decoration:underline; }
+article[data-view="inicio"] > .inline-actions { margin:1.5rem 1.25rem; align-items:stretch; }
+article[data-view="inicio"] > .inline-actions > * { flex:1; min-width:11rem; padding:1rem; border:1px solid #c8d6e8; background:#fff; border-radius:.75rem; font-size:.95rem; text-align:left; display:flex; align-items:center; }
+.home-topics { margin:1.5rem 1.25rem; padding:0 1rem; background:#fff; border:1px solid #c8d6e8; border-radius:.75rem; }
+article[data-view="inicio"] > p, article[data-view="inicio"] > a { margin-inline:1.25rem; }
+.section-nav { border-radius:.5rem; background:#f3f7fd; padding:.8rem 1rem; }
+.academic-item { border-top:1px solid #d4dfed; padding-top:1.5rem; }
+.objective { border-left:3px solid #167c85; border-radius:0 .65rem .65rem 0; }
+.math-region { background:#f5f8fd; border-color:#c8d6e8; border-radius:.6rem; }
+footer { max-width:84ch; font-size:.85rem; }
+.high-contrast body, .high-contrast .topbar, .high-contrast aside, .high-contrast .home-hero, .high-contrast article[data-view], .high-contrast .home-search, .high-contrast .home-topics, .high-contrast article[data-view="inicio"] > .inline-actions > *, .high-contrast .section-nav, .high-contrast .math-region { background:#000; color:#fff; border-color:#fff; }
+.high-contrast .home-hero::after { display:none; }
+.high-contrast .home-kicker, .high-contrast .home-hero .lead, .high-contrast .voice-instructions, .high-contrast .syllabus * { color:#fff; }
+.high-contrast .search-input-row input { background:#000; color:#fff; border-color:#fff; }
+.high-contrast #home-search-results a, .high-contrast #search-results a { color:#ffeb66; background:#000; border-color:#fff; }
+@media(max-width:64rem) { .layout { grid-template-columns:minmax(0,1fr); } .topbar { gap:.8rem; } .home-hero { padding:2rem 1.5rem 3.5rem; } }
+@media(max-width:35rem) { .home-hero { padding:1.5rem 1rem 2.5rem; border-radius:.9rem; } .home-hero h1 { font-size:2rem; } .home-search { margin:-1rem .5rem 1rem; padding:1rem; } .home-search .inline-actions { gap:.5rem; } .home-search .voice-primary { width:100%; justify-content:center; padding:.8rem; } article[data-view="inicio"] > .inline-actions { margin-inline:.5rem; } .home-topics { margin-inline:.5rem; } .header-actions > * { min-height:2.75rem; } }
+@media(forced-colors:active) { .home-hero, .home-search, article[data-view], aside, .topbar { background:Canvas; color:CanvasText; border-color:CanvasText; } .home-hero::after { display:none; } .home-hero .lead,.home-kicker,.syllabus * { color:CanvasText; } }
+.home-hero :focus { outline-color:#9df3e4!important; }
+@media(max-width:64rem) { .header-actions { gap:.4rem; font-size:.82rem; } .header-actions button { padding:.45rem .65rem; } }
+.syllabus .pending small { color:#b3c2d6; font-size:.875rem; }
+.high-contrast .syllabus .pending small { color:#fff; }
+.high-contrast .search-input-row input::placeholder { color:#fff; }
+.high-contrast { --bg:#000; --surface:#111; --text:#fff; --muted:#e0e0e0; --accent:#ffe66b; --border:#fff; --selected:#242424; --focus:#ffe66b; color:var(--text); background:var(--bg); }
+.high-contrast button.primary, .high-contrast .primary-link { background:#ffe66b; border-color:#ffe66b; color:#000; }
+article[data-view="inicio"] > .inline-actions > * { min-width:min(11rem,100%); max-width:100%; overflow-wrap:anywhere; }
+.home-hero h1 { overflow-wrap:anywhere; }

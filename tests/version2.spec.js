@@ -11,9 +11,11 @@ test('voz: silencio automático, anuncio completo y un clic al destino',async({p
 test('voz: actividad nueva reinicia espera y cierre del proveedor conserva texto',async({page})=>{
  await voice(page);await page.goto('/');await page.clock.install();await page.locator('#home-voice-start').click();await say(page,'regla');await page.clock.fastForward(3000);await say(page,'regla de la cadena');await page.clock.fastForward(3000);await expect(page.locator('#home-voice-stop')).toBeVisible();await page.evaluate(()=>window.recognition.onend());await page.clock.fastForward(3501);await expect(page.locator('#home-search-results a')).toHaveAttribute('href','#cadena--tema');
 });
-test('voz: solo un reintento vacío, errores explícitos y alternativa escrita',async({page})=>{
- await voice(page);await page.goto('/');await page.locator('#home-voice-start').click();await page.evaluate(()=>{window.recognition.onend();window.instances[0].onresult({results:[[{transcript:'tardío'}]]});});await expect(page.locator('#home-search-query')).toHaveValue('');
- await page.evaluate(()=>window.recognition.onend());expect(await page.evaluate(()=>window.instances.length)).toBe(2);await expect(page.locator('#home-search-status')).toContainText('sin devolver texto');
+test('voz: perfil del jueves, sin reinicio automático y alternativa escrita',async({page})=>{
+ await voice(page);await page.goto('/');await page.locator('#home-voice-start').click();
+ expect(await page.evaluate(()=>({lang:window.recognition.lang,continuous:window.recognition.continuous,interim:window.recognition.interimResults}))).toEqual({lang:'es',continuous:false,interim:true});
+ await page.evaluate(()=>{window.recognition.onend();window.instances[0].onresult({results:[[{transcript:'tardío'}]]});});await expect(page.locator('#home-search-query')).toHaveValue('');
+ expect(await page.evaluate(()=>window.instances.length)).toBe(1);await expect(page.locator('#home-search-status')).toContainText('sin devolver texto');
  await page.locator('#home-voice-start').click();await page.evaluate(()=>window.recognition.onerror({error:'network'}));await expect(page.locator('#home-search-status')).toContainText('otro navegador');await page.locator('#home-search-query').fill('derivación implícita');await page.locator('#home-search-query').press('Enter');await expect(page.locator('#implicita--tema')).toBeFocused();
 });
 test('voz: cancelar, Escape, edición y navegación descartan transcripciones tardías',async({page})=>{

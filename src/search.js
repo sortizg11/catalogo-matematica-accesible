@@ -125,7 +125,7 @@ export function initSearch() {
       finish();
       cancelActive = () => { if (recognition) { finish(); status.textContent = 'Escucha cancelada.'; } };
       const token = generation;
-      let transcript = '', attempts = 0;
+      let transcript = '';
       results.replaceChildren(); jump.hidden = true;
       const complete = () => {
         if (token !== generation || !visible()) return;
@@ -144,8 +144,9 @@ export function initSearch() {
         try { recognition = new Speech(); } catch { endWithoutFinal('No se pudo iniciar el reconocimiento.'); return; }
         const current = recognition;
         const valid = () => token === generation && recognition === current && visible();
-        recognition.lang = 'es-CR';
-        recognition.continuous = true;
+        // Perfil de la versión 1.4: una búsqueda breve en español.
+        recognition.lang = 'es';
+        recognition.continuous = false;
         recognition.interimResults = true;
         recognition.maxAlternatives = 1;
         phase = 'connecting';
@@ -189,11 +190,9 @@ export function initSearch() {
         recognition.onend = () => {
           if (!valid()) return;
           clearTimeout(timer);
-          if (transcript) { waitForSilence(); return; }
-          // Algunos navegadores cierran al responder el permiso. Un solo reintento,
-          // sin bucle de micrófono ni solicitudes indefinidas.
-          if (attempts++ === 0) { connect(); }
-          else endWithoutFinal('El servicio de voz se cerró sin devolver texto.');
+          if (transcript) { if (!silenceTimer) waitForSilence(); return; }
+          // Cada sesión nace del clic original; onend no inicia otra escucha.
+          endWithoutFinal('La escucha terminó sin devolver texto.');
         };
         try {
           clearTimeout(timer);

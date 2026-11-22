@@ -1,6 +1,6 @@
 # Manual de uso de Cálculo Diferencial e Integral
 
-Versión 2.0 · 21 de noviembre de 2026
+Versión 2.1 · 21 de noviembre de 2026
 
 Este catálogo permite consultar teoría, ejemplos, práctica y soluciones mediante enlaces, teclado y un lector de pantalla. Algunos contenidos del programa siguen pendientes. No requiere cuenta y no evalúa ni guarda tus respuestas.
 
@@ -8,7 +8,7 @@ Este catálogo permite consultar teoría, ejemplos, práctica y soluciones media
 
 Al entrar, encontrarás «Buscar un tema», con un campo escrito y el botón «Iniciar búsqueda por voz». Escribe, por ejemplo, «derivación implícita» y pulsa Buscar o Enter. Un destino único abre el tema; varias coincidencias muestran enlaces para elegir. No es un chat y no genera respuestas.
 
-Si prefieres explorar, abre «Temas disponibles» o utiliza el temario por unidades. «Continuar donde quedé» conserva tu acceso al marcador, sin convertirse en una lista de actividad reciente. Esta organización corresponde a la actualización 2.0 del catálogo público.
+Si prefieres explorar, abre «Temas disponibles» o utiliza el temario por unidades. «Continuar donde quedé» conserva tu acceso al marcador, sin convertirse en una lista de actividad reciente. Esta organización corresponde a la actualización 2.1 del catálogo público.
 
 ## Entrar y elegir un tema
 
@@ -46,7 +46,7 @@ Para dictar, pulsa «Iniciar búsqueda por voz» y concede el permiso si quieres
 
 El texto reconocido aparece en el campo. El lector de pantalla anuncia el texto y los temas encontrados mediante el aviso de estado, sin añadir otra voz. Elige el enlace del tema para abrirlo con un clic o con Enter. Si quieres corregirlo, edita el campo y pulsa «Buscar tema». La búsqueda escrita conserva la apertura directa cuando encuentra un destino único.
 
-«Cancelar escucha» o Escape descartan el intento. Editar el campo, cerrar el diálogo o cambiar de sección también cancela la escucha y descarta respuestas tardías. Si el proveedor cierra sin transcribir, se intenta reconectar una vez; después se informa del fallo. La espera de conexión y la escucha sin texto tienen un límite de 20 segundos cada una.
+«Cancelar escucha» o Escape descartan el intento. Editar el campo, cerrar el diálogo o cambiar de sección también cancela la escucha y descarta respuestas tardías. La escucha es breve y no se reinicia automáticamente. Si termina sin transcribir, puedes iniciar otro intento con el botón. La espera de conexión y la escucha sin texto tienen un límite de 20 segundos cada una.
 
 El reconocimiento es opcional y depende del navegador y de su proveedor, que puede procesar el audio por internet. El catálogo no guarda grabaciones ni consultas. Si el servicio no está disponible, puedes escribir o activar el dictado del dispositivo sobre el mismo campo de búsqueda. Ese dictado se inicia con los controles propios de tu equipo. Utiliza auriculares para evitar que el micrófono recoja la voz del lector.
 

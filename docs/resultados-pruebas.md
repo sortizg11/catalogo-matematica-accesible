@@ -71,3 +71,19 @@ Doce pruebas focalizadas de búsqueda y voz simulada aprobadas (1,7 minutos). Se
 - El usuario comunica uso de Chrome, lectura matemática satisfactoria y micrófono fallido en una evaluación parcial. No se recibió el instrumento cumplimentado ni se ejecutó aquí una prueba de micrófono o de NVDA reales. No se afirma conformidad WCAG completa.
 
 Comprobación final después de los últimos ajustes: diez pruebas repetidas aprobadas en 2,0 minutos. Incluyeron los ocho recorridos de versión 2 (con Tab directo al resultado, alias del ejemplo retirado, exportación y soluciones) y los diagnósticos axe de vistas y diálogos. Son repeticiones de cobertura ya contada entre las 49, no diez pruebas distintas adicionales.
+
+
+## Versión 2.1 — 21 de noviembre de 2026
+
+Se comparó el perfil de reconocimiento del jueves 19 (commits 22e6413 y 7c2bf03) con las entregas posteriores. Se recupera el perfil de 1.4: lang es, continuous false, interimResults true, maxAlternatives 1 y sin reinicios automáticos desde onend. El origen del error network comunicado por el usuario no se da por demostrado. No se añade ningún modelo descargable ni servicio de transcripción propio.
+
+Verificación ejecutada:
+
+- El primer lanzamiento de 15 pruebas no pudo iniciar el navegador: el ejecutable temporal de Playwright ya no estaba disponible. Se restauró únicamente ese recurso del entorno de desarrollo y se relanzó; esto no añade instalaciones ni dependencias para la persona usuaria.
+- Quince pruebas de búsqueda y voz simulada aprobaron en 3,1 minutos. Incluyen la configuración del jueves, un solo inicio por clic, cierre sin texto sin reconectar, anuncio del resultado, confirmación por enlace, errores, edición, cancelación y descarte tardío, además de soluciones y reflujo.
+- Ocho pruebas seleccionadas de presentación: siete aprobaron y una detectó desbordamiento a 320 px con texto al 200 %. Se identificó un ancho mínimo de 11 rem en los accesos de continuación/exploración; se limitó al ancho disponible. Se permitió además dividir títulos largos para evitar recorte. El diagnóstico posterior midió ancho de documento 320 px para viewport 320 px, sin elementos fuera del borde derecho.
+- Una prueba adicional de alto contraste en la búsqueda y la solución abierta aprobó en 1,2 minutos, con reglas axe y reflujo. Se corrigieron antes los colores de las indicaciones pendientes, el texto de ejemplo del buscador y las variables del modo de alto contraste.
+- Verificador de integración ejecutado: 181 expresiones MathML, 115 pasos, 12 relaciones, 13 ejemplos y 5 ejercicios conservados en los datos y SHA-256 de fuente verificado. Sintaxis del buscador y del módulo de entrada comprobada.
+- Capturas de escritorio, móvil y solución abierta inspeccionadas visualmente. Las pruebas automáticas de accesibilidad son parciales. No se ejecutó una prueba con voz humana por micrófono ni con NVDA real en esta entrega.
+
+Tras corregir el reflujo, las dos comprobaciones de ampliación se repitieron y aprobaron en 23,0 segundos. Resultado de la entrega: 24 pruebas distintas aprobadas entre las ejecuciones descritas; las dos repeticiones no se cuentan otra vez.

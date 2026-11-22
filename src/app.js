@@ -1,9 +1,9 @@
-import {topics,renderTopic,home,help} from './content.js';
+import {topics,renderTopic,home,help} from './content.js?v=2.1.0';
 import {initPreferences} from './preferences.js';
 import {buildNavigation,initNavigation,toggleMenu,navigate,topicId} from './navigation.js';
 import {initDialogs,openDialog} from './dialogs.js';
 import {initShortcuts} from './shortcuts.js';
-import {initSearch} from './search.js';
+import {initSearch} from './search.js?v=2.1.0';
 import {initStudy,initMathRegions} from './study.js';
 document.getElementById('views').innerHTML=home+topics.map(renderTopic).join('')+help;
 initStudy();

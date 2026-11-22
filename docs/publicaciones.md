@@ -1,3 +1,13 @@
+# Registro de publicaciones del catálogo
+
+## Versión 2.1 — 21 de noviembre de 2026
+
+Se restaura el perfil de voz de 1.4 tras comparar el historial del jueves: lang es, continuous false, interimResults true y sin reinicio automático. Se conserva el resultado para confirmarlo por enlace y la cancelación segura. No se incorpora la propuesta descartada de un modelo descargable. El reconocimiento sigue utilizando el proveedor del navegador; la causa del error comunicado no se presenta como demostrada ni el micrófono real como aprobado.
+
+Se renueva la identidad visual con cabecera y navegación azul profundo, acento turquesa, portada de búsqueda y superficies claras de lectura. Se mantienen contenido académico, ubicaciones, marcadores, soluciones y alternativas de teclado. Véase [el alcance de 2.1](version-2.1.md).
+
+---
+
 ## Versión 2.0 — 21 de noviembre de 2026
 
 Actualización autorizada para publicación en main y GitHub Pages. Incluye cierre automático de dictado, anuncio accesible del texto, enlace de confirmación al destino, reconexión única y cancelación segura. Soluciones desplegables junto a cada ejercicio, enlaces y marcadores conservados, plantilla compartida en once temas y sus HTML independientes, ayuda sin pruebas incrustadas y atajos activos inicialmente con opción de desactivación.
@@ -10,7 +20,6 @@ El historial de GitHub identifica el commit de esta actualización y Actions reg
 
 ---
 
-# Registro de publicaciones del catálogo
 
 Sitio público: https://sortizg11.github.io/catalogo-matematica-accesible/ . Repositorio: https://github.com/sortizg11/catalogo-matematica-accesible . Rama: main.
 

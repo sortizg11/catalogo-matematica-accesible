@@ -1,4 +1,18 @@
-# Estado de la versión 2.0 — 21 de noviembre de 2026
+# Actualización 2.1 — 21 de noviembre de 2026
+
+| Cambio | Estado | Observación |
+| --- | --- | --- |
+| Perfil de voz del jueves | Restaurado | Español general, escucha breve, sin reinicios automáticos |
+| Lectura del texto y enlace al resultado | Conservados | Sin voz sintetizada del catálogo |
+| Descarga de un modelo | Descartada por el usuario | No se incorpora; se mantiene el mismo enlace web |
+| Diseño tecnológico | Renovado | Cabecera y navegación oscuras, turquesa, portada y búsqueda rediseñadas |
+| Micrófono real | Pendiente de confirmación tras la restauración | Fallo comunicado en Chrome, Safari y navegador integrado; causa no demostrada |
+
+Las secciones siguientes documentan las entregas anteriores.
+
+---
+
+## Estado de la versión 2.0 — 21 de noviembre de 2026
 
 | Cambio | Estado actual | Observaciones | Aporte pendiente del usuario |
 | --- | --- | --- | --- |
@@ -16,7 +30,7 @@ La aplicación del instrumento anterior fue parcial: las tareas no realizadas no
 
 ---
 
-# Cambios y pendientes del catálogo
+## Cambios y pendientes del catálogo
 
 Registro iniciado el 19 y actualizado el 20 de noviembre de 2026. «Publicado» corresponde a la versión de GitHub; La actualización 1.4 incorpora el nuevo inicio y publica estos documentos; su despliegue se registra en GitHub Actions.
 

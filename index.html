@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#162B45">
   <meta name="description" content="Catálogo universitario de matemática: teoría, ejemplos y práctica con MathML y navegación por teclado.">
   <title>Cálculo Diferencial e Integral</title>
-  <link rel="stylesheet" href="styles.css">
-  <script type="module" src="src/app.js"></script>
+  <link rel="stylesheet" href="styles.css?v=2.1.0">
+  <script type="module" src="src/app.js?v=2.1.0"></script>
 </head>
 <body>
   <a class="skip" href="#contenido">Saltar al contenido principal</a>
@@ -19,14 +19,14 @@
         <div class="institution-content"><p>Escuela de Matemática - Departamento de Orientación y Psicología</p><p>Tecnológico de Costa Rica</p></div>
       </details>
     </div>
-    <div class="header-actions"><button id="menu-toggle" aria-expanded="true" aria-controls="temario">Ocultar temario</button><button id="tools-open" class="primary">Abrir centro de herramientas</button><button data-dialog="search">Buscar contenidos</button><a href="#ayuda">Ayuda</a><button data-dialog="preferences">Preferencias</button></div>
+    <div class="header-actions"><button id="menu-toggle" aria-expanded="true" aria-controls="temario">Ocultar temario</button><button id="tools-open" class="primary" aria-label="Abrir centro de herramientas">Herramientas</button><button data-dialog="search" aria-label="Buscar contenidos">Buscar</button><a href="#ayuda">Ayuda</a><button data-dialog="preferences">Preferencias</button></div>
   </header>
   <div class="layout">
     <aside id="sidebar"><div id="nav-slot"></div></aside>
     <main id="contenido" tabindex="-1">
       <nav aria-label="Ruta académica" class="breadcrumbs" id="breadcrumbs"></nav>
       <div id="views"></div>
-      <footer>Cálculo Diferencial e Integral <span>Versión 2.0</span></footer>
+      <footer>Cálculo Diferencial e Integral <span>Versión 2.1</span></footer>
     </main>
   </div>
   <dialog id="menu-dialog" aria-labelledby="menu-title"><div class="dialog-head"><h2 id="menu-title">Temario del curso</h2><button data-close>Cerrar temario</button></div><div id="mobile-nav-slot"></div></dialog>
