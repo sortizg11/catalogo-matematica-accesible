@@ -98,6 +98,18 @@ test('atajos activos inicialmente y excluidos en fórmulas y diálogos',async({p
   await page.locator('#sustitucion--tema').focus();await page.keyboard.press('Alt+Shift+h');await expect(page.locator('#tools')).toBeVisible();await page.keyboard.press('Escape');
   await page.locator('[data-view="sustitucion"] .math-region').first().focus();await page.keyboard.press('Alt+Shift+h');await expect(page.locator('#tools')).not.toBeVisible();
 });
+test('inicio con unidades cerradas y atajo activo aunque la tecla produzca un símbolo',async({page})=>{
+  await page.goto('/');
+  const units=page.locator('.unit-toggle');
+  await expect(units).toHaveCount(6);
+  await expect(page.locator('.unit-toggle[aria-expanded="true"]')).toHaveCount(0);
+  await expect(page.locator('#unit-list-4')).toBeHidden();
+  await page.locator('#inicio').dispatchEvent('keydown',{key:'Ó',code:'KeyH',altKey:true,shiftKey:true,bubbles:true,cancelable:true});
+  await expect(page.locator('#tools')).toBeVisible();
+  await page.goto('/#sustitucion--tema');
+  await expect(page.locator('#unit-4')).toHaveAttribute('aria-expanded','true');
+  await expect(page.locator('#unit-list-4')).toBeVisible();
+});
 test('ubicación explícita, todos los pasos y evidencia visual',async({page})=>{
   await page.goto('/#sustitucion--ejercicio-p4');await page.locator('#tools-open').click();await page.locator('#where-open').click();await expect(page.locator('#where-text')).toContainText('Ejercicio 4');await page.keyboard.press('Escape');await expect(page.locator('#tools-open')).toBeFocused();
   await page.goto('/#sustitucion--tema');await page.evaluate(()=>window.scrollTo(0,0));await page.screenshot({path:'docs/evidencia/escritorio.png',fullPage:false});

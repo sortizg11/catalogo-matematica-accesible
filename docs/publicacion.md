@@ -33,3 +33,7 @@ No subas `node_modules`, `.pnpm-store`, `test-results` ni `playwright-report`. E
 Abre Introducción a las integrales, consulta teoría y ejemplos; después entra en Sustitución, abre un paso, ve a práctica y vuelve desde la solución. Prueba también «Continuar donde quedé» en el mismo navegador. El punto guardado en localhost no se transfiere al dominio público.
 
 Guía oficial: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+
+## Guía para aportar materiales
+
+Consulta el [manual para incorporar materiales](manual-incorporar-materiales.md) para preparar un archivo LaTeX con la plantilla común, subirlo a revisión y publicar su tema desde el temario.

@@ -1,5 +1,11 @@
 # Registro de publicaciones del catálogo
 
+## Versión 2.1.1 — 22 de noviembre de 2026
+
+Las unidades del temario aparecen cerradas al cargar el inicio. Un enlace directo abre la unidad del tema indicado. Los atajos parten activos, respetan el ajuste guardado en Preferencias y reconocen la combinación cuando el teclado produce un símbolo. Se incorpora el [manual para aportar materiales](manual-incorporar-materiales.md) con plantilla LaTeX, dos prompts y edición del temario paso a paso. El [registro de pruebas](resultados-pruebas.md) documenta el alcance de la verificación.
+
+---
+
 ## Versión 2.1 — 21 de noviembre de 2026
 
 Se restaura el perfil de voz de 1.4 tras comparar el historial del jueves: lang es, continuous false, interimResults true y sin reinicio automático. Se conserva el resultado para confirmarlo por enlace y la cancelación segura. No se incorpora la propuesta descartada de un modelo descargable. El reconocimiento sigue utilizando el proveedor del navegador; la causa del error comunicado no se presenta como demostrada ni el micrófono real como aprobado.

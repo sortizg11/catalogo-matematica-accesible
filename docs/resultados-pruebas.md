@@ -87,3 +87,14 @@ Verificación ejecutada:
 - Capturas de escritorio, móvil y solución abierta inspeccionadas visualmente. Las pruebas automáticas de accesibilidad son parciales. No se ejecutó una prueba con voz humana por micrófono ni con NVDA real en esta entrega.
 
 Tras corregir el reflujo, las dos comprobaciones de ampliación se repitieron y aprobaron en 23,0 segundos. Resultado de la entrega: 24 pruebas distintas aprobadas entre las ejecuciones descritas; las dos repeticiones no se cuentan otra vez.
+
+## Evaluación real con NVDA — actualización del 21 de noviembre de 2026
+
+El responsable del proyecto confirma que se han realizado dos pruebas reales con NVDA en momentos distintos. La primera dispone de un registro en PDF; la segunda, de un informe de resultados aportado por el responsable del proyecto. Por tanto, las pruebas con NVDA no deben figurar como “no realizadas”.
+
+El primer piloto permitió valorar la navegación por encabezados y controles; señaló dificultades de lectura matemática, orientación mediante «Dónde estoy» y familiarización inicial. La tercera sesión está programada para el miércoles 25 de noviembre de 2026. Se añadirán sus hallazgos después de aplicarla. Los diagnósticos automáticos de Lighthouse/axe y las pruebas reales con NVDA se informan por separado.
+
+## Versión 2.1.1 — 22 de noviembre de 2026
+
+- En Node, con DOM simulado, se verificaron el marcado inicial de las seis unidades cerradas, el control de apertura y cierre, la apertura y el foco al entrar por un enlace directo de Sustitución, y el atajo con tecla que devuelve una letra o un símbolo. Se comprobó que los atajos se excluyen en los contextos protegidos y al desactivarlos.
+- Se comprobó la sintaxis de los módulos de entrada y búsqueda y del nuevo guion de regresión. Playwright quedó pendiente en el entorno local: el servidor no pudo abrir el puerto de prueba y el navegador sin servidor tampoco inició. No se registra una auditoría nueva de Lighthouse, axe-core o NVDA.

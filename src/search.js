@@ -1,5 +1,5 @@
 import {curriculum} from './content.js';
-import {navigate} from './navigation.js';
+import {navigate} from './navigation.js?v=2.1.1';
 import {closeDialog} from './dialogs.js';
 
 const normalize = text => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '')

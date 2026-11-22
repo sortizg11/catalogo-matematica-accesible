@@ -9,7 +9,7 @@ let locationId = 'inicio';
 let memoryBookmark = null;
 export const topicId = () => currentTopic;
 export function buildNavigation() {
-  document.querySelector('#nav-slot').innerHTML = `<nav class="syllabus" id="temario" aria-label="Temario académico"><p class="nav-kicker">Tu curso</p><p class="course-name">Cálculo Diferencial<br>e Integral</p>${curriculum.map(unit=>`<button class="unit-toggle" id="unit-${unit.id}" aria-expanded="${unit.id==='4'}" aria-controls="unit-list-${unit.id}">${unit.title}</button><ul id="unit-list-${unit.id}" ${unit.id==='4'?'':'hidden'}>${renderCurriculumItems(unit.items)}</ul>`).join('')}<a href="#inicio">Volver al catálogo</a></nav>`;
+  document.querySelector('#nav-slot').innerHTML = `<nav class="syllabus" id="temario" aria-label="Temario académico"><p class="nav-kicker">Tu curso</p><p class="course-name">Cálculo Diferencial<br>e Integral</p>${curriculum.map(unit=>`<button class="unit-toggle" id="unit-${unit.id}" aria-expanded="false" aria-controls="unit-list-${unit.id}">${unit.title}</button><ul id="unit-list-${unit.id}" hidden>${renderCurriculumItems(unit.items)}</ul>`).join('')}<a href="#inicio">Volver al catálogo</a></nav>`;
   document.querySelectorAll('.unit-toggle').forEach(button=>button.addEventListener('click',()=> {
     const open = button.getAttribute('aria-expanded') !== 'true';
     button.setAttribute('aria-expanded',String(open));document.getElementById(button.getAttribute('aria-controls')).hidden=!open;
